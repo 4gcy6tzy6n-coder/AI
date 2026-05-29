@@ -1,0 +1,223 @@
+# Performance Benchmark Suite v2 - 性能测试套件 v2
+# Phase 9 WP1: 大规模性能优化
+
+version: "2.0"
+description: "Phase 9 性能优化验证测试套件"
+
+# 测试层级定义 (基于 Phase 8，优化目标)
+tiers:
+  S:
+    name: "Small Scale"
+    units: 1000
+    expected_qps: 50          # Phase 8: 10, Phase 9 目标: 50
+    max_latency_p50_ms: 20    # Phase 8: 55, Phase 9 目标: 20
+    max_latency_p95_ms: 50    # Phase 8: 57, Phase 9 目标: 50
+    concurrent_requests: 10
+    
+  M:
+    name: "Medium Scale"
+    units: 10000
+    expected_qps: 100         # Phase 8: 50, Phase 9 目标: 100
+    max_latency_p50_ms: 50    # Phase 8: 136, Phase 9 目标: 50
+    max_latency_p95_ms: 100   # Phase 8: 141, Phase 9 目标: 100
+    concurrent_requests: 20
+    
+  L:
+    name: "Large Scale"
+    units: 100000
+    expected_qps: 200         # Phase 8: 200, Phase 9 目标: 200 (需达到)
+    max_latency_p50_ms: 200   # Phase 8: 1080, Phase 9 目标: 200
+    max_latency_p95_ms: 500   # Phase 8: 1123, Phase 9 目标: 500
+    concurrent_requests: 50
+    
+  X:
+    name: "Extra Large Scale"
+    units: 1000000
+    expected_qps: 500         # Phase 8: 1000, Phase 9 目标: 500
+    max_latency_p50_ms: 500   # Phase 8: 14976, Phase 9 目标: 500
+    max_latency_p95_ms: 2000  # Phase 8: 14486, Phase 9 目标: 2000
+    concurrent_requests: 100
+
+# 测试场景定义
+scenarios:
+  # 场景1: 检索性能测试
+  retrieval_performance:
+    name: "检索性能测试"
+    description: "测试分层索引和缓存优化后的检索性能"
+    tests:
+      - name: "hot_layer_retrieval"
+        description: "热层检索性能"
+        target_latency_ms: 5
+        target_throughput_qps: 1000
+        
+      - name: "warm_layer_retrieval"
+        description: "温层检索性能"
+        target_latency_ms: 20
+        target_throughput_qps: 500
+        
+      - name: "cold_layer_retrieval"
+        description: "冷层检索性能"
+        target_latency_ms: 100
+        target_throughput_qps: 100
+        
+      - name: "cache_hit_performance"
+        description: "缓存命中场景性能"
+        target_hit_rate: 0.60
+        target_latency_ms: 1
+
+  # 场景2: 并发控制测试
+  concurrency_control:
+    name: "并发控制测试"
+    description: "测试读写锁和并发控制优化"
+    tests:
+      - name: "concurrent_reads"
+        description: "并发读操作"
+        max_concurrent: 20
+        target_success_rate: 0.99
+        
+      - name: "concurrent_writes_kb"
+        description: "并发知识库写入"
+        max_concurrent: 5
+        target_success_rate: 0.95
+        
+      - name: "read_write_mixed"
+        description: "读写混合场景"
+        read_ratio: 0.8
+        write_ratio: 0.2
+        target_throughput_qps: 50
+
+  # 场景3: 资源使用测试
+  resource_usage:
+    name: "资源使用测试"
+    description: "测试内存和CPU使用优化"
+    tests:
+      - name: "memory_per_unit"
+        description: "每Unit内存占用"
+        target_max_bytes: 51200  # 50KB
+        
+      - name: "memory_total_100k"
+        description: "100K Units总内存"
+        target_max_mb: 600
+        
+      - name: "cpu_usage"
+        description: "CPU使用率"
+        target_max_percent: 80
+
+# 性能指标定义
+metrics:
+  latency:
+    - name: "p50"
+      description: "50分位延迟"
+      unit: "ms"
+    - name: "p95"
+      description: "95分位延迟"
+      unit: "ms"
+    - name: "p99"
+      description: "99分位延迟"
+      unit: "ms"
+      
+  throughput:
+    - name: "qps"
+      description: "每秒查询数"
+      unit: "queries/second"
+      
+  reliability:
+    - name: "error_rate"
+      description: "错误率"
+      unit: "percent"
+      target_max: 0.05
+    - name: "timeout_rate"
+      description: "超时率"
+      unit: "percent"
+      target_max: 0.10
+    - name: "success_rate"
+      description: "成功率"
+      unit: "percent"
+      target_min: 0.95
+
+# 优化组件测试
+optimization_components:
+  layered_index:
+    name: "分层索引"
+    description: "测试 HNSW + 分层索引优化"
+    tests:
+      - name: "hnsw_search_accuracy"
+        description: "HNSW搜索精度"
+        target_recall: 0.95
+      - name: "layer_promotion"
+        description: "层间晋升机制"
+        target_promotion_time_ms: 10
+        
+  cache_manager:
+    name: "缓存管理器"
+    description: "测试多级缓存优化"
+    tests:
+      - name: "l1_hit_rate"
+        description: "L1缓存命中率"
+        target_min: 0.40
+      - name: "overall_hit_rate"
+        description: "整体缓存命中率"
+        target_min: 0.60
+      - name: "cache_warmup_time"
+        description: "缓存预热时间"
+        target_max_seconds: 60
+        
+  concurrency_controller:
+    name: "并发控制器"
+    description: "测试并发控制优化"
+    tests:
+      - name: "rw_lock_efficiency"
+        description: "读写锁效率"
+        target_contention_rate: 0.10
+      - name: "queue_processing_rate"
+        description: "队列处理速率"
+        target_min_tasks_per_second: 100
+      - name: "rate_limiter_accuracy"
+        description: "限流器精度"
+        target_deviation_percent: 0.05
+
+# 对比基准 (Phase 8 结果)
+baselines:
+  phase8:
+    S:
+      p50_latency_ms: 55
+      p95_latency_ms: 57
+      qps: 18.2
+      error_rate: 0.00
+      timeout_rate: 0.00
+      
+    M:
+      p50_latency_ms: 136
+      p95_latency_ms: 141
+      qps: 7.4
+      error_rate: 0.00
+      timeout_rate: 0.00
+      
+    L:
+      p50_latency_ms: 1080
+      p95_latency_ms: 1123
+      qps: 0.9
+      error_rate: 0.50
+      timeout_rate: 0.50
+      
+    X:
+      p50_latency_ms: 14976
+      p95_latency_ms: 14486
+      qps: 0.1
+      error_rate: 0.50
+      timeout_rate: 0.50
+
+# 测试执行配置
+execution:
+  warmup_iterations: 100
+  test_duration_seconds: 60
+  cooldown_seconds: 10
+  
+# 报告配置
+reporting:
+  output_formats:
+    - json
+    - markdown
+    - html
+  include_charts: true
+  compare_with_baseline: true

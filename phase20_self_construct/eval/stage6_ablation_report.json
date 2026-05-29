@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-04-19T00:30:18.585976",
+  "results": {
+    "baseline": {
+      "name": "baseline",
+      "target_gain": 0.1402597402597403,
+      "old_drop": 0.03344481605351168,
+      "writeback_change": 0.03733333333333333,
+      "rollback_recovery": null
+    },
+    "writeback_only": {
+      "name": "writeback_only",
+      "target_gain": 0.17662337662337668,
+      "old_drop": 0.5,
+      "writeback_change": 0.16400000000000003,
+      "rollback_recovery": null
+    },
+    "rollback_only": {
+      "name": "rollback_only",
+      "target_gain": 0.24935064935064938,
+      "old_drop": 0.03344481605351168,
+      "writeback_change": 0.009333333333333305,
+      "rollback_recovery": 0.0
+    },
+    "both": {
+      "name": "both",
+      "target_gain": 0.1584415584415585,
+      "old_drop": 0.5,
+      "writeback_change": 0.08400000000000002,
+      "rollback_recovery": 54.960317460317476
+    }
+  },
+  "analysis": {
+    "baseline_target": 0.1402597402597403,
+    "writeback_damage": -0.036363636363636376,
+    "rollback_damage": -0.10909090909090907,
+    "both_damage": -0.018181818181818188,
+    "culprit": "\u65e0\u660e\u663e\u7834\u574f\u8005 (\u53ef\u80fd\u662f\u968f\u673a\u6027)"
+  },
+  "recommendation": "\u6d88\u878d\u6d4b\u8bd5\u65e0\u7ed3\u8bba\uff0c\u5efa\u8bae\u91cd\u590d\u6d4b\u8bd5\u6216\u63a5\u53d7\u57fa\u7ebf"
+}

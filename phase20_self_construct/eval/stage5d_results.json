@@ -1,0 +1,51 @@
+[
+  {
+    "success": false,
+    "reason": "insufficient_candidates"
+  },
+  {
+    "success": false,
+    "reason": "insufficient_candidates"
+  },
+  {
+    "experiment": "explanation_kb_first",
+    "total": 3,
+    "kb_routed": 3,
+    "success": true,
+    "routing": [
+      {
+        "candidate_id": "explanation_bb6204d3d019",
+        "score": 0.997,
+        "route": "knowledge_base"
+      },
+      {
+        "candidate_id": "explanation_c3baaab48e82",
+        "score": 0.979,
+        "route": "knowledge_base"
+      },
+      {
+        "candidate_id": "explanation_d324f985f399",
+        "score": 0.976,
+        "route": "knowledge_base"
+      }
+    ]
+  },
+  {
+    "experiment": "rule_separate",
+    "total": 2,
+    "kb_routed": 2,
+    "success": true,
+    "routing": [
+      {
+        "candidate_id": "rule_65dc20cda48f",
+        "score": 0.986,
+        "route": "knowledge_base"
+      },
+      {
+        "candidate_id": "rule_db02e350396a",
+        "score": 0.984,
+        "route": "knowledge_base"
+      }
+    ]
+  }
+]

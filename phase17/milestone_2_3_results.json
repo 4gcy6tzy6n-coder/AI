@@ -1,0 +1,125 @@
+[
+  {
+    "config": {
+      "name": "基线组 (最小闭环)",
+      "use_gap_detector": false,
+      "use_writeback_head": false,
+      "hidden_dim": 256,
+      "num_epochs": 3,
+      "batch_size": 8,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "history": {
+      "train_losses": [
+        14.09313232421875,
+        10.112756004333496,
+        8.377435207366943
+      ],
+      "gap_accuracies": [
+        0.45,
+        0.475,
+        0.515
+      ],
+      "retrieval_fps": [
+        0.7733333325386047,
+        0.9253333353996277,
+        0.8993333351612091
+      ],
+      "writeback_fps": [
+        0.2353333365917206,
+        0.18380952656269073,
+        0.13600000262260437
+      ],
+      "long_term_precisions": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "final_gap_accuracy": 0.5,
+    "final_policy_accuracy": 0.4
+  },
+  {
+    "config": {
+      "name": "+GapDetector",
+      "use_gap_detector": true,
+      "use_writeback_head": false,
+      "hidden_dim": 256,
+      "num_epochs": 3,
+      "batch_size": 8,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "history": {
+      "train_losses": [
+        14.187929611206055,
+        10.184700736999512,
+        8.445486679077149
+      ],
+      "gap_accuracies": [
+        0.445,
+        0.485,
+        0.53
+      ],
+      "retrieval_fps": [
+        0.8206666684150696,
+        0.9006666684150696,
+        0.8725714313983918
+      ],
+      "writeback_fps": [
+        0.25066667020320893,
+        0.3152380985021591,
+        0.1293333351612091
+      ],
+      "long_term_precisions": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "final_gap_accuracy": 0.5,
+    "final_policy_accuracy": 0.5
+  },
+  {
+    "config": {
+      "name": "+GapDetector +WritebackHead",
+      "use_gap_detector": true,
+      "use_writeback_head": true,
+      "hidden_dim": 256,
+      "num_epochs": 3,
+      "batch_size": 8,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "history": {
+      "train_losses": [
+        14.093589820861816,
+        10.235936088562012,
+        8.536526546478271
+      ],
+      "gap_accuracies": [
+        0.44,
+        0.435,
+        0.485
+      ],
+      "retrieval_fps": [
+        0.6240000033378601,
+        0.7460000026226044,
+        0.946666669845581
+      ],
+      "writeback_fps": [
+        0.2666666704416275,
+        0.08333333492279053,
+        0.27466666877269746
+      ],
+      "long_term_precisions": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "final_gap_accuracy": 0.5,
+    "final_policy_accuracy": 0.36666666666666664
+  }
+]

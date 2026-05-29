@@ -1,0 +1,42 @@
+{
+  "native": {
+    "params": 3150115,
+    "best_val_acc": 0.8888888888888888,
+    "holdout": {
+      "gap_acc": 0.3333333333333333,
+      "policy_acc": 0.1111111111111111,
+      "writeback_acc": 0.6666666666666666
+    },
+    "paraphrase": {
+      "gap_acc": 0.4444444444444444,
+      "policy_acc": 0.4444444444444444,
+      "writeback_acc": 0.6666666666666666
+    },
+    "longdialog": {
+      "gap_acc": 0.75,
+      "policy_acc": 0.25,
+      "writeback_acc": 0.0
+    },
+    "inference_speed_ms": 32.43945360183716
+  },
+  "transformer": {
+    "params": 2887587,
+    "best_val_acc": 1.0,
+    "holdout": {
+      "gap_acc": 0.3333333333333333,
+      "policy_acc": 0.2222222222222222,
+      "writeback_acc": 0.3333333333333333
+    },
+    "paraphrase": {
+      "gap_acc": 0.5555555555555556,
+      "policy_acc": 0.5555555555555556,
+      "writeback_acc": 0.5555555555555556
+    },
+    "longdialog": {
+      "gap_acc": 1.0,
+      "policy_acc": 0.25,
+      "writeback_acc": 0.0
+    },
+    "inference_speed_ms": 5.609836578369141
+  }
+}

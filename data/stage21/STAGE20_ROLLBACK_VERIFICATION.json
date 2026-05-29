@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "report": {
+    "baseline": {
+      "regression_pass_rate": 1.0,
+      "tsla_safety_intercept": 1.0,
+      "failure_fix_rate": 0.0,
+      "memory_contamination": 0
+    },
+    "patched": {
+      "regression_pass_rate": 0.98,
+      "tsla_safety_intercept": 0.99,
+      "failure_fix_rate": 0.85,
+      "memory_contamination": 0
+    },
+    "post_rollback": {
+      "regression_pass_rate": 1.0,
+      "tsla_safety_intercept": 1.0,
+      "failure_fix_rate": 0.0,
+      "memory_contamination": 0
+    },
+    "tests": {
+      "rollback_restores_regression_pass_rate": {
+        "baseline": 1.0,
+        "post_rollback": 1.0,
+        "diff": 0.0,
+        "passed": true
+      },
+      "rollback_restores_tsla_safety_intercept": {
+        "baseline": 1.0,
+        "post_rollback": 1.0,
+        "diff": 0.0,
+        "passed": true
+      },
+      "patches_changed_failure_fix_rate": {
+        "baseline": 0.0,
+        "patched": 0.85,
+        "diff": 0.85,
+        "passed": true
+      },
+      "rollback_clears_contamination": {
+        "post_rollback_contamination": 0,
+        "passed": true
+      }
+    }
+  },
+  "timestamp": "2026-05-12T03:31:31.077989+00:00"
+}

@@ -1,0 +1,66 @@
+{
+  "experiment": "exp6c_final_tuning",
+  "config": {
+    "base_kl_weights": {
+      "gap": 0.32,
+      "policy": 0.32,
+      "governance": 0.32,
+      "writeback": 0.4
+    },
+    "learning_rate": 1.2e-05,
+    "replay_ratio": 0.35,
+    "step1_max_change": 0.002
+  },
+  "continuous_result": {
+    "baseline_target": 0.68,
+    "final_target": 0.84,
+    "total_change": 0.15999999999999992,
+    "step1_drop": 0.07999999999999996,
+    "final_drop": 0.17999999999999994,
+    "writeback_drop": 0.09999999999999998,
+    "ability_changes": {
+      "retrieval": 0.17999999999999994,
+      "governance": 0.0,
+      "policy": 0.17999999999999994,
+      "writeback": 0.09999999999999998
+    },
+    "step_results": [
+      {
+        "step": 1,
+        "target": 0.68,
+        "old_ability_drop": 0.07999999999999996,
+        "ability_changes": {
+          "retrieval": 0.07999999999999996,
+          "governance": 0.0,
+          "policy": 0.07999999999999996,
+          "writeback": -0.020000000000000018
+        },
+        "kl_weights": {
+          "gap": 0.3704400000000001,
+          "policy": 0.3704400000000001,
+          "governance": 0.3704400000000001,
+          "writeback": 0.4630500000000001
+        }
+      },
+      {
+        "step": 2,
+        "target": 0.88,
+        "old_ability_drop": 0.19999999999999996,
+        "ability_changes": {
+          "retrieval": 0.19999999999999996,
+          "governance": 0.0,
+          "policy": 0.19999999999999996,
+          "writeback": 0.09999999999999998
+        },
+        "kl_weights": {
+          "gap": 0.4288306050000002,
+          "policy": 0.4288306050000002,
+          "governance": 0.4288306050000002,
+          "writeback": 0.5
+        }
+      }
+    ],
+    "success": false
+  },
+  "phase6_ready": false
+}

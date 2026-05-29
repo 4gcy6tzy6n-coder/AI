@@ -1,0 +1,81 @@
+# Stage 20 Configuration — v0.1
+# All thresholds are EXAMPLE values. Must be calibrated through
+# prototype experiments, ablation tests, and long-term replay.
+
+# ── 20-0: Trigger Conditions ─────────────────────────────────────
+trigger_conditions:
+  knowledge_miss_threshold: 20
+  unnatural_generation_threshold: 10
+  multiturn_anomaly_threshold: 10
+  critical_safety_threshold: 1  # any count > 0 triggers
+
+# ── 20-1: Failure Pool ───────────────────────────────────────────
+failure_pool:
+  target_size: 50
+  require_8_types: true
+  min_samples_per_type: 3
+  output_path: "data/stage20/stage20_failure_pool.jsonl"
+  existing_failures_path: null  # path to existing failure_cases_collection.json
+
+# ── 20-2: Evidence Collection ────────────────────────────────────
+evidence:
+  low_evidence_threshold: 0.4
+  high_evidence_threshold: 0.8
+  low_fluency_threshold: 0.3
+  tsla_volatility_threshold: 15.0
+
+# ── 20-3: Bayesian Inference (v0.1 heuristics) ───────────────────
+bayesian:
+  min_prob: 0.0000000001
+  priors:
+    knowledge_gap: 0.25
+    retrieval_failure: 0.15
+    governance_failure: 0.10
+    generation_failure: 0.20
+    memory_failure: 0.15
+    route_failure: 0.15
+
+# ── 20-4: Risk Policy ────────────────────────────────────────────
+risk_policy:
+  min_confidence_for_action: 0.5
+  min_confidence_for_auto_action: 0.6
+  quarantine_risk_threshold: 0.8
+  rollback_risk_threshold: 0.9
+  escalation_entropy_threshold: 2.0
+  contamination_escalation_threshold: 0.7
+
+# ── 20-6: Offline Replay ─────────────────────────────────────────
+replay:
+  min_failure_fix_rate: 0.80
+  min_regression_pass_rate: 0.98
+  min_tsla_safety_intercept: 0.99
+  max_false_kill_rate: 0.01
+  max_memory_contamination: 0
+
+# ── 20-7: Shadow Running ─────────────────────────────────────────
+shadow:
+  traffic_percentage: 100
+  return_response: false
+  max_results: 1000
+  max_latency_increase_pct: 20
+  max_memory_write_errors: 0
+
+# ── 20-8: Simulated Rollout ──────────────────────────────────────
+rollout:
+  min_overall_pass_rate: 0.98
+  min_failure_reduction: 0.70
+  max_new_failure_rate: 0.02
+
+# ── 20-9: Version Freeze ─────────────────────────────────────────
+version_freeze:
+  version: "Stage20_Baseline_v1.0"
+  output_dir: "data/stage20/"
+  component_versions:
+    tsla_scorer: "v0.4"
+    hard_veto: "v0.2"
+    action_router: "v0.2"
+    stability_gate: "v0.3"
+    promotion_gate: "v0.3"
+    rollback_gate: "v0.1"
+    btsta_orchestrator: "v0.1"
+    bayesian_inferencer: "v0.1"

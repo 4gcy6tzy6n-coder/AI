@@ -1,0 +1,153 @@
+{
+  "chain_length": 10,
+  "snapshots_created": [
+    "snap_cycle_1",
+    "snap_cycle_2",
+    "snap_cycle_3",
+    "snap_cycle_4",
+    "snap_cycle_5",
+    "snap_cycle_6",
+    "snap_cycle_7",
+    "snap_cycle_8",
+    "snap_cycle_9"
+  ],
+  "rollback_tests": [
+    {
+      "from_cycle": 1,
+      "to_cycle": 2,
+      "forward_diff": {
+        "failure_fix_rate": 0.0,
+        "regression_pass_rate": 0.0,
+        "tsla_safety_intercept": 0.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 0.0
+      },
+      "rollback_restored": true,
+      "passed": true
+    },
+    {
+      "from_cycle": 2,
+      "to_cycle": 3,
+      "forward_diff": {
+        "failure_fix_rate": 0.0,
+        "regression_pass_rate": 0.0,
+        "tsla_safety_intercept": 0.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 0.0
+      },
+      "rollback_restored": true,
+      "passed": true
+    },
+    {
+      "from_cycle": 3,
+      "to_cycle": 4,
+      "forward_diff": {
+        "failure_fix_rate": 0.0,
+        "regression_pass_rate": 0.0,
+        "tsla_safety_intercept": 0.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 0.0
+      },
+      "rollback_restored": true,
+      "passed": true
+    },
+    {
+      "from_cycle": 4,
+      "to_cycle": 5,
+      "forward_diff": {
+        "failure_fix_rate": 0.0,
+        "regression_pass_rate": 0.0,
+        "tsla_safety_intercept": 0.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 0.0
+      },
+      "rollback_restored": true,
+      "passed": true
+    },
+    {
+      "from_cycle": 5,
+      "to_cycle": 6,
+      "forward_diff": {
+        "failure_fix_rate": 0.0,
+        "regression_pass_rate": 0.0,
+        "tsla_safety_intercept": 0.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 0.0
+      },
+      "rollback_restored": true,
+      "passed": true
+    },
+    {
+      "from_cycle": 6,
+      "to_cycle": 7,
+      "forward_diff": {
+        "failure_fix_rate": 0.0,
+        "regression_pass_rate": 0.0,
+        "tsla_safety_intercept": 0.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 0.0
+      },
+      "rollback_restored": true,
+      "passed": true
+    },
+    {
+      "from_cycle": 7,
+      "to_cycle": 8,
+      "forward_diff": {
+        "failure_fix_rate": 0.0,
+        "regression_pass_rate": 0.0,
+        "tsla_safety_intercept": 0.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 0.0
+      },
+      "rollback_restored": true,
+      "passed": true
+    },
+    {
+      "from_cycle": 8,
+      "to_cycle": 9,
+      "forward_diff": {
+        "failure_fix_rate": 0.0,
+        "regression_pass_rate": 0.0,
+        "tsla_safety_intercept": 0.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 0.0
+      },
+      "rollback_restored": true,
+      "passed": true
+    },
+    {
+      "from_cycle": 9,
+      "to_cycle": 10,
+      "forward_diff": {
+        "failure_fix_rate": 0.0,
+        "regression_pass_rate": 0.0,
+        "tsla_safety_intercept": 0.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 0.0
+      },
+      "rollback_restored": true,
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "timestamp": "2026-05-12T03:31:31.078261+00:00"
+}

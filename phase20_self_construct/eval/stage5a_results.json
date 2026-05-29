@@ -1,0 +1,25 @@
+{
+  "explanation": {
+    "total_queries": 5,
+    "generated": 5,
+    "generation_rate": 1.0,
+    "hallucination_low": 4,
+    "hallucination_rate": 0.8,
+    "avg_confidence": 0.9542135000228882
+  },
+  "relation": {
+    "total_pairs": 4,
+    "generated": 4,
+    "generation_rate": 1.0,
+    "avg_confidence": 0.9973370134830475
+  },
+  "rule": {
+    "total_scenarios": 3,
+    "generated": 3,
+    "generation_rate": 1.0
+  },
+  "total_candidates": 12,
+  "valid_structure": 12,
+  "low_hallucination": 9,
+  "passed": true
+}

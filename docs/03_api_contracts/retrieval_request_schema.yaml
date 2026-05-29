@@ -1,0 +1,302 @@
+openapi: 3.0.0
+info:
+  title: Retrieval Request Schema
+  version: 1.0.0
+  description: 检索请求数据模型定义
+
+components:
+  schemas:
+    RetrievalRequest:
+      type: object
+      required:
+        - request_id
+        - query
+        - timestamp
+      properties:
+        request_id:
+          type: string
+          format: uuid
+          description: 请求唯一标识符
+        query:
+          type: string
+          description: 检索查询
+        query_type:
+          type: string
+          enum: [semantic, lexical, hybrid, structured]
+          description: 查询类型
+        unit_id:
+          type: string
+          description: 关联的 Unit ID
+        session_id:
+          type: string
+          description: 会话 ID
+        sources:
+          type: object
+          properties:
+            internal:
+              type: boolean
+              description: 是否检索内部记忆
+            external:
+              type: boolean
+              description: 是否检索外部源
+            zones:
+              type: array
+              items:
+                type: string
+                enum: [transient, long_term, shallow_permanent, deep_permanent]
+              description: 检索的记忆区域
+            external_sources:
+              type: array
+              items:
+                type: string
+              description: 外部源列表
+        filters:
+          $ref: '#/components/schemas/RetrievalFilters'
+        ranking:
+          $ref: '#/components/schemas/RankingConfig'
+        limits:
+          $ref: '#/components/schemas/RetrievalLimits'
+        timeout_ms:
+          type: integer
+          description: 超时时间（毫秒）
+        timestamp:
+          type: string
+          format: date-time
+          description: 请求时间
+
+    RetrievalFilters:
+      type: object
+      properties:
+        min_relevance:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: 最小相关度
+        max_age:
+          type: integer
+          description: 最大年龄（秒）
+        content_types:
+          type: array
+          items:
+            type: string
+          description: 内容类型过滤
+        tags:
+          type: array
+          items:
+            type: string
+          description: 标签过滤
+        exclude_ids:
+          type: array
+          items:
+            type: string
+          description: 排除的 ID 列表
+
+    RankingConfig:
+      type: object
+      properties:
+        strategy:
+          type: string
+          enum: [relevance, recency, credibility, hybrid, custom]
+          description: 排序策略
+        weights:
+          type: object
+          properties:
+            relevance:
+              type: number
+              description: 相关度权重
+            recency:
+              type: number
+              description: 时效性权重
+            credibility:
+              type: number
+              description: 可信度权重
+            popularity:
+              type: number
+              description: 流行度权重
+        custom_rules:
+          type: array
+          items:
+            type: object
+          description: 自定义排序规则
+
+    RetrievalLimits:
+      type: object
+      properties:
+        max_results:
+          type: integer
+          description: 最大结果数
+        max_internal:
+          type: integer
+          description: 最大内部结果数
+        max_external:
+          type: integer
+          description: 最大外部结果数
+        max_evidence:
+          type: integer
+          description: 最大证据数
+
+    RetrievalResponse:
+      type: object
+      required:
+        - response_id
+        - request_id
+        - status
+      properties:
+        response_id:
+          type: string
+          description: 响应 ID
+        request_id:
+          type: string
+          description: 对应的请求 ID
+        status:
+          type: string
+          enum: [success, partial, failed, timeout]
+          description: 响应状态
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/RetrievalResult'
+          description: 检索结果列表
+        evidence_pack:
+          $ref: '#/components/schemas/EvidencePack'
+        metadata:
+          type: object
+          properties:
+            total_found:
+              type: integer
+              description: 找到的总数
+            returned:
+              type: integer
+              description: 返回的数量
+            execution_time_ms:
+              type: integer
+              description: 执行时间
+            sources_queried:
+              type: array
+              items:
+                type: string
+              description: 查询的源
+
+    RetrievalResult:
+      type: object
+      required:
+        - result_id
+        - content
+        - source
+        - relevance_score
+      properties:
+        result_id:
+          type: string
+          description: 结果 ID
+        content:
+          type: string
+          description: 结果内容
+        source:
+          type: string
+          description: 结果来源
+        source_type:
+          type: string
+          enum: [internal, external]
+          description: 来源类型
+        relevance_score:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: 相关度分数
+        credibility_score:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: 可信度分数
+        freshness_score:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: 时效性分数
+        metadata:
+          type: object
+          description: 结果元数据
+
+    EvidencePack:
+      type: object
+      required:
+        - pack_id
+        - evidence
+      properties:
+        pack_id:
+          type: string
+          description: 证据包 ID
+        query:
+          type: string
+          description: 原始查询
+        evidence:
+          type: array
+          items:
+            $ref: '#/components/schemas/Evidence'
+          description: 证据列表
+        conflicts:
+          type: array
+          items:
+            $ref: '#/components/schemas/EvidenceConflict'
+          description: 证据冲突
+        coverage_score:
+          type: number
+          description: 覆盖度分数
+        overall_confidence:
+          type: number
+          description: 整体置信度
+
+    Evidence:
+      type: object
+      required:
+        - evidence_id
+        - content
+        - source
+      properties:
+        evidence_id:
+          type: string
+          description: 证据 ID
+        content:
+          type: string
+          description: 证据内容
+        source:
+          type: string
+          description: 证据来源
+        source_type:
+          type: string
+          enum: [memory, knowledge_base, api, document]
+        relevance:
+          type: number
+          description: 相关度
+        credibility:
+          type: number
+          description: 可信度
+        timestamp:
+          type: string
+          format: date-time
+          description: 证据时间戳
+        citations:
+          type: array
+          items:
+            type: string
+          description: 引用列表
+
+    EvidenceConflict:
+      type: object
+      properties:
+        conflict_id:
+          type: string
+          description: 冲突 ID
+        evidence_ids:
+          type: array
+          items:
+            type: string
+          description: 冲突的证据 ID
+        conflict_type:
+          type: string
+          enum: [contradiction, inconsistency, ambiguity]
+          description: 冲突类型
+        severity:
+          type: string
+          enum: [low, medium, high]
+          description: 严重程度

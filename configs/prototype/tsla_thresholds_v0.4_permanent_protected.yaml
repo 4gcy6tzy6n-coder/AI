@@ -1,0 +1,148 @@
+"""
+TSLA Thresholds v0.4 Permanent Protected
+第四阶段永久层保护后的阈值配置
+
+冻结日期: 2026-04-17
+版本: prototype_v0.4_permanent_protected
+
+核心原则:
+- 浅层永久层: 数量极少、质量极高、修改极慢、回退极严
+- 深层永久层: 仅由训练路径长期验证后晋升
+- 禁止跨层直写，仅允许从长期正常区晋升
+"""
+
+# 浅层永久层阈值 (Shallow Permanent)
+shallow_permanent:
+  # 核心质量阈值
+  thresholds:
+    Q: 78  # 质量
+    T: 80  # 透明度
+    S: 75  # 稳定性
+    C: 85  # 一致性
+    L: 85  # 合法性
+
+  # 周期要求
+  cycles:
+    min_stability_cycles: 5  # 最少稳定周期
+    min_conflict_free_rounds: 3  # 最少无冲突轮数
+    min_days_since_promotion: 7  # 晋升后最少观察天数
+
+  # 来源策略
+  source_policy:
+    allowed_sources:
+      - "retrieved"      # 用户触发检索的高质量外部知识
+      - "verified_external"  # 已验证的外部知识
+    blocked_sources:
+      - "user_input"     # 用户直接输入
+      - "model_generated"  # 模型生成
+      - "unverified"     # 未验证来源
+
+  # 冲突历史限制
+  conflict_policy:
+    max_recent_conflicts: 0  # 近期不允许冲突
+    max_recent_backflows: 0  # 近期不允许回流
+    hard_veto_threshold: 1   # 硬否决阈值
+
+# 深层永久层阈值 (Deep Permanent) - 第五阶段启用
+deep_permanent:
+  # 核心质量阈值 (更高)
+  thresholds:
+    Q: 85
+    T: 88
+    S: 85
+    C: 92
+    L: 90
+
+  # 周期要求 (更长)
+  cycles:
+    min_stability_cycles: 10  # 最少10周期稳定
+    min_conflict_free_rounds: 8  # 最少8轮无冲突
+    min_verification_rounds: 5   # 最少验证轮数
+    min_training_iterations: 100  # 最少训练迭代
+
+  # 来源策略 (仅限训练路径)
+  source_policy:
+    allowed_sources:
+      - "training_path"      # 训练路径长期正常区
+      - "multi_round_verified"  # 多轮验证
+    blocked_sources:
+      - "user_path"          # 用户路径
+      - "single_round"       # 单轮验证
+      - "model_self_constructed"  # 模型自构建(需额外审查)
+
+  # 强审查要求
+  review_requirements:
+    source_review: true       # 来源审查
+    evidence_review: true     # 证据审查
+    conflict_review: true     # 冲突审查
+    cross_task_verification: true  # 跨任务验证
+
+# 保护回退策略
+protection_fallback:
+  # 优先级顺序
+  priority:
+    - "mark_conflict"      # 1. 标记冲突
+    - "local_fix"          # 2. 局部修正
+    - "split"              # 3. 拆分
+    - "downgrade_to_review"  # 4. 降级到受审区
+    - "downgrade_to_isolation"  # 5. 降级到隔离区
+
+  # 禁止操作
+  prohibited:
+    - "direct_delete"      # 禁止直接删除
+    - "cross_layer_write"  # 禁止跨层直写
+    - "parameter_override" # 禁止参数覆盖
+
+# 实验配置
+experiments:
+  # 实验A: 瞬时层拦截
+  experiment_a:
+    pass_threshold: 0.85
+    metrics:
+      - "noise_interception_rate"
+      - "false_positive_to_normal"
+
+  # 实验B: 长期层治理
+  experiment_b:
+    pass_threshold: 0.80
+    metrics:
+      - "review_to_normal_rate"
+      - "isolation_reflow_rate"
+
+  # 实验C: 浅层永久晋升
+  experiment_c:
+    pass_threshold: 0.90
+    metrics:
+      - "promotion_rate"
+      - "false_promotion_rate"
+
+  # 实验D: 回退保护
+  experiment_d:
+    pass_threshold: 0.95
+    metrics:
+      - "downgrade_success_rate"
+      - "delete_blocked_rate"
+
+# 第五阶段预留配置 (Training Path)
+training_path:
+  # 强审查节点
+  strong_review:
+    enabled: true
+    check_items:
+      - "source_authenticity"
+      - "evidence_sufficiency"
+      - "conflict_detection"
+      - "boundary_clarity"
+
+  # 验证节点
+  verification:
+    enabled: true
+    min_rounds: 5
+    check_consistency: true
+    check_cross_task: true
+
+  # 混淆任务
+  noise_injection:
+    enabled: true
+    confusion_ratio: 0.3
+    trigger_missing_perception: true

@@ -1,0 +1,279 @@
+{
+  "version": "phase3_v0.1",
+  "description": "第三阶段定标测试样本集 - 4类稳定性测试样本",
+  "created_at": "2026-04-17",
+  "cases": [
+    {
+      "case_id": "stable_promote_001",
+      "category": "稳定晋升样本",
+      "description": "对象在连续多轮中整体平稳，无重大冲突，分数逐步靠近长期正常区门槛",
+      "unit": {
+        "script_form": "稳定概念A",
+        "core_meaning": "这是一个稳定的知识定义",
+        "source_type": "retrieved"
+      },
+      "history_scores": [
+        {"T": 74, "S": 68, "E": 66, "C": 78, "L": 80, "Q": 71},
+        {"T": 76, "S": 71, "E": 67, "C": 79, "L": 80, "Q": 73},
+        {"T": 77, "S": 73, "E": 69, "C": 81, "L": 82, "Q": 75}
+      ],
+      "history_events": [
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false},
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false},
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false}
+      ],
+      "current_zone": "review",
+      "review_rounds": 3,
+      "expected": {
+        "stability_state": "stable",
+        "stability_decision": "move_normal_candidate",
+        "promotion_decision": "promote_to_normal"
+      }
+    },
+    {
+      "case_id": "stable_promote_002",
+      "category": "稳定晋升样本",
+      "description": "从隔离区晋升到正常区",
+      "unit": {
+        "script_form": "稳定概念B",
+        "core_meaning": "这是一个曾经隔离但现在稳定的知识",
+        "source_type": "retrieved"
+      },
+      "history_scores": [
+        {"T": 70, "S": 65, "E": 75, "C": 70, "L": 78, "Q": 70},
+        {"T": 75, "S": 70, "E": 76, "C": 76, "L": 80, "Q": 74},
+        {"T": 78, "S": 74, "E": 78, "C": 80, "L": 82, "Q": 77},
+        {"T": 80, "S": 76, "E": 79, "C": 82, "L": 83, "Q": 79}
+      ],
+      "history_events": [
+        {"action": "isolate", "has_conflict": true, "hard_veto_triggered": false},
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false},
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false},
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false}
+      ],
+      "current_zone": "isolation",
+      "review_rounds": 4,
+      "expected": {
+        "stability_state": "pseudo_stable",
+        "stability_decision": "stay_review",
+        "promotion_decision": "blocked_by_stability"
+      }
+    },
+    {
+      "case_id": "pseudo_stable_001",
+      "category": "假稳定样本",
+      "description": "表面连续通过，但C在窗口内波动较大，后续出现反证",
+      "unit": {
+        "script_form": "假稳定概念",
+        "core_meaning": "这是一个表面稳定但有问题定义",
+        "source_type": "inferred"
+      },
+      "history_scores": [
+        {"T": 78, "S": 72, "E": 82, "C": 76, "L": 84, "Q": 76},
+        {"T": 79, "S": 70, "E": 83, "C": 71, "L": 84, "Q": 75},
+        {"T": 72, "S": 61, "E": 80, "C": 58, "L": 84, "Q": 67}
+      ],
+      "history_events": [
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false},
+        {"action": "keep", "has_conflict": true, "hard_veto_triggered": false},
+        {"action": "review_backflow", "has_conflict": true, "hard_veto_triggered": false}
+      ],
+      "current_zone": "review",
+      "review_rounds": 3,
+      "expected": {
+        "stability_state": "error_prone",
+        "stability_decision": "exclude_candidate",
+        "promotion_decision": "blocked_by_stability"
+      }
+    },
+    {
+      "case_id": "pseudo_stable_002",
+      "category": "假稳定样本",
+      "description": "Q表面稳定但S波动，支撑来源不独立",
+      "unit": {
+        "script_form": "来源依赖概念",
+        "core_meaning": "依赖单一来源的知识",
+        "source_type": "retrieved"
+      },
+      "history_scores": [
+        {"T": 76, "S": 75, "E": 70, "C": 80, "L": 82, "Q": 75},
+        {"T": 77, "S": 68, "E": 72, "C": 79, "L": 82, "Q": 74},
+        {"T": 78, "S": 72, "E": 71, "C": 81, "L": 82, "Q": 75}
+      ],
+      "history_events": [
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false},
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false},
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false}
+      ],
+      "current_zone": "review",
+      "review_rounds": 3,
+      "expected": {
+        "stability_state": "stable",
+        "stability_decision": "move_normal_candidate",
+        "promotion_decision": "promote_to_normal"
+      }
+    },
+    {
+      "case_id": "high_e_low_s_001",
+      "category": "高证据低稳定样本",
+      "description": "E很高但S持续偏低，适合隔离不适合正常区",
+      "unit": {
+        "script_form": "高证据波动概念",
+        "core_meaning": "证据强但跨轮不一致的知识",
+        "source_type": "retrieved"
+      },
+      "history_scores": [
+        {"T": 81, "S": 50, "E": 90, "C": 73, "L": 86, "Q": 70},
+        {"T": 83, "S": 54, "E": 91, "C": 74, "L": 86, "Q": 71},
+        {"T": 82, "S": 48, "E": 89, "C": 72, "L": 86, "Q": 69}
+      ],
+      "history_events": [
+        {"action": "isolate", "has_conflict": false, "hard_veto_triggered": false},
+        {"action": "isolate", "has_conflict": false, "hard_veto_triggered": false},
+        {"action": "isolate", "has_conflict": false, "hard_veto_triggered": false}
+      ],
+      "current_zone": "isolation",
+      "review_rounds": 3,
+      "expected": {
+        "stability_state": "unstable",
+        "stability_decision": "stay_isolation",
+        "promotion_decision": "stay_isolation"
+      }
+    },
+    {
+      "case_id": "high_e_low_s_002",
+      "category": "高证据低稳定样本",
+      "description": "T和E都不低但S波动明显",
+      "unit": {
+        "script_form": "证据强波动概念",
+        "core_meaning": "多来源但结论不一致",
+        "source_type": "inferred"
+      },
+      "history_scores": [
+        {"T": 79, "S": 55, "E": 85, "C": 70, "L": 80, "Q": 72},
+        {"T": 80, "S": 62, "E": 86, "C": 72, "L": 80, "Q": 73},
+        {"T": 78, "S": 58, "E": 84, "C": 68, "L": 80, "Q": 71}
+      ],
+      "history_events": [
+        {"action": "isolate", "has_conflict": true, "hard_veto_triggered": false},
+        {"action": "isolate", "has_conflict": true, "hard_veto_triggered": false},
+        {"action": "isolate", "has_conflict": false, "hard_veto_triggered": false}
+      ],
+      "current_zone": "isolation",
+      "review_rounds": 3,
+      "expected": {
+        "stability_state": "error_prone",
+        "stability_decision": "error_archive_candidate",
+        "promotion_decision": "blocked_by_stability"
+      }
+    },
+    {
+      "case_id": "peak_drop_001",
+      "category": "历史峰值下滑样本",
+      "description": "前期很稳定曾进入高位，后期出现明显下降",
+      "unit": {
+        "script_form": "峰值下滑概念",
+        "core_meaning": "曾经稳定但后来暴露问题的知识",
+        "source_type": "retrieved"
+      },
+      "history_scores": [
+        {"T": 85, "S": 82, "E": 80, "C": 87, "L": 88, "Q": 84},
+        {"T": 86, "S": 83, "E": 80, "C": 88, "L": 88, "Q": 85},
+        {"T": 74, "S": 61, "E": 73, "C": 66, "L": 84, "Q": 68}
+      ],
+      "history_events": [
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false},
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false},
+        {"action": "review_backflow", "has_conflict": true, "hard_veto_triggered": false}
+      ],
+      "current_zone": "normal",
+      "review_rounds": 3,
+      "expected": {
+        "stability_state": "degrading",
+        "stability_decision": "downgrade",
+        "promotion_decision": "blocked_by_stability"
+      }
+    },
+    {
+      "case_id": "peak_drop_002",
+      "category": "历史峰值下滑样本",
+      "description": "S从高位掉到阈值以下，应触发降级",
+      "unit": {
+        "script_form": "稳定性下滑概念",
+        "core_meaning": "曾经稳定但后来不一致的知识",
+        "source_type": "user_input"
+      },
+      "history_scores": [
+        {"T": 82, "S": 85, "E": 78, "C": 85, "L": 86, "Q": 83},
+        {"T": 83, "S": 84, "E": 79, "C": 86, "L": 86, "Q": 83},
+        {"T": 81, "S": 68, "E": 77, "C": 82, "L": 86, "Q": 78}
+      ],
+      "history_events": [
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false},
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false},
+        {"action": "keep", "has_conflict": true, "hard_veto_triggered": false}
+      ],
+      "current_zone": "normal",
+      "review_rounds": 3,
+      "expected": {
+        "stability_state": "degrading",
+        "stability_decision": "downgrade",
+        "promotion_decision": "blocked_by_stability"
+      }
+    },
+    {
+      "case_id": "error_prone_001",
+      "category": "易错样本",
+      "description": "多次硬否决，反复失败",
+      "unit": {
+        "script_form": "错误概念",
+        "core_meaning": "多次被验证错误的知识",
+        "source_type": "inferred"
+      },
+      "history_scores": [
+        {"T": 45, "S": 40, "E": 50, "C": 60, "L": 70, "Q": 50},
+        {"T": 42, "S": 38, "E": 48, "C": 55, "L": 70, "Q": 48},
+        {"T": 40, "S": 35, "E": 45, "C": 50, "L": 70, "Q": 45}
+      ],
+      "history_events": [
+        {"action": "isolate", "has_conflict": true, "hard_veto_triggered": true},
+        {"action": "review_backflow", "has_conflict": true, "hard_veto_triggered": true},
+        {"action": "isolate", "has_conflict": true, "hard_veto_triggered": true}
+      ],
+      "current_zone": "isolation",
+      "review_rounds": 3,
+      "expected": {
+        "stability_state": "error_prone",
+        "stability_decision": "error_archive_candidate",
+        "promotion_decision": "blocked_by_stability"
+      }
+    },
+    {
+      "case_id": "threshold_edge_001",
+      "category": "阈值边缘样本",
+      "description": "接近但未达到正常区阈值",
+      "unit": {
+        "script_form": "边缘概念",
+        "core_meaning": "接近晋升门槛的知识",
+        "source_type": "retrieved"
+      },
+      "history_scores": [
+        {"T": 70, "S": 68, "E": 64, "C": 73, "L": 74, "Q": 70},
+        {"T": 71, "S": 69, "E": 65, "C": 74, "L": 74, "Q": 71},
+        {"T": 72, "S": 70, "E": 66, "C": 75, "L": 75, "Q": 72}
+      ],
+      "history_events": [
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false},
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false},
+        {"action": "keep", "has_conflict": false, "hard_veto_triggered": false}
+      ],
+      "current_zone": "review",
+      "review_rounds": 3,
+      "expected": {
+        "stability_state": "stable",
+        "stability_decision": "move_normal_candidate",
+        "promotion_decision": "blocked_by_threshold"
+      }
+    }
+  ]
+}

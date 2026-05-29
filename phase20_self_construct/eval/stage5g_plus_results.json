@@ -1,0 +1,119 @@
+[
+  {
+    "config_name": "\u5b9e\u9a8c1_A+\u57fa\u7840\u7248",
+    "kl_weights": {
+      "gap": 0.18,
+      "policy": 0.18,
+      "governance": 0.18,
+      "writeback": 0.18
+    },
+    "learning_rate": 8e-06,
+    "single_results": [
+      {
+        "candidate_id": "relation_technical_stack_3_213415",
+        "target_change": 0.14,
+        "writeback_drop": 0.020000000000000018,
+        "max_old_drop": 0.020000000000000018,
+        "rollback_success": false,
+        "success": true
+      },
+      {
+        "candidate_id": "relation_technical_stack_4_213415",
+        "target_change": 0.0,
+        "writeback_drop": 0.0,
+        "max_old_drop": 0.14,
+        "rollback_success": false,
+        "success": false
+      }
+    ],
+    "continuous_result": {
+      "total_change": 0.08000000000000007,
+      "max_old_drop": 0.09999999999999998,
+      "writeback_drop": 0.019999999999999907,
+      "success": true
+    },
+    "single_success": 1,
+    "avg_target_improvement": 0.07,
+    "max_old_drop": 0.14,
+    "writeback_drop": 0.020000000000000018,
+    "passed": false
+  },
+  {
+    "config_name": "\u5b9e\u9a8c2_A+_writeback\u9ad8\u4fdd\u62a4",
+    "kl_weights": {
+      "gap": 0.18,
+      "policy": 0.18,
+      "governance": 0.2,
+      "writeback": 0.3
+    },
+    "learning_rate": 8e-06,
+    "single_results": [
+      {
+        "candidate_id": "relation_technical_stack_3_213415",
+        "target_change": -0.09999999999999998,
+        "writeback_drop": 0.020000000000000018,
+        "max_old_drop": 0.06000000000000005,
+        "rollback_success": false,
+        "success": false
+      },
+      {
+        "candidate_id": "relation_technical_stack_4_213415",
+        "target_change": 0.09999999999999998,
+        "writeback_drop": 0.0,
+        "max_old_drop": 0.18000000000000005,
+        "rollback_success": false,
+        "success": false
+      }
+    ],
+    "continuous_result": {
+      "total_change": 0.07999999999999996,
+      "max_old_drop": 0.24,
+      "writeback_drop": 0.020000000000000018,
+      "success": false
+    },
+    "single_success": 0,
+    "avg_target_improvement": 0.0,
+    "max_old_drop": 0.24,
+    "writeback_drop": 0.020000000000000018,
+    "passed": false
+  },
+  {
+    "config_name": "\u5b9e\u9a8c3_A+_\u66f4\u5c0f\u6b65\u957f",
+    "kl_weights": {
+      "gap": 0.18,
+      "policy": 0.18,
+      "governance": 0.18,
+      "writeback": 0.18
+    },
+    "learning_rate": 7e-06,
+    "single_results": [
+      {
+        "candidate_id": "relation_technical_stack_3_213415",
+        "target_change": 0.0,
+        "writeback_drop": 0.06000000000000005,
+        "max_old_drop": 0.07999999999999996,
+        "rollback_success": false,
+        "success": false
+      },
+      {
+        "candidate_id": "relation_technical_stack_4_213415",
+        "target_change": 0.17999999999999994,
+        "writeback_drop": 0.14,
+        "max_old_drop": 0.14,
+        "rollback_success": false,
+        "success": false
+      }
+    ],
+    "continuous_result": {
+      "total_change": 0.12,
+      "max_old_drop": 0.12,
+      "writeback_drop": 0.020000000000000018,
+      "success": false
+    },
+    "single_success": 0,
+    "avg_target_improvement": 0.08999999999999997,
+    "max_old_drop": 0.14,
+    "writeback_drop": 0.14,
+    "passed": false
+  }
+]

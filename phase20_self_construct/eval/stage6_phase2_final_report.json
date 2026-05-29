@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-04-19T00:40:33.987731",
+  "config": {
+    "use_writeback_fix": true,
+    "use_rollback_fix": true,
+    "model_config": {
+      "base_kl_weights": {
+        "gap": 0.3,
+        "policy": 0.3,
+        "governance": 0.3,
+        "writeback": 0.42
+      },
+      "learning_rate": 1e-05,
+      "replay_ratio": 0.4,
+      "step1_max_change": 0.003,
+      "step2_max_change": 0.008,
+      "old_ability_threshold": 0.12,
+      "writeback_threshold": 0.05,
+      "auto_rollback": true,
+      "param_promotion_threshold": 0.8,
+      "kb_promotion_threshold": 0.7
+    }
+  },
+  "acceptance_criteria": {
+    "target_improvement": 0.1,
+    "old_ability_drop": 0.15,
+    "writeback_change": 0.05,
+    "rollback_recovery": 90.0
+  },
+  "baseline": {
+    "timestamp": "2026-04-19T00:39:53.424112",
+    "checkpoint_id": "stage6_phase2_final",
+    "scores": {
+      "target_score": 0.6666666666666666,
+      "retrieval_score": 0.0,
+      "policy_score": 0.0,
+      "governance_score": 0.9791666666666666,
+      "writeback_score": 0.32899999999999996
+    }
+  },
+  "step_results": [
+    {
+      "step": 1,
+      "target_improvement": -0.03809523809523807,
+      "old_ability_drop": 0.0560897435897435,
+      "writeback_change": 0.17100000000000004
+    },
+    {
+      "step": 2,
+      "target_improvement": -0.1523809523809524,
+      "old_ability_drop": 0.5,
+      "writeback_change": 0.19433333333333336
+    },
+    {
+      "step": 3,
+      "target_improvement": 0.01904761904761909,
+      "old_ability_drop": 0.5,
+      "writeback_change": 0.054333333333333345
+    },
+    {
+      "step": 4,
+      "target_improvement": -0.03809523809523807,
+      "old_ability_drop": 0.0560897435897435,
+      "writeback_change": 0.3676666666666666
+    },
+    {
+      "step": 5,
+      "target_improvement": -0.03809523809523807,
+      "old_ability_drop": 0.0560897435897435,
+      "writeback_change": 0.251
+    }
+  ],
+  "final_metrics": {
+    "target_improvement": -0.03809523809523807,
+    "max_old_ability_drop": 0.5,
+    "max_writeback_change": 0.3676666666666666,
+    "rollback_recovery_rate": 0.0
+  },
+  "acceptance": {
+    "criteria_check": {
+      "target_improvement": false,
+      "old_ability_drop": false,
+      "writeback_change": false,
+      "rollback_recovery": false
+    },
+    "overall_pass": false
+  }
+}

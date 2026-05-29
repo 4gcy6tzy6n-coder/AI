@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-04-18T19:50:42.781656",
+  "config": {
+    "hidden_dim": 256,
+    "vocab_size": 10000,
+    "max_seq_len": 100,
+    "num_epochs": 10,
+    "batch_size": 16,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "device": "cpu",
+    "policy_weight": 1.0,
+    "gap_weight": 1.0,
+    "governance_weight": 1.0,
+    "writeback_weight": 0.0,
+    "response_weight": 0.5,
+    "total_samples": 500,
+    "d1_ratio": 0.6,
+    "d2_ratio": 0.3,
+    "d3_ratio": 0.1,
+    "checkpoint_dir": "phase18_stage3a/checkpoints",
+    "save_best": true,
+    "patience": 3,
+    "min_delta": 0.01
+  },
+  "history": {
+    "train_loss": [
+      7.335687351226807,
+      6.762632617950439,
+      5.954205055236816,
+      5.183694477081299,
+      4.8315729141235355,
+      4.697458553314209,
+      4.663228149414063
+    ],
+    "val_loss": [
+      6.69511958530971,
+      6.313204833439419,
+      5.243007523672921,
+      4.803956236158099,
+      4.688447884150913,
+      4.681627682277134,
+      4.634703363691058
+    ],
+    "gap_acc": [
+      0.62,
+      0.61,
+      0.98,
+      1.0,
+      1.0,
+      0.98,
+      1.0
+    ],
+    "policy_acc": [
+      0.58,
+      0.76,
+      0.98,
+      0.98,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governance_acc": [
+      0.52,
+      0.72,
+      0.68,
+      0.85,
+      0.94,
+      0.98,
+      0.98
+    ]
+  },
+  "final_metrics": {
+    "best_gap_acc": 1.0,
+    "final_gap_acc": 1.0,
+    "final_policy_acc": 1.0
+  }
+}

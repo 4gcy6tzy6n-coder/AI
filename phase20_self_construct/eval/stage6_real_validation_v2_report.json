@@ -1,0 +1,1080 @@
+{
+  "timestamp": "2026-04-19T00:05:45.847420",
+  "config": {
+    "base_kl_weights": {
+      "gap": 0.3,
+      "policy": 0.3,
+      "governance": 0.3,
+      "writeback": 0.42
+    },
+    "learning_rate": 1e-05,
+    "replay_ratio": 0.4,
+    "step1_max_change": 0.003,
+    "step2_max_change": 0.008,
+    "old_ability_threshold": 0.12,
+    "writeback_threshold": 0.05,
+    "auto_rollback": true,
+    "param_promotion_threshold": 0.8,
+    "kb_promotion_threshold": 0.7
+  },
+  "acceptance_criteria": {
+    "step1_max_drop": 0.1,
+    "step5_max_drop": 0.15,
+    "step10_max_drop": 0.2,
+    "writeback_max_change": 0.05,
+    "target_improvement_5step": 0.1,
+    "target_improvement_10step": 0.15,
+    "rollback_recovery_rate": 0.9
+  },
+  "5_step_report": {
+    "timestamp": "2026-04-19T00:03:06.890401",
+    "config": {
+      "base_kl_weights": {
+        "gap": 0.3,
+        "policy": 0.3,
+        "governance": 0.3,
+        "writeback": 0.42
+      },
+      "learning_rate": 1e-05,
+      "replay_ratio": 0.4,
+      "step1_max_change": 0.003,
+      "step2_max_change": 0.008,
+      "old_ability_threshold": 0.12,
+      "writeback_threshold": 0.05,
+      "auto_rollback": true,
+      "param_promotion_threshold": 0.8,
+      "kb_promotion_threshold": 0.7
+    },
+    "num_steps": 5,
+    "target_improvement": 0.027705627705627678,
+    "max_old_ability_drop": 0.022644927536231818,
+    "max_writeback_change": 0.08400000000000007,
+    "max_single_step_drop": 0.022644927536231818,
+    "rollback_count": 2,
+    "criteria_check": {
+      "target_improvement": false,
+      "old_ability_drop": true,
+      "writeback_change": false,
+      "single_step_drop": true
+    },
+    "overall_pass": false,
+    "step_results": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-04-19T00:02:26.430237",
+        "pre_eval": {
+          "timestamp": "2026-04-19T00:02:18.837182",
+          "scores": {
+            "target_score": 0.5636363636363636,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.5599999999999999
+          },
+          "baseline_scores": {
+            "target_score": 0.5904761904761905,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.63
+          },
+          "target_improvement": -0.026839826839826886,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.07000000000000006,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "post_eval": {
+          "timestamp": "2026-04-19T00:02:26.429658",
+          "scores": {
+            "target_score": 0.6727272727272727,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.5459999999999999
+          },
+          "baseline_scores": {
+            "target_score": 0.5904761904761905,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.63
+          },
+          "target_improvement": 0.08225108225108224,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.08400000000000007,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "rollback_triggered": true,
+        "target_improvement": 0.08225108225108224,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.08400000000000007
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2026-04-19T00:02:36.766967",
+        "pre_eval": {
+          "timestamp": "2026-04-19T00:02:30.171694",
+          "scores": {
+            "target_score": 0.6181818181818182,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.724
+          },
+          "baseline_scores": {
+            "target_score": 0.5904761904761905,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.63
+          },
+          "target_improvement": 0.027705627705627678,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.09399999999999997,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "post_eval": {
+          "timestamp": "2026-04-19T00:02:36.766415",
+          "scores": {
+            "target_score": 0.6545454545454545,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.5459999999999999
+          },
+          "baseline_scores": {
+            "target_score": 0.5904761904761905,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.63
+          },
+          "target_improvement": 0.06406926406926405,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.08400000000000007,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "rollback_triggered": false,
+        "target_improvement": 0.06406926406926405,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.08400000000000007
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2026-04-19T00:02:46.835491",
+        "pre_eval": {
+          "timestamp": "2026-04-19T00:02:40.469836",
+          "scores": {
+            "target_score": 0.4909090909090909,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.696
+          },
+          "baseline_scores": {
+            "target_score": 0.5904761904761905,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.63
+          },
+          "target_improvement": -0.09956709956709958,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.06599999999999995,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "post_eval": {
+          "timestamp": "2026-04-19T00:02:46.835051",
+          "scores": {
+            "target_score": 0.6545454545454545,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.574
+          },
+          "baseline_scores": {
+            "target_score": 0.5904761904761905,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.63
+          },
+          "target_improvement": 0.06406926406926405,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.05600000000000005,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "rollback_triggered": false,
+        "target_improvement": 0.06406926406926405,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.05600000000000005
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2026-04-19T00:02:56.940633",
+        "pre_eval": {
+          "timestamp": "2026-04-19T00:02:50.543447",
+          "scores": {
+            "target_score": 0.6363636363636364,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.5599999999999999
+          },
+          "baseline_scores": {
+            "target_score": 0.5904761904761905,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.63
+          },
+          "target_improvement": 0.045887445887445866,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.07000000000000006,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "post_eval": {
+          "timestamp": "2026-04-19T00:02:56.939997",
+          "scores": {
+            "target_score": 0.6,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.616
+          },
+          "baseline_scores": {
+            "target_score": 0.5904761904761905,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.63
+          },
+          "target_improvement": 0.00952380952380949,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.014000000000000012,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "rollback_triggered": false,
+        "target_improvement": 0.00952380952380949,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.014000000000000012
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2026-04-19T00:03:06.889937",
+        "pre_eval": {
+          "timestamp": "2026-04-19T00:03:00.537290",
+          "scores": {
+            "target_score": 0.7090909090909091,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.574
+          },
+          "baseline_scores": {
+            "target_score": 0.5904761904761905,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.63
+          },
+          "target_improvement": 0.11861471861471862,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.05600000000000005,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "post_eval": {
+          "timestamp": "2026-04-19T00:03:06.889389",
+          "scores": {
+            "target_score": 0.6181818181818182,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.5599999999999999
+          },
+          "baseline_scores": {
+            "target_score": 0.5904761904761905,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.63
+          },
+          "target_improvement": 0.027705627705627678,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.07000000000000006,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "rollback_triggered": true,
+        "target_improvement": 0.027705627705627678,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.07000000000000006
+      }
+    ]
+  },
+  "10_step_report": {
+    "timestamp": "2026-04-19T00:04:58.115500",
+    "config": {
+      "base_kl_weights": {
+        "gap": 0.3,
+        "policy": 0.3,
+        "governance": 0.3,
+        "writeback": 0.42
+      },
+      "learning_rate": 1e-05,
+      "replay_ratio": 0.4,
+      "step1_max_change": 0.003,
+      "step2_max_change": 0.008,
+      "old_ability_threshold": 0.12,
+      "writeback_threshold": 0.05,
+      "auto_rollback": true,
+      "param_promotion_threshold": 0.8,
+      "kb_promotion_threshold": 0.7
+    },
+    "num_steps": 10,
+    "target_improvement": 0.061471861471861455,
+    "max_old_ability_drop": 0.022644927536231818,
+    "max_writeback_change": 0.15000000000000002,
+    "max_single_step_drop": 0.022644927536231818,
+    "rollback_count": 4,
+    "criteria_check": {
+      "target_improvement": false,
+      "old_ability_drop": true,
+      "writeback_change": false,
+      "single_step_drop": true
+    },
+    "overall_pass": false,
+    "step_results": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-04-19T00:03:24.275587",
+        "pre_eval": {
+          "timestamp": "2026-04-19T00:03:18.269987",
+          "scores": {
+            "target_score": 0.6727272727272727,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.5599999999999999
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": 0.02510822510822508,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.04200000000000004,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "post_eval": {
+          "timestamp": "2026-04-19T00:03:24.275005",
+          "scores": {
+            "target_score": 0.6727272727272727,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.5459999999999999
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": 0.02510822510822508,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.05600000000000005,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "rollback_triggered": true,
+        "target_improvement": 0.02510822510822508,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.05600000000000005
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2026-04-19T00:03:35.380663",
+        "pre_eval": {
+          "timestamp": "2026-04-19T00:03:28.176897",
+          "scores": {
+            "target_score": 0.6181818181818182,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.724
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": -0.029437229437229484,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.122,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "post_eval": {
+          "timestamp": "2026-04-19T00:03:35.380116",
+          "scores": {
+            "target_score": 0.6545454545454545,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.5459999999999999
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": 0.006926406926406892,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.05600000000000005,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "rollback_triggered": false,
+        "target_improvement": 0.006926406926406892,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.05600000000000005
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2026-04-19T00:03:46.532259",
+        "pre_eval": {
+          "timestamp": "2026-04-19T00:03:39.257178",
+          "scores": {
+            "target_score": 0.4909090909090909,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.696
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": -0.15670995670995674,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.09399999999999997,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "post_eval": {
+          "timestamp": "2026-04-19T00:03:46.531651",
+          "scores": {
+            "target_score": 0.6545454545454545,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.574
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": 0.006926406926406892,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.028000000000000025,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "rollback_triggered": false,
+        "target_improvement": 0.006926406926406892,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.028000000000000025
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2026-04-19T00:03:57.373514",
+        "pre_eval": {
+          "timestamp": "2026-04-19T00:03:50.600456",
+          "scores": {
+            "target_score": 0.6363636363636364,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.5599999999999999
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": -0.011255411255411296,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.04200000000000004,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "post_eval": {
+          "timestamp": "2026-04-19T00:03:57.372942",
+          "scores": {
+            "target_score": 0.6,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.616
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": -0.04761904761904767,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.014000000000000012,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "rollback_triggered": false,
+        "target_improvement": -0.04761904761904767,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.014000000000000012
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2026-04-19T00:04:08.179407",
+        "pre_eval": {
+          "timestamp": "2026-04-19T00:04:01.315640",
+          "scores": {
+            "target_score": 0.7090909090909091,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.574
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": 0.061471861471861455,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.028000000000000025,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "post_eval": {
+          "timestamp": "2026-04-19T00:04:08.178853",
+          "scores": {
+            "target_score": 0.6181818181818182,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.5599999999999999
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": -0.029437229437229484,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.04200000000000004,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "rollback_triggered": true,
+        "target_improvement": -0.029437229437229484,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.04200000000000004
+      },
+      {
+        "step_number": 6,
+        "timestamp": "2026-04-19T00:04:15.857012",
+        "pre_eval": {
+          "timestamp": "2026-04-19T00:04:12.048043",
+          "scores": {
+            "target_score": 0.5818181818181818,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.518
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": -0.06580086580086586,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.08399999999999996,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "post_eval": {
+          "timestamp": "2026-04-19T00:04:15.856416",
+          "scores": {
+            "target_score": 0.5454545454545454,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.588
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": -0.10216450216450224,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.014000000000000012,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "rollback_triggered": false,
+        "target_improvement": -0.10216450216450224,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.014000000000000012
+      },
+      {
+        "step_number": 7,
+        "timestamp": "2026-04-19T00:04:26.461513",
+        "pre_eval": {
+          "timestamp": "2026-04-19T00:04:19.604100",
+          "scores": {
+            "target_score": 0.5454545454545454,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.5459999999999999
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": -0.10216450216450224,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.05600000000000005,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "post_eval": {
+          "timestamp": "2026-04-19T00:04:26.460891",
+          "scores": {
+            "target_score": 0.6,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.504
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": -0.04761904761904767,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.09799999999999998,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "rollback_triggered": true,
+        "target_improvement": -0.04761904761904767,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.09799999999999998
+      },
+      {
+        "step_number": 8,
+        "timestamp": "2026-04-19T00:04:37.190539",
+        "pre_eval": {
+          "timestamp": "2026-04-19T00:04:30.309657",
+          "scores": {
+            "target_score": 0.6181818181818182,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.5599999999999999
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": -0.029437229437229484,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.04200000000000004,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "post_eval": {
+          "timestamp": "2026-04-19T00:04:37.189955",
+          "scores": {
+            "target_score": 0.6363636363636364,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.588
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": -0.011255411255411296,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.014000000000000012,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "rollback_triggered": true,
+        "target_improvement": -0.011255411255411296,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.014000000000000012
+      },
+      {
+        "step_number": 9,
+        "timestamp": "2026-04-19T00:04:48.009184",
+        "pre_eval": {
+          "timestamp": "2026-04-19T00:04:40.915170",
+          "scores": {
+            "target_score": 0.6363636363636364,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.766
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": -0.011255411255411296,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.16400000000000003,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "post_eval": {
+          "timestamp": "2026-04-19T00:04:48.008629",
+          "scores": {
+            "target_score": 0.6727272727272727,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.738
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": 0.02510822510822508,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.136,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "rollback_triggered": false,
+        "target_improvement": 0.02510822510822508,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.136
+      },
+      {
+        "step_number": 10,
+        "timestamp": "2026-04-19T00:04:58.115180",
+        "pre_eval": {
+          "timestamp": "2026-04-19T00:04:51.735876",
+          "scores": {
+            "target_score": 0.6,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.616
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": -0.04761904761904767,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.014000000000000012,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "post_eval": {
+          "timestamp": "2026-04-19T00:04:58.114696",
+          "scores": {
+            "target_score": 0.7090909090909091,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9565217391304348,
+            "writeback_score": 0.752
+          },
+          "baseline_scores": {
+            "target_score": 0.6476190476190476,
+            "retrieval_score": 0.0,
+            "policy_score": 0.0,
+            "governance_score": 0.9791666666666666,
+            "writeback_score": 0.602
+          },
+          "target_improvement": 0.061471861471861455,
+          "old_ability_drop": 0.022644927536231818,
+          "writeback_change": 0.15000000000000002,
+          "details": {
+            "num_samples": 50,
+            "old_capability_breakdown": {
+              "retrieval": 0.0,
+              "policy": 0.0,
+              "governance": 0.9565217391304348
+            }
+          }
+        },
+        "rollback_triggered": false,
+        "target_improvement": 0.061471861471861455,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.15000000000000002
+      }
+    ]
+  },
+  "rollback_test": {
+    "recovery_rates": {
+      "target_score": 64.61538461538466,
+      "governance_score": 0,
+      "writeback_score": 0
+    },
+    "avg_recovery_rate": 21.53846153846155,
+    "full_recovery": false,
+    "pass": false
+  },
+  "summary": {
+    "5_step_pass": false,
+    "10_step_pass": false,
+    "rollback_pass": false,
+    "overall_pass": false,
+    "fixes_applied": [
+      "writeback KL 0.38 -> 0.42",
+      "replay_ratio 0.35 -> 0.40",
+      "improved rollback state saving"
+    ]
+  }
+}

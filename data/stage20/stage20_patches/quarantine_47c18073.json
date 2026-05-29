@@ -1,0 +1,37 @@
+{
+  "package_id": "47c18073-b0b3-424f-93e4-0bbdc04b2f45",
+  "package_type": "quarantine",
+  "target_failure_types": [
+    "memory_write_error"
+  ],
+  "risk_decision": {
+    "recommended_action": "quarantine",
+    "reason": "Escalation triggered: contamination=0.90, entropy=1.33",
+    "severity": "high",
+    "confidence": 0.5160200335416417,
+    "posterior": {
+      "posteriors": {
+        "knowledge_gap": 0.14016805816847677,
+        "retrieval_failure": 0.034524764660059395,
+        "governance_failure": 0.05579250364118943,
+        "generation_failure": 0.5160200335416417,
+        "memory_failure": 0.22473779943298589,
+        "route_failure": 0.02875684055564677
+      },
+      "dominant_cause": "generation_failure",
+      "confidence": 0.5160200335416417,
+      "entropy": 1.331606452315152
+    },
+    "tsla_action_map": "isolate"
+  },
+  "payload": {
+    "action": "quarantine",
+    "target_zone": "long_term_isolation",
+    "sample_id": "W1_002",
+    "quarantine_reason": "Memory contamination score: 0.90",
+    "review_deadline_days": 90
+  },
+  "generated_at": "2026-05-11T14:02:12.156200+00:00",
+  "applied": false,
+  "verified": false
+}

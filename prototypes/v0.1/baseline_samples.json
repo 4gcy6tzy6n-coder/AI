@@ -1,0 +1,129 @@
+{
+  "version": "prototype_v0.1",
+  "frozen_at": "2026-04-17",
+  "description": "第一阶段最小可运行原型基线样本",
+  "samples": [
+    {
+      "id": "normal_001",
+      "category": "正常样本",
+      "input": "苹果是什么",
+      "expected_state_trace": [
+        "InputParsed",
+        "UnitsActivated",
+        "EvidenceCollected",
+        "CandidateBuilt",
+        "TSLAReviewed"
+      ],
+      "expected_units_count": 2,
+      "expected_tsla_action": "keep",
+      "expected_memory_decision": "transient",
+      "actual_output": {
+        "units": [
+          {
+            "script_form": "苹果是什么",
+            "core_meaning": "",
+            "truth_score": 0.5,
+            "legality_score": 1.0
+          },
+          {
+            "script_form": "苹果",
+            "core_meaning": "一种常见的水果，味甜多汁",
+            "truth_score": 0.8,
+            "legality_score": 1.0
+          }
+        ],
+        "thinking_state_trace": [
+          "InputParsed",
+          "UnitsActivated",
+          "EvidenceCollected",
+          "CandidateBuilt",
+          "TSLAReviewed"
+        ],
+        "gap_result": {
+          "has_gap": false,
+          "severity": "none"
+        },
+        "candidate_conclusion": {
+          "answer_text": "基于检索到的信息: 苹果是一种常见的水果，属于蔷薇科苹果属...",
+          "confidence_stub": 0.68
+        },
+        "tsla_action": {
+          "action": "keep",
+          "confidence": 0.68,
+          "reason": "通过所有 TSLA 检查"
+        },
+        "memory_write_decision": "transient"
+      }
+    },
+    {
+      "id": "gap_001",
+      "category": "缺失样本",
+      "input": "某个没定义的新词是什么意思",
+      "expected_state_trace": [
+        "InputParsed",
+        "UnitsActivated",
+        "GapDetected",
+        "EvidenceCollected",
+        "CandidateBuilt",
+        "TSLAReviewed"
+      ],
+      "expected_gap_detected": true,
+      "expected_tsla_action": "review",
+      "expected_memory_decision": "transient_only",
+      "actual_output": {
+        "gap_result": {
+          "has_gap": true,
+          "gap_types": ["missing_meaning"],
+          "reasons": ["对象 '某个没定义的新词' 缺少基本语义定义"],
+          "severity": "low"
+        },
+        "tsla_action": {
+          "action": "review",
+          "confidence": 0.5,
+          "reason": "置信度过低: 0.46 < 0.6"
+        },
+        "memory_write_decision": "transient_only"
+      }
+    },
+    {
+      "id": "conflict_001",
+      "category": "冲突样本",
+      "input": "测试对象（模拟冲突）",
+      "expected_tsla_action": "isolate",
+      "expected_conflict_flags": true
+    },
+    {
+      "id": "ambiguous_001",
+      "category": "多义样本",
+      "input": "苹果",
+      "expected_units_count": 2,
+      "expected_multiple_units": true
+    }
+  ],
+  "format_specs": {
+    "state_trace": {
+      "description": "思考状态轨迹，6个固定状态",
+      "states": [
+        "InputParsed",
+        "UnitsActivated",
+        "GapDetected",
+        "EvidenceCollected",
+        "CandidateBuilt",
+        "TSLAReviewed"
+      ]
+    },
+    "tsla_actions_v0.1": {
+      "description": "第一阶段5个动作",
+      "actions": ["keep", "review", "split", "isolate", "reject"]
+    },
+    "memory_decisions_v0.1": {
+      "description": "第一阶段记忆写入决策",
+      "decisions": ["transient", "transient_only", "no_write", "isolated_transient", "transient_pending_split"]
+    },
+    "unit_fields": {
+      "required": ["unit_id", "unit_type", "script_form", "language_tag"],
+      "tsla_scores": ["truth_score", "stability_score", "evidence_score", "conflict_cleanliness", "legality_score", "governance_score"],
+      "memory_location": ["memory_layer", "zone_type"]
+    }
+  }
+}

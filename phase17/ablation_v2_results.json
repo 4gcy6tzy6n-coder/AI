@@ -1,0 +1,83 @@
+[
+  {
+    "config": {
+      "name": "基线组 (最小闭环)",
+      "use_gap": false,
+      "use_writeback": false,
+      "phased_training": false,
+      "writeback_weight": 0.3,
+      "hidden_dim": 256,
+      "num_epochs": 5,
+      "batch_size": 16,
+      "learning_rate": 0.0005,
+      "device": "cpu"
+    },
+    "history": {
+      "loss": [
+        10.978976048921284,
+        9.136628100746556,
+        7.174327273117869,
+        6.739001123528731,
+        6.512885043495579
+      ]
+    },
+    "metrics": {
+      "gap_acc": 0,
+      "policy_acc": 0.8,
+      "wb_acc": 0,
+      "wb_fp": 0
+    }
+  },
+  {
+    "config": {
+      "name": "+GapDetector",
+      "use_gap": true,
+      "use_writeback": false,
+      "phased_training": false,
+      "writeback_weight": 0.3,
+      "hidden_dim": 256,
+      "num_epochs": 5,
+      "batch_size": 16,
+      "learning_rate": 0.0005,
+      "device": "cpu"
+    },
+    "history": {
+      "loss": [
+        11.62603067096911,
+        9.677107961554276,
+        7.755660308034797,
+        7.264955319856343,
+        6.974471117320814
+      ]
+    },
+    "metrics": {
+      "gap_acc": 1.0,
+      "policy_acc": 0.9833333333333333,
+      "wb_acc": 0.6333333333333333,
+      "wb_fp": 0.2
+    }
+  },
+  {
+    "config": {
+      "name": "+GapDetector +WritebackHead (分阶段, WB=0.3)",
+      "use_gap": true,
+      "use_writeback": true,
+      "phased_training": true,
+      "writeback_weight": 0.3,
+      "hidden_dim": 256,
+      "num_epochs": 5,
+      "batch_size": 16,
+      "learning_rate": 0.0005,
+      "device": "cpu"
+    },
+    "history": {
+      "loss": []
+    },
+    "metrics": {
+      "gap_acc": 0.8,
+      "policy_acc": 0.8166666666666667,
+      "wb_acc": 0.6333333333333333,
+      "wb_fp": 0.2
+    }
+  }
+]

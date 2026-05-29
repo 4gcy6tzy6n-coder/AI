@@ -1,0 +1,108 @@
+{
+  "timestamp": "2026-04-18T19:59:21.905999",
+  "config": {
+    "hidden_dim": 256,
+    "vocab_size": 10000,
+    "max_seq_len": 150,
+    "num_epochs": 8,
+    "batch_size": 16,
+    "base_lr": 0.0001,
+    "writeback_lr": 0.0005,
+    "weight_decay": 0.0001,
+    "device": "cpu",
+    "policy_weight": 1.0,
+    "gap_weight": 1.0,
+    "governance_weight": 1.0,
+    "writeback_weight": 0.5,
+    "response_weight": 0.3,
+    "total_samples": 300,
+    "d4_ratio": 0.85,
+    "d5_ratio": 0.15,
+    "checkpoint_dir": "phase18_stage3b/checkpoints",
+    "stage3a_checkpoint": "phase18_stage3a/checkpoints/best_model.pt",
+    "save_best": true,
+    "patience": 3,
+    "min_delta": 0.005
+  },
+  "history": {
+    "train_loss": [
+      7.251107629140218,
+      4.08608078956604,
+      3.464292287826538,
+      3.1826066176096597,
+      3.0299270311991373,
+      2.878692881266276
+    ],
+    "val_loss": [
+      4.837220549583435,
+      3.6417653560638428,
+      3.2818132638931274,
+      3.0491774678230286,
+      2.913712799549103,
+      2.8318580389022827
+    ],
+    "gap_acc": [
+      0.6833333333333333,
+      0.8,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "policy_acc": [
+      0.48333333333333334,
+      0.8,
+      0.8,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governance_acc": [
+      0.48333333333333334,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "wb_acc": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "wb_fp": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "lt_prec": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "lt_recall": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "final_metrics": {
+    "best_gap_acc": 1.0,
+    "final_gap_acc": 1.0,
+    "final_policy_acc": 1.0,
+    "final_wb_fp": 0.0,
+    "final_lt_prec": 1.0
+  }
+}

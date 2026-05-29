@@ -1,0 +1,43 @@
+{
+  "benchmark": {
+    "total_candidates": 12,
+    "avg_scores": {
+      "structure": 1.0,
+      "consistency": 1.0,
+      "novelty": 1.0,
+      "hallucination_resistance": 0.7959813063644106,
+      "overall": 0.9591962612728823
+    },
+    "type_scores": {
+      "EXPLANATION": {
+        "structure": 1.0,
+        "consistency": 1.0,
+        "novelty": 1.0,
+        "hallucination_resistance": 0.8129879048443399,
+        "overall": 0.962597580968868,
+        "count": 5
+      },
+      "RELATION": {
+        "structure": 1.0,
+        "consistency": 1.0,
+        "novelty": 1.0,
+        "hallucination_resistance": 0.7372982624801807,
+        "overall": 0.9474596524960361,
+        "count": 4
+      },
+      "RULE": {
+        "structure": 1.0,
+        "consistency": 1.0,
+        "novelty": 1.0,
+        "hallucination_resistance": 0.8458810340768347,
+        "overall": 0.969176206815367,
+        "count": 3
+      }
+    }
+  },
+  "quality_check": {
+    "passed": 4,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

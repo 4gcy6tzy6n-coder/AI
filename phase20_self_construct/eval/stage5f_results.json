@@ -1,0 +1,90 @@
+{
+  "single_promotion": [
+    {
+      "candidate_id": "relation_technical_stack_3_213415",
+      "score": 0.9301362276077271,
+      "baseline": {
+        "target": 0.66,
+        "old": {
+          "private_knowledge": 1.0,
+          "retrieval_trigger": 0.82,
+          "gap": 0.92,
+          "governance": 1.0,
+          "writeback": 0.9
+        }
+      },
+      "after": {
+        "target": 0.66,
+        "old": {
+          "private_knowledge": 1.0,
+          "retrieval_trigger": 0.78,
+          "gap": 0.98,
+          "governance": 1.0,
+          "writeback": 0.94
+        }
+      },
+      "target_change": 0.0,
+      "writeback_change": 0.039999999999999925,
+      "max_old_drop": 0.05999999999999994,
+      "success": false,
+      "rollback_success": false
+    },
+    {
+      "candidate_id": "relation_technical_stack_4_213415",
+      "score": 0.9214461088180542,
+      "baseline": {
+        "target": 0.58,
+        "old": {
+          "private_knowledge": 1.0,
+          "retrieval_trigger": 0.72,
+          "gap": 0.94,
+          "governance": 1.0,
+          "writeback": 0.92
+        }
+      },
+      "after": {
+        "target": 0.6,
+        "old": {
+          "private_knowledge": 1.0,
+          "retrieval_trigger": 0.68,
+          "gap": 0.98,
+          "governance": 1.0,
+          "writeback": 0.9
+        }
+      },
+      "target_change": 0.020000000000000018,
+      "writeback_change": -0.020000000000000018,
+      "max_old_drop": 0.040000000000000036,
+      "success": true,
+      "rollback_success": false
+    }
+  ],
+  "continuous": {
+    "experiment": "continuous_with_governance",
+    "steps": 2,
+    "baseline_target": 0.62,
+    "final_target": 0.6,
+    "total_change": -0.020000000000000018,
+    "final_max_drop": 0.040000000000000036,
+    "step_results": [
+      {
+        "step": 1,
+        "candidate_id": "relation_technical_stack_3_213415",
+        "improvement": -0.040000000000000036,
+        "cumulative": -0.040000000000000036,
+        "writeback_drop": 0.020000000000000018,
+        "max_old_drop": 0.06000000000000005
+      },
+      {
+        "step": 2,
+        "candidate_id": "relation_technical_stack_4_213415",
+        "improvement": 0.020000000000000018,
+        "cumulative": -0.020000000000000018,
+        "writeback_drop": 0.040000000000000036,
+        "max_old_drop": 0.040000000000000036
+      }
+    ],
+    "success": false
+  },
+  "phase6_ready": false
+}

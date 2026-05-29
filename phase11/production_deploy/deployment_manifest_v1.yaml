@@ -1,0 +1,425 @@
+# Deployment Manifest V1 - 部署清单 V1
+# Phase 11 WP2: 生产部署基线建立
+
+apiVersion: v1
+kind: DeploymentManifest
+metadata:
+  name: post-transformer-ai-v1.1
+  version: "1.1.0"
+  phase: "Phase 11"
+  date: "2026-04-18"
+
+---
+# 环境定义
+environments:
+  local:
+    description: "本地开发环境"
+    replicas: 1
+    resources:
+      cpu: "1"
+      memory: "2Gi"
+    persistence: false
+    
+  dev:
+    description: "开发集成环境"
+    replicas: 1
+    resources:
+      cpu: "2"
+      memory: "4Gi"
+    persistence: true
+    
+  staging:
+    description: "预发布测试环境"
+    replicas: 2
+    resources:
+      cpu: "4"
+      memory: "8Gi"
+    persistence: true
+    
+  pre-prod:
+    description: "生产候选环境"
+    replicas: 2
+    resources:
+      cpu: "4"
+      memory: "8Gi"
+    persistence: true
+    
+  pilot:
+    description: "试运行环境"
+    replicas: 2
+    resources:
+      cpu: "4"
+      memory: "8Gi"
+    persistence: true
+
+---
+# 服务定义
+services:
+  # API Gateway
+  api-gateway:
+    image: post-transformer-ai/api-gateway:v1.1
+    port: 8080
+    replicas:
+      min: 1
+      max: 3
+    resources:
+      requests:
+        cpu: "500m"
+        memory: "1Gi"
+      limits:
+        cpu: "1000m"
+        memory: "2Gi"
+    healthCheck:
+      path: /health
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    env:
+      - name: SERVICE_PORT
+        value: "8080"
+      - name: RATE_LIMIT
+        value: "100"
+    
+  # Retrieval Service
+  retrieval-service:
+    image: post-transformer-ai/retrieval-service:v1.1
+    port: 8081
+    replicas:
+      min: 2
+      max: 5
+    resources:
+      requests:
+        cpu: "1000m"
+        memory: "2Gi"
+      limits:
+        cpu: "2000m"
+        memory: "4Gi"
+    healthCheck:
+      path: /health
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    env:
+      - name: SERVICE_PORT
+        value: "8081"
+      - name: DEFAULT_TIMEOUT_MS
+        value: "1000"
+      - name: CACHE_TTL_SECONDS
+        value: "300"
+    volumes:
+      - name: index-data
+        mountPath: /data/index
+        size: 50Gi
+    
+  # Governance Service
+  governance-service:
+    image: post-transformer-ai/governance-service:v1.1
+    port: 8082
+    replicas:
+      min: 2
+      max: 4
+    resources:
+      requests:
+        cpu: "1000m"
+        memory: "2Gi"
+      limits:
+        cpu: "2000m"
+        memory: "4Gi"
+    healthCheck:
+      path: /health
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    env:
+      - name: SERVICE_PORT
+        value: "8082"
+      - name: TSLA_THRESHOLD_HIGH
+        value: "0.8"
+      - name: TSLA_THRESHOLD_MEDIUM
+        value: "0.5"
+    
+  # Memory Service
+  memory-service:
+    image: post-transformer-ai/memory-service:v1.1
+    port: 8083
+    replicas:
+      min: 2
+      max: 4
+    resources:
+      requests:
+        cpu: "1000m"
+        memory: "2Gi"
+      limits:
+        cpu: "2000m"
+        memory: "4Gi"
+    healthCheck:
+      path: /health
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    env:
+      - name: SERVICE_PORT
+        value: "8083"
+      - name: TRANSACTION_TIMEOUT
+        value: "30"
+    volumes:
+      - name: memory-data
+        mountPath: /data/memory
+        size: 100Gi
+    
+  # Observability Service
+  observability-service:
+    image: post-transformer-ai/observability-service:v1.1
+    port: 8084
+    replicas:
+      min: 1
+      max: 2
+    resources:
+      requests:
+        cpu: "500m"
+        memory: "1Gi"
+      limits:
+        cpu: "1000m"
+        memory: "2Gi"
+    env:
+      - name: SERVICE_PORT
+        value: "8084"
+
+---
+# 基础设施
+infrastructure:
+  # PostgreSQL
+  postgresql:
+    version: "15"
+    replicas: 2  # 主从
+    resources:
+      cpu: "2000m"
+      memory: "4Gi"
+    storage: 100Gi
+    databases:
+      - memory_service
+      - governance_service
+    backup:
+      enabled: true
+      schedule: "0 2 * * *"  # 每天 2 AM
+      retention: 7
+      
+  # Redis
+  redis:
+    version: "7"
+    mode: cluster
+    replicas: 3
+    resources:
+      cpu: "1000m"
+      memory: "2Gi"
+    persistence: true
+    
+  # Elasticsearch
+  elasticsearch:
+    version: "8"
+    replicas: 3
+    resources:
+      cpu: "2000m"
+      memory: "4Gi"
+    storage: 200Gi
+    
+  # Prometheus
+  prometheus:
+    version: "2.45"
+    retention: 30d
+    storage: 50Gi
+    
+  # Grafana
+  grafana:
+    version: "10"
+    replicas: 1
+
+---
+# 配置管理
+config:
+  # 全局配置
+  global:
+    logLevel: INFO
+    timezone: UTC
+    
+  # 环境特定配置
+  pilot:
+    features:
+      rateLimiting: true
+      circuitBreaker: true
+      caching: true
+    timeouts:
+      retrieval: 1000ms
+      governance: 2000ms
+      memory: 3000ms
+      total: 5000ms
+    limits:
+      maxQPS: 100
+      maxConcurrent: 50
+      maxRequestSize: 10MB
+
+---
+# 网络配置
+network:
+  ingress:
+    enabled: true
+    class: nginx
+    tls:
+      enabled: true
+      certManager: true
+    annotations:
+      nginx.ingress.kubernetes.io/rate-limit: "100"
+      nginx.ingress.kubernetes.io/rate-limit-window: "1m"
+      
+  serviceMesh:
+    enabled: true
+    type: istio
+    mTLS: true
+    
+  policies:
+    - name: default-deny
+      type: deny-all
+    - name: allow-internal
+      type: allow
+      from:
+        - namespace: post-transformer-ai
+
+---
+# 安全配置
+security:
+  # 密钥管理
+  secrets:
+    provider: vault
+    path: secret/post-transformer-ai
+    
+  # RBAC
+  rbac:
+    enabled: true
+    serviceAccounts:
+      - name: api-gateway-sa
+        roles: ["viewer"]
+      - name: retrieval-service-sa
+        roles: ["viewer", "index-reader"]
+      - name: governance-service-sa
+        roles: ["viewer", "decision-maker"]
+      - name: memory-service-sa
+        roles: ["viewer", "memory-writer"]
+        
+  # 网络策略
+  networkPolicies:
+    enabled: true
+    
+  # Pod 安全
+  podSecurity:
+    enabled: true
+    policy: restricted
+
+---
+# 监控配置
+monitoring:
+  metrics:
+    enabled: true
+    interval: 10s
+    retention: 30d
+    
+  logging:
+    level: INFO
+    format: json
+    aggregation: fluentd
+    
+  tracing:
+    enabled: true
+    sampler: 0.1  # 10% 采样
+    backend: jaeger
+    
+  alerts:
+    channels:
+      - name: pagerduty
+        type: pagerduty
+        severity: [P0, P1]
+      - name: slack
+        type: slack
+        severity: [P1, P2]
+      - name: email
+        type: email
+        severity: [P2, P3]
+
+---
+# 备份恢复
+backup:
+  # 配置备份
+  config:
+    enabled: true
+    schedule: "0 */6 * * *"  # 每 6 小时
+    retention: 30
+    
+  # 数据备份
+  data:
+    enabled: true
+    schedule: "0 2 * * *"  # 每天 2 AM
+    retention: 7
+    
+  # 索引备份
+  index:
+    enabled: true
+    schedule: "0 3 * * *"  # 每天 3 AM
+    retention: 3
+    
+  # 快照
+  snapshot:
+    enabled: true
+    schedule: "0 4 * * 0"  # 每周日 4 AM
+    retention: 4
+
+---
+# 自动扩缩容
+autoscaling:
+  enabled: true
+  metrics:
+    - type: cpu
+      targetAverageUtilization: 70
+    - type: memory
+      targetAverageUtilization: 80
+    - type: custom
+      name: request_qps
+      target:
+        averageValue: 100
+  behavior:
+    scaleUp:
+      stabilizationWindowSeconds: 60
+      policies:
+        - type: percent
+          value: 100
+          periodSeconds: 60
+    scaleDown:
+      stabilizationWindowSeconds: 300
+      policies:
+        - type: percent
+          value: 10
+          periodSeconds: 60
+
+---
+# 灰度发布
+canary:
+  enabled: true
+  steps:
+    - weight: 10
+      pause: {duration: 2h}
+    - weight: 25
+      pause: {duration: 4h}
+    - weight: 50
+      pause: {duration: 8h}
+    - weight: 100
+  analysis:
+    threshold: 5
+    interval: 1m
+    successfulRunHistoryLimit: 3
+    metrics:
+      - name: error-rate
+        thresholdRange:
+          max: 5
+        interval: 1m
+      - name: latency-p95
+        thresholdRange:
+          max: 500
+        interval: 1m

@@ -1,0 +1,23 @@
+{
+  "expansion": {
+    "total_generated": 25,
+    "score_stats": {
+      "mean": 0.8201566524505616,
+      "max": 0.9301362276077271,
+      "gte_90": 5,
+      "gte_85": 15
+    },
+    "subcategory_distribution": {
+      "identity": 5,
+      "project_state": 5,
+      "technical_stack": 5,
+      "history_recall": 5,
+      "temporal": 5
+    }
+  },
+  "filtering": {
+    "input_count": 25,
+    "output_count": 3,
+    "pass_rate": 0.12
+  }
+}

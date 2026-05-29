@@ -1,0 +1,245 @@
+"""
+TSLA Thresholds v0.7 Complexity & Generalization
+第七阶段复杂度与通用化验证后的阈值配置
+
+冻结日期: 2026-04-18
+版本: prototype_v0.7_complexity_generalization
+上一版本: prototype_v0.6_full_training_loop
+
+核心原则:
+- 复杂度优势已验证：参数利用率+60%，内存-1600MB，更新速度×800，修复速度×17000
+- 通用化抽象v1已完成：Concept/Relation/Rule/Task Pattern四类Unit定义
+- 系统稳定性评分：90.1/100
+- 进入Phase 8：跨语言适配、规模扩展、复杂知识治理、产品化接口
+
+Phase 8约束:
+- 核心治理层保持稳定，不做结构性推翻
+- 适配层与核心层严格分离
+- 所有新增能力必须可测
+"""
+
+# ============================================
+# Phase 7 验证结果记录
+# ============================================
+phase7_validation:
+  complexity_advantage:
+    param_utilization_improvement: "+60%"  # 30% -> 90%
+    memory_reduction_mb: 1600              # 4500MB -> 2900MB
+    update_speedup: "800x"                 # 4200s -> 5.1s
+    repair_speedup: "17000x"               # 90000s -> 5.1s
+    scalability_improvement: "+193%"       # 27.5 -> 80.5
+  
+  system_stability_score: 90.1
+  
+  benchmark_results:
+    qa_stability: "100.0%"
+    long_term_governance: "91.4%"
+    permanent_promotion: "94.3%"
+    training_loop: "80.0%"
+    param_write_back: "84.6%"
+  
+  generalization:
+    universal_unit_types:
+      - concept
+      - relation
+      - rule
+      - task_pattern
+    adapter_layer_defined: true
+    cross_language_ready: true
+
+# ============================================
+# TSLA 阈值配置 (继承自v0.6，Phase 8保持稳定)
+# ============================================
+
+tsla_thresholds:
+  # 质量维度阈值
+  quality:
+    min_clarity: 0.7
+    min_transparency: 0.6
+    min_stability: 0.5
+    min_consistency: 0.6
+    min_legitimacy: 0.7
+  
+  # 综合评分阈值
+  composite:
+    excellent: 0.85
+    good: 0.70
+    acceptable: 0.55
+    poor: 0.40
+  
+  # 稳定性周期要求
+  stability:
+    min_cycles_for_promotion: 5
+    min_cycles_for_permanent: 10
+    max_cycles_in_review: 3
+
+# ============================================
+# 五门迁移阈值 (保持稳定)
+# ============================================
+
+governance_gates:
+  gate_1_input:
+    min_quality: 0.40
+  
+  gate_2_parsing:
+    min_quality: 0.50
+  
+  gate_3_retrieval:
+    min_quality: 0.55
+    max_retrieval_time_ms: 5000
+  
+  gate_4_integration:
+    min_quality: 0.60
+  
+  gate_5_tsla:
+    min_quality: 0.65
+
+# ============================================
+# 分层存储阈值 (保持稳定)
+# ============================================
+
+storage_layers:
+  working:
+    max_capacity: 1000
+    ttl_seconds: 3600
+  
+  long_term:
+    max_capacity: 10000
+    min_quality_for_entry: 0.60
+    min_cycles_for_promotion: 5
+  
+  deep_permanent:
+    max_capacity: 100000
+    min_quality_for_entry: 0.75
+    min_cycles_for_promotion: 10
+    verification_required: true
+  
+  permanent:
+    max_capacity: 1000000
+    min_quality_for_entry: 0.90
+    min_cycles_for_promotion: 20
+    manual_review_required: true
+
+# ============================================
+# Phase 8 新增：跨语言适配配置
+# ============================================
+
+cross_lingual:
+  supported_languages:
+    - zh  # 中文
+    - en  # 英文
+  
+  # 语言检测置信度阈值
+  language_detection:
+    min_confidence: 0.85
+  
+  # 跨语言一致性检查
+  cross_lingual_consistency:
+    min_alignment_score: 0.70
+    check_required_for_promotion: true
+  
+  # 适配层隔离检查
+  adapter_isolation:
+    core_governance_unchanged: true
+    language_specific_in_adapter_only: true
+
+# ============================================
+# Phase 8 新增：规模扩展监控阈值
+# ============================================
+
+scale_monitoring:
+  # 性能退化预警阈值
+  performance_degradation:
+    max_latency_increase_percent: 50
+    max_memory_increase_percent: 100
+    min_throughput_retention_percent: 70
+  
+  # 治理负载预警
+  governance_load:
+    max_isolation_zone_occupancy: 0.30
+    max_error_zone_growth_rate: 0.10
+    max_permanent_layer_pollution_rate: 0.01
+  
+  # 规模档位定义
+  scale_tiers:
+    small:
+      max_units: 1000
+      expected_qps: 10
+    medium:
+      max_units: 10000
+      expected_qps: 50
+    large:
+      max_units: 100000
+      expected_qps: 200
+    stress:
+      max_units: 1000000
+      expected_qps: 1000
+
+# ============================================
+# Phase 8 新增：复杂知识治理阈值
+# ============================================
+
+complex_knowledge:
+  # 冲突检测
+  conflict_detection:
+    min_similarity_for_conflict_check: 0.80
+    max_conflict_tolerance: 0.05
+  
+  # 动态更新
+  dynamic_update:
+    max_update_frequency_per_unit: 10  # 每周期最大更新次数
+    min_evidence_for_update: 0.70
+  
+  # 诱导防御
+  hallucination_defense:
+    min_evidence_strength: 0.60
+    max_fluency_without_evidence: 0.40
+  
+  # 污染监控
+  pollution_monitoring:
+    max_permanent_layer_pollution: 0.01
+    max_deep_permanent_pollution: 0.05
+    auto_freeze_threshold: 0.10
+
+# ============================================
+# 风险预警阈值 (Phase 8强化)
+# ============================================
+
+risk_alerts:
+  permanent_layer_pollution:
+    warning_threshold: 0.005
+    critical_threshold: 0.01
+    action: "freeze_promotion"
+  
+  isolation_zone_overload:
+    warning_threshold: 0.25
+    critical_threshold: 0.30
+    action: "pause_new_isolation"
+  
+  param_writeback_anomaly:
+    max_failure_rate: 0.10
+    max_regression_rate: 0.05
+    action: "freeze_writeback"
+  
+  english_adapter_core_contamination:
+    max_core_layer_modifications: 0
+    action: "rollback_adapter"
+
+# ============================================
+# 版本信息
+# ============================================
+
+version_info:
+  version: "v0.7_complexity_generalization"
+  previous_version: "v0.6_full_training_loop"
+  freeze_date: "2026-04-18"
+  next_phase: "v0.8_expansion_cross_lingual"
+  
+  completed_phases:
+    - "v0.1_skeleton"
+    - "v0.2_forward_pipeline"
+    - "v0.3_governance_loop"
+    - "v0.4_tsla_mapping"
+    - "v0.5_training_path"
+    - "v0.6_full_training_loop"
+    - "v0.7_complexity_generalization"

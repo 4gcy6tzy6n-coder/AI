@@ -1,0 +1,50 @@
+{"input_text": "为啥 检索 要用 知识库 呢？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_colloquial"}
+{"input_text": "检索 与 知识库 之间有什么联系？", "target_gap": 1, "target_strategy": 1, "sample_type": "positive"}
+{"input_text": "检索 和 知识库 是什么关系？", "target_gap": 1, "target_strategy": 1, "sample_type": "positive"}
+{"input_text": "检索 和 知识库 是什么关系？", "target_gap": 1, "target_strategy": 1, "sample_type": "positive"}
+{"input_text": "请解释 手机 和 电脑 的关系", "target_gap": 0, "target_strategy": 0, "sample_type": "negative"}
+{"input_text": "检索 是不是离不开 知识库？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_colloquial"}
+{"input_text": "检索 和 知识库 是绑在一起的吗？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_colloquial"}
+{"input_text": "请解释 猫 和 狗 的关系", "target_gap": 0, "target_strategy": 0, "sample_type": "negative"}
+{"input_text": "检索 的实现对 知识库 有什么要求？", "target_gap": 1, "target_strategy": 1, "sample_type": "positive"}
+{"input_text": "检索 依赖 知识库 吗？", "target_gap": 1, "target_strategy": 1, "sample_type": "positive"}
+{"input_text": "检索 对 知识库 的依赖程度如何？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_synonym"}
+{"input_text": "手机 与 电脑 之间有什么联系？", "target_gap": 0, "target_strategy": 0, "sample_type": "negative"}
+{"input_text": "手机 和 电脑 是什么关系？", "target_gap": 0, "target_strategy": 0, "sample_type": "negative"}
+{"input_text": "在使用 检索 时，为什么需要 知识库？", "target_gap": 1, "target_strategy": 1, "sample_type": "positive"}
+{"input_text": "请解释 汽车 和 飞机 的关系", "target_gap": 0, "target_strategy": 0, "sample_type": "negative"}
+{"input_text": "检索 如何利用 知识库？", "target_gap": 1, "target_strategy": 1, "sample_type": "positive"}
+{"input_text": "为啥 检索 要用 知识库 呢？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_colloquial"}
+{"input_text": "检索 和 知识库 是如何配合工作的？", "target_gap": 1, "target_strategy": 1, "sample_type": "positive"}
+{"input_text": "检索 和 知识库 哪个更重要？", "target_gap": 1, "target_strategy": 2, "sample_type": "adversarial_boundary"}
+{"input_text": "检索 与 知识库 之间有什么联系？", "target_gap": 1, "target_strategy": 1, "sample_type": "positive"}
+{"input_text": "请解释 苹果 和 香蕉 的关系", "target_gap": 0, "target_strategy": 0, "sample_type": "negative"}
+{"input_text": "除了 知识库，检索 还能用什么？", "target_gap": 1, "target_strategy": 2, "sample_type": "adversarial_boundary"}
+{"input_text": "检索 跟 知识库 有啥关系啊？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_colloquial"}
+{"input_text": "检索 与 知识库 有何关联？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_synonym"}
+{"input_text": "汽车 和 飞机 是什么关系？", "target_gap": 0, "target_strategy": 0, "sample_type": "negative"}
+{"input_text": "检索 和 知识库 是如何相互作用的？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_synonym"}
+{"input_text": "检索 对 知识库 的依赖程度如何？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_synonym"}
+{"input_text": "检索 和 知识库 的区别是什么？", "target_gap": 1, "target_strategy": 2, "sample_type": "adversarial_boundary"}
+{"input_text": "检索 与 知识库 有何关联？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_synonym"}
+{"input_text": "猫 和 狗 是什么关系？", "target_gap": 0, "target_strategy": 0, "sample_type": "negative"}
+{"input_text": "知识库 如何支撑 检索 的功能？", "target_gap": 1, "target_strategy": 1, "sample_type": "positive"}
+{"input_text": "桌子 和 椅子 是什么关系？", "target_gap": 0, "target_strategy": 0, "sample_type": "negative"}
+{"input_text": "没有 知识库，检索 还能工作吗？", "target_gap": 1, "target_strategy": 1, "sample_type": "positive"}
+{"input_text": "苹果 和 香蕉 是什么关系？", "target_gap": 0, "target_strategy": 0, "sample_type": "negative"}
+{"input_text": "苹果 与 香蕉 之间有什么联系？", "target_gap": 0, "target_strategy": 0, "sample_type": "negative"}
+{"input_text": "检索 与 知识库 的耦合关系是怎样的？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_synonym"}
+{"input_text": "检索 跟 知识库 有啥关系啊？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_colloquial"}
+{"input_text": "检索 和 知识库 的关联是什么？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_synonym"}
+{"input_text": "猫 与 狗 之间有什么联系？", "target_gap": 0, "target_strategy": 0, "sample_type": "negative"}
+{"input_text": "请解释 检索 和 知识库 的关系", "target_gap": 1, "target_strategy": 1, "sample_type": "positive"}
+{"input_text": "从技术角度看，检索 和 知识库 的关系是什么？", "target_gap": 1, "target_strategy": 1, "sample_type": "positive"}
+{"input_text": "检索 比 知识库 好吗？", "target_gap": 1, "target_strategy": 2, "sample_type": "adversarial_boundary"}
+{"input_text": "检索 为什么离不开 知识库？", "target_gap": 1, "target_strategy": 1, "sample_type": "positive"}
+{"input_text": "汽车 与 飞机 之间有什么联系？", "target_gap": 0, "target_strategy": 0, "sample_type": "negative"}
+{"input_text": "检索 是不是离不开 知识库？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_colloquial"}
+{"input_text": "请解释 桌子 和 椅子 的关系", "target_gap": 0, "target_strategy": 0, "sample_type": "negative"}
+{"input_text": "知识库 在 检索 中起什么作用？", "target_gap": 1, "target_strategy": 1, "sample_type": "positive"}
+{"input_text": "检索 和 知识库 的关联是什么？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_synonym"}
+{"input_text": "桌子 与 椅子 之间有什么联系？", "target_gap": 0, "target_strategy": 0, "sample_type": "negative"}
+{"input_text": "用 检索 的时候为啥还得有 知识库？", "target_gap": 1, "target_strategy": 1, "sample_type": "adversarial_colloquial"}

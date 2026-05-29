@@ -1,0 +1,219 @@
+# Alert Rules V1 - 告警规则 v1
+# Phase 9 WP4: 工程可靠性与可观测性增强
+
+version: "1.0"
+description: "Phase 9 告警规则配置"
+
+# 规则组
+groups:
+  - name: "permanent_layer_alerts"
+    description: "永久层污染告警"
+    rules:
+      - alert: PermanentLayerContamination
+        expr: permanent_layer_contamination_rate > 0.01
+        for: 5m
+        labels:
+          severity: critical
+          layer: permanent
+        annotations:
+          summary: "永久层污染率过高"
+          description: "永久层污染率达到 {{ $value }}%，超过阈值 1%"
+          action: "立即检查隔离区机制，暂停新晋升"
+      
+      - alert: PermanentLayerWriteError
+        expr: rate(permanent_layer_write_errors[5m]) > 0.1
+        for: 3m
+        labels:
+          severity: warning
+          layer: permanent
+        annotations:
+          summary: "永久层写入错误率上升"
+          description: "永久层写入错误率达到 {{ $value }}/秒"
+          action: "检查写回队列状态，准备回放"
+
+  - name: "isolation_zone_alerts"
+    description: "隔离区告警"
+    rules:
+      - alert: IsolationZoneOverload
+        expr: isolation_zone_size > 1000
+        for: 10m
+        labels:
+          severity: warning
+          component: isolation
+        annotations:
+          summary: "隔离区负载过高"
+          description: "隔离区包含 {{ $value }} 个 Units，超过阈值 1000"
+          action: "检查隔离原因，考虑批量清理或人工审查"
+      
+      - alert: IsolationZoneGrowthRate
+        expr: rate(isolation_zone_size[1h]) > 100
+        for: 30m
+        labels:
+          severity: warning
+          component: isolation
+        annotations:
+          summary: "隔离区增长过快"
+          description: "隔离区每小时新增 {{ $value }} 个 Units"
+          action: "检查治理阈值设置，可能存在系统性问题"
+
+  - name: "retrieval_alerts"
+    description: "检索告警"
+    rules:
+      - alert: RetrievalLatencyP95
+        expr: histogram_quantile(0.95, retrieval_latency_seconds) > 0.5
+        for: 5m
+        labels:
+          severity: warning
+          component: retrieval
+        annotations:
+          summary: "检索 P95 延迟过高"
+          description: "检索 P95 延迟达到 {{ $value }}s，超过阈值 500ms"
+          action: "检查索引状态，考虑预热缓存或扩容"
+      
+      - alert: RetrievalTimeout
+        expr: rate(retrieval_timeouts[5m]) > 0.05
+        for: 3m
+        labels:
+          severity: warning
+          component: retrieval
+        annotations:
+          summary: "检索超时率上升"
+          description: "检索超时率达到 {{ $value }}/秒"
+          action: "检查检索服务负载，可能需要增加 Worker"
+      
+      - alert: CacheHitRateDrop
+        expr: cache_hit_rate < 0.3
+        for: 10m
+        labels:
+          severity: info
+          component: cache
+        annotations:
+          summary: "缓存命中率下降"
+          description: "缓存命中率降至 {{ $value }}%，低于阈值 30%"
+          action: "检查缓存策略，考虑调整缓存大小或预热"
+
+  - name: "writeback_alerts"
+    description: "写回告警"
+    rules:
+      - alert: WritebackQueueBacklog
+        expr: writeback_queue_size > 500
+        for: 5m
+        labels:
+          severity: warning
+          component: writeback
+        annotations:
+          summary: "写回队列积压"
+          description: "写回队列积压 {{ $value }} 个任务"
+          action: "检查写回服务状态，可能需要增加并发"
+      
+      - alert: WritebackFailureRate
+        expr: rate(writeback_failures[5m]) > 0.1
+        for: 3m
+        labels:
+          severity: critical
+          component: writeback
+        annotations:
+          summary: "写回失败率过高"
+          description: "写回失败率达到 {{ $value }}/秒"
+          action: "暂停新晋升，检查存储层状态，准备回放"
+      
+      - alert: WritebackLatency
+        expr: histogram_quantile(0.95, writeback_latency_seconds) > 2.0
+        for: 5m
+        labels:
+          severity: warning
+          component: writeback
+        annotations:
+          summary: "写回 P95 延迟过高"
+          description: "写回 P95 延迟达到 {{ $value }}s"
+          action: "检查存储层性能，可能需要优化或扩容"
+
+  - name: "bilingual_alerts"
+    description: "双语一致性告警"
+    rules:
+      - alert: BilingualAlignmentDrop
+        expr: bilingual_alignment_score < 0.7
+        for: 10m
+        labels:
+          severity: warning
+          component: bilingual
+        annotations:
+          summary: "双语对齐分数下降"
+          description: "双语对齐分数降至 {{ $value }}，低于阈值 0.7"
+          action: "检查英文适配器实现，可能存在核心层污染"
+      
+      - alert: EnglishRelationErrorRate
+        expr: english_relation_error_rate > 0.3
+        for: 15m
+        labels:
+          severity: warning
+          component: english
+        annotations:
+          summary: "英文关系检测错误率上升"
+          description: "英文关系检测错误率达到 {{ $value }}"
+          action: "检查英文关系模式库，需要增加负样本"
+
+  - name: "system_alerts"
+    description: "系统级告警"
+    rules:
+      - alert: HighMemoryUsage
+        expr: memory_usage_percent > 85
+        for: 5m
+        labels:
+          severity: warning
+          component: system
+        annotations:
+          summary: "内存使用率过高"
+          description: "内存使用率达到 {{ $value }}%"
+          action: "检查内存泄漏，考虑重启或扩容"
+      
+      - alert: HighCPUUsage
+        expr: cpu_usage_percent > 80
+        for: 10m
+        labels:
+          severity: info
+          component: system
+        annotations:
+          summary: "CPU 使用率过高"
+          description: "CPU 使用率达到 {{ $value }}%"
+          action: "检查是否有异常任务，考虑扩容"
+      
+      - alert: DiskSpaceLow
+        expr: disk_free_percent < 20
+        for: 5m
+        labels:
+          severity: critical
+          component: system
+        annotations:
+          summary: "磁盘空间不足"
+          description: "磁盘剩余空间仅 {{ $value }}%"
+          action: "立即清理日志或扩容存储"
+
+# 通知配置
+notifications:
+  channels:
+    - name: "email"
+      type: "email"
+      config:
+        smtp_server: "smtp.example.com"
+        to: "ops@example.com"
+    
+    - name: "slack"
+      type: "slack"
+      config:
+        webhook_url: "https://hooks.slack.com/services/..."
+        channel: "#alerts"
+    
+    - name: "pagerduty"
+      type: "pagerduty"
+      config:
+        service_key: "..."
+      severity_filter: ["critical"]
+
+# 抑制规则
+inhibit_rules:
+  - source_match:
+      severity: "critical"
+    target_match:
+      severity: "warning"
+    equal: ["layer", "component"]

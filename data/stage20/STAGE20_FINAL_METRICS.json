@@ -1,0 +1,30 @@
+{
+  "failure_fix_rate": 1.0,
+  "regression_pass_rate": 1.0,
+  "tsla_safety_intercept": 1.0,
+  "false_kill_rate": 0.0,
+  "memory_contamination": 0.0,
+  "retrieval_context_failure": 0.0,
+  "multiturn_consistency": 1.0,
+  "rollback_success_rate": 1.0,
+  "by_failure_type": {
+    "knowledge_miss": 0.15,
+    "unnatural_generation": 0.15,
+    "multiturn_anomaly": 0.15,
+    "retrieval_mismatch": 0.15,
+    "tsla_false_pass": 0.1,
+    "tsla_over_block": 0.1,
+    "safety_boundary_error": 0.1,
+    "memory_write_error": 0.1
+  },
+  "by_risk_level": {
+    "low": 0.3,
+    "medium": 0.3,
+    "high": 0.2,
+    "critical": 0.2
+  },
+  "total_samples": 20,
+  "timestamp": "2026-05-11T14:31:09.078188+00:00",
+  "verdict": "ACCEPTED",
+  "all_metrics_pass": true
+}

@@ -1,0 +1,165 @@
+"""
+TSLA Thresholds v0.5 Training Integrated
+第五阶段训练路径集成后的阈值配置
+
+冻结日期: 2026-04-17
+版本: prototype_v0.5_training_integrated
+
+核心原则:
+- 训练路径独立运行，与用户路径分离
+- 深层永久层仅接收训练路径长期验证后的知识
+- 强审查与验证成为正式节点
+- 自构建内容只能走受控晋升链
+"""
+
+# 浅层永久层阈值 (Shallow Permanent)
+shallow_permanent:
+  thresholds:
+    Q: 78
+    T: 80
+    S: 75
+    C: 85
+    L: 85
+  cycles:
+    min_stability_cycles: 5
+    min_conflict_free_rounds: 3
+    min_days_since_promotion: 7
+  source_policy:
+    allowed_sources:
+      - "retrieved"
+      - "verified_external"
+    blocked_sources:
+      - "user_input"
+      - "model_generated"
+      - "unverified"
+
+# 深层永久层阈值 (Deep Permanent)
+deep_permanent:
+  thresholds:
+    Q: 85
+    T: 88
+    S: 85
+    C: 92
+    L: 90
+  cycles:
+    min_stability_cycles: 10
+    min_conflict_free_rounds: 8
+    min_verification_rounds: 5
+    min_training_iterations: 100
+  source_policy:
+    allowed_sources:
+      - "training_path"
+      - "multi_round_verified"
+    blocked_sources:
+      - "user_path"
+      - "single_round"
+      - "model_self_constructed"
+  review_requirements:
+    source_review: true
+    evidence_review: true
+    conflict_review: true
+    cross_task_verification: true
+
+# 训练路径配置
+training_path:
+  stages:
+    - "seed_input"
+    - "review_candidate"
+    - "noise_injection"
+    - "model_thinking"
+    - "missing_perception"
+    - "retrieval"
+    - "candidate_conclusion"
+    - "tsla_initial"
+    - "strong_review"
+    - "verification"
+    - "gate_promotion"
+  
+  strong_review:
+    enabled: true
+    check_items:
+      - "source_authenticity"
+      - "evidence_sufficiency"
+      - "conflict_detection"
+      - "boundary_clarity"
+      - "single_meaning"
+      - "structure_integrity"
+  
+  verification:
+    enabled: true
+    min_rounds: 5
+    check_consistency: true
+    check_cross_task: true
+    check_long_term_stability: true
+  
+  noise_injection:
+    enabled: true
+    confusion_ratio: 0.3
+    trigger_missing_perception: true
+
+# 第六阶段预留配置 (Parameter Promotion)
+parameter_promotion:
+  # 参数晋升门槛（更高）
+  thresholds:
+    Q: 90
+    T: 92
+    S: 90
+    C: 95
+    L: 93
+    cross_task_score: 0.90
+    long_term_stability: 0.95
+  
+  # 来源限制
+  allowed_sources:
+    - "deep_permanent"
+    - "multi_task_verified"
+  blocked_sources:
+    - "shallow_permanent"
+    - "user_path"
+    - "model_self_constructed_direct"
+  
+  # 验证维度
+  verification_dimensions:
+    - "cross_round"
+    - "cross_task"
+    - "cross_version"
+  
+  # 写回保护
+  write_protection:
+    allow_self_learned: true
+    block_manual_override: true
+    require_rollback_mechanism: true
+
+# 参数存储配置
+param_storage:
+  manual_params:
+    protected: true
+    allow_read: true
+    allow_write: false
+    description: "基础手工训练参数，禁止直接覆盖"
+  
+  self_learned_params:
+    protected: false
+    allow_read: true
+    allow_write: true
+    description: "模型自构建学习参数，允许受控写回"
+    promotion_requirements:
+      min_verification_rounds: 8
+      min_cross_task_score: 0.90
+      min_long_term_stability: 0.95
+
+# 保护回退策略
+protection_fallback:
+  priority:
+    - "mark_conflict"
+    - "local_fix"
+    - "split"
+    - "downgrade_to_review"
+    - "downgrade_to_isolation"
+    - "param_rollback"
+    - "param_freeze"
+  prohibited:
+    - "direct_delete"
+    - "cross_layer_write"
+    - "manual_param_override"
+    - "unverified_param_write"

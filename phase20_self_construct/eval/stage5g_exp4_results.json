@@ -1,0 +1,53 @@
+{
+  "experiment": "exp4_global_protection",
+  "config": {
+    "kl_weights": {
+      "gap": 0.25,
+      "policy": 0.25,
+      "governance": 0.25,
+      "writeback": 0.3
+    },
+    "learning_rate": 1.2e-05,
+    "replay_ratio": 0.2
+  },
+  "single_results": [
+    {
+      "candidate_id": "relation_technical_stack_3_213415",
+      "target_change": 0.09999999999999998,
+      "ability_changes": {
+        "retrieval_trigger": -0.020000000000000018,
+        "governance": 0.0,
+        "policy_routing": -0.020000000000000018,
+        "writeback": -0.12
+      },
+      "max_old_drop": 0.12,
+      "rollback_success": false,
+      "success": false
+    },
+    {
+      "candidate_id": "relation_technical_stack_4_213415",
+      "target_change": -0.020000000000000018,
+      "ability_changes": {
+        "retrieval_trigger": -0.05999999999999994,
+        "governance": 0.0,
+        "policy_routing": -0.05999999999999994,
+        "writeback": -0.020000000000000018
+      },
+      "max_old_drop": 0.05999999999999994,
+      "rollback_success": false,
+      "success": false
+    }
+  ],
+  "continuous_result": {
+    "total_change": 0.05999999999999994,
+    "ability_changes": {
+      "retrieval_trigger": 0.12,
+      "governance": 0.0,
+      "policy_routing": 0.12,
+      "writeback": -0.019999999999999907
+    },
+    "max_old_drop": 0.12,
+    "success": false
+  },
+  "phase6_ready": false
+}

@@ -1,0 +1,40 @@
+{"input": {"user_query": "val_\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_0"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "val_\u9879\u76ee\u76ee\u6807_1"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "val_\u4f60\u597d_2"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "val_Python\u662f\u4ec0\u4e48_3"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "val_\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_4"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "val_\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_5"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "val_\u9879\u76ee\u76ee\u6807_6"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "val_\u4f60\u597d_7"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "val_Python\u662f\u4ec0\u4e48_8"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "val_\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_9"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "val_\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_10"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "val_\u9879\u76ee\u76ee\u6807_11"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "val_\u4f60\u597d_12"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "val_Python\u662f\u4ec0\u4e48_13"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "val_\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_14"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "val_\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_15"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "val_\u9879\u76ee\u76ee\u6807_16"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "val_\u4f60\u597d_17"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "val_Python\u662f\u4ec0\u4e48_18"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "val_\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_19"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "val_\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_20"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "val_\u9879\u76ee\u76ee\u6807_21"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "val_\u4f60\u597d_22"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "val_Python\u662f\u4ec0\u4e48_23"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "val_\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_24"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "val_\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_25"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "val_\u9879\u76ee\u76ee\u6807_26"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "val_\u4f60\u597d_27"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "val_Python\u662f\u4ec0\u4e48_28"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "val_\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_29"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "val_\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_30"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "val_\u9879\u76ee\u76ee\u6807_31"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "val_\u4f60\u597d_32"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "val_Python\u662f\u4ec0\u4e48_33"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "val_\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_34"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "val_\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_35"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "val_\u9879\u76ee\u76ee\u6807_36"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "val_\u4f60\u597d_37"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "val_Python\u662f\u4ec0\u4e48_38"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "val_\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_39"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}

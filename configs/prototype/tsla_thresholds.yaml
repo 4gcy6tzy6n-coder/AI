@@ -1,0 +1,143 @@
+# TSLA 阈值配置 - 第二阶段占位参数
+# 注意：这些阈值目前是示例参数，正式参数需要通过实验定标
+
+version: "v0.2-prototype"
+description: "TSLA 评分阈值配置（占位版本）"
+
+# 统一评分框架
+scoring:
+  # T - 真实性 (Truthfulness)
+  truth:
+    weight: 0.25
+    min_acceptable: 50
+    min_good: 70
+    min_excellent: 85
+
+  # S - 稳定性 (Stability)
+  stability:
+    weight: 0.20
+    min_acceptable: 40
+    min_good: 60
+    min_excellent: 80
+
+  # E - 证据强度 (Evidence)
+  evidence:
+    weight: 0.20
+    min_acceptable: 45
+    min_good: 65
+    min_excellent: 80
+
+  # C - 冲突洁净度 (Conflict Cleanliness)
+  conflict:
+    weight: 0.15
+    min_acceptable: 60
+    min_good: 75
+    min_excellent: 90
+
+  # L - 结构合法性 (Legality)
+  legality:
+    weight: 0.10
+    min_acceptable: 70
+    min_good: 85
+    min_excellent: 95
+
+  # R - 复用价值 (Reusability)
+  reusability:
+    weight: 0.05
+    min_acceptable: 30
+    min_good: 50
+    min_excellent: 70
+
+  # P - 来源风险修正 (Provenance Risk)
+  provenance:
+    weight: 0.05
+    min_acceptable: 40
+    min_good: 60
+    min_excellent: 80
+
+# Q - 综合治理分计算
+composite:
+  min_promote_to_long_term: 65
+  min_promote_to_shallow_permanent: 80
+  min_promote_to_deep_permanent: 90
+  auto_reject_below: 30
+
+# 硬否决阈值
+hard_veto:
+  safety_threshold: 20
+  liability_threshold: 25
+  accountability_threshold: 30
+
+# 8 动作触发阈值（第二阶段正式框架）
+actions:
+  # 危险动作（优先）
+  review_backflow:
+    trigger: "gap_severity_high OR confidence_below_40"
+    description: "回流重审"
+
+  split:
+    trigger: "ambiguous_structure OR multiple_meanings_detected"
+    description: "拆分"
+
+  error_archive:
+    trigger: "confirmed_error AND has_learning_value"
+    description: "错误归档"
+
+  exclude:
+    trigger: "no_value AND structurally_invalid"
+    description: "排除"
+
+  # 治理动作
+  isolate:
+    trigger: "conflict_detected OR cleanliness_below_50"
+    description: "隔离"
+
+  downgrade:
+    trigger: "stability_dropped OR evidence_weakened"
+    description: "降级"
+
+  # 正向动作
+  keep:
+    trigger: "all_scores_acceptable AND no_conflicts"
+    description: "保留"
+
+  promote:
+    trigger: "composite_above_threshold AND stability_high"
+    description: "晋升（第二阶段只到长期层）"
+
+# 记忆层迁移阈值
+memory_layers:
+  transient:
+    max_retention_hours: 24
+    auto_evict: true
+
+  long_term:
+    review_zone:
+      min_composite_score: 65
+      max_retention_days: 30
+
+    isolation_zone:
+      trigger: "conflict_detected OR hard_veto_triggered"
+      max_retention_days: 90
+
+    error_zone:
+      trigger: "confirmed_error"
+      max_retention_days: 365
+
+# 来源风险修正系数
+source_risk:
+  user_input:
+    base_risk: 0.3
+    trust_multiplier: 1.0
+
+  system_generated:
+    base_risk: 0.1
+    trust_multiplier: 1.2
+
+  retrieved:
+    base_risk: 0.4
+    trust_multiplier: 0.9
+
+  inferred:
+    base_risk: 0.5
+    trust_multiplier: 0.8

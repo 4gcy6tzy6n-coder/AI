@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Data
+data/raw/*
+data/interim/*
+data/processed/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+
+# Artifacts
+artifacts/checkpoints/*
+artifacts/logs/*
+artifacts/traces/*
+!artifacts/checkpoints/.gitkeep
+!artifacts/logs/.gitkeep
+!artifacts/traces/.gitkeep
+
+# Model/checkpoint outputs
+*.pt
+*.pth
+*.ckpt
+*.bin
+phase*/checkpoints/
+phase*/training_output/
+phase20_self_construct/stage8_dataset/
+
+# Secrets
+.env
+.env.local
+*.key
+*.pem
+
+# OS
+.DS_Store
+Thumbs.db

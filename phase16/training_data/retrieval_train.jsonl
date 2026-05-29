@@ -1,0 +1,200 @@
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_0"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_1"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_2"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_3"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_4"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_5"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_6"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_7"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_8"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_9"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_10"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_11"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_12"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_13"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_14"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_15"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_16"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_17"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_18"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_19"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_20"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_21"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_22"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_23"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_24"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_25"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_26"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_27"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_28"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_29"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_30"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_31"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_32"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_33"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_34"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_35"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_36"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_37"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_38"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_39"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_40"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_41"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_42"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_43"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_44"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_45"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_46"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_47"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_48"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_49"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_50"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_51"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_52"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_53"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_54"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_55"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_56"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_57"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_58"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_59"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_60"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_61"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_62"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_63"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_64"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_65"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_66"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_67"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_68"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_69"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_70"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_71"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_72"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_73"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_74"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_75"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_76"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_77"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_78"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_79"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_80"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_81"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_82"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_83"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_84"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_85"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_86"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_87"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_88"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_89"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_90"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_91"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_92"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_93"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_94"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_95"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_96"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_97"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_98"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_99"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_100"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_101"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_102"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_103"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_104"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_105"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_106"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_107"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_108"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_109"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_110"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_111"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_112"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_113"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_114"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_115"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_116"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_117"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_118"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_119"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_120"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_121"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_122"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_123"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_124"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_125"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_126"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_127"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_128"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_129"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_130"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_131"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_132"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_133"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_134"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_135"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_136"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_137"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_138"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_139"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_140"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_141"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_142"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_143"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_144"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_145"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_146"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_147"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_148"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_149"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_150"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_151"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_152"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_153"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_154"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_155"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_156"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_157"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_158"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_159"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_160"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_161"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_162"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_163"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_164"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_165"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_166"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_167"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_168"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_169"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_170"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_171"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_172"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_173"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_174"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_175"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_176"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_177"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_178"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_179"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_180"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_181"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_182"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_183"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_184"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_185"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_186"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_187"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_188"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_189"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_190"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_191"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_192"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_193"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_194"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}
+{"input": {"user_query": "\u6211\u53eb\u4ec0\u4e48\u540d\u5b57_195"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.9, "governance_actions": ["CHECK_MEMORY"]}}
+{"input": {"user_query": "\u9879\u76ee\u76ee\u6807_196"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.85, "governance_actions": ["RETRIEVE", "CHECK_CONFLICT"]}}
+{"input": {"user_query": "\u4f60\u597d_197"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.1, "governance_actions": []}}
+{"input": {"user_query": "Python\u662f\u4ec0\u4e48_198"}, "output": {"retrieval_triggered": false, "retrieval_necessity_score": 0.2, "governance_actions": ["VERIFY_SOURCE"]}}
+{"input": {"user_query": "\u6211\u4eec\u4e4b\u524d\u8ba8\u8bba\u8fc7\u4ec0\u4e48_199"}, "output": {"retrieval_triggered": true, "retrieval_necessity_score": 0.95, "governance_actions": ["RETRIEVE", "TEMPORAL_CHECK"]}}

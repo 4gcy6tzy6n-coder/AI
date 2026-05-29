@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-04-19T00:22:36.753887",
+  "config": {
+    "base_kl_weights": {
+      "gap": 0.3,
+      "policy": 0.3,
+      "governance": 0.3,
+      "writeback": 0.42
+    },
+    "learning_rate": 1e-05,
+    "replay_ratio": 0.4,
+    "step1_max_change": 0.003,
+    "step2_max_change": 0.008,
+    "old_ability_threshold": 0.12,
+    "writeback_threshold": 0.05,
+    "auto_rollback": true,
+    "param_promotion_threshold": 0.8,
+    "kb_promotion_threshold": 0.7
+  },
+  "acceptance_criteria": {
+    "target_improvement": 0.1,
+    "old_ability_drop": 0.15,
+    "writeback_change": 0.05,
+    "rollback_recovery": 0.9
+  },
+  "test_5_step": {
+    "target_improvement": 0.05714285714285716,
+    "max_old_ability_drop": 0.022644927536231818,
+    "max_writeback_change": 0.09099999999999997,
+    "pass_target": false,
+    "pass_old": true,
+    "pass_writeback": false,
+    "results": [
+      {
+        "step": 1,
+        "pre_eval": "EvaluationResult(timestamp='2026-04-19T00:21:51.691315', scores=CapabilityScores(target_score=0.6363636363636364, retrieval_score=0.0, policy_score=0.0, governance_score=0.9565217391304348, writeback_score=0.574), baseline_scores=CapabilityScores(target_score=0.5428571428571428, retrieval_score=0.0, policy_score=0.0, governance_score=0.9791666666666666, writeback_score=0.595), target_improvement=0.09350649350649354, old_ability_drop=0.022644927536231818, writeback_change=0.02100000000000002, details={'num_samples': 50, 'old_capability_breakdown': {'retrieval': 0.0, 'policy': 0.0, 'governance': 0.9565217391304348}})",
+        "post_eval": "EvaluationResult(timestamp='2026-04-19T00:21:55.561683', scores=CapabilityScores(target_score=0.6181818181818182, retrieval_score=0.0, policy_score=0.0, governance_score=0.9565217391304348, writeback_score=0.5319999999999999), baseline_scores=CapabilityScores(target_score=0.5428571428571428, retrieval_score=0.0, policy_score=0.0, governance_score=0.9791666666666666, writeback_score=0.595), target_improvement=0.07532467532467535, old_ability_drop=0.022644927536231818, writeback_change=0.06300000000000006, details={'num_samples': 50, 'old_capability_breakdown': {'retrieval': 0.0, 'policy': 0.0, 'governance': 0.9565217391304348}})",
+        "target_improvement": 0.07532467532467535,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.06300000000000006,
+        "rollback_triggered": true
+      },
+      {
+        "step": 2,
+        "pre_eval": "EvaluationResult(timestamp='2026-04-19T00:21:57.183128', scores=CapabilityScores(target_score=0.5818181818181818, retrieval_score=0.0, policy_score=0.5, governance_score=0.9565217391304348, writeback_score=0.616), baseline_scores=CapabilityScores(target_score=0.5428571428571428, retrieval_score=0.0, policy_score=0.0, governance_score=0.9791666666666666, writeback_score=0.595), target_improvement=0.038961038961038974, old_ability_drop=0.5, writeback_change=0.02100000000000002, details={'num_samples': 50, 'old_capability_breakdown': {'retrieval': 0.0, 'policy': 0.5, 'governance': 0.9565217391304348}})",
+        "post_eval": "EvaluationResult(timestamp='2026-04-19T00:22:00.443213', scores=CapabilityScores(target_score=0.6363636363636364, retrieval_score=0.0, policy_score=0.0, governance_score=0.9565217391304348, writeback_score=0.5599999999999999), baseline_scores=CapabilityScores(target_score=0.5428571428571428, retrieval_score=0.0, policy_score=0.0, governance_score=0.9791666666666666, writeback_score=0.595), target_improvement=0.09350649350649354, old_ability_drop=0.022644927536231818, writeback_change=0.03500000000000003, details={'num_samples': 50, 'old_capability_breakdown': {'retrieval': 0.0, 'policy': 0.0, 'governance': 0.9565217391304348}})",
+        "target_improvement": 0.09350649350649354,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.03500000000000003,
+        "rollback_triggered": false
+      },
+      {
+        "step": 3,
+        "pre_eval": "EvaluationResult(timestamp='2026-04-19T00:22:02.242839', scores=CapabilityScores(target_score=0.5818181818181818, retrieval_score=0.0, policy_score=0.0, governance_score=0.9565217391304348, writeback_score=0.602), baseline_scores=CapabilityScores(target_score=0.5428571428571428, retrieval_score=0.0, policy_score=0.0, governance_score=0.9791666666666666, writeback_score=0.595), target_improvement=0.038961038961038974, old_ability_drop=0.022644927536231818, writeback_change=0.007000000000000006, details={'num_samples': 50, 'old_capability_breakdown': {'retrieval': 0.0, 'policy': 0.0, 'governance': 0.9565217391304348}})",
+        "post_eval": "EvaluationResult(timestamp='2026-04-19T00:22:05.469274', scores=CapabilityScores(target_score=0.6181818181818182, retrieval_score=0.0, policy_score=0.0, governance_score=0.9565217391304348, writeback_score=0.602), baseline_scores=CapabilityScores(target_score=0.5428571428571428, retrieval_score=0.0, policy_score=0.0, governance_score=0.9791666666666666, writeback_score=0.595), target_improvement=0.07532467532467535, old_ability_drop=0.022644927536231818, writeback_change=0.007000000000000006, details={'num_samples': 50, 'old_capability_breakdown': {'retrieval': 0.0, 'policy': 0.0, 'governance': 0.9565217391304348}})",
+        "target_improvement": 0.07532467532467535,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.007000000000000006,
+        "rollback_triggered": false
+      },
+      {
+        "step": 4,
+        "pre_eval": "EvaluationResult(timestamp='2026-04-19T00:22:07.346457', scores=CapabilityScores(target_score=0.6545454545454545, retrieval_score=0.0, policy_score=0.0, governance_score=0.9565217391304348, writeback_score=0.588), baseline_scores=CapabilityScores(target_score=0.5428571428571428, retrieval_score=0.0, policy_score=0.0, governance_score=0.9791666666666666, writeback_score=0.595), target_improvement=0.11168831168831173, old_ability_drop=0.022644927536231818, writeback_change=0.007000000000000006, details={'num_samples': 50, 'old_capability_breakdown': {'retrieval': 0.0, 'policy': 0.0, 'governance': 0.9565217391304348}})",
+        "post_eval": "EvaluationResult(timestamp='2026-04-19T00:22:10.448717', scores=CapabilityScores(target_score=0.6181818181818182, retrieval_score=0.0, policy_score=0.0, governance_score=0.9565217391304348, writeback_score=0.504), baseline_scores=CapabilityScores(target_score=0.5428571428571428, retrieval_score=0.0, policy_score=0.0, governance_score=0.9791666666666666, writeback_score=0.595), target_improvement=0.07532467532467535, old_ability_drop=0.022644927536231818, writeback_change=0.09099999999999997, details={'num_samples': 50, 'old_capability_breakdown': {'retrieval': 0.0, 'policy': 0.0, 'governance': 0.9565217391304348}})",
+        "target_improvement": 0.07532467532467535,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.09099999999999997,
+        "rollback_triggered": true
+      },
+      {
+        "step": 5,
+        "pre_eval": "EvaluationResult(timestamp='2026-04-19T00:22:12.092288', scores=CapabilityScores(target_score=0.6, retrieval_score=0.0, policy_score=0.0, governance_score=0.9565217391304348, writeback_score=0.588), baseline_scores=CapabilityScores(target_score=0.5428571428571428, retrieval_score=0.0, policy_score=0.0, governance_score=0.9791666666666666, writeback_score=0.595), target_improvement=0.05714285714285716, old_ability_drop=0.022644927536231818, writeback_change=0.007000000000000006, details={'num_samples': 50, 'old_capability_breakdown': {'retrieval': 0.0, 'policy': 0.0, 'governance': 0.9565217391304348}})",
+        "post_eval": "EvaluationResult(timestamp='2026-04-19T00:22:15.451407', scores=CapabilityScores(target_score=0.6, retrieval_score=0.0, policy_score=0.0, governance_score=0.9565217391304348, writeback_score=0.574), baseline_scores=CapabilityScores(target_score=0.5428571428571428, retrieval_score=0.0, policy_score=0.0, governance_score=0.9791666666666666, writeback_score=0.595), target_improvement=0.05714285714285716, old_ability_drop=0.022644927536231818, writeback_change=0.02100000000000002, details={'num_samples': 50, 'old_capability_breakdown': {'retrieval': 0.0, 'policy': 0.0, 'governance': 0.9565217391304348}})",
+        "target_improvement": 0.05714285714285716,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.02100000000000002,
+        "rollback_triggered": true
+      }
+    ]
+  },
+  "test_rollback": {
+    "recovery_rates": {
+      "target_score": 42.50000000000016,
+      "policy_score": 0,
+      "governance_score": 0,
+      "writeback_score": 0
+    },
+    "avg_recovery_rate": 10.62500000000004,
+    "full_recovery": false,
+    "pass": false
+  },
+  "summary": {
+    "target_improvement": 0.05714285714285716,
+    "max_old_ability_drop": 0.022644927536231818,
+    "max_writeback_change": 0.09099999999999997,
+    "rollback_recovery_rate": 10.62500000000004,
+    "pass_target": false,
+    "pass_old": true,
+    "pass_writeback": false,
+    "pass_rollback": false,
+    "overall_pass": false
+  }
+}

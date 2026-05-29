@@ -1,0 +1,58 @@
+{
+  "package_id": "aa5dabbb-cdbb-4148-b4a5-06e2d73bdb2d",
+  "package_type": "human_review",
+  "target_failure_types": [
+    "unnatural_generation"
+  ],
+  "risk_decision": {
+    "recommended_action": "human_review",
+    "reason": "Low confidence (0.48) — escalating to human review. Dominant cause was knowledge_gap",
+    "severity": "low",
+    "confidence": 0.47877936045566744,
+    "posterior": {
+      "posteriors": {
+        "knowledge_gap": 0.47877936045566744,
+        "retrieval_failure": 0.0874556802185405,
+        "governance_failure": 0.0750664110636621,
+        "generation_failure": 0.24775994876726845,
+        "memory_failure": 0.027431573803667023,
+        "route_failure": 0.08350702569119449
+      },
+      "dominant_cause": "knowledge_gap",
+      "confidence": 0.47877936045566744,
+      "entropy": 1.411777627980831
+    },
+    "tsla_action_map": "review_backflow"
+  },
+  "payload": {
+    "action": "human_review",
+    "sample_id": "G1_003",
+    "reason": "Low confidence (0.48) — escalating to human review. Dominant cause was knowledge_gap",
+    "evidence_summary": {
+      "retrieval_gap": 0.2,
+      "context_conflict": 0.1,
+      "generation_fluency": 0.2,
+      "answer_faithfulness": 0.8,
+      "memory_contamination": 0.1,
+      "strategy_mismatch": 0.1,
+      "tsla_confidence": 0.7,
+      "user_intent_clarity": 0.7
+    },
+    "posterior": {
+      "posteriors": {
+        "knowledge_gap": 0.47877936045566744,
+        "retrieval_failure": 0.0874556802185405,
+        "governance_failure": 0.0750664110636621,
+        "generation_failure": 0.24775994876726845,
+        "memory_failure": 0.027431573803667023,
+        "route_failure": 0.08350702569119449
+      },
+      "dominant_cause": "knowledge_gap",
+      "confidence": 0.47877936045566744,
+      "entropy": 1.411777627980831
+    }
+  },
+  "generated_at": "2026-05-11T14:02:12.154793+00:00",
+  "applied": false,
+  "verified": false
+}

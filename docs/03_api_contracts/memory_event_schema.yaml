@@ -1,0 +1,155 @@
+openapi: 3.0.0
+info:
+  title: Memory Event Schema
+  version: 1.0.0
+  description: 记忆事件数据模型定义
+
+components:
+  schemas:
+    MemoryEvent:
+      type: object
+      required:
+        - event_id
+        - event_type
+        - timestamp
+        - memory_id
+      properties:
+        event_id:
+          type: string
+          format: uuid
+          description: 事件唯一标识符
+        event_type:
+          type: string
+          enum:
+            - created
+            - read
+            - updated
+            - deleted
+            - promoted
+            - demoted
+            - expired
+            - archived
+          description: 事件类型
+        timestamp:
+          type: string
+          format: date-time
+          description: 事件发生时间
+        memory_id:
+          type: string
+          description: 关联的记忆 ID
+        unit_id:
+          type: string
+          description: 关联的 Unit ID
+        source_zone:
+          type: string
+          enum: [transient, long_term, shallow_permanent, deep_permanent]
+          description: 源记忆区域
+        target_zone:
+          type: string
+          enum: [transient, long_term, shallow_permanent, deep_permanent]
+          description: 目标记忆区域
+        metadata:
+          type: object
+          description: 事件元数据
+
+    MemoryCreatedEvent:
+      allOf:
+        - $ref: '#/components/schemas/MemoryEvent'
+      properties:
+        event_type:
+          type: string
+          enum: [created]
+        initial_zone:
+          type: string
+          description: 初始存储区域
+        content_hash:
+          type: string
+          description: 内容哈希
+
+    MemoryReadEvent:
+      allOf:
+        - $ref: '#/components/schemas/MemoryEvent'
+      properties:
+        event_type:
+          type: string
+          enum: [read]
+        query:
+          type: string
+          description: 查询内容
+        relevance_score:
+          type: number
+          description: 相关度分数
+
+    MemoryPromotedEvent:
+      allOf:
+        - $ref: '#/components/schemas/MemoryEvent'
+      properties:
+        event_type:
+          type: string
+          enum: [promoted]
+        source_zone:
+          type: string
+        target_zone:
+          type: string
+        promotion_reason:
+          type: string
+          enum: [stability, frequency, importance, manual]
+        gate_decisions:
+          type: array
+          items:
+            $ref: '#/components/schemas/GateDecision'
+
+    GateDecision:
+      type: object
+      required:
+        - gate_type
+        - decision
+      properties:
+        gate_type:
+          type: string
+          enum: [write, stability, promotion, permanent_protection]
+        decision:
+          type: string
+          enum: [allowed, rejected, conditional]
+        score:
+          type: number
+          description: 门控评分
+        conditions:
+          type: array
+          items:
+            type: string
+          description: 附加条件
+
+    MemoryExpiredEvent:
+      allOf:
+        - $ref: '#/components/schemas/MemoryEvent'
+      properties:
+        event_type:
+          type: string
+          enum: [expired]
+        ttl:
+          type: integer
+          description: 设置的生存时间
+        actual_lifetime:
+          type: integer
+          description: 实际生存时间（秒）
+        expired_at:
+          type: string
+          format: date-time
+
+    EventStream:
+      type: object
+      properties:
+        stream_id:
+          type: string
+          description: 流标识符
+        events:
+          type: array
+          items:
+            $ref: '#/components/schemas/MemoryEvent'
+        cursor:
+          type: string
+          description: 游标位置
+        has_more:
+          type: boolean
+          description: 是否有更多事件

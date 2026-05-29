@@ -1,0 +1,55 @@
+# 来源风险评估配置
+version: "v0.2-prototype"
+
+sources:
+  user_input:
+    base_trust: 0.7
+    risk_factors:
+      - name: "input_length"
+        short_penalty: 0.1  # 输入过短扣分
+      - name: "clarity"
+        ambiguous_penalty: 0.15
+    modifiers:
+      verified_user: 0.1
+      anonymous: -0.1
+
+  system_generated:
+    base_trust: 0.85
+    risk_factors:
+      - name: "chain_depth"
+        deep_inference_penalty: 0.05  # 推理链过长扣分
+    modifiers:
+      direct_derivation: 0.1
+      multi_hop_inference: -0.1
+
+  retrieved:
+    base_trust: 0.6
+    risk_factors:
+      - name: "source_quality"
+        internal_kb: 0.2
+        external_verified: 0.1
+        external_unverified: -0.2
+      - name: "retrieval_confidence"
+        low_confidence_penalty: 0.15
+    modifiers:
+      cross_referenced: 0.15
+      single_source: -0.1
+
+  inferred:
+    base_trust: 0.5
+    risk_factors:
+      - name: "inference_chain"
+        each_step_penalty: 0.08
+      - name: "evidence_support"
+        weak_support_penalty: 0.2
+    modifiers:
+      rule_based: 0.1
+      pattern_matching: 0.05
+      statistical_inference: -0.05
+
+# 风险等级映射
+risk_levels:
+  low: { min_score: 70, label: "低风险" }
+  medium: { min_score: 40, label: "中等风险" }
+  high: { min_score: 20, label: "高风险" }
+  critical: { min_score: 0, label: "严重风险" }

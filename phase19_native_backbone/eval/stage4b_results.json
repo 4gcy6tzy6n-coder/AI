@@ -1,0 +1,46 @@
+{
+  "Native-128": {
+    "model_type": "native",
+    "hidden_dim": 128,
+    "params": 3150115,
+    "best_val_acc": 0.9958333333333332,
+    "test_results": {
+      "gap_acc": 1.0,
+      "policy_acc": 1.0,
+      "writeback_acc": 0.9753086419753086
+    }
+  },
+  "Native-64": {
+    "model_type": "native",
+    "hidden_dim": 64,
+    "params": 2090595,
+    "best_val_acc": 0.9333333333333332,
+    "test_results": {
+      "gap_acc": 1.0,
+      "policy_acc": 0.8765432098765432,
+      "writeback_acc": 1.0
+    }
+  },
+  "Transformer-Matched": {
+    "model_type": "transformer",
+    "hidden_dim": 128,
+    "params": 2887587,
+    "best_val_acc": 0.9958333333333332,
+    "test_results": {
+      "gap_acc": 1.0,
+      "policy_acc": 1.0,
+      "writeback_acc": 0.9506172839506173
+    }
+  },
+  "Transformer-Small": {
+    "model_type": "transformer",
+    "hidden_dim": 64,
+    "params": 2024867,
+    "best_val_acc": 0.9833333333333334,
+    "test_results": {
+      "gap_acc": 1.0,
+      "policy_acc": 1.0,
+      "writeback_acc": 0.9753086419753086
+    }
+  }
+}

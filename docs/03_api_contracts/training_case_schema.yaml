@@ -1,0 +1,298 @@
+openapi: 3.0.0
+info:
+  title: Training Case Schema
+  version: 1.0.0
+  description: 训练案例数据模型定义
+
+components:
+  schemas:
+    TrainingCase:
+      type: object
+      required:
+        - case_id
+        - input
+        - expected_output
+        - difficulty
+      properties:
+        case_id:
+          type: string
+          format: uuid
+          description: 案例唯一标识符
+        input:
+          $ref: '#/components/schemas/CaseInput'
+        expected_output:
+          $ref: '#/components/schemas/CaseOutput'
+        expected_reasoning:
+          type: array
+          items:
+            $ref: '#/components/schemas/ReasoningStep'
+          description: 期望推理步骤
+        difficulty:
+          type: integer
+          minimum: 1
+          maximum: 10
+          description: 难度等级
+        tags:
+          type: array
+          items:
+            type: string
+          description: 标签列表
+        category:
+          type: string
+          description: 案例类别
+        source:
+          type: string
+          description: 案例来源
+        metadata:
+          type: object
+          description: 案例元数据
+        created_at:
+          type: string
+          format: date-time
+          description: 创建时间
+        version:
+          type: string
+          description: 案例版本
+
+    CaseInput:
+      type: object
+      required:
+        - content
+      properties:
+        content:
+          type: string
+          description: 输入内容
+        content_type:
+          type: string
+          enum: [text, code, structured, multimodal]
+          description: 内容类型
+        context:
+          type: string
+          description: 上下文信息
+        constraints:
+          type: array
+          items:
+            type: string
+          description: 约束条件
+
+    CaseOutput:
+      type: object
+      required:
+        - content
+      properties:
+        content:
+          type: string
+          description: 期望输出内容
+        content_type:
+          type: string
+          enum: [text, code, structured, action]
+          description: 内容类型
+        acceptance_criteria:
+          type: array
+          items:
+            $ref: '#/components/schemas/AcceptanceCriterion'
+          description: 验收标准
+        alternative_outputs:
+          type: array
+          items:
+            type: string
+          description: 可接受的替代输出
+
+    AcceptanceCriterion:
+      type: object
+      required:
+        - criterion_type
+        - description
+      properties:
+        criterion_type:
+          type: string
+          enum: [exact_match, semantic_similarity, contains, regex, custom]
+          description: 标准类型
+        description:
+          type: string
+          description: 标准描述
+        threshold:
+          type: number
+          description: 阈值（如适用）
+        validator:
+          type: string
+          description: 自定义验证器（如适用）
+
+    ReasoningStep:
+      type: object
+      required:
+        - step_id
+        - description
+      properties:
+        step_id:
+          type: string
+          description: 步骤 ID
+        order:
+          type: integer
+          description: 步骤顺序
+        description:
+          type: string
+          description: 步骤描述
+        step_type:
+          type: string
+          enum: [analysis, deduction, induction, retrieval, calculation, verification]
+          description: 步骤类型
+        required_evidence:
+          type: array
+          items:
+            type: string
+          description: 所需证据
+        expected_intermediate:
+          type: string
+          description: 期望中间结果
+
+    TrainingBatch:
+      type: object
+      required:
+        - batch_id
+        - cases
+      properties:
+        batch_id:
+          type: string
+          description: 批次 ID
+        cases:
+          type: array
+          items:
+            $ref: '#/components/schemas/TrainingCase'
+          description: 案例列表
+        batch_type:
+          type: string
+          enum: [standard, noise_injected, adversarial, curriculum]
+          description: 批次类型
+        noise_config:
+          $ref: '#/components/schemas/NoiseConfig'
+        curriculum_stage:
+          type: integer
+          description: 课程阶段（如适用）
+        metadata:
+          type: object
+          description: 批次元数据
+
+    NoiseConfig:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+          description: 是否启用噪声
+        noise_types:
+          type: array
+          items:
+            type: string
+            enum: [input, retrieval, reasoning, output]
+          description: 噪声类型
+        intensity:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: 噪声强度
+        input_noise:
+          $ref: '#/components/schemas/InputNoiseConfig'
+        retrieval_noise:
+          $ref: '#/components/schemas/RetrievalNoiseConfig'
+        reasoning_noise:
+          $ref: '#/components/schemas/ReasoningNoiseConfig'
+
+    InputNoiseConfig:
+      type: object
+      properties:
+        typo_rate:
+          type: number
+          description: 错别字率
+        word_dropout_rate:
+          type: number
+          description: 词语丢弃率
+        shuffle_rate:
+          type: number
+          description: 顺序打乱率
+        paraphrase_rate:
+          type: number
+          description: 改写率
+
+    RetrievalNoiseConfig:
+      type: object
+      properties:
+        irrelevant_result_rate:
+          type: number
+          description: 无关结果率
+        missing_result_rate:
+          type: number
+          description: 缺失结果率
+        ranking_error_rate:
+          type: number
+          description: 排序错误率
+        stale_result_rate:
+          type: number
+          description: 过时结果率
+
+    ReasoningNoiseConfig:
+      type: object
+      properties:
+        step_dropout_rate:
+          type: number
+          description: 步骤丢弃率
+        wrong_step_rate:
+          type: number
+          description: 错误步骤率
+        circular_reasoning_rate:
+          type: number
+          description: 循环推理率
+        irrelevant_step_rate:
+          type: number
+          description: 无关步骤率
+
+    TrainingResult:
+      type: object
+      required:
+        - result_id
+        - case_id
+        - status
+      properties:
+        result_id:
+          type: string
+          description: 结果 ID
+        case_id:
+          type: string
+          description: 案例 ID
+        status:
+          type: string
+          enum: [passed, failed, partial, error]
+          description: 结果状态
+        actual_output:
+          type: string
+          description: 实际输出
+        actual_reasoning:
+          type: array
+          items:
+            $ref: '#/components/schemas/ReasoningStep'
+          description: 实际推理步骤
+        metrics:
+          $ref: '#/components/schemas/TrainingMetrics'
+        errors:
+          type: array
+          items:
+            type: string
+          description: 错误信息
+        execution_time_ms:
+          type: integer
+          description: 执行时间
+
+    TrainingMetrics:
+      type: object
+      properties:
+        output_similarity:
+          type: number
+          description: 输出相似度
+        reasoning_accuracy:
+          type: number
+          description: 推理准确性
+        step_coverage:
+          type: number
+          description: 步骤覆盖率
+        confidence:
+          type: number
+          description: 置信度

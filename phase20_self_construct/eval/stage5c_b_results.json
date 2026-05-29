@@ -1,0 +1,66 @@
+{
+  "baseline": {
+    "target": 0.5,
+    "old": {
+      "private_knowledge": 1.0,
+      "retrieval_trigger": 0.7,
+      "gap": 1.0,
+      "governance": 1.0,
+      "writeback": 0.9,
+      "multiturn": 0.0
+    }
+  },
+  "post_promotion": {
+    "target": 0.52,
+    "old": {
+      "private_knowledge": 1.0,
+      "retrieval_trigger": 0.7,
+      "gap": 0.94,
+      "governance": 1.0,
+      "writeback": 0.9,
+      "multiturn": 0.0
+    }
+  },
+  "target_change": 0.020000000000000018,
+  "old_changes": {
+    "private_knowledge": 0.0,
+    "retrieval_trigger": 0.0,
+    "gap": -0.06000000000000005,
+    "governance": 0.0,
+    "writeback": 0.0,
+    "multiturn": 0.0
+  },
+  "training_history": [
+    {
+      "total": 4.10218128987721,
+      "gap": 2.0510770763669695,
+      "policy": 1.8812890648841858,
+      "kl": 1.698150873184204
+    },
+    {
+      "total": 3.466659426689148,
+      "gap": 1.728777187211173,
+      "policy": 1.5822037607431412,
+      "kl": 1.5567850725991386
+    },
+    {
+      "total": 3.2143023354666576,
+      "gap": 1.4788789131811686,
+      "policy": 1.5771821290254593,
+      "kl": 1.582413171018873
+    },
+    {
+      "total": 2.856171097074236,
+      "gap": 1.279360096369471,
+      "policy": 1.4088906986372811,
+      "kl": 1.6792025395802088
+    },
+    {
+      "total": 2.7115292762007033,
+      "gap": 1.1422759326440948,
+      "policy": 1.4010434289063727,
+      "kl": 1.682099427495684
+    }
+  ],
+  "rollback_triggered": false
+}

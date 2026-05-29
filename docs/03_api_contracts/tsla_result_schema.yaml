@@ -1,0 +1,220 @@
+openapi: 3.0.0
+info:
+  title: TSLA Result Schema
+  version: 1.0.0
+  description: TSLA 评估结果数据模型定义
+
+components:
+  schemas:
+    TSLAResult:
+      type: object
+      required:
+        - result_id
+        - unit_id
+        - timestamp
+        - scores
+        - action
+      properties:
+        result_id:
+          type: string
+          format: uuid
+          description: 结果唯一标识符
+        unit_id:
+          type: string
+          description: 评估的 Unit ID
+        timestamp:
+          type: string
+          format: date-time
+          description: 评估时间
+        scores:
+          $ref: '#/components/schemas/TSLAScores'
+        action:
+          $ref: '#/components/schemas/TSLAAction'
+        veto:
+          $ref: '#/components/schemas/VetoDecision'
+        audit_record:
+          $ref: '#/components/schemas/AuditRecord'
+
+    TSLAScores:
+      type: object
+      required:
+        - trustworthiness
+        - safety
+        - liability
+        - accountability
+        - overall
+      properties:
+        trustworthiness:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: 可信度分数
+        safety:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: 安全性分数
+        liability:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: 责任分数
+        accountability:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: 可追责性分数
+        overall:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: 综合分数
+        details:
+          type: object
+          description: 详细评分
+          properties:
+            accuracy:
+              type: number
+              description: 准确性
+            consistency:
+              type: number
+              description: 一致性
+            explainability:
+              type: number
+              description: 可解释性
+            harmful_content:
+              type: number
+              description: 有害内容检测
+            bias_score:
+              type: number
+              description: 偏见分数
+            legal_compliance:
+              type: number
+              description: 法律合规性
+            ethical_compliance:
+              type: number
+              description: 伦理合规性
+            auditability:
+              type: number
+              description: 可审计性
+            traceability:
+              type: number
+              description: 可追溯性
+
+    TSLAAction:
+      type: object
+      required:
+        - action_type
+        - confidence
+      properties:
+        action_type:
+          type: string
+          enum: [ACCEPT, REJECT, REVIEW, ESCALATE, DECOMPOSE, AUGMENT]
+          description: 动作类型
+        confidence:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: 动作置信度
+        reason:
+          type: string
+          description: 动作原因
+        metadata:
+          type: object
+          description: 附加元数据
+        requires_follow_up:
+          type: boolean
+          description: 是否需要跟进
+        follow_up_actions:
+          type: array
+          items:
+            type: string
+          description: 后续动作列表
+
+    VetoDecision:
+      type: object
+      required:
+        - vetoed
+      properties:
+        vetoed:
+          type: boolean
+          description: 是否被否决
+        veto_type:
+          type: string
+          enum: [safety, legal, integrity, policy]
+          description: 否决类型
+        reason:
+          type: string
+          description: 否决原因
+        severity:
+          type: string
+          enum: [low, medium, high, critical]
+          description: 严重程度
+        alert_level:
+          type: string
+          enum: [none, info, warning, critical]
+          description: 警报级别
+
+    AuditRecord:
+      type: object
+      required:
+        - record_id
+        - timestamp
+      properties:
+        record_id:
+          type: string
+          description: 记录 ID
+        timestamp:
+          type: string
+          format: date-time
+          description: 记录时间
+        unit_id:
+          type: string
+          description: Unit ID
+        input_hash:
+          type: string
+          description: 输入内容哈希
+        scores:
+          $ref: '#/components/schemas/TSLAScores'
+        action:
+          $ref: '#/components/schemas/TSLAAction'
+        context_hash:
+          type: string
+          description: 上下文哈希
+        signature:
+          type: string
+          description: 数字签名
+
+    TSLAReport:
+      type: object
+      properties:
+        report_id:
+          type: string
+          description: 报告 ID
+        period:
+          type: object
+          properties:
+            start:
+              type: string
+              format: date-time
+            end:
+              type: string
+              format: date-time
+        summary:
+          type: object
+          properties:
+            total_evaluated:
+              type: integer
+            accepted:
+              type: integer
+            rejected:
+              type: integer
+            reviewed:
+              type: integer
+            escalated:
+              type: integer
+            average_scores:
+              $ref: '#/components/schemas/TSLAScores'
+        distribution:
+          type: object
+          description: 分数分布

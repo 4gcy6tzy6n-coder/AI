@@ -1,0 +1,166 @@
+{
+  "timestamp": "2026-04-19T15:10:42.767266",
+  "config": "baseline_v1",
+  "results": {
+    "baseline": {
+      "test_id": "ablation_baseline_20260419_150112",
+      "timestamp": "2026-04-19T15:02:57.287703",
+      "strategy": "baseline",
+      "metrics": {
+        "target_gain": 0.17489177489177488,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.136,
+        "rollback_recovery": 0.0,
+        "e2e_success_rate": 0.0,
+        "stability_pass": false
+      },
+      "regression": {
+        "pass": false,
+        "failed_items": [
+          "\u7aef\u5230\u7aef\u6210\u529f\u7387 > 90%",
+          "\u7a33\u5b9a\u6027\u901a\u8fc7"
+        ]
+      }
+    },
+    "A": {
+      "test_id": "ablation_A_20260419_150257",
+      "timestamp": "2026-04-19T15:04:34.957071",
+      "strategy": "A",
+      "metrics": {
+        "target_gain": 0.17489177489177488,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.136,
+        "rollback_recovery": 0.0,
+        "e2e_success_rate": 0.0,
+        "stability_pass": false
+      },
+      "regression": {
+        "pass": false,
+        "failed_items": [
+          "\u7aef\u5230\u7aef\u6210\u529f\u7387 > 90%",
+          "\u7a33\u5b9a\u6027\u901a\u8fc7"
+        ]
+      }
+    },
+    "B": {
+      "test_id": "ablation_B_20260419_150434",
+      "timestamp": "2026-04-19T15:06:15.893115",
+      "strategy": "B",
+      "metrics": {
+        "target_gain": 0.17489177489177488,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.136,
+        "rollback_recovery": 0.0,
+        "e2e_success_rate": 0.0,
+        "stability_pass": false
+      },
+      "regression": {
+        "pass": false,
+        "failed_items": [
+          "\u7aef\u5230\u7aef\u6210\u529f\u7387 > 90%",
+          "\u7a33\u5b9a\u6027\u901a\u8fc7"
+        ]
+      }
+    },
+    "C": {
+      "test_id": "ablation_C_20260419_150615",
+      "timestamp": "2026-04-19T15:07:56.133986",
+      "strategy": "C",
+      "metrics": {
+        "target_gain": 0.17489177489177488,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.136,
+        "rollback_recovery": 0.0,
+        "e2e_success_rate": 0.0,
+        "stability_pass": false
+      },
+      "regression": {
+        "pass": false,
+        "failed_items": [
+          "\u7aef\u5230\u7aef\u6210\u529f\u7387 > 90%",
+          "\u7a33\u5b9a\u6027\u901a\u8fc7"
+        ]
+      }
+    },
+    "D_A_B": {
+      "test_id": "ablation_D_F_G_20260419_150756",
+      "timestamp": "2026-04-19T15:09:01.956736",
+      "strategy": "D_F_G",
+      "metrics": {
+        "target_gain": 0.17489177489177488,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.136,
+        "rollback_recovery": 0.0,
+        "e2e_success_rate": 0.0,
+        "stability_pass": false
+      },
+      "regression": {
+        "pass": false,
+        "failed_items": [
+          "\u7aef\u5230\u7aef\u6210\u529f\u7387 > 90%",
+          "\u7a33\u5b9a\u6027\u901a\u8fc7"
+        ]
+      }
+    },
+    "D_A_C": {
+      "test_id": "ablation_D_F_I_20260419_150901",
+      "timestamp": "2026-04-19T15:09:31.661649",
+      "strategy": "D_F_I",
+      "metrics": {
+        "target_gain": 0.17489177489177488,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.136,
+        "rollback_recovery": 0.0,
+        "e2e_success_rate": 0.0,
+        "stability_pass": false
+      },
+      "regression": {
+        "pass": false,
+        "failed_items": [
+          "\u7aef\u5230\u7aef\u6210\u529f\u7387 > 90%",
+          "\u7a33\u5b9a\u6027\u901a\u8fc7"
+        ]
+      }
+    },
+    "D_B_C": {
+      "test_id": "ablation_D_G_I_20260419_150931",
+      "timestamp": "2026-04-19T15:10:05.475021",
+      "strategy": "D_G_I",
+      "metrics": {
+        "target_gain": 0.17489177489177488,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.136,
+        "rollback_recovery": 0.0,
+        "e2e_success_rate": 0.0,
+        "stability_pass": false
+      },
+      "regression": {
+        "pass": false,
+        "failed_items": [
+          "\u7aef\u5230\u7aef\u6210\u529f\u7387 > 90%",
+          "\u7a33\u5b9a\u6027\u901a\u8fc7"
+        ]
+      }
+    },
+    "D_A_B_C": {
+      "test_id": "ablation_D_F_G_I_20260419_151005",
+      "timestamp": "2026-04-19T15:10:42.765883",
+      "strategy": "D_F_G_I",
+      "metrics": {
+        "target_gain": 0.17489177489177488,
+        "old_ability_drop": 0.022644927536231818,
+        "writeback_change": 0.136,
+        "rollback_recovery": 0.0,
+        "e2e_success_rate": 0.0,
+        "stability_pass": false
+      },
+      "regression": {
+        "pass": false,
+        "failed_items": [
+          "\u7aef\u5230\u7aef\u6210\u529f\u7387 > 90%",
+          "\u7a33\u5b9a\u6027\u901a\u8fc7"
+        ]
+      }
+    }
+  }
+}

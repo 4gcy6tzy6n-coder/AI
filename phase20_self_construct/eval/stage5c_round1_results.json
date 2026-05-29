@@ -1,0 +1,57 @@
+{
+  "candidate_id": "relation_dc371e5e27f4",
+  "baseline": {
+    "target_ability": {
+      "relation_recognition": 0.58
+    },
+    "old_abilities": {
+      "private_knowledge": 1.0,
+      "retrieval_trigger": 0.8,
+      "gap_governance_writeback": {
+        "gap": 0.98,
+        "governance": 1.0,
+        "writeback": 0.92
+      },
+      "multiturn_stability": 1.0
+    },
+    "strategy_distribution": {
+      "DIRECT": 0.0,
+      "RETRIEVAL_FIRST": 0.83,
+      "CONSERVATIVE": 0.0,
+      "DECLINE": 0.05,
+      "REVIEW": 0.12
+    }
+  },
+  "post_promotion": {
+    "target_ability": {
+      "relation_recognition": 0.34
+    },
+    "old_abilities": {
+      "private_knowledge": 1.0,
+      "retrieval_trigger": 0.76,
+      "gap_governance_writeback": {
+        "gap": 0.94,
+        "governance": 1.0,
+        "writeback": 0.94
+      },
+      "multiturn_stability": 1.0
+    },
+    "strategy_distribution": {
+      "DIRECT": 0.01,
+      "RETRIEVAL_FIRST": 0.78,
+      "CONSERVATIVE": 0.01,
+      "DECLINE": 0.08,
+      "REVIEW": 0.12
+    }
+  },
+  "comparison": {
+    "target_change": -0.23999999999999994,
+    "old_changes": {
+      "private_knowledge": 0.0,
+      "retrieval_trigger": -0.040000000000000036,
+      "multiturn_stability": 0.0
+    },
+    "should_rollback": false
+  },
+  "rollback_performed": false
+}

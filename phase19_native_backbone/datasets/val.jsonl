@@ -1,0 +1,3 @@
+{"input": {"user_query": "再见"}, "output": {"gap_type": "NO_GAP", "response_strategy": "DIRECT", "governance_actions": [], "memory_decision": {"should_writeback": false}}}
+{"input": {"user_query": "帮我订个酒店"}, "output": {"gap_type": "RETRIEVABLE", "response_strategy": "RETRIEVAL_FIRST", "governance_actions": ["VERIFY_SCOPE"], "memory_decision": {"should_writeback": true, "target_layer": "ephemeral"}}}
+{"input": {"user_query": "这个我不太确定答案"}, "output": {"gap_type": "RETRIEVABLE", "response_strategy": "CONSERVATIVE", "governance_actions": ["VERIFY_SCOPE"], "memory_decision": {"should_writeback": false}}}

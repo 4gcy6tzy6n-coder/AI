@@ -1,0 +1,196 @@
+"""
+TSLA Thresholds v0.6 Full Training Loop
+第六阶段完整训练闭环后的阈值配置
+
+冻结日期: 2026-04-17
+版本: prototype_v0.6_full_training_loop
+
+核心原则:
+- 完整训练闭环已落地
+- 参数晋升受控
+- 手工参数与自构建参数分离
+- 回滚/冻结机制已建立
+"""
+
+# 浅层永久层阈值 (Shallow Permanent)
+shallow_permanent:
+  thresholds:
+    Q: 78
+    T: 80
+    S: 75
+    C: 85
+    L: 85
+  cycles:
+    min_stability_cycles: 5
+    min_conflict_free_rounds: 3
+    min_days_since_promotion: 7
+  source_policy:
+    allowed_sources:
+      - "retrieved"
+      - "verified_external"
+    blocked_sources:
+      - "user_input"
+      - "model_generated"
+      - "unverified"
+
+# 深层永久层阈值 (Deep Permanent)
+deep_permanent:
+  thresholds:
+    Q: 85
+    T: 88
+    S: 85
+    C: 92
+    L: 90
+  cycles:
+    min_stability_cycles: 10
+    min_conflict_free_rounds: 8
+    min_verification_rounds: 5
+    min_training_iterations: 100
+  source_policy:
+    allowed_sources:
+      - "training_path"
+      - "multi_round_verified"
+    blocked_sources:
+      - "user_path"
+      - "single_round"
+      - "model_self_constructed"
+  review_requirements:
+    source_review: true
+    evidence_review: true
+    conflict_review: true
+    cross_task_verification: true
+
+# 参数晋升阈值 (Parameter Promotion)
+parameter_promotion:
+  thresholds:
+    Q: 90
+    T: 92
+    S: 90
+    C: 95
+    L: 93
+    cross_task_score: 0.90
+    long_term_stability: 0.95
+  cycles:
+    min_verification_rounds: 8
+    min_cross_task_verifications: 3
+    min_long_term_cycles: 15
+  source_policy:
+    allowed_sources:
+      - "deep_permanent"
+      - "multi_task_verified"
+    blocked_sources:
+      - "shallow_permanent"
+      - "user_path"
+      - "model_self_constructed_direct"
+  verification_dimensions:
+    - "cross_round"
+    - "cross_task"
+    - "cross_version"
+  write_protection:
+    allow_self_learned: true
+    block_manual_override: true
+    require_rollback_mechanism: true
+    require_validation_period: true
+
+# 训练路径配置
+training_path:
+  stages:
+    - "seed_input"
+    - "review_candidate"
+    - "noise_injection"
+    - "model_thinking"
+    - "missing_perception"
+    - "retrieval"
+    - "candidate_conclusion"
+    - "tsla_initial"
+    - "strong_review"
+    - "verification"
+    - "gate_promotion"
+  
+  strong_review:
+    enabled: true
+    check_items:
+      - "source_authenticity"
+      - "evidence_sufficiency"
+      - "conflict_detection"
+      - "boundary_clarity"
+      - "single_meaning"
+      - "structure_integrity"
+  
+  verification:
+    enabled: true
+    min_rounds: 5
+    check_consistency: true
+    check_cross_task: true
+    check_long_term_stability: true
+  
+  noise_injection:
+    enabled: true
+    confusion_ratio: 0.3
+    trigger_missing_perception: true
+
+# 完整训练闭环配置
+full_training_loop:
+  max_rounds: 10
+  enable_param_promotion: true
+  enable_rollback: true
+  enable_freeze: true
+  
+  metrics:
+    - "total_candidates"
+    - "rejected_count"
+    - "kb_promoted_count"
+    - "param_candidate_count"
+    - "param_write_success_count"
+    - "rollback_count"
+    - "freeze_count"
+
+# 参数存储配置
+param_storage:
+  manual_params:
+    protected: true
+    allow_read: true
+    allow_write: false
+    description: "基础手工训练参数，禁止直接覆盖"
+    protection_levels:
+      - "critical"
+      - "standard"
+      - "adjustable"
+  
+  self_learned_params:
+    protected: false
+    allow_read: true
+    allow_write: true
+    description: "模型自构建学习参数，允许受控写回"
+    promotion_requirements:
+      min_verification_rounds: 8
+      min_cross_task_score: 0.90
+      min_long_term_stability: 0.95
+    validation_period_days: 7
+
+# 回滚/冻结配置
+rollback_config:
+  enabled: true
+  auto_rollback_on_drift: true
+  max_rollback_history: 100
+  
+freeze_config:
+  enabled: true
+  auto_freeze_on_conflict: true
+  max_frozen_params: 50
+
+# 保护回退策略
+protection_fallback:
+  priority:
+    - "mark_conflict"
+    - "local_fix"
+    - "split"
+    - "downgrade_to_review"
+    - "downgrade_to_isolation"
+    - "param_rollback"
+    - "param_freeze"
+  prohibited:
+    - "direct_delete"
+    - "cross_layer_write"
+    - "manual_param_override"
+    - "unverified_param_write"

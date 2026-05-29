@@ -1,0 +1,88 @@
+{
+  "experiment_id": "target_gain_verify_20260419_141525",
+  "timestamp": "2026-04-19T14:15:25.778158",
+  "config_version": "1.0",
+  "baseline_target_score": 0.5523809523809524,
+  "final_target_score": 0.7272727272727273,
+  "target_gain_percent": 0.1567099567099567,
+  "old_ability_drop": 0.022644927536231818,
+  "writeback_change": 0.136,
+  "verification": {
+    "target_gain_pass": true,
+    "old_ability_pass": true,
+    "writeback_pass": false,
+    "overall_pass": false
+  },
+  "step_records": [
+    {
+      "step": 1,
+      "target_improvement": 0.0,
+      "old_ability_drop": 0.0,
+      "writeback_change": 0.0,
+      "error": "'StepMetrics' object has no attribute 'gap'"
+    },
+    {
+      "step": 2,
+      "target_improvement": 0.0,
+      "old_ability_drop": 0.0,
+      "writeback_change": 0.0,
+      "error": "'StepMetrics' object has no attribute 'gap'"
+    },
+    {
+      "step": 3,
+      "target_improvement": 0.0,
+      "old_ability_drop": 0.0,
+      "writeback_change": 0.0,
+      "error": "'StepMetrics' object has no attribute 'gap'"
+    },
+    {
+      "step": 4,
+      "target_improvement": 0.0,
+      "old_ability_drop": 0.0,
+      "writeback_change": 0.0,
+      "error": "'StepMetrics' object has no attribute 'gap'"
+    },
+    {
+      "step": 5,
+      "target_improvement": 0.0,
+      "old_ability_drop": 0.0,
+      "writeback_change": 0.0,
+      "error": "'StepMetrics' object has no attribute 'gap'"
+    },
+    {
+      "step": 6,
+      "target_improvement": 0.01904761904761898,
+      "old_ability_drop": 0.0560897435897435,
+      "writeback_change": 0.12600000000000006,
+      "error": ""
+    },
+    {
+      "step": 7,
+      "target_improvement": 0.0,
+      "old_ability_drop": 0.0,
+      "writeback_change": 0.0,
+      "error": "'StepMetrics' object has no attribute 'gap'"
+    },
+    {
+      "step": 8,
+      "target_improvement": 0.0,
+      "old_ability_drop": 0.0,
+      "writeback_change": 0.0,
+      "error": "'StepMetrics' object has no attribute 'gap'"
+    },
+    {
+      "step": 9,
+      "target_improvement": 0.0,
+      "old_ability_drop": 0.0,
+      "writeback_change": 0.0,
+      "error": "'StepMetrics' object has no attribute 'gap'"
+    },
+    {
+      "step": 10,
+      "target_improvement": 0.0,
+      "old_ability_drop": 0.0,
+      "writeback_change": 0.0,
+      "error": "'StepMetrics' object has no attribute 'gap'"
+    }
+  ]
+}

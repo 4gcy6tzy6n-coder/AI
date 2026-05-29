@@ -1,0 +1,13 @@
+{
+  "stats": {
+    "total": 7,
+    "no_write": 5,
+    "ephemeral": 0,
+    "long_term": 2,
+    "isolation": 0,
+    "error_archive": 0
+  },
+  "promotion_rate": 0.2857142857142857,
+  "isolation_rate": 0.0,
+  "error_rate": 0.0
+}

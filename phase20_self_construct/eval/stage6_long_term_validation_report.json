@@ -1,0 +1,380 @@
+{
+  "timestamp": "2026-04-18T23:35:55.134185",
+  "config": {
+    "base_kl_weights": {
+      "gap": 0.3,
+      "policy": 0.3,
+      "governance": 0.3,
+      "writeback": 0.38
+    },
+    "learning_rate": 1e-05,
+    "replay_ratio": 0.35,
+    "step1_max_change": 0.003,
+    "step2_max_change": 0.008,
+    "old_ability_threshold": 0.12,
+    "writeback_threshold": 0.05,
+    "auto_rollback": true,
+    "param_promotion_threshold": 0.8,
+    "kb_promotion_threshold": 0.7
+  },
+  "5_step_validation": {
+    "num_steps": 5,
+    "metrics_history": [
+      {
+        "step_number": 1,
+        "target_improvement": 0.18000000000000005,
+        "old_ability_drop": 0.5,
+        "writeback_change": 0.33999999999999997,
+        "retrieval_change": 0.24,
+        "policy_change": 0.24,
+        "governance_change": 0.5,
+        "kl_weights": {
+          "gap": 0.3,
+          "policy": 0.3,
+          "governance": 0.3,
+          "writeback": 0.38
+        },
+        "rollback_triggered": true,
+        "cumulative_target": 0.18000000000000005,
+        "cumulative_old_drop": 0.5
+      },
+      {
+        "step_number": 2,
+        "target_improvement": 0.08000000000000007,
+        "old_ability_drop": 0.09999999999999998,
+        "writeback_change": -0.05999999999999994,
+        "retrieval_change": 0.09999999999999998,
+        "policy_change": 0.09999999999999998,
+        "governance_change": 0.0,
+        "kl_weights": {
+          "gap": 0.3,
+          "policy": 0.3,
+          "governance": 0.3,
+          "writeback": 0.38
+        },
+        "rollback_triggered": true,
+        "cumulative_target": 0.2600000000000001,
+        "cumulative_old_drop": 0.09999999999999998
+      },
+      {
+        "step_number": 3,
+        "target_improvement": 0.08000000000000007,
+        "old_ability_drop": 0.05999999999999994,
+        "writeback_change": 0.0,
+        "retrieval_change": -0.05999999999999994,
+        "policy_change": -0.05999999999999994,
+        "governance_change": 0.0,
+        "kl_weights": {
+          "gap": 0.3,
+          "policy": 0.3,
+          "governance": 0.3,
+          "writeback": 0.38
+        },
+        "rollback_triggered": false,
+        "cumulative_target": 0.3400000000000002,
+        "cumulative_old_drop": 0.05999999999999994
+      },
+      {
+        "step_number": 4,
+        "target_improvement": 0.020000000000000018,
+        "old_ability_drop": 0.040000000000000036,
+        "writeback_change": -0.020000000000000018,
+        "retrieval_change": -0.040000000000000036,
+        "policy_change": -0.040000000000000036,
+        "governance_change": 0.0,
+        "kl_weights": {
+          "gap": 0.3,
+          "policy": 0.3,
+          "governance": 0.3,
+          "writeback": 0.38
+        },
+        "rollback_triggered": false,
+        "cumulative_target": 0.3600000000000002,
+        "cumulative_old_drop": 0.040000000000000036
+      },
+      {
+        "step_number": 5,
+        "target_improvement": 0.040000000000000036,
+        "old_ability_drop": 0.020000000000000018,
+        "writeback_change": 0.040000000000000036,
+        "retrieval_change": -0.020000000000000018,
+        "policy_change": -0.020000000000000018,
+        "governance_change": 0.0,
+        "kl_weights": {
+          "gap": 0.3,
+          "policy": 0.3,
+          "governance": 0.3,
+          "writeback": 0.38
+        },
+        "rollback_triggered": false,
+        "cumulative_target": 0.40000000000000024,
+        "cumulative_old_drop": 0.020000000000000018
+      }
+    ],
+    "final_target_improvement": 0.40000000000000024,
+    "final_old_ability_drop": 0.020000000000000018,
+    "final_writeback_change": 0.040000000000000036,
+    "max_old_ability_drop": 0.5,
+    "rollback_count": 2,
+    "success": false
+  },
+  "5_step_analysis": {
+    "total_steps": 5,
+    "old_ability": {
+      "initial_drop": 0.5,
+      "final_drop": 0.020000000000000018,
+      "max_drop": 0.5,
+      "avg_drop": 0.144,
+      "trend": "stable"
+    },
+    "writeback": {
+      "max_change": 0.33999999999999997,
+      "avg_change": 0.06000000000000001,
+      "stable": false
+    },
+    "target_learning": {
+      "total_gain": 0.40000000000000024,
+      "avg_per_step": 0.08000000000000004,
+      "positive_steps": 5
+    },
+    "rollback_analysis": {
+      "count": 2,
+      "rate": 0.4
+    }
+  },
+  "10_step_validation": {
+    "num_steps": 10,
+    "metrics_history": [
+      {
+        "step_number": 1,
+        "target_improvement": 0.18000000000000005,
+        "old_ability_drop": 0.5,
+        "writeback_change": 0.33999999999999997,
+        "retrieval_change": 0.24,
+        "policy_change": 0.24,
+        "governance_change": 0.5,
+        "kl_weights": {
+          "gap": 0.3,
+          "policy": 0.3,
+          "governance": 0.3,
+          "writeback": 0.38
+        },
+        "rollback_triggered": true,
+        "cumulative_target": 0.18000000000000005,
+        "cumulative_old_drop": 0.5
+      },
+      {
+        "step_number": 2,
+        "target_improvement": 0.08000000000000007,
+        "old_ability_drop": 0.09999999999999998,
+        "writeback_change": -0.05999999999999994,
+        "retrieval_change": 0.09999999999999998,
+        "policy_change": 0.09999999999999998,
+        "governance_change": 0.0,
+        "kl_weights": {
+          "gap": 0.3,
+          "policy": 0.3,
+          "governance": 0.3,
+          "writeback": 0.38
+        },
+        "rollback_triggered": true,
+        "cumulative_target": 0.2600000000000001,
+        "cumulative_old_drop": 0.09999999999999998
+      },
+      {
+        "step_number": 3,
+        "target_improvement": 0.08000000000000007,
+        "old_ability_drop": 0.05999999999999994,
+        "writeback_change": 0.0,
+        "retrieval_change": -0.05999999999999994,
+        "policy_change": -0.05999999999999994,
+        "governance_change": 0.0,
+        "kl_weights": {
+          "gap": 0.3,
+          "policy": 0.3,
+          "governance": 0.3,
+          "writeback": 0.38
+        },
+        "rollback_triggered": false,
+        "cumulative_target": 0.3400000000000002,
+        "cumulative_old_drop": 0.05999999999999994
+      },
+      {
+        "step_number": 4,
+        "target_improvement": 0.020000000000000018,
+        "old_ability_drop": 0.040000000000000036,
+        "writeback_change": -0.020000000000000018,
+        "retrieval_change": -0.040000000000000036,
+        "policy_change": -0.040000000000000036,
+        "governance_change": 0.0,
+        "kl_weights": {
+          "gap": 0.3,
+          "policy": 0.3,
+          "governance": 0.3,
+          "writeback": 0.38
+        },
+        "rollback_triggered": false,
+        "cumulative_target": 0.3600000000000002,
+        "cumulative_old_drop": 0.040000000000000036
+      },
+      {
+        "step_number": 5,
+        "target_improvement": 0.040000000000000036,
+        "old_ability_drop": 0.020000000000000018,
+        "writeback_change": 0.040000000000000036,
+        "retrieval_change": -0.020000000000000018,
+        "policy_change": -0.020000000000000018,
+        "governance_change": 0.0,
+        "kl_weights": {
+          "gap": 0.3,
+          "policy": 0.3,
+          "governance": 0.3,
+          "writeback": 0.38
+        },
+        "rollback_triggered": false,
+        "cumulative_target": 0.40000000000000024,
+        "cumulative_old_drop": 0.020000000000000018
+      },
+      {
+        "step_number": 6,
+        "target_improvement": 0.0,
+        "old_ability_drop": 0.06000000000000005,
+        "writeback_change": -0.16000000000000003,
+        "retrieval_change": 0.06000000000000005,
+        "policy_change": 0.06000000000000005,
+        "governance_change": 0.0,
+        "kl_weights": {
+          "gap": 0.3,
+          "policy": 0.3,
+          "governance": 0.3,
+          "writeback": 0.38
+        },
+        "rollback_triggered": true,
+        "cumulative_target": 0.40000000000000024,
+        "cumulative_old_drop": 0.06000000000000005
+      },
+      {
+        "step_number": 8,
+        "target_improvement": 0.18000000000000005,
+        "old_ability_drop": 0.09999999999999998,
+        "writeback_change": 0.07999999999999996,
+        "retrieval_change": 0.09999999999999998,
+        "policy_change": 0.09999999999999998,
+        "governance_change": 0.020000000000000018,
+        "kl_weights": {
+          "gap": 0.3,
+          "policy": 0.3,
+          "governance": 0.3,
+          "writeback": 0.38
+        },
+        "rollback_triggered": true,
+        "cumulative_target": 0.5800000000000003,
+        "cumulative_old_drop": 0.09999999999999998
+      },
+      {
+        "step_number": 9,
+        "target_improvement": 0.16000000000000003,
+        "old_ability_drop": 0.12,
+        "writeback_change": -0.05999999999999994,
+        "retrieval_change": 0.12,
+        "policy_change": 0.12,
+        "governance_change": 0.0,
+        "kl_weights": {
+          "gap": 0.3,
+          "policy": 0.3,
+          "governance": 0.3,
+          "writeback": 0.38
+        },
+        "rollback_triggered": true,
+        "cumulative_target": 0.7400000000000003,
+        "cumulative_old_drop": 0.12
+      },
+      {
+        "step_number": 10,
+        "target_improvement": 0.12,
+        "old_ability_drop": 0.06000000000000005,
+        "writeback_change": -0.06000000000000005,
+        "retrieval_change": 0.06000000000000005,
+        "policy_change": 0.06000000000000005,
+        "governance_change": 0.0,
+        "kl_weights": {
+          "gap": 0.3,
+          "policy": 0.3,
+          "governance": 0.3,
+          "writeback": 0.38
+        },
+        "rollback_triggered": true,
+        "cumulative_target": 0.8600000000000003,
+        "cumulative_old_drop": 0.06000000000000005
+      }
+    ],
+    "final_target_improvement": 0.8600000000000003,
+    "final_old_ability_drop": 0.06000000000000005,
+    "final_writeback_change": -0.06000000000000005,
+    "max_old_ability_drop": 0.5,
+    "rollback_count": 6,
+    "success": false
+  },
+  "10_step_analysis": {
+    "total_steps": 9,
+    "old_ability": {
+      "initial_drop": 0.5,
+      "final_drop": 0.06000000000000005,
+      "max_drop": 0.5,
+      "avg_drop": 0.11777777777777779,
+      "trend": "stable"
+    },
+    "writeback": {
+      "max_change": 0.33999999999999997,
+      "avg_change": 0.011111111111111108,
+      "stable": false
+    },
+    "target_learning": {
+      "total_gain": 0.8600000000000003,
+      "avg_per_step": 0.09555555555555559,
+      "positive_steps": 8
+    },
+    "rollback_analysis": {
+      "count": 6,
+      "rate": 0.6666666666666666
+    }
+  },
+  "rollback_analysis": {
+    "baseline": {
+      "target": 0.69,
+      "retrieval": 0.76,
+      "governance": 1.0,
+      "policy": 0.76,
+      "writeback": 0.87
+    },
+    "pre_rollback": {
+      "target": 0.61,
+      "retrieval": 0.76,
+      "governance": 1.0,
+      "policy": 0.76,
+      "writeback": 0.93
+    },
+    "post_rollback": {
+      "target": 0.57,
+      "retrieval": 0.75,
+      "governance": 1.0,
+      "policy": 0.75,
+      "writeback": 0.93
+    },
+    "rollback_success": true,
+    "recovery_rates": {
+      "target": 0,
+      "retrieval": 100,
+      "governance": 100,
+      "policy": 100,
+      "writeback": 0
+    },
+    "avg_recovery_rate": 60.0
+  },
+  "summary": {
+    "5_step_success": false,
+    "10_step_success": false,
+    "rollback_recovery_rate": 60.0,
+    "overall_pass": false
+  }
+}

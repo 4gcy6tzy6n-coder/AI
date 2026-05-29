@@ -1,0 +1,351 @@
+"""
+Benchmark Scale Suite - 扩展数据规模测试套件
+Phase 8 WP2: 规模扩展验证
+
+目标：
+- 验证第七阶段得到的复杂度优势是否具有规模稳健性
+- 识别系统瓶颈模块
+- 明确优势保留项与系统瓶颈项
+
+版本: v1.0
+日期: 2026-04-18
+"""
+
+# ============================================
+# 规模档位定义
+# ============================================
+
+scale_tiers:
+  small:
+    id: "S"
+    description: "小规模基准测试"
+    max_units: 1000
+    expected_qps: 10
+    knowledge_injection_intensity: "low"
+    noise_ratio: 0.05
+    conflict_ratio: 0.05
+    retrieval_pressure: "light"
+    
+  medium:
+    id: "M"
+    description: "中等规模测试"
+    max_units: 10000
+    expected_qps: 50
+    knowledge_injection_intensity: "medium"
+    noise_ratio: 0.10
+    conflict_ratio: 0.10
+    retrieval_pressure: "moderate"
+    
+  large:
+    id: "L"
+    description: "大规模测试"
+    max_units: 100000
+    expected_qps: 200
+    knowledge_injection_intensity: "high"
+    noise_ratio: 0.15
+    conflict_ratio: 0.15
+    retrieval_pressure: "heavy"
+    
+  stress:
+    id: "X"
+    description: "极限压力测试"
+    max_units: 1000000
+    expected_qps: 1000
+    knowledge_injection_intensity: "extreme"
+    noise_ratio: 0.25
+    conflict_ratio: 0.20
+    retrieval_pressure: "extreme"
+
+# ============================================
+# 核心指标追踪
+# ============================================
+
+core_metrics:
+  # 参数效率指标
+  param_efficiency:
+    - metric: "param_utilization_rate"
+      description: "参数利用率"
+      phase7_baseline: 0.90
+      degradation_threshold: 0.15  # 下降不超过15%
+      
+    - metric: "effective_param_ratio"
+      description: "有效参数比例"
+      phase7_baseline: 0.90
+      degradation_threshold: 0.15
+  
+  # 内存指标
+  memory:
+    - metric: "total_memory_mb"
+      description: "总内存占用"
+      phase7_baseline: 2900
+      growth_factor_threshold: 2.0  # 增长不超过2倍
+      
+    - metric: "memory_per_unit_kb"
+      description: "每单位内存消耗"
+      target: "< 50"  # 目标：每单位小于50KB
+  
+  # 检索性能指标
+  retrieval:
+    - metric: "avg_retrieval_latency_ms"
+      description: "平均检索延迟"
+      phase7_baseline: 5.0
+      max_acceptable: 50.0  # 最大可接受50ms
+      
+    - metric: "retrieval_throughput_qps"
+      description: "检索吞吐量"
+      target_scale_factor: "linear"  # 期望线性扩展
+      
+    - metric: "retrieval_accuracy"
+      description: "检索准确率"
+      phase7_baseline: 0.95
+      degradation_threshold: 0.10
+  
+  # 知识更新指标
+  update:
+    - metric: "update_latency_ms"
+      description: "知识更新延迟"
+      phase7_baseline: 5100
+      max_acceptable: 30000  # 最大可接受30秒
+      
+    - metric: "update_throughput_ops_per_sec"
+      description: "更新吞吐量"
+      target: "> 1"  # 至少每秒1次更新
+  
+  # 错误修复指标
+  repair:
+    - metric: "repair_latency_ms"
+      description: "错误修复延迟"
+      phase7_baseline: 5100
+      max_acceptable: 60000  # 最大可接受60秒
+      
+    - metric: "repair_success_rate"
+      description: "修复成功率"
+      phase7_baseline: 0.95
+      degradation_threshold: 0.15
+  
+  # 治理稳定性指标
+  governance:
+    - metric: "long_term_governance_pass_rate"
+      description: "长期层治理通过率"
+      phase7_baseline: 0.914
+      degradation_threshold: 0.10
+      
+    - metric: "permanent_promotion_pass_rate"
+      description: "永久层晋升通过率"
+      phase7_baseline: 0.943
+      degradation_threshold: 0.10
+      
+    - metric: "isolation_zone_occupancy"
+      description: "隔离区占用率"
+      warning_threshold: 0.25
+      critical_threshold: 0.30
+      
+    - metric: "permanent_layer_pollution_rate"
+      description: "永久层污染率"
+      warning_threshold: 0.005
+      critical_threshold: 0.01
+
+# ============================================
+# 分层指标记录
+# ============================================
+
+layer_metrics:
+  working_layer:
+    metrics:
+      - "object_count"
+      - "hit_rate"
+      - "ttl_expiration_rate"
+      - "memory_usage_mb"
+    
+  long_term_layer:
+    metrics:
+      - "object_count"
+      - "promotion_rate"
+      - "demotion_rate"
+      - "quality_distribution"
+      - "memory_usage_mb"
+    
+  deep_permanent_layer:
+    metrics:
+      - "object_count"
+      - "promotion_rate"
+      - "verification_queue_length"
+      - "quality_distribution"
+      - "memory_usage_mb"
+    
+  permanent_layer:
+    metrics:
+      - "object_count"
+      - "manual_review_queue_length"
+      - "pollution_incidents"
+      - "quality_distribution"
+      - "memory_usage_mb"
+    
+  isolation_zone:
+    metrics:
+      - "object_count"
+      - "admission_rate"
+      - "resolution_rate"
+      - "overflow_events"
+    
+  error_zone:
+    metrics:
+      - "object_count"
+      - "effective_counterexample_rate"
+      - "recall_rate"
+
+# ============================================
+# 模块耗时统计
+# ============================================
+
+module_timing:
+  modules:
+    - name: "input_parsing"
+      description: "输入解析"
+      expected_max_ms: 100
+      
+    - name: "gap_detection"
+      description: "缺口识别"
+      expected_max_ms: 200
+      
+    - name: "retrieval"
+      description: "检索"
+      expected_max_ms: 5000
+      
+    - name: "integration"
+      description: "整合"
+      expected_max_ms: 500
+      
+    - name: "tsla_evaluation"
+      description: "TSLA评估"
+      expected_max_ms: 300
+      
+    - name: "gate_routing"
+      description: "门控路由"
+      expected_max_ms: 100
+      
+    - name: "write_back"
+      description: "参数写回"
+      expected_max_ms: 5000
+      
+    - name: "error_repair"
+      description: "错误修复"
+      expected_max_ms: 10000
+
+# ============================================
+# 失败样本回收
+# ============================================
+
+failure_recovery:
+  auto_recovery:
+    enabled: true
+    max_retries: 3
+    retry_delay_ms: 1000
+    
+  failure_classification:
+    - type: "timeout"
+      action: "retry_with_backoff"
+      
+    - type: "quality_rejection"
+      action: "route_to_isolation"
+      
+    - type: "conflict_detected"
+      action: "route_to_isolation"
+      
+    - type: "system_error"
+      action: "log_and_alert"
+      
+  sample_preservation:
+    preserve_failed_samples: true
+    preservation_duration_days: 30
+    max_preserved_samples: 10000
+
+# ============================================
+# 测试运行配置
+# ============================================
+
+test_execution:
+  # 每档规模的测试轮次
+  rounds_per_tier: 5
+  
+  # 每轮测试的样本数
+  samples_per_round:
+    small: 100
+    medium: 500
+    large: 1000
+    stress: 5000
+  
+  # 预热轮次（不计入结果）
+  warmup_rounds: 2
+  
+  # 测试间冷却时间
+  cooldown_seconds: 10
+  
+  # 超时设置
+  timeout_per_sample_seconds: 60
+  timeout_per_round_minutes: 30
+
+# ============================================
+# 瓶颈识别规则
+# ============================================
+
+bottleneck_detection:
+  rules:
+    - name: "retrieval_bottleneck"
+      condition: "retrieval_latency > 50ms AND retrieval_latency_growth > 2x"
+      severity: "critical"
+      
+    - name: "memory_bottleneck"
+      condition: "memory_growth > 2x AND memory_per_unit > 100KB"
+      severity: "critical"
+      
+    - name: "governance_overload"
+      condition: "isolation_zone_occupancy > 0.30"
+      severity: "warning"
+      
+    - name: "promotion_slowdown"
+      condition: "promotion_rate < baseline_50%"
+      severity: "warning"
+      
+    - name: "writeback_degradation"
+      condition: "writeback_latency > 30s"
+      severity: "critical"
+
+# ============================================
+# 验收标准
+# ============================================
+
+acceptance_criteria:
+  # 至少2-3项核心优势保持
+  min_preserved_advantages: 2
+  
+  # 无明显结构性问题
+  max_critical_bottlenecks: 0
+  
+  # 性能退化可接受
+  max_acceptable_degradation: 0.30  # 30%
+  
+  # 治理稳定性保持
+  min_governance_stability: 0.70  # 70%
+  
+  # 系统不崩溃
+  system_stability_required: true
+
+# ============================================
+# 输出报告格式
+# ============================================
+
+output_report:
+  sections:
+    - "executive_summary"
+    - "scale_tier_results"
+    - "metric_trends"
+    - "bottleneck_analysis"
+    - "advantage_preservation_assessment"
+    - "recommendations"
+    
+  visualizations:
+    - "metric_vs_scale_chart"
+    - "latency_distribution_histogram"
+    - "layer_growth_chart"
+    - "bottleneck_heatmap"

@@ -1,0 +1,163 @@
+[
+  {
+    "experiment": "relation_2",
+    "candidate_id": "relation_169adf1f0331",
+    "baseline": {
+      "target": 0.48,
+      "old": {
+        "private_knowledge": 1.0,
+        "retrieval_trigger": 0.72,
+        "gap": 0.98,
+        "governance": 1.0,
+        "writeback": 0.9
+      }
+    },
+    "post": {
+      "target": 0.36,
+      "old": {
+        "private_knowledge": 1.0,
+        "retrieval_trigger": 0.64,
+        "gap": 0.98,
+        "governance": 1.0,
+        "writeback": 0.86
+      }
+    },
+    "target_change": -0.12,
+    "max_old_drop": 0.07999999999999996,
+    "success": false,
+    "training": {
+      "history": [
+        {
+          "total": 6.134561198098319,
+          "gap": 2.8832645756857738,
+          "policy": 2.636291265487671,
+          "kl": 6.150053092411587
+        },
+        {
+          "total": 5.493703195026943,
+          "gap": 2.3957698345184326,
+          "policy": 2.55876248223441,
+          "kl": 5.391708510262625
+        },
+        {
+          "total": 4.479157481874738,
+          "gap": 1.8314180203846522,
+          "policy": 2.1532160384314403,
+          "kl": 4.945233481270926
+        },
+        {
+          "total": 3.6057871750422885,
+          "gap": 1.473054724080222,
+          "policy": 1.7167959894452776,
+          "kl": 4.159364564078195
+        },
+        {
+          "total": 2.8909810951777866,
+          "gap": 1.0250217361109597,
+          "policy": 1.4917314222880773,
+          "kl": 3.7422784055982317
+        }
+      ]
+    }
+  },
+  {
+    "experiment": "cross_type_EXPLANATION",
+    "candidate_id": "explanation_bb6204d3d019",
+    "candidate_type": "EXPLANATION",
+    "baseline": {
+      "target": 0.56,
+      "old": {
+        "private_knowledge": 1.0,
+        "retrieval_trigger": 0.82,
+        "gap": 0.94,
+        "governance": 1.0,
+        "writeback": 0.94
+      }
+    },
+    "post": {
+      "target": 0.56,
+      "old": {
+        "private_knowledge": 1.0,
+        "retrieval_trigger": 0.76,
+        "gap": 0.92,
+        "governance": 1.0,
+        "writeback": 0.92
+      }
+    },
+    "target_change": 0.0,
+    "max_old_drop": 0.05999999999999994,
+    "success": false,
+    "training": {
+      "history": [
+        {
+          "total": 1.2661679301943098,
+          "gap": 0.008069803406085287,
+          "policy": 0.6240236035415104,
+          "kl": 6.340744767870222
+        },
+        {
+          "total": 0.9489959478378296,
+          "gap": 0.006934437501643386,
+          "policy": 0.28646894437926157,
+          "kl": 6.555925505501883
+        },
+        {
+          "total": 0.8750876614025661,
+          "gap": 0.007671397511980363,
+          "policy": 0.18254578858613968,
+          "kl": 6.848704678671701
+        },
+        {
+          "total": 0.8177425691059658,
+          "gap": 0.01591218262910843,
+          "policy": 0.16135963637913978,
+          "kl": 6.4047073636736185
+        },
+        {
+          "total": 0.7484831895147052,
+          "gap": 0.03498996395085539,
+          "policy": 0.11984786923442568,
+          "kl": 5.9364535467965265
+        }
+      ]
+    }
+  },
+  {
+    "experiment": "dual_promotion",
+    "candidate_1": "relation_dc371e5e27f4",
+    "candidate_2": "relation_169adf1f0331",
+    "baseline": {
+      "target": 0.42,
+      "old": {
+        "private_knowledge": 1.0,
+        "retrieval_trigger": 0.64,
+        "gap": 0.96,
+        "governance": 1.0,
+        "writeback": 0.84
+      }
+    },
+    "after_1": {
+      "target": 0.46,
+      "old": {
+        "private_knowledge": 1.0,
+        "retrieval_trigger": 0.82,
+        "gap": 0.96,
+        "governance": 1.0,
+        "writeback": 0.92
+      }
+    },
+    "after_2": {
+      "target": 0.48,
+      "old": {
+        "private_knowledge": 1.0,
+        "retrieval_trigger": 0.74,
+        "gap": 0.94,
+        "governance": 1.0,
+        "writeback": 0.82
+      }
+    },
+    "total_change": 0.06,
+    "max_old_drop": 0.09999999999999998,
+    "success": true
+  }
+]

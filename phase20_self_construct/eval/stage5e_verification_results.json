@@ -1,0 +1,86 @@
+{
+  "single_promotion": [
+    {
+      "candidate_id": "relation_technical_stack_3_213415",
+      "score": 0.9301362276077271,
+      "baseline": {
+        "target": 0.7,
+        "old": {
+          "private_knowledge": 1.0,
+          "retrieval_trigger": 0.8,
+          "gap": 0.94,
+          "governance": 1.0,
+          "writeback": 0.88
+        }
+      },
+      "after": {
+        "target": 0.84,
+        "old": {
+          "private_knowledge": 1.0,
+          "retrieval_trigger": 0.94,
+          "gap": 0.98,
+          "governance": 1.0,
+          "writeback": 0.8
+        }
+      },
+      "target_change": 0.14,
+      "max_old_drop": 0.1399999999999999,
+      "success": false,
+      "rollback_success": false
+    },
+    {
+      "candidate_id": "relation_technical_stack_4_213415",
+      "score": 0.9214461088180542,
+      "baseline": {
+        "target": 0.58,
+        "old": {
+          "private_knowledge": 1.0,
+          "retrieval_trigger": 0.68,
+          "gap": 0.92,
+          "governance": 1.0,
+          "writeback": 0.9
+        }
+      },
+      "after": {
+        "target": 0.92,
+        "old": {
+          "private_knowledge": 1.0,
+          "retrieval_trigger": 0.96,
+          "gap": 1.0,
+          "governance": 1.0,
+          "writeback": 0.88
+        }
+      },
+      "target_change": 0.3400000000000001,
+      "max_old_drop": 0.2799999999999999,
+      "success": false,
+      "rollback_success": false
+    }
+  ],
+  "micro_step": {
+    "experiment": "micro_step_promotion",
+    "steps": 2,
+    "baseline_target": 0.6,
+    "final_target": 0.94,
+    "cumulative_improvement": 0.33999999999999997,
+    "max_old_drop": 0.21999999999999997,
+    "step_results": [
+      {
+        "step": 1,
+        "candidate_id": "relation_technical_stack_3_213415",
+        "improvement": 0.21999999999999997,
+        "cumulative": 0.21999999999999997,
+        "max_old_drop": 0.07999999999999996
+      },
+      {
+        "step": 2,
+        "candidate_id": "relation_technical_stack_4_213415",
+        "improvement": 0.12,
+        "cumulative": 0.33999999999999997,
+        "max_old_drop": 0.21999999999999997
+      }
+    ],
+    "success": false
+  },
+  "phase6_ready": false
+}

@@ -1,0 +1,47 @@
+"""
+TSLA Thresholds v0.3 Calibrated
+第三阶段定标后的最优阈值配置
+
+冻结日期: 2026-04-17
+定标方法: 网格搜索 + 敏感性分析
+验证准确率: 100%
+假阳性: 0
+假阴性: 0
+"""
+
+# 稳定性门阈值
+stability_gate:
+  window_size: 3
+  stable_min_q: 68          # 最优: 68 (原示例值: 70)
+  stable_min_s: 65          # 最优: 65
+  max_q_std: 8              # 最优: 8 (原示例值: 10)
+  max_conflict_rate: 0.15   # 最优: 0.15 (原示例值: 0.2)
+  peak_drop_q: 15
+  peak_drop_s: 15
+
+# 晋升门阈值
+promotion_gate:
+  min_review_rounds: 3
+  normal_zone_thresholds:
+    Q: 72
+    T: 75
+    S: 70
+    E: 65
+    C: 75
+    L: 75
+
+# 硬否决阈值
+hard_veto:
+  min_truth_score: 0.3
+  max_conflict_rate: 0.5
+  min_legality_score: 0.5
+
+# 评分权重
+scoring_weights:
+  truth: 0.25
+  stability: 0.20
+  evidence: 0.15
+  conflict: 0.15
+  legality: 0.10
+  reusability: 0.10
+  provenance: 0.05

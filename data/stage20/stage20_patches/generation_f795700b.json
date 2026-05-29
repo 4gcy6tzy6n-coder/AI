@@ -1,0 +1,46 @@
+{
+  "package_id": "f795700b-fa13-4900-bc34-474e0a4a3999",
+  "package_type": "generation",
+  "target_failure_types": [
+    "tsla_false_pass"
+  ],
+  "risk_decision": {
+    "recommended_action": "generation_patch",
+    "reason": "Auto-decision: dominant cause=generation_failure with confidence=0.63",
+    "severity": "high",
+    "confidence": 0.6338196001195554,
+    "posterior": {
+      "posteriors": {
+        "knowledge_gap": 0.17216630518805087,
+        "retrieval_failure": 0.03384848038062778,
+        "governance_failure": 0.03193467146220875,
+        "generation_failure": 0.6338196001195554,
+        "memory_failure": 0.008825895562414095,
+        "route_failure": 0.11940504728714306
+      },
+      "dominant_cause": "generation_failure",
+      "confidence": 0.6338196001195554,
+      "entropy": 1.1120091674432018
+    },
+    "tsla_action_map": "review_backflow"
+  },
+  "payload": {
+    "action": "generation_patch",
+    "style_constraints": {
+      "tone": "neutral",
+      "max_sentence_length": 50
+    },
+    "avoid_phrases": [],
+    "clarity_rules": [
+      {
+        "rule_id": 1,
+        "description": "Ensure responses are grounded in retrieved evidence",
+        "check": "response_claims in retrieved_context"
+      }
+    ],
+    "sample_id": "synth_coverage_tsla_false_pass"
+  },
+  "generated_at": "2026-05-11T13:25:22.047136+00:00",
+  "applied": false,
+  "verified": false
+}
