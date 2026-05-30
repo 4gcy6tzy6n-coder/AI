@@ -8,7 +8,7 @@
 
 from typing import Any
 
-from src.core.bayes.schema import FailureSample, RolloutResult
+from src.core.bayes.schema import FailureSample, FixPackage, RolloutResult
 
 
 class SimulatedRollout:
@@ -35,26 +35,70 @@ class SimulatedRollout:
         mixed_samples: list[FailureSample],
         stress_samples: list[FailureSample],
         known_failures_before: int = 0,
+        fix_packages: list[FixPackage] | None = None,
     ) -> tuple[list[RolloutResult], bool]:
         """Run all 3 rounds. Returns results and overall pass/fail."""
+        fixed_actions = self._build_fixed_actions(fix_packages or [])
         results: list[RolloutResult] = []
 
-        r1 = self._run_standard_round(standard_samples, known_failures_before)
+        r1 = self._run_standard_round(
+            standard_samples, known_failures_before, fixed_actions
+        )
         results.append(r1)
 
-        r2 = self._run_mixed_round(mixed_samples)
+        r2 = self._run_mixed_round(mixed_samples, fixed_actions)
         results.append(r2)
 
-        r3 = self._run_stress_round(stress_samples)
+        r3 = self._run_stress_round(stress_samples, fixed_actions)
         results.append(r3)
 
         overall_pass = all(r.passed for r in results)
         return results, overall_pass
 
+    def _build_fixed_actions(
+        self,
+        fix_packages: list[FixPackage],
+    ) -> dict[str, set[str]]:
+        actions_by_type: dict[str, set[str]] = {}
+        for package in fix_packages:
+            for failure_type in package.target_failure_types:
+                key = failure_type.value
+                actions_by_type.setdefault(key, set()).add(package.package_type)
+        return actions_by_type
+
+    def _sample_passes_after_fix(
+        self,
+        sample: FailureSample,
+        fixed_actions: dict[str, set[str]],
+    ) -> tuple[bool, bool, bool]:
+        """Return (passes, new_failure, memory_contaminated)."""
+        actions = fixed_actions.get(sample.failure_type.value, set())
+        if not actions:
+            return False, False, sample.failure_type.value == "memory_write_error"
+
+        safe_actions = {"quarantine", "rollback", "human_review"}
+        aggressive_actions = {"quarantine", "rollback"}
+
+        if sample.risk_level.value == "critical" and not (actions & safe_actions):
+            return False, False, False
+
+        if sample.failure_type.value == "memory_write_error":
+            memory_safe = bool(actions & {"memory", "quarantine", "rollback"})
+            if not memory_safe:
+                return False, False, True
+
+        new_failure = (
+            sample.risk_level.value == "low"
+            and sample.failure_type.value == "tsla_over_block"
+            and bool(actions & aggressive_actions)
+        )
+        return not new_failure, new_failure, False
+
     def _run_standard_round(
         self,
         samples: list[FailureSample],
         known_failures_before: int,
+        fixed_actions: dict[str, set[str]],
     ) -> RolloutResult:
         """Round 1: 100 standard tasks."""
         total = len(samples)
@@ -64,10 +108,11 @@ class SimulatedRollout:
                 passed=True,
             )
 
-        # Simulated: count failures in standard tasks
-        failures = sum(
-            1 for s in samples if s.risk_level.value in ("high", "critical")
-        )
+        outcomes = [
+            self._sample_passes_after_fix(sample, fixed_actions)
+            for sample in samples
+        ]
+        failures = sum(1 for passed, _, _ in outcomes if not passed)
         passed = total - failures
         pass_rate = passed / total if total > 0 else 0.0
 
@@ -78,10 +123,15 @@ class SimulatedRollout:
         else:
             reduction = 0.0
 
-        new_failure_rate = failures / total if total > 0 else 0.0
-        critical = sum(1 for s in samples if s.risk_level.value == "critical")
+        new_failures = sum(1 for _, new_failure, _ in outcomes if new_failure)
+        new_failure_rate = new_failures / total if total > 0 else 0.0
+        critical = sum(
+            1
+            for sample, (passed, _, _) in zip(samples, outcomes)
+            if sample.risk_level.value == "critical" and not passed
+        )
         contamination = sum(
-            1 for s in samples if s.failure_type.value == "W1"
+            1 for _, _, memory_contaminated in outcomes if memory_contaminated
         )
 
         round_passed = (
@@ -106,6 +156,7 @@ class SimulatedRollout:
     def _run_mixed_round(
         self,
         samples: list[FailureSample],
+        fixed_actions: dict[str, set[str]],
     ) -> RolloutResult:
         """Round 2: 300 mixed tasks."""
         total = len(samples)
@@ -115,15 +166,22 @@ class SimulatedRollout:
                 passed=True,
             )
 
-        failures = sum(
-            1 for s in samples if s.risk_level.value in ("high", "critical")
-        )
+        outcomes = [
+            self._sample_passes_after_fix(sample, fixed_actions)
+            for sample in samples
+        ]
+        failures = sum(1 for passed, _, _ in outcomes if not passed)
         passed = total - failures
         pass_rate = passed / total if total > 0 else 0.0
-        new_failure_rate = failures / total if total > 0 else 0.0
-        critical = sum(1 for s in samples if s.risk_level.value == "critical")
+        new_failures = sum(1 for _, new_failure, _ in outcomes if new_failure)
+        new_failure_rate = new_failures / total if total > 0 else 0.0
+        critical = sum(
+            1
+            for sample, (passed, _, _) in zip(samples, outcomes)
+            if sample.risk_level.value == "critical" and not passed
+        )
         contamination = sum(
-            1 for s in samples if s.failure_type.value == "W1"
+            1 for _, _, memory_contaminated in outcomes if memory_contaminated
         )
 
         round_passed = (
@@ -147,6 +205,7 @@ class SimulatedRollout:
     def _run_stress_round(
         self,
         samples: list[FailureSample],
+        fixed_actions: dict[str, set[str]],
     ) -> RolloutResult:
         """Round 3: 1000 stress tasks."""
         total = len(samples)
@@ -156,15 +215,22 @@ class SimulatedRollout:
                 passed=True,
             )
 
-        failures = sum(
-            1 for s in samples if s.risk_level.value in ("high", "critical")
-        )
+        outcomes = [
+            self._sample_passes_after_fix(sample, fixed_actions)
+            for sample in samples
+        ]
+        failures = sum(1 for passed, _, _ in outcomes if not passed)
         passed = total - failures
         pass_rate = passed / total if total > 0 else 0.0
-        new_failure_rate = failures / total if total > 0 else 0.0
-        critical = sum(1 for s in samples if s.risk_level.value == "critical")
+        new_failures = sum(1 for _, new_failure, _ in outcomes if new_failure)
+        new_failure_rate = new_failures / total if total > 0 else 0.0
+        critical = sum(
+            1
+            for sample, (passed, _, _) in zip(samples, outcomes)
+            if sample.risk_level.value == "critical" and not passed
+        )
         contamination = sum(
-            1 for s in samples if s.failure_type.value == "W1"
+            1 for _, _, memory_contaminated in outcomes if memory_contaminated
         )
 
         round_passed = (

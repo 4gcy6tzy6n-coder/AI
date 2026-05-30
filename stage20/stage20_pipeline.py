@@ -27,6 +27,7 @@ from src.core.bayes.schema import (
     ShadowResult,
     VersionFreezePoint,
 )
+from src.core.bayes.correction_executor import CorrectionExecutor
 
 from .failure_pool import FailurePoolBuilder, TriggerCondition
 from .offline_replay import OfflineReplayVerifier
@@ -44,8 +45,15 @@ class Stage20Pipeline:
 
     def __init__(self, config: dict[str, Any] | None = None):
         self.config = config or {}
+        output_dir = self.config.get("output_dir", "data/stage20/")
 
-        self.btsta = BTSLAOrchestrator()
+        patch_output_dir = self.config.get(
+            "patch_output_dir",
+            str(Path(output_dir) / "stage20_patches"),
+        )
+        self.btsta = BTSLAOrchestrator(
+            correction_executor=CorrectionExecutor(output_dir=patch_output_dir)
+        )
         self.failure_pool_builder = FailurePoolBuilder(
             output_path=self.config.get(
                 "failure_pool_path", "data/stage20/stage20_failure_pool.jsonl"
@@ -62,7 +70,7 @@ class Stage20Pipeline:
             config=self.config.get("rollout", {}),
         )
         self.freezer = VersionFreezer(
-            output_dir=self.config.get("output_dir", "data/stage20/"),
+            output_dir=output_dir,
             component_versions=self.config.get("component_versions"),
         )
 
@@ -140,6 +148,7 @@ class Stage20Pipeline:
             failure_samples,
             failure_samples[:len(failure_samples)//2],  # mixed = half
             failure_samples,  # stress = all (for v0.1 demo)
+            all_fix_packages,
         )
         step_results["20-8_rollout"] = step_20_8
         all_passed = all_passed and step_20_8.get("passed", False)
@@ -315,6 +324,7 @@ class Stage20Pipeline:
         standard_samples: list[FailureSample],
         mixed_samples: list[FailureSample],
         stress_samples: list[FailureSample],
+        fix_packages: list[FixPackage],
     ) -> dict[str, Any]:
         total_known = len(self.failure_pool_builder.load_pool()) or len(standard_samples)
         results, passed = self.rollout.run_rollout(
@@ -322,6 +332,7 @@ class Stage20Pipeline:
             mixed_samples=mixed_samples[:300] if mixed_samples else [],
             stress_samples=stress_samples[:1000] if stress_samples else [],
             known_failures_before=total_known,
+            fix_packages=fix_packages,
         )
         return {
             "passed": passed,

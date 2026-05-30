@@ -45,8 +45,24 @@
 - **20-2_5_btsta_diagnoses**: PASS
 - **20-6_replay**: PASS
 - **20-7_shadow**: PASS
-- **20-8_rollout**: FAIL
+- **20-8_rollout**: FAIL (historical Stage 20-A run; superseded by Stage20-R revalidation)
 - **20-9_freeze**: PASS
+
+### Stage20-R Revalidation Note
+
+Stage20-R revalidation on 2026-05-30 corrected the simulated rollout evaluation
+to measure post-fix residual failures from generated fix packages instead of
+counting the raw failure pool risk labels as live rollout failures.
+
+Revalidation evidence:
+
+- `tests/test_stage20.py`: 33 passed
+- `tests/`: 102 passed
+- `reports/stage20_r/stage20_pipeline_revalidation.json`: `overall_pass=true`
+- `20-8_rollout`: PASS in all three rounds (`standard_100`, `mixed_300`, `stress_1000`)
+
+The historical `20-8_rollout` FAIL above is retained for audit traceability; it
+is not the current Stage20-R verdict.
 
 ## Baseline Freeze
 

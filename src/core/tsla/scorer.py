@@ -364,7 +364,7 @@ class TSLAScorer:
 # 第三阶段新增：历史序列评分与滚动统计
 # ============================================================================
 
-from datetime import datetime
+from datetime import datetime, timezone
 import statistics
 
 
@@ -375,8 +375,8 @@ class ScoreSnapshot:
 
     用于积累历史评分序列，支持后续稳定性分析和定标实验
     """
-    unit_id: str
-    timestamp: str
+    unit_id: str = ""
+    timestamp: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     session_id: Optional[str] = None
 
     # 八维评分

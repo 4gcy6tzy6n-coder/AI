@@ -371,28 +371,32 @@ class TestOrchestrator:
 
     def test_diagnose_returns_all_keys(self):
         from src.core.bayes.orchestrator import BTSLAOrchestrator
+        from src.core.bayes.correction_executor import CorrectionExecutor
         from src.core.bayes.schema import FailureSample
         from src.core.unit.models import Unit
         from src.core.tsla.scorer import ScoringResult, TSLAScores, ScoreSnapshot, RollingStats
         from src.core.tsla.action_router import ActionDecision
         from src.core.memory.memory_events import MemoryZone
 
-        orchestrator = BTSLAOrchestrator()
-        sample = FailureSample(sample_id="d1", user_query="Test query")
-        unit = Unit()
-        scoring = ScoringResult(
-            current_scores=TSLAScores(),
-            snapshot=ScoreSnapshot(),
-            rolling_stats=RollingStats(),
-            history_count=1,
-        )
-        action = ActionDecision(
-            action="keep",
-            reason="no issues",
-            target_zone=MemoryZone.LONG_TERM_NORMAL,
-        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            orchestrator = BTSLAOrchestrator(
+                correction_executor=CorrectionExecutor(output_dir=tmpdir)
+            )
+            sample = FailureSample(sample_id="d1", user_query="Test query")
+            unit = Unit()
+            scoring = ScoringResult(
+                current_scores=TSLAScores(),
+                snapshot=ScoreSnapshot(),
+                rolling_stats=RollingStats(),
+                history_count=1,
+            )
+            action = ActionDecision(
+                action="keep",
+                reason="no issues",
+                target_zone=MemoryZone.LONG_TERM_NORMAL,
+            )
 
-        result = orchestrator.diagnose(sample, unit, scoring, action)
+            result = orchestrator.diagnose(sample, unit, scoring, action)
 
         assert "sample_id" in result
         assert "evidence" in result
@@ -456,9 +460,19 @@ class TestStage20Pipeline:
 
     def test_pipeline_runs_end_to_end(self):
         from stage20.stage20_pipeline import Stage20Pipeline
+        from stage20.acceptance_harness import RealisticFailurePool
 
-        pipeline = Stage20Pipeline()
-        result = pipeline.run()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            pipeline = Stage20Pipeline(config={
+                "failure_pool_path": str(Path(tmpdir) / "stage20_failure_pool.jsonl"),
+                "output_dir": tmpdir,
+                "patch_output_dir": str(Path(tmpdir) / "stage20_patches"),
+            })
+            failure_samples = RealisticFailurePool.build(
+                target_size=20,
+                output_path=str(Path(tmpdir) / "stage20_failure_pool.jsonl"),
+            )
+            result = pipeline.run(failure_samples=failure_samples)
 
         assert result["stage"] == "Stage20"
         assert result["version"] == "v0.1"
