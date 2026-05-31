@@ -12,7 +12,7 @@ Stage30 implementation starts.
 
 ## Immediate Next Actions
 
-1. Complete and freeze Stage21-B from `stage21-a-fixed-failure-pool-v1.0`.
+1. Commit, tag, and push Stage21-B from the passing validation result.
 2. Use Stage21-B evidence to define Stage22 multi-pool holdout fixtures.
 3. Keep Stage23 learned-prior work blocked until Stage22 proves cross-pool
    stability without learned priors.

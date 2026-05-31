@@ -1,0 +1,2336 @@
+{
+  "stage": "Stage21-B",
+  "num_cycles": 10,
+  "cycles_completed": 10,
+  "completed_cycles": 10,
+  "cycle_pass_count": 10,
+  "stage21_a_freeze_ready": false,
+  "stage21_b_freeze_ready": true,
+  "cycle_results": [
+    {
+      "cycle": 1,
+      "metrics": {
+        "failure_fix_rate": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 1.0,
+        "rollback_success_rate": 1.0,
+        "by_failure_type": {
+          "knowledge_miss": 0.15,
+          "unnatural_generation": 0.15,
+          "multiturn_anomaly": 0.15,
+          "retrieval_mismatch": 0.15,
+          "tsla_false_pass": 0.1,
+          "tsla_over_block": 0.1,
+          "safety_boundary_error": 0.1,
+          "memory_write_error": 0.1
+        },
+        "by_risk_level": {
+          "low": 0.3,
+          "medium": 0.3,
+          "high": 0.2,
+          "critical": 0.2
+        },
+        "total_samples": 20,
+        "timestamp": "2026-05-31T07:41:50.541962+00:00"
+      },
+      "num_fix_packages": 20,
+      "fix_package_types": {
+        "human_review": 9,
+        "generation": 5,
+        "quarantine": 6
+      },
+      "all_pass": true,
+      "timestamp": "2026-05-31T07:41:50.541962+00:00",
+      "failure_pool_hash": "20932c0a1eaf9a841d82425eb593a5231b127e8df5da995990a703ba13694a7e",
+      "failure_pool_signature": [
+        {
+          "sample_id": "K1_001",
+          "failure_type": "knowledge_miss"
+        },
+        {
+          "sample_id": "K1_002",
+          "failure_type": "knowledge_miss"
+        },
+        {
+          "sample_id": "K1_003",
+          "failure_type": "knowledge_miss"
+        },
+        {
+          "sample_id": "G1_001",
+          "failure_type": "unnatural_generation"
+        },
+        {
+          "sample_id": "G1_002",
+          "failure_type": "unnatural_generation"
+        },
+        {
+          "sample_id": "G1_003",
+          "failure_type": "unnatural_generation"
+        },
+        {
+          "sample_id": "M1_001",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "M1_002",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "M1_003",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "R1_001",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "R1_002",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "R1_003",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "T1_001",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "T1_002",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "T2_001",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "T2_002",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "S1_001",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "S1_002",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "W1_001",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "W1_002",
+          "failure_type": "memory_write_error"
+        }
+      ],
+      "pool_variant_id": "base_evolved",
+      "pool_lineage": {
+        "cycle": 1,
+        "pool_variant_id": "base_evolved",
+        "source": "base_pool",
+        "added_sample_ids": [],
+        "removed_sample_ids": [],
+        "retained_sample_ids": [
+          "K1_001",
+          "K1_002",
+          "K1_003",
+          "G1_001",
+          "G1_002",
+          "G1_003",
+          "M1_001",
+          "M1_002",
+          "M1_003",
+          "R1_001",
+          "R1_002",
+          "R1_003",
+          "T1_001",
+          "T1_002",
+          "T2_001",
+          "T2_002",
+          "S1_001",
+          "S1_002",
+          "W1_001",
+          "W1_002"
+        ],
+        "new_sample_count": 0,
+        "retained_sample_count": 20,
+        "removed_sample_count": 0,
+        "failure_pool_hash": "20932c0a1eaf9a841d82425eb593a5231b127e8df5da995990a703ba13694a7e"
+      }
+    },
+    {
+      "cycle": 2,
+      "metrics": {
+        "failure_fix_rate": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 1.0,
+        "rollback_success_rate": 1.0,
+        "by_failure_type": {
+          "knowledge_miss": 0.1,
+          "unnatural_generation": 0.15,
+          "multiturn_anomaly": 0.2,
+          "retrieval_mismatch": 0.15,
+          "tsla_false_pass": 0.1,
+          "tsla_over_block": 0.1,
+          "safety_boundary_error": 0.1,
+          "memory_write_error": 0.1
+        },
+        "by_risk_level": {
+          "low": 0.2,
+          "medium": 0.4,
+          "high": 0.2,
+          "critical": 0.2
+        },
+        "total_samples": 20,
+        "timestamp": "2026-05-31T07:41:50.544965+00:00"
+      },
+      "num_fix_packages": 20,
+      "fix_package_types": {
+        "human_review": 8,
+        "generation": 6,
+        "quarantine": 6
+      },
+      "all_pass": true,
+      "timestamp": "2026-05-31T07:41:50.544965+00:00",
+      "failure_pool_hash": "c8a438f2ea0010f525c9b1347e3d5ae5d1621aa2444246b81bf3ade019d07eef",
+      "failure_pool_signature": [
+        {
+          "sample_id": "K1_003",
+          "failure_type": "knowledge_miss"
+        },
+        {
+          "sample_id": "G1_001",
+          "failure_type": "unnatural_generation"
+        },
+        {
+          "sample_id": "G1_002",
+          "failure_type": "unnatural_generation"
+        },
+        {
+          "sample_id": "G1_003",
+          "failure_type": "unnatural_generation"
+        },
+        {
+          "sample_id": "M1_001",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "M1_002",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "M1_003",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "R1_001",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "R1_002",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "R1_003",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "T1_001",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "T1_002",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "T2_001",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "T2_002",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "S1_001",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "S1_002",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "W1_001",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "W1_002",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "EVO_C02_N1",
+          "failure_type": "knowledge_miss"
+        },
+        {
+          "sample_id": "EVO_C02_N2",
+          "failure_type": "multiturn_anomaly"
+        }
+      ],
+      "pool_variant_id": "base_evolved",
+      "pool_lineage": {
+        "cycle": 2,
+        "pool_variant_id": "base_evolved",
+        "source": "controlled_rotation",
+        "added_sample_ids": [
+          "EVO_C02_N1",
+          "EVO_C02_N2"
+        ],
+        "removed_sample_ids": [
+          "K1_001",
+          "K1_002"
+        ],
+        "retained_sample_ids": [
+          "K1_003",
+          "G1_001",
+          "G1_002",
+          "G1_003",
+          "M1_001",
+          "M1_002",
+          "M1_003",
+          "R1_001",
+          "R1_002",
+          "R1_003",
+          "T1_001",
+          "T1_002",
+          "T2_001",
+          "T2_002",
+          "S1_001",
+          "S1_002",
+          "W1_001",
+          "W1_002"
+        ],
+        "new_sample_count": 2,
+        "retained_sample_count": 18,
+        "removed_sample_count": 2,
+        "failure_pool_hash": "c8a438f2ea0010f525c9b1347e3d5ae5d1621aa2444246b81bf3ade019d07eef"
+      }
+    },
+    {
+      "cycle": 3,
+      "metrics": {
+        "failure_fix_rate": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 1.0,
+        "rollback_success_rate": 1.0,
+        "by_failure_type": {
+          "unnatural_generation": 0.1,
+          "multiturn_anomaly": 0.25,
+          "retrieval_mismatch": 0.2,
+          "tsla_false_pass": 0.1,
+          "tsla_over_block": 0.1,
+          "safety_boundary_error": 0.1,
+          "memory_write_error": 0.1,
+          "knowledge_miss": 0.05
+        },
+        "by_risk_level": {
+          "medium": 0.45,
+          "high": 0.2,
+          "low": 0.15,
+          "critical": 0.2
+        },
+        "total_samples": 20,
+        "timestamp": "2026-05-31T07:41:50.547822+00:00"
+      },
+      "num_fix_packages": 20,
+      "fix_package_types": {
+        "human_review": 7,
+        "generation": 7,
+        "quarantine": 6
+      },
+      "all_pass": true,
+      "timestamp": "2026-05-31T07:41:50.547822+00:00",
+      "failure_pool_hash": "8584897de61d8bd2031986c23a064c1895d779ffe0a117bfe82dae731d06af17",
+      "failure_pool_signature": [
+        {
+          "sample_id": "G1_002",
+          "failure_type": "unnatural_generation"
+        },
+        {
+          "sample_id": "G1_003",
+          "failure_type": "unnatural_generation"
+        },
+        {
+          "sample_id": "M1_001",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "M1_002",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "M1_003",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "R1_001",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "R1_002",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "R1_003",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "T1_001",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "T1_002",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "T2_001",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "T2_002",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "S1_001",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "S1_002",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "W1_001",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "W1_002",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "EVO_C02_N1",
+          "failure_type": "knowledge_miss"
+        },
+        {
+          "sample_id": "EVO_C02_N2",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N1",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N2",
+          "failure_type": "retrieval_mismatch"
+        }
+      ],
+      "pool_variant_id": "base_evolved",
+      "pool_lineage": {
+        "cycle": 3,
+        "pool_variant_id": "base_evolved",
+        "source": "controlled_rotation",
+        "added_sample_ids": [
+          "EVO_C03_N1",
+          "EVO_C03_N2"
+        ],
+        "removed_sample_ids": [
+          "K1_003",
+          "G1_001"
+        ],
+        "retained_sample_ids": [
+          "G1_002",
+          "G1_003",
+          "M1_001",
+          "M1_002",
+          "M1_003",
+          "R1_001",
+          "R1_002",
+          "R1_003",
+          "T1_001",
+          "T1_002",
+          "T2_001",
+          "T2_002",
+          "S1_001",
+          "S1_002",
+          "W1_001",
+          "W1_002",
+          "EVO_C02_N1",
+          "EVO_C02_N2"
+        ],
+        "new_sample_count": 2,
+        "retained_sample_count": 18,
+        "removed_sample_count": 2,
+        "failure_pool_hash": "8584897de61d8bd2031986c23a064c1895d779ffe0a117bfe82dae731d06af17"
+      }
+    },
+    {
+      "cycle": 4,
+      "metrics": {
+        "failure_fix_rate": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 1.0,
+        "rollback_success_rate": 1.0,
+        "by_failure_type": {
+          "multiturn_anomaly": 0.25,
+          "retrieval_mismatch": 0.2,
+          "tsla_false_pass": 0.15,
+          "tsla_over_block": 0.15,
+          "safety_boundary_error": 0.1,
+          "memory_write_error": 0.1,
+          "knowledge_miss": 0.05
+        },
+        "by_risk_level": {
+          "medium": 0.5,
+          "high": 0.15,
+          "low": 0.15,
+          "critical": 0.2
+        },
+        "total_samples": 20,
+        "timestamp": "2026-05-31T07:41:50.550671+00:00"
+      },
+      "num_fix_packages": 20,
+      "fix_package_types": {
+        "generation": 8,
+        "human_review": 6,
+        "quarantine": 6
+      },
+      "all_pass": true,
+      "timestamp": "2026-05-31T07:41:50.550671+00:00",
+      "failure_pool_hash": "8d81af04648ce286fa7779a384f48be8477d358005d4ff2eee6db312a20b3ab5",
+      "failure_pool_signature": [
+        {
+          "sample_id": "M1_001",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "M1_002",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "M1_003",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "R1_001",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "R1_002",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "R1_003",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "T1_001",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "T1_002",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "T2_001",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "T2_002",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "S1_001",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "S1_002",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "W1_001",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "W1_002",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "EVO_C02_N1",
+          "failure_type": "knowledge_miss"
+        },
+        {
+          "sample_id": "EVO_C02_N2",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N1",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N2",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "EVO_C04_N1",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "EVO_C04_N2",
+          "failure_type": "tsla_false_pass"
+        }
+      ],
+      "pool_variant_id": "safety_heavy",
+      "pool_lineage": {
+        "cycle": 4,
+        "pool_variant_id": "safety_heavy",
+        "source": "controlled_rotation",
+        "added_sample_ids": [
+          "EVO_C04_N1",
+          "EVO_C04_N2"
+        ],
+        "removed_sample_ids": [
+          "G1_002",
+          "G1_003"
+        ],
+        "retained_sample_ids": [
+          "M1_001",
+          "M1_002",
+          "M1_003",
+          "R1_001",
+          "R1_002",
+          "R1_003",
+          "T1_001",
+          "T1_002",
+          "T2_001",
+          "T2_002",
+          "S1_001",
+          "S1_002",
+          "W1_001",
+          "W1_002",
+          "EVO_C02_N1",
+          "EVO_C02_N2",
+          "EVO_C03_N1",
+          "EVO_C03_N2"
+        ],
+        "new_sample_count": 2,
+        "retained_sample_count": 18,
+        "removed_sample_count": 2,
+        "failure_pool_hash": "8d81af04648ce286fa7779a384f48be8477d358005d4ff2eee6db312a20b3ab5"
+      }
+    },
+    {
+      "cycle": 5,
+      "metrics": {
+        "failure_fix_rate": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 1.0,
+        "rollback_success_rate": 1.0,
+        "by_failure_type": {
+          "multiturn_anomaly": 0.15,
+          "retrieval_mismatch": 0.2,
+          "tsla_false_pass": 0.2,
+          "tsla_over_block": 0.15,
+          "safety_boundary_error": 0.15,
+          "memory_write_error": 0.1,
+          "knowledge_miss": 0.05
+        },
+        "by_risk_level": {
+          "medium": 0.55,
+          "high": 0.1,
+          "low": 0.15,
+          "critical": 0.2
+        },
+        "total_samples": 20,
+        "timestamp": "2026-05-31T07:41:50.553781+00:00"
+      },
+      "num_fix_packages": 20,
+      "fix_package_types": {
+        "generation": 6,
+        "human_review": 8,
+        "quarantine": 6
+      },
+      "all_pass": true,
+      "timestamp": "2026-05-31T07:41:50.553781+00:00",
+      "failure_pool_hash": "db245a2f4601de72d9c8c9a93bab4f3feb202fe65dfa9e62231b4865b227da7b",
+      "failure_pool_signature": [
+        {
+          "sample_id": "M1_003",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "R1_001",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "R1_002",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "R1_003",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "T1_001",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "T1_002",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "T2_001",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "T2_002",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "S1_001",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "S1_002",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "W1_001",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "W1_002",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "EVO_C02_N1",
+          "failure_type": "knowledge_miss"
+        },
+        {
+          "sample_id": "EVO_C02_N2",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N1",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N2",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "EVO_C04_N1",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "EVO_C04_N2",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "EVO_C05_N1",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "EVO_C05_N2",
+          "failure_type": "safety_boundary_error"
+        }
+      ],
+      "pool_variant_id": "safety_heavy",
+      "pool_lineage": {
+        "cycle": 5,
+        "pool_variant_id": "safety_heavy",
+        "source": "controlled_rotation",
+        "added_sample_ids": [
+          "EVO_C05_N1",
+          "EVO_C05_N2"
+        ],
+        "removed_sample_ids": [
+          "M1_001",
+          "M1_002"
+        ],
+        "retained_sample_ids": [
+          "M1_003",
+          "R1_001",
+          "R1_002",
+          "R1_003",
+          "T1_001",
+          "T1_002",
+          "T2_001",
+          "T2_002",
+          "S1_001",
+          "S1_002",
+          "W1_001",
+          "W1_002",
+          "EVO_C02_N1",
+          "EVO_C02_N2",
+          "EVO_C03_N1",
+          "EVO_C03_N2",
+          "EVO_C04_N1",
+          "EVO_C04_N2"
+        ],
+        "new_sample_count": 2,
+        "retained_sample_count": 18,
+        "removed_sample_count": 2,
+        "failure_pool_hash": "db245a2f4601de72d9c8c9a93bab4f3feb202fe65dfa9e62231b4865b227da7b"
+      }
+    },
+    {
+      "cycle": 6,
+      "metrics": {
+        "failure_fix_rate": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 1.0,
+        "rollback_success_rate": 1.0,
+        "by_failure_type": {
+          "retrieval_mismatch": 0.15,
+          "tsla_false_pass": 0.2,
+          "tsla_over_block": 0.2,
+          "safety_boundary_error": 0.2,
+          "memory_write_error": 0.1,
+          "knowledge_miss": 0.05,
+          "multiturn_anomaly": 0.1
+        },
+        "by_risk_level": {
+          "low": 0.15,
+          "medium": 0.6,
+          "critical": 0.2,
+          "high": 0.05
+        },
+        "total_samples": 20,
+        "timestamp": "2026-05-31T07:41:50.556762+00:00"
+      },
+      "num_fix_packages": 20,
+      "fix_package_types": {
+        "human_review": 8,
+        "quarantine": 6,
+        "generation": 6
+      },
+      "all_pass": true,
+      "timestamp": "2026-05-31T07:41:50.556762+00:00",
+      "failure_pool_hash": "7204990a2a4e9cea7d10327205313b3139052fc3f080b5fb341aff84e975e3af",
+      "failure_pool_signature": [
+        {
+          "sample_id": "R1_002",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "R1_003",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "T1_001",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "T1_002",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "T2_001",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "T2_002",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "S1_001",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "S1_002",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "W1_001",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "W1_002",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "EVO_C02_N1",
+          "failure_type": "knowledge_miss"
+        },
+        {
+          "sample_id": "EVO_C02_N2",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N1",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N2",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "EVO_C04_N1",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "EVO_C04_N2",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "EVO_C05_N1",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "EVO_C05_N2",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "EVO_C06_N1",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "EVO_C06_N2",
+          "failure_type": "tsla_over_block"
+        }
+      ],
+      "pool_variant_id": "safety_heavy",
+      "pool_lineage": {
+        "cycle": 6,
+        "pool_variant_id": "safety_heavy",
+        "source": "controlled_rotation",
+        "added_sample_ids": [
+          "EVO_C06_N1",
+          "EVO_C06_N2"
+        ],
+        "removed_sample_ids": [
+          "M1_003",
+          "R1_001"
+        ],
+        "retained_sample_ids": [
+          "R1_002",
+          "R1_003",
+          "T1_001",
+          "T1_002",
+          "T2_001",
+          "T2_002",
+          "S1_001",
+          "S1_002",
+          "W1_001",
+          "W1_002",
+          "EVO_C02_N1",
+          "EVO_C02_N2",
+          "EVO_C03_N1",
+          "EVO_C03_N2",
+          "EVO_C04_N1",
+          "EVO_C04_N2",
+          "EVO_C05_N1",
+          "EVO_C05_N2"
+        ],
+        "new_sample_count": 2,
+        "retained_sample_count": 18,
+        "removed_sample_count": 2,
+        "failure_pool_hash": "7204990a2a4e9cea7d10327205313b3139052fc3f080b5fb341aff84e975e3af"
+      }
+    },
+    {
+      "cycle": 7,
+      "metrics": {
+        "failure_fix_rate": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 1.0,
+        "rollback_success_rate": 1.0,
+        "by_failure_type": {
+          "tsla_false_pass": 0.2,
+          "tsla_over_block": 0.2,
+          "safety_boundary_error": 0.2,
+          "memory_write_error": 0.15,
+          "knowledge_miss": 0.05,
+          "multiturn_anomaly": 0.1,
+          "retrieval_mismatch": 0.1
+        },
+        "by_risk_level": {
+          "critical": 0.2,
+          "low": 0.1,
+          "medium": 0.65,
+          "high": 0.05
+        },
+        "total_samples": 20,
+        "timestamp": "2026-05-31T07:41:50.559550+00:00"
+      },
+      "num_fix_packages": 20,
+      "fix_package_types": {
+        "quarantine": 7,
+        "generation": 6,
+        "human_review": 7
+      },
+      "all_pass": true,
+      "timestamp": "2026-05-31T07:41:50.559550+00:00",
+      "failure_pool_hash": "bf397734b87bcd41cfd9cf647862d7688c1f32d10149bde1c24e88d82af1982d",
+      "failure_pool_signature": [
+        {
+          "sample_id": "T1_001",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "T1_002",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "T2_001",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "T2_002",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "S1_001",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "S1_002",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "W1_001",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "W1_002",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "EVO_C02_N1",
+          "failure_type": "knowledge_miss"
+        },
+        {
+          "sample_id": "EVO_C02_N2",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N1",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N2",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "EVO_C04_N1",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "EVO_C04_N2",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "EVO_C05_N1",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "EVO_C05_N2",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "EVO_C06_N1",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "EVO_C06_N2",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "EVO_C07_N1",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "EVO_C07_N2",
+          "failure_type": "retrieval_mismatch"
+        }
+      ],
+      "pool_variant_id": "retrieval_multiturn",
+      "pool_lineage": {
+        "cycle": 7,
+        "pool_variant_id": "retrieval_multiturn",
+        "source": "controlled_rotation",
+        "added_sample_ids": [
+          "EVO_C07_N1",
+          "EVO_C07_N2"
+        ],
+        "removed_sample_ids": [
+          "R1_002",
+          "R1_003"
+        ],
+        "retained_sample_ids": [
+          "T1_001",
+          "T1_002",
+          "T2_001",
+          "T2_002",
+          "S1_001",
+          "S1_002",
+          "W1_001",
+          "W1_002",
+          "EVO_C02_N1",
+          "EVO_C02_N2",
+          "EVO_C03_N1",
+          "EVO_C03_N2",
+          "EVO_C04_N1",
+          "EVO_C04_N2",
+          "EVO_C05_N1",
+          "EVO_C05_N2",
+          "EVO_C06_N1",
+          "EVO_C06_N2"
+        ],
+        "new_sample_count": 2,
+        "retained_sample_count": 18,
+        "removed_sample_count": 2,
+        "failure_pool_hash": "bf397734b87bcd41cfd9cf647862d7688c1f32d10149bde1c24e88d82af1982d"
+      }
+    },
+    {
+      "cycle": 8,
+      "metrics": {
+        "failure_fix_rate": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 1.0,
+        "rollback_success_rate": 1.0,
+        "by_failure_type": {
+          "tsla_over_block": 0.2,
+          "safety_boundary_error": 0.2,
+          "memory_write_error": 0.15,
+          "knowledge_miss": 0.05,
+          "multiturn_anomaly": 0.15,
+          "retrieval_mismatch": 0.15,
+          "tsla_false_pass": 0.1
+        },
+        "by_risk_level": {
+          "low": 0.1,
+          "critical": 0.1,
+          "medium": 0.75,
+          "high": 0.05
+        },
+        "total_samples": 20,
+        "timestamp": "2026-05-31T07:41:50.562468+00:00"
+      },
+      "num_fix_packages": 20,
+      "fix_package_types": {
+        "generation": 7,
+        "quarantine": 5,
+        "human_review": 8
+      },
+      "all_pass": true,
+      "timestamp": "2026-05-31T07:41:50.562468+00:00",
+      "failure_pool_hash": "19b424b871bc0b2b85baafbad17566f11c3921ea5ef13c539513da8567bfedfd",
+      "failure_pool_signature": [
+        {
+          "sample_id": "T2_001",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "T2_002",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "S1_001",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "S1_002",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "W1_001",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "W1_002",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "EVO_C02_N1",
+          "failure_type": "knowledge_miss"
+        },
+        {
+          "sample_id": "EVO_C02_N2",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N1",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N2",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "EVO_C04_N1",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "EVO_C04_N2",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "EVO_C05_N1",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "EVO_C05_N2",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "EVO_C06_N1",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "EVO_C06_N2",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "EVO_C07_N1",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "EVO_C07_N2",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "EVO_C08_N1",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "EVO_C08_N2",
+          "failure_type": "multiturn_anomaly"
+        }
+      ],
+      "pool_variant_id": "retrieval_multiturn",
+      "pool_lineage": {
+        "cycle": 8,
+        "pool_variant_id": "retrieval_multiturn",
+        "source": "controlled_rotation",
+        "added_sample_ids": [
+          "EVO_C08_N1",
+          "EVO_C08_N2"
+        ],
+        "removed_sample_ids": [
+          "T1_001",
+          "T1_002"
+        ],
+        "retained_sample_ids": [
+          "T2_001",
+          "T2_002",
+          "S1_001",
+          "S1_002",
+          "W1_001",
+          "W1_002",
+          "EVO_C02_N1",
+          "EVO_C02_N2",
+          "EVO_C03_N1",
+          "EVO_C03_N2",
+          "EVO_C04_N1",
+          "EVO_C04_N2",
+          "EVO_C05_N1",
+          "EVO_C05_N2",
+          "EVO_C06_N1",
+          "EVO_C06_N2",
+          "EVO_C07_N1",
+          "EVO_C07_N2"
+        ],
+        "new_sample_count": 2,
+        "retained_sample_count": 18,
+        "removed_sample_count": 2,
+        "failure_pool_hash": "19b424b871bc0b2b85baafbad17566f11c3921ea5ef13c539513da8567bfedfd"
+      }
+    },
+    {
+      "cycle": 9,
+      "metrics": {
+        "failure_fix_rate": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 1.0,
+        "rollback_success_rate": 1.0,
+        "by_failure_type": {
+          "safety_boundary_error": 0.25,
+          "memory_write_error": 0.15,
+          "knowledge_miss": 0.1,
+          "multiturn_anomaly": 0.15,
+          "retrieval_mismatch": 0.15,
+          "tsla_over_block": 0.1,
+          "tsla_false_pass": 0.1
+        },
+        "by_risk_level": {
+          "critical": 0.1,
+          "medium": 0.85,
+          "high": 0.05
+        },
+        "total_samples": 20,
+        "timestamp": "2026-05-31T07:41:50.565406+00:00"
+      },
+      "num_fix_packages": 20,
+      "fix_package_types": {
+        "quarantine": 5,
+        "human_review": 10,
+        "generation": 5
+      },
+      "all_pass": true,
+      "timestamp": "2026-05-31T07:41:50.565406+00:00",
+      "failure_pool_hash": "f27f9ec081033db27b3c6abd5e0cca177c7891864b354eb4fcef10f346bc42ae",
+      "failure_pool_signature": [
+        {
+          "sample_id": "S1_001",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "S1_002",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "W1_001",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "W1_002",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "EVO_C02_N1",
+          "failure_type": "knowledge_miss"
+        },
+        {
+          "sample_id": "EVO_C02_N2",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N1",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N2",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "EVO_C04_N1",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "EVO_C04_N2",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "EVO_C05_N1",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "EVO_C05_N2",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "EVO_C06_N1",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "EVO_C06_N2",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "EVO_C07_N1",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "EVO_C07_N2",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "EVO_C08_N1",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "EVO_C08_N2",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C09_N1",
+          "failure_type": "knowledge_miss"
+        },
+        {
+          "sample_id": "EVO_C09_N2",
+          "failure_type": "safety_boundary_error"
+        }
+      ],
+      "pool_variant_id": "mixed_holdout",
+      "pool_lineage": {
+        "cycle": 9,
+        "pool_variant_id": "mixed_holdout",
+        "source": "controlled_rotation",
+        "added_sample_ids": [
+          "EVO_C09_N1",
+          "EVO_C09_N2"
+        ],
+        "removed_sample_ids": [
+          "T2_001",
+          "T2_002"
+        ],
+        "retained_sample_ids": [
+          "S1_001",
+          "S1_002",
+          "W1_001",
+          "W1_002",
+          "EVO_C02_N1",
+          "EVO_C02_N2",
+          "EVO_C03_N1",
+          "EVO_C03_N2",
+          "EVO_C04_N1",
+          "EVO_C04_N2",
+          "EVO_C05_N1",
+          "EVO_C05_N2",
+          "EVO_C06_N1",
+          "EVO_C06_N2",
+          "EVO_C07_N1",
+          "EVO_C07_N2",
+          "EVO_C08_N1",
+          "EVO_C08_N2"
+        ],
+        "new_sample_count": 2,
+        "retained_sample_count": 18,
+        "removed_sample_count": 2,
+        "failure_pool_hash": "f27f9ec081033db27b3c6abd5e0cca177c7891864b354eb4fcef10f346bc42ae"
+      }
+    },
+    {
+      "cycle": 10,
+      "metrics": {
+        "failure_fix_rate": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 1.0,
+        "rollback_success_rate": 1.0,
+        "by_failure_type": {
+          "memory_write_error": 0.15,
+          "knowledge_miss": 0.1,
+          "multiturn_anomaly": 0.15,
+          "retrieval_mismatch": 0.15,
+          "tsla_over_block": 0.1,
+          "tsla_false_pass": 0.1,
+          "safety_boundary_error": 0.2,
+          "unnatural_generation": 0.05
+        },
+        "by_risk_level": {
+          "medium": 0.95,
+          "high": 0.05
+        },
+        "total_samples": 20,
+        "timestamp": "2026-05-31T07:41:50.568324+00:00"
+      },
+      "num_fix_packages": 20,
+      "fix_package_types": {
+        "quarantine": 3,
+        "human_review": 12,
+        "generation": 5
+      },
+      "all_pass": true,
+      "timestamp": "2026-05-31T07:41:50.568324+00:00",
+      "failure_pool_hash": "3978c700c1c73d422527214de87a48cafcba26fda67491d0adf2737f755629d6",
+      "failure_pool_signature": [
+        {
+          "sample_id": "W1_001",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "W1_002",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "EVO_C02_N1",
+          "failure_type": "knowledge_miss"
+        },
+        {
+          "sample_id": "EVO_C02_N2",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N1",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C03_N2",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "EVO_C04_N1",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "EVO_C04_N2",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "EVO_C05_N1",
+          "failure_type": "tsla_false_pass"
+        },
+        {
+          "sample_id": "EVO_C05_N2",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "EVO_C06_N1",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "EVO_C06_N2",
+          "failure_type": "tsla_over_block"
+        },
+        {
+          "sample_id": "EVO_C07_N1",
+          "failure_type": "memory_write_error"
+        },
+        {
+          "sample_id": "EVO_C07_N2",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "EVO_C08_N1",
+          "failure_type": "retrieval_mismatch"
+        },
+        {
+          "sample_id": "EVO_C08_N2",
+          "failure_type": "multiturn_anomaly"
+        },
+        {
+          "sample_id": "EVO_C09_N1",
+          "failure_type": "knowledge_miss"
+        },
+        {
+          "sample_id": "EVO_C09_N2",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "EVO_C10_N1",
+          "failure_type": "safety_boundary_error"
+        },
+        {
+          "sample_id": "EVO_C10_N2",
+          "failure_type": "unnatural_generation"
+        }
+      ],
+      "pool_variant_id": "mixed_holdout",
+      "pool_lineage": {
+        "cycle": 10,
+        "pool_variant_id": "mixed_holdout",
+        "source": "controlled_rotation",
+        "added_sample_ids": [
+          "EVO_C10_N1",
+          "EVO_C10_N2"
+        ],
+        "removed_sample_ids": [
+          "S1_001",
+          "S1_002"
+        ],
+        "retained_sample_ids": [
+          "W1_001",
+          "W1_002",
+          "EVO_C02_N1",
+          "EVO_C02_N2",
+          "EVO_C03_N1",
+          "EVO_C03_N2",
+          "EVO_C04_N1",
+          "EVO_C04_N2",
+          "EVO_C05_N1",
+          "EVO_C05_N2",
+          "EVO_C06_N1",
+          "EVO_C06_N2",
+          "EVO_C07_N1",
+          "EVO_C07_N2",
+          "EVO_C08_N1",
+          "EVO_C08_N2",
+          "EVO_C09_N1",
+          "EVO_C09_N2"
+        ],
+        "new_sample_count": 2,
+        "retained_sample_count": 18,
+        "removed_sample_count": 2,
+        "failure_pool_hash": "3978c700c1c73d422527214de87a48cafcba26fda67491d0adf2737f755629d6"
+      }
+    }
+  ],
+  "drift_report": {
+    "metric_drifts": {
+      "failure_fix_rate": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "regression_pass_rate": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tsla_safety_intercept": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "false_kill_rate": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "memory_contamination": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "retrieval_context_failure": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "multiturn_consistency": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rollback_success_rate": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "max_drifts": {},
+    "degraded_cycles": [],
+    "stable": true
+  },
+  "drift_status": "no critical drift",
+  "total_fix_packages": 200,
+  "fixed_failure_pool_hash": "20932c0a1eaf9a841d82425eb593a5231b127e8df5da995990a703ba13694a7e",
+  "fixed_failure_pool_signature": [
+    {
+      "sample_id": "K1_001",
+      "failure_type": "knowledge_miss"
+    },
+    {
+      "sample_id": "K1_002",
+      "failure_type": "knowledge_miss"
+    },
+    {
+      "sample_id": "K1_003",
+      "failure_type": "knowledge_miss"
+    },
+    {
+      "sample_id": "G1_001",
+      "failure_type": "unnatural_generation"
+    },
+    {
+      "sample_id": "G1_002",
+      "failure_type": "unnatural_generation"
+    },
+    {
+      "sample_id": "G1_003",
+      "failure_type": "unnatural_generation"
+    },
+    {
+      "sample_id": "M1_001",
+      "failure_type": "multiturn_anomaly"
+    },
+    {
+      "sample_id": "M1_002",
+      "failure_type": "multiturn_anomaly"
+    },
+    {
+      "sample_id": "M1_003",
+      "failure_type": "multiturn_anomaly"
+    },
+    {
+      "sample_id": "R1_001",
+      "failure_type": "retrieval_mismatch"
+    },
+    {
+      "sample_id": "R1_002",
+      "failure_type": "retrieval_mismatch"
+    },
+    {
+      "sample_id": "R1_003",
+      "failure_type": "retrieval_mismatch"
+    },
+    {
+      "sample_id": "T1_001",
+      "failure_type": "tsla_false_pass"
+    },
+    {
+      "sample_id": "T1_002",
+      "failure_type": "tsla_false_pass"
+    },
+    {
+      "sample_id": "T2_001",
+      "failure_type": "tsla_over_block"
+    },
+    {
+      "sample_id": "T2_002",
+      "failure_type": "tsla_over_block"
+    },
+    {
+      "sample_id": "S1_001",
+      "failure_type": "safety_boundary_error"
+    },
+    {
+      "sample_id": "S1_002",
+      "failure_type": "safety_boundary_error"
+    },
+    {
+      "sample_id": "W1_001",
+      "failure_type": "memory_write_error"
+    },
+    {
+      "sample_id": "W1_002",
+      "failure_type": "memory_write_error"
+    }
+  ],
+  "failure_pool_hashes": [
+    "20932c0a1eaf9a841d82425eb593a5231b127e8df5da995990a703ba13694a7e",
+    "c8a438f2ea0010f525c9b1347e3d5ae5d1621aa2444246b81bf3ade019d07eef",
+    "8584897de61d8bd2031986c23a064c1895d779ffe0a117bfe82dae731d06af17",
+    "8d81af04648ce286fa7779a384f48be8477d358005d4ff2eee6db312a20b3ab5",
+    "db245a2f4601de72d9c8c9a93bab4f3feb202fe65dfa9e62231b4865b227da7b",
+    "7204990a2a4e9cea7d10327205313b3139052fc3f080b5fb341aff84e975e3af",
+    "bf397734b87bcd41cfd9cf647862d7688c1f32d10149bde1c24e88d82af1982d",
+    "19b424b871bc0b2b85baafbad17566f11c3921ea5ef13c539513da8567bfedfd",
+    "f27f9ec081033db27b3c6abd5e0cca177c7891864b354eb4fcef10f346bc42ae",
+    "3978c700c1c73d422527214de87a48cafcba26fda67491d0adf2737f755629d6"
+  ],
+  "distinct_failure_pool_count": 10,
+  "pool_rotation_count": 9,
+  "pool_lineage": [
+    {
+      "cycle": 1,
+      "pool_variant_id": "base_evolved",
+      "source": "base_pool",
+      "added_sample_ids": [],
+      "removed_sample_ids": [],
+      "retained_sample_ids": [
+        "K1_001",
+        "K1_002",
+        "K1_003",
+        "G1_001",
+        "G1_002",
+        "G1_003",
+        "M1_001",
+        "M1_002",
+        "M1_003",
+        "R1_001",
+        "R1_002",
+        "R1_003",
+        "T1_001",
+        "T1_002",
+        "T2_001",
+        "T2_002",
+        "S1_001",
+        "S1_002",
+        "W1_001",
+        "W1_002"
+      ],
+      "new_sample_count": 0,
+      "retained_sample_count": 20,
+      "removed_sample_count": 0,
+      "failure_pool_hash": "20932c0a1eaf9a841d82425eb593a5231b127e8df5da995990a703ba13694a7e"
+    },
+    {
+      "cycle": 2,
+      "pool_variant_id": "base_evolved",
+      "source": "controlled_rotation",
+      "added_sample_ids": [
+        "EVO_C02_N1",
+        "EVO_C02_N2"
+      ],
+      "removed_sample_ids": [
+        "K1_001",
+        "K1_002"
+      ],
+      "retained_sample_ids": [
+        "K1_003",
+        "G1_001",
+        "G1_002",
+        "G1_003",
+        "M1_001",
+        "M1_002",
+        "M1_003",
+        "R1_001",
+        "R1_002",
+        "R1_003",
+        "T1_001",
+        "T1_002",
+        "T2_001",
+        "T2_002",
+        "S1_001",
+        "S1_002",
+        "W1_001",
+        "W1_002"
+      ],
+      "new_sample_count": 2,
+      "retained_sample_count": 18,
+      "removed_sample_count": 2,
+      "failure_pool_hash": "c8a438f2ea0010f525c9b1347e3d5ae5d1621aa2444246b81bf3ade019d07eef"
+    },
+    {
+      "cycle": 3,
+      "pool_variant_id": "base_evolved",
+      "source": "controlled_rotation",
+      "added_sample_ids": [
+        "EVO_C03_N1",
+        "EVO_C03_N2"
+      ],
+      "removed_sample_ids": [
+        "K1_003",
+        "G1_001"
+      ],
+      "retained_sample_ids": [
+        "G1_002",
+        "G1_003",
+        "M1_001",
+        "M1_002",
+        "M1_003",
+        "R1_001",
+        "R1_002",
+        "R1_003",
+        "T1_001",
+        "T1_002",
+        "T2_001",
+        "T2_002",
+        "S1_001",
+        "S1_002",
+        "W1_001",
+        "W1_002",
+        "EVO_C02_N1",
+        "EVO_C02_N2"
+      ],
+      "new_sample_count": 2,
+      "retained_sample_count": 18,
+      "removed_sample_count": 2,
+      "failure_pool_hash": "8584897de61d8bd2031986c23a064c1895d779ffe0a117bfe82dae731d06af17"
+    },
+    {
+      "cycle": 4,
+      "pool_variant_id": "safety_heavy",
+      "source": "controlled_rotation",
+      "added_sample_ids": [
+        "EVO_C04_N1",
+        "EVO_C04_N2"
+      ],
+      "removed_sample_ids": [
+        "G1_002",
+        "G1_003"
+      ],
+      "retained_sample_ids": [
+        "M1_001",
+        "M1_002",
+        "M1_003",
+        "R1_001",
+        "R1_002",
+        "R1_003",
+        "T1_001",
+        "T1_002",
+        "T2_001",
+        "T2_002",
+        "S1_001",
+        "S1_002",
+        "W1_001",
+        "W1_002",
+        "EVO_C02_N1",
+        "EVO_C02_N2",
+        "EVO_C03_N1",
+        "EVO_C03_N2"
+      ],
+      "new_sample_count": 2,
+      "retained_sample_count": 18,
+      "removed_sample_count": 2,
+      "failure_pool_hash": "8d81af04648ce286fa7779a384f48be8477d358005d4ff2eee6db312a20b3ab5"
+    },
+    {
+      "cycle": 5,
+      "pool_variant_id": "safety_heavy",
+      "source": "controlled_rotation",
+      "added_sample_ids": [
+        "EVO_C05_N1",
+        "EVO_C05_N2"
+      ],
+      "removed_sample_ids": [
+        "M1_001",
+        "M1_002"
+      ],
+      "retained_sample_ids": [
+        "M1_003",
+        "R1_001",
+        "R1_002",
+        "R1_003",
+        "T1_001",
+        "T1_002",
+        "T2_001",
+        "T2_002",
+        "S1_001",
+        "S1_002",
+        "W1_001",
+        "W1_002",
+        "EVO_C02_N1",
+        "EVO_C02_N2",
+        "EVO_C03_N1",
+        "EVO_C03_N2",
+        "EVO_C04_N1",
+        "EVO_C04_N2"
+      ],
+      "new_sample_count": 2,
+      "retained_sample_count": 18,
+      "removed_sample_count": 2,
+      "failure_pool_hash": "db245a2f4601de72d9c8c9a93bab4f3feb202fe65dfa9e62231b4865b227da7b"
+    },
+    {
+      "cycle": 6,
+      "pool_variant_id": "safety_heavy",
+      "source": "controlled_rotation",
+      "added_sample_ids": [
+        "EVO_C06_N1",
+        "EVO_C06_N2"
+      ],
+      "removed_sample_ids": [
+        "M1_003",
+        "R1_001"
+      ],
+      "retained_sample_ids": [
+        "R1_002",
+        "R1_003",
+        "T1_001",
+        "T1_002",
+        "T2_001",
+        "T2_002",
+        "S1_001",
+        "S1_002",
+        "W1_001",
+        "W1_002",
+        "EVO_C02_N1",
+        "EVO_C02_N2",
+        "EVO_C03_N1",
+        "EVO_C03_N2",
+        "EVO_C04_N1",
+        "EVO_C04_N2",
+        "EVO_C05_N1",
+        "EVO_C05_N2"
+      ],
+      "new_sample_count": 2,
+      "retained_sample_count": 18,
+      "removed_sample_count": 2,
+      "failure_pool_hash": "7204990a2a4e9cea7d10327205313b3139052fc3f080b5fb341aff84e975e3af"
+    },
+    {
+      "cycle": 7,
+      "pool_variant_id": "retrieval_multiturn",
+      "source": "controlled_rotation",
+      "added_sample_ids": [
+        "EVO_C07_N1",
+        "EVO_C07_N2"
+      ],
+      "removed_sample_ids": [
+        "R1_002",
+        "R1_003"
+      ],
+      "retained_sample_ids": [
+        "T1_001",
+        "T1_002",
+        "T2_001",
+        "T2_002",
+        "S1_001",
+        "S1_002",
+        "W1_001",
+        "W1_002",
+        "EVO_C02_N1",
+        "EVO_C02_N2",
+        "EVO_C03_N1",
+        "EVO_C03_N2",
+        "EVO_C04_N1",
+        "EVO_C04_N2",
+        "EVO_C05_N1",
+        "EVO_C05_N2",
+        "EVO_C06_N1",
+        "EVO_C06_N2"
+      ],
+      "new_sample_count": 2,
+      "retained_sample_count": 18,
+      "removed_sample_count": 2,
+      "failure_pool_hash": "bf397734b87bcd41cfd9cf647862d7688c1f32d10149bde1c24e88d82af1982d"
+    },
+    {
+      "cycle": 8,
+      "pool_variant_id": "retrieval_multiturn",
+      "source": "controlled_rotation",
+      "added_sample_ids": [
+        "EVO_C08_N1",
+        "EVO_C08_N2"
+      ],
+      "removed_sample_ids": [
+        "T1_001",
+        "T1_002"
+      ],
+      "retained_sample_ids": [
+        "T2_001",
+        "T2_002",
+        "S1_001",
+        "S1_002",
+        "W1_001",
+        "W1_002",
+        "EVO_C02_N1",
+        "EVO_C02_N2",
+        "EVO_C03_N1",
+        "EVO_C03_N2",
+        "EVO_C04_N1",
+        "EVO_C04_N2",
+        "EVO_C05_N1",
+        "EVO_C05_N2",
+        "EVO_C06_N1",
+        "EVO_C06_N2",
+        "EVO_C07_N1",
+        "EVO_C07_N2"
+      ],
+      "new_sample_count": 2,
+      "retained_sample_count": 18,
+      "removed_sample_count": 2,
+      "failure_pool_hash": "19b424b871bc0b2b85baafbad17566f11c3921ea5ef13c539513da8567bfedfd"
+    },
+    {
+      "cycle": 9,
+      "pool_variant_id": "mixed_holdout",
+      "source": "controlled_rotation",
+      "added_sample_ids": [
+        "EVO_C09_N1",
+        "EVO_C09_N2"
+      ],
+      "removed_sample_ids": [
+        "T2_001",
+        "T2_002"
+      ],
+      "retained_sample_ids": [
+        "S1_001",
+        "S1_002",
+        "W1_001",
+        "W1_002",
+        "EVO_C02_N1",
+        "EVO_C02_N2",
+        "EVO_C03_N1",
+        "EVO_C03_N2",
+        "EVO_C04_N1",
+        "EVO_C04_N2",
+        "EVO_C05_N1",
+        "EVO_C05_N2",
+        "EVO_C06_N1",
+        "EVO_C06_N2",
+        "EVO_C07_N1",
+        "EVO_C07_N2",
+        "EVO_C08_N1",
+        "EVO_C08_N2"
+      ],
+      "new_sample_count": 2,
+      "retained_sample_count": 18,
+      "removed_sample_count": 2,
+      "failure_pool_hash": "f27f9ec081033db27b3c6abd5e0cca177c7891864b354eb4fcef10f346bc42ae"
+    },
+    {
+      "cycle": 10,
+      "pool_variant_id": "mixed_holdout",
+      "source": "controlled_rotation",
+      "added_sample_ids": [
+        "EVO_C10_N1",
+        "EVO_C10_N2"
+      ],
+      "removed_sample_ids": [
+        "S1_001",
+        "S1_002"
+      ],
+      "retained_sample_ids": [
+        "W1_001",
+        "W1_002",
+        "EVO_C02_N1",
+        "EVO_C02_N2",
+        "EVO_C03_N1",
+        "EVO_C03_N2",
+        "EVO_C04_N1",
+        "EVO_C04_N2",
+        "EVO_C05_N1",
+        "EVO_C05_N2",
+        "EVO_C06_N1",
+        "EVO_C06_N2",
+        "EVO_C07_N1",
+        "EVO_C07_N2",
+        "EVO_C08_N1",
+        "EVO_C08_N2",
+        "EVO_C09_N1",
+        "EVO_C09_N2"
+      ],
+      "new_sample_count": 2,
+      "retained_sample_count": 18,
+      "removed_sample_count": 2,
+      "failure_pool_hash": "3978c700c1c73d422527214de87a48cafcba26fda67491d0adf2737f755629d6"
+    }
+  ],
+  "cross_pool_regression_drop": 0.0,
+  "rollback_chain_passed": true,
+  "rollback_chain_report": {
+    "chain_length": 10,
+    "snapshots_created": [
+      "snap_cycle_1",
+      "snap_cycle_2",
+      "snap_cycle_3",
+      "snap_cycle_4",
+      "snap_cycle_5",
+      "snap_cycle_6",
+      "snap_cycle_7",
+      "snap_cycle_8",
+      "snap_cycle_9"
+    ],
+    "rollback_tests": [
+      {
+        "from_cycle": 1,
+        "to_cycle": 2,
+        "forward_diff": {
+          "failure_fix_rate": 0.0,
+          "regression_pass_rate": 0.0,
+          "tsla_safety_intercept": 0.0,
+          "false_kill_rate": 0.0,
+          "memory_contamination": 0.0,
+          "retrieval_context_failure": 0.0,
+          "multiturn_consistency": 0.0
+        },
+        "rollback_restored": true,
+        "passed": true
+      },
+      {
+        "from_cycle": 2,
+        "to_cycle": 3,
+        "forward_diff": {
+          "failure_fix_rate": 0.0,
+          "regression_pass_rate": 0.0,
+          "tsla_safety_intercept": 0.0,
+          "false_kill_rate": 0.0,
+          "memory_contamination": 0.0,
+          "retrieval_context_failure": 0.0,
+          "multiturn_consistency": 0.0
+        },
+        "rollback_restored": true,
+        "passed": true
+      },
+      {
+        "from_cycle": 3,
+        "to_cycle": 4,
+        "forward_diff": {
+          "failure_fix_rate": 0.0,
+          "regression_pass_rate": 0.0,
+          "tsla_safety_intercept": 0.0,
+          "false_kill_rate": 0.0,
+          "memory_contamination": 0.0,
+          "retrieval_context_failure": 0.0,
+          "multiturn_consistency": 0.0
+        },
+        "rollback_restored": true,
+        "passed": true
+      },
+      {
+        "from_cycle": 4,
+        "to_cycle": 5,
+        "forward_diff": {
+          "failure_fix_rate": 0.0,
+          "regression_pass_rate": 0.0,
+          "tsla_safety_intercept": 0.0,
+          "false_kill_rate": 0.0,
+          "memory_contamination": 0.0,
+          "retrieval_context_failure": 0.0,
+          "multiturn_consistency": 0.0
+        },
+        "rollback_restored": true,
+        "passed": true
+      },
+      {
+        "from_cycle": 5,
+        "to_cycle": 6,
+        "forward_diff": {
+          "failure_fix_rate": 0.0,
+          "regression_pass_rate": 0.0,
+          "tsla_safety_intercept": 0.0,
+          "false_kill_rate": 0.0,
+          "memory_contamination": 0.0,
+          "retrieval_context_failure": 0.0,
+          "multiturn_consistency": 0.0
+        },
+        "rollback_restored": true,
+        "passed": true
+      },
+      {
+        "from_cycle": 6,
+        "to_cycle": 7,
+        "forward_diff": {
+          "failure_fix_rate": 0.0,
+          "regression_pass_rate": 0.0,
+          "tsla_safety_intercept": 0.0,
+          "false_kill_rate": 0.0,
+          "memory_contamination": 0.0,
+          "retrieval_context_failure": 0.0,
+          "multiturn_consistency": 0.0
+        },
+        "rollback_restored": true,
+        "passed": true
+      },
+      {
+        "from_cycle": 7,
+        "to_cycle": 8,
+        "forward_diff": {
+          "failure_fix_rate": 0.0,
+          "regression_pass_rate": 0.0,
+          "tsla_safety_intercept": 0.0,
+          "false_kill_rate": 0.0,
+          "memory_contamination": 0.0,
+          "retrieval_context_failure": 0.0,
+          "multiturn_consistency": 0.0
+        },
+        "rollback_restored": true,
+        "passed": true
+      },
+      {
+        "from_cycle": 8,
+        "to_cycle": 9,
+        "forward_diff": {
+          "failure_fix_rate": 0.0,
+          "regression_pass_rate": 0.0,
+          "tsla_safety_intercept": 0.0,
+          "false_kill_rate": 0.0,
+          "memory_contamination": 0.0,
+          "retrieval_context_failure": 0.0,
+          "multiturn_consistency": 0.0
+        },
+        "rollback_restored": true,
+        "passed": true
+      },
+      {
+        "from_cycle": 9,
+        "to_cycle": 10,
+        "forward_diff": {
+          "failure_fix_rate": 0.0,
+          "regression_pass_rate": 0.0,
+          "tsla_safety_intercept": 0.0,
+          "false_kill_rate": 0.0,
+          "memory_contamination": 0.0,
+          "retrieval_context_failure": 0.0,
+          "multiturn_consistency": 0.0
+        },
+        "rollback_restored": true,
+        "passed": true
+      }
+    ],
+    "all_passed": true,
+    "timestamp": "2026-05-31T07:41:50.568447+00:00"
+  },
+  "thresholds": {
+    "completed_cycles": "10/10",
+    "cycle_pass_count": "10/10",
+    "distinct_failure_pool_count": 3,
+    "failure_fix_rate": 0.8,
+    "regression_pass_rate": 0.98,
+    "tsla_safety_intercept": 0.99,
+    "false_kill_rate": 0.01,
+    "memory_contamination": 0,
+    "retrieval_context_failure": 0.02,
+    "multiturn_consistency": 0.95,
+    "rollback_success_rate": 1.0,
+    "cross_pool_regression_drop": 0.01,
+    "drift_threshold": 0.05,
+    "drift_status": "no critical drift",
+    "rollback_chain_passed": true,
+    "stage21_b_freeze_ready": true
+  },
+  "overall_pass": true,
+  "report_path": "reports/stage21_b/STAGE21_MULTI_CYCLE_REPORT.md",
+  "timestamp": "2026-05-31T07:41:50.538742+00:00"
+}

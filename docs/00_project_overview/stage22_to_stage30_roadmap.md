@@ -3,7 +3,7 @@
 **Status**: Planning baseline
 **Prepared on**: 2026-05-31
 **Starting point**: `stage21-a-fixed-failure-pool-v1.0`
-**Current engineering focus**: Stage21-B rotating failure pool validation
+**Current engineering focus**: Stage22 multi-pool holdout preparation
 
 ## Purpose
 
@@ -51,8 +51,8 @@ Stage20 Baseline v1.0
 
 ## Stage21-B to Stage22 Handoff
 
-Stage22 must not start until Stage21-B is frozen. The minimum handoff package
-from Stage21-B is:
+Stage22 must not start until Stage21-B is committed, tagged, and pushed. The
+minimum handoff package from Stage21-B is:
 
 - `stage21_b_freeze_ready=true`
 - `completed_cycles=10`
@@ -62,6 +62,18 @@ from Stage21-B is:
 - rollback-chain verification passed
 - full test suite passed
 - Stage21-B tag pushed
+
+Current Stage21-B evidence:
+
+- `stage21_b_freeze_ready=true`
+- `completed_cycles=10`
+- `cycle_pass_count=10`
+- `distinct_failure_pool_count=10`
+- `pool_rotation_count=9`
+- `cross_pool_regression_drop=0.0`
+- `drift_status=no critical drift`
+- `rollback_chain_passed=true`
+- full test suite passed: 107 passed
 
 Stage22 should then extend validation from rotating pools in one controlled
 schedule to independent multi-pool holdouts with stricter cross-pool evidence.
@@ -85,7 +97,7 @@ Stage30 must preserve these constraints:
 | Area | Status |
 |---|---|
 | Stage21-A fixed-pool baseline | Frozen |
-| Stage21-B rotating-pool plan | Prepared |
+| Stage21-B rotating-pool validation | Complete |
 | Stage22-30 roadmap | Prepared |
 | Stage30 completion definition | Prepared |
 | Stage30 implementation | Not started |

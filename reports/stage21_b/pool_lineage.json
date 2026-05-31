@@ -1,0 +1,368 @@
+[
+  {
+    "cycle": 1,
+    "pool_variant_id": "base_evolved",
+    "source": "base_pool",
+    "added_sample_ids": [],
+    "removed_sample_ids": [],
+    "retained_sample_ids": [
+      "K1_001",
+      "K1_002",
+      "K1_003",
+      "G1_001",
+      "G1_002",
+      "G1_003",
+      "M1_001",
+      "M1_002",
+      "M1_003",
+      "R1_001",
+      "R1_002",
+      "R1_003",
+      "T1_001",
+      "T1_002",
+      "T2_001",
+      "T2_002",
+      "S1_001",
+      "S1_002",
+      "W1_001",
+      "W1_002"
+    ],
+    "new_sample_count": 0,
+    "retained_sample_count": 20,
+    "removed_sample_count": 0,
+    "failure_pool_hash": "20932c0a1eaf9a841d82425eb593a5231b127e8df5da995990a703ba13694a7e"
+  },
+  {
+    "cycle": 2,
+    "pool_variant_id": "base_evolved",
+    "source": "controlled_rotation",
+    "added_sample_ids": [
+      "EVO_C02_N1",
+      "EVO_C02_N2"
+    ],
+    "removed_sample_ids": [
+      "K1_001",
+      "K1_002"
+    ],
+    "retained_sample_ids": [
+      "K1_003",
+      "G1_001",
+      "G1_002",
+      "G1_003",
+      "M1_001",
+      "M1_002",
+      "M1_003",
+      "R1_001",
+      "R1_002",
+      "R1_003",
+      "T1_001",
+      "T1_002",
+      "T2_001",
+      "T2_002",
+      "S1_001",
+      "S1_002",
+      "W1_001",
+      "W1_002"
+    ],
+    "new_sample_count": 2,
+    "retained_sample_count": 18,
+    "removed_sample_count": 2,
+    "failure_pool_hash": "c8a438f2ea0010f525c9b1347e3d5ae5d1621aa2444246b81bf3ade019d07eef"
+  },
+  {
+    "cycle": 3,
+    "pool_variant_id": "base_evolved",
+    "source": "controlled_rotation",
+    "added_sample_ids": [
+      "EVO_C03_N1",
+      "EVO_C03_N2"
+    ],
+    "removed_sample_ids": [
+      "K1_003",
+      "G1_001"
+    ],
+    "retained_sample_ids": [
+      "G1_002",
+      "G1_003",
+      "M1_001",
+      "M1_002",
+      "M1_003",
+      "R1_001",
+      "R1_002",
+      "R1_003",
+      "T1_001",
+      "T1_002",
+      "T2_001",
+      "T2_002",
+      "S1_001",
+      "S1_002",
+      "W1_001",
+      "W1_002",
+      "EVO_C02_N1",
+      "EVO_C02_N2"
+    ],
+    "new_sample_count": 2,
+    "retained_sample_count": 18,
+    "removed_sample_count": 2,
+    "failure_pool_hash": "8584897de61d8bd2031986c23a064c1895d779ffe0a117bfe82dae731d06af17"
+  },
+  {
+    "cycle": 4,
+    "pool_variant_id": "safety_heavy",
+    "source": "controlled_rotation",
+    "added_sample_ids": [
+      "EVO_C04_N1",
+      "EVO_C04_N2"
+    ],
+    "removed_sample_ids": [
+      "G1_002",
+      "G1_003"
+    ],
+    "retained_sample_ids": [
+      "M1_001",
+      "M1_002",
+      "M1_003",
+      "R1_001",
+      "R1_002",
+      "R1_003",
+      "T1_001",
+      "T1_002",
+      "T2_001",
+      "T2_002",
+      "S1_001",
+      "S1_002",
+      "W1_001",
+      "W1_002",
+      "EVO_C02_N1",
+      "EVO_C02_N2",
+      "EVO_C03_N1",
+      "EVO_C03_N2"
+    ],
+    "new_sample_count": 2,
+    "retained_sample_count": 18,
+    "removed_sample_count": 2,
+    "failure_pool_hash": "8d81af04648ce286fa7779a384f48be8477d358005d4ff2eee6db312a20b3ab5"
+  },
+  {
+    "cycle": 5,
+    "pool_variant_id": "safety_heavy",
+    "source": "controlled_rotation",
+    "added_sample_ids": [
+      "EVO_C05_N1",
+      "EVO_C05_N2"
+    ],
+    "removed_sample_ids": [
+      "M1_001",
+      "M1_002"
+    ],
+    "retained_sample_ids": [
+      "M1_003",
+      "R1_001",
+      "R1_002",
+      "R1_003",
+      "T1_001",
+      "T1_002",
+      "T2_001",
+      "T2_002",
+      "S1_001",
+      "S1_002",
+      "W1_001",
+      "W1_002",
+      "EVO_C02_N1",
+      "EVO_C02_N2",
+      "EVO_C03_N1",
+      "EVO_C03_N2",
+      "EVO_C04_N1",
+      "EVO_C04_N2"
+    ],
+    "new_sample_count": 2,
+    "retained_sample_count": 18,
+    "removed_sample_count": 2,
+    "failure_pool_hash": "db245a2f4601de72d9c8c9a93bab4f3feb202fe65dfa9e62231b4865b227da7b"
+  },
+  {
+    "cycle": 6,
+    "pool_variant_id": "safety_heavy",
+    "source": "controlled_rotation",
+    "added_sample_ids": [
+      "EVO_C06_N1",
+      "EVO_C06_N2"
+    ],
+    "removed_sample_ids": [
+      "M1_003",
+      "R1_001"
+    ],
+    "retained_sample_ids": [
+      "R1_002",
+      "R1_003",
+      "T1_001",
+      "T1_002",
+      "T2_001",
+      "T2_002",
+      "S1_001",
+      "S1_002",
+      "W1_001",
+      "W1_002",
+      "EVO_C02_N1",
+      "EVO_C02_N2",
+      "EVO_C03_N1",
+      "EVO_C03_N2",
+      "EVO_C04_N1",
+      "EVO_C04_N2",
+      "EVO_C05_N1",
+      "EVO_C05_N2"
+    ],
+    "new_sample_count": 2,
+    "retained_sample_count": 18,
+    "removed_sample_count": 2,
+    "failure_pool_hash": "7204990a2a4e9cea7d10327205313b3139052fc3f080b5fb341aff84e975e3af"
+  },
+  {
+    "cycle": 7,
+    "pool_variant_id": "retrieval_multiturn",
+    "source": "controlled_rotation",
+    "added_sample_ids": [
+      "EVO_C07_N1",
+      "EVO_C07_N2"
+    ],
+    "removed_sample_ids": [
+      "R1_002",
+      "R1_003"
+    ],
+    "retained_sample_ids": [
+      "T1_001",
+      "T1_002",
+      "T2_001",
+      "T2_002",
+      "S1_001",
+      "S1_002",
+      "W1_001",
+      "W1_002",
+      "EVO_C02_N1",
+      "EVO_C02_N2",
+      "EVO_C03_N1",
+      "EVO_C03_N2",
+      "EVO_C04_N1",
+      "EVO_C04_N2",
+      "EVO_C05_N1",
+      "EVO_C05_N2",
+      "EVO_C06_N1",
+      "EVO_C06_N2"
+    ],
+    "new_sample_count": 2,
+    "retained_sample_count": 18,
+    "removed_sample_count": 2,
+    "failure_pool_hash": "bf397734b87bcd41cfd9cf647862d7688c1f32d10149bde1c24e88d82af1982d"
+  },
+  {
+    "cycle": 8,
+    "pool_variant_id": "retrieval_multiturn",
+    "source": "controlled_rotation",
+    "added_sample_ids": [
+      "EVO_C08_N1",
+      "EVO_C08_N2"
+    ],
+    "removed_sample_ids": [
+      "T1_001",
+      "T1_002"
+    ],
+    "retained_sample_ids": [
+      "T2_001",
+      "T2_002",
+      "S1_001",
+      "S1_002",
+      "W1_001",
+      "W1_002",
+      "EVO_C02_N1",
+      "EVO_C02_N2",
+      "EVO_C03_N1",
+      "EVO_C03_N2",
+      "EVO_C04_N1",
+      "EVO_C04_N2",
+      "EVO_C05_N1",
+      "EVO_C05_N2",
+      "EVO_C06_N1",
+      "EVO_C06_N2",
+      "EVO_C07_N1",
+      "EVO_C07_N2"
+    ],
+    "new_sample_count": 2,
+    "retained_sample_count": 18,
+    "removed_sample_count": 2,
+    "failure_pool_hash": "19b424b871bc0b2b85baafbad17566f11c3921ea5ef13c539513da8567bfedfd"
+  },
+  {
+    "cycle": 9,
+    "pool_variant_id": "mixed_holdout",
+    "source": "controlled_rotation",
+    "added_sample_ids": [
+      "EVO_C09_N1",
+      "EVO_C09_N2"
+    ],
+    "removed_sample_ids": [
+      "T2_001",
+      "T2_002"
+    ],
+    "retained_sample_ids": [
+      "S1_001",
+      "S1_002",
+      "W1_001",
+      "W1_002",
+      "EVO_C02_N1",
+      "EVO_C02_N2",
+      "EVO_C03_N1",
+      "EVO_C03_N2",
+      "EVO_C04_N1",
+      "EVO_C04_N2",
+      "EVO_C05_N1",
+      "EVO_C05_N2",
+      "EVO_C06_N1",
+      "EVO_C06_N2",
+      "EVO_C07_N1",
+      "EVO_C07_N2",
+      "EVO_C08_N1",
+      "EVO_C08_N2"
+    ],
+    "new_sample_count": 2,
+    "retained_sample_count": 18,
+    "removed_sample_count": 2,
+    "failure_pool_hash": "f27f9ec081033db27b3c6abd5e0cca177c7891864b354eb4fcef10f346bc42ae"
+  },
+  {
+    "cycle": 10,
+    "pool_variant_id": "mixed_holdout",
+    "source": "controlled_rotation",
+    "added_sample_ids": [
+      "EVO_C10_N1",
+      "EVO_C10_N2"
+    ],
+    "removed_sample_ids": [
+      "S1_001",
+      "S1_002"
+    ],
+    "retained_sample_ids": [
+      "W1_001",
+      "W1_002",
+      "EVO_C02_N1",
+      "EVO_C02_N2",
+      "EVO_C03_N1",
+      "EVO_C03_N2",
+      "EVO_C04_N1",
+      "EVO_C04_N2",
+      "EVO_C05_N1",
+      "EVO_C05_N2",
+      "EVO_C06_N1",
+      "EVO_C06_N2",
+      "EVO_C07_N1",
+      "EVO_C07_N2",
+      "EVO_C08_N1",
+      "EVO_C08_N2",
+      "EVO_C09_N1",
+      "EVO_C09_N2"
+    ],
+    "new_sample_count": 2,
+    "retained_sample_count": 18,
+    "removed_sample_count": 2,
+    "failure_pool_hash": "3978c700c1c73d422527214de87a48cafcba26fda67491d0adf2737f755629d6"
+  }
+]

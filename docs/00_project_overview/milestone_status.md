@@ -1,10 +1,11 @@
 # Milestone Status
 
-## Current Stage: Stage21-B Preparation
+## Current Stage: Stage22 Preparation
 
 The project has moved beyond the early Phase 1 roadmap. The current trusted
 baseline chain is **Stage20 Baseline v1.0** revalidated by Stage20-R, followed
-by the frozen **Stage21-A fixed failure pool validation baseline**.
+by the frozen **Stage21-A fixed failure pool validation baseline** and the
+completed **Stage21-B rotating failure pool validation baseline**.
 
 ## Current Gate
 
@@ -15,11 +16,15 @@ by the frozen **Stage21-A fixed failure pool validation baseline**.
 | Test environment restored | Complete | `.venv` from `requirements.txt` |
 | Stage20 unit tests | Complete | 33 passed |
 | Stage21-A unit tests | Complete | 3 passed |
-| Full test suite | Complete | 105 passed |
+| Full test suite | Complete | 107 passed |
 | Stage20 pipeline revalidation | Complete | `reports/stage20_r/stage20_pipeline_revalidation.json` |
 | 20-8 rollout conflict cleaned | Complete | `data/stage20/STAGE20_ACCEPTANCE_REPORT.md` |
 | Stage21-A fixed failure pool validation | Complete | `reports/stage21_a/stage21_a_results.json` |
 | Stage21-A frozen and tagged | Complete | `stage21-a-fixed-failure-pool-v1.0` |
+| Stage21-B rotating failure pool validation | Complete | `reports/stage21_b/stage21_b_results.json` |
+| Stage21-B implementation tests | Complete | 2 passed |
+| Stage20/Stage21 regression tests | Complete | 38 passed |
+| Full test suite after Stage21-B | Complete | 107 passed |
 | Stage22-30 roadmap prepared | Complete | `docs/00_project_overview/stage22_to_stage30_roadmap.md` |
 | Stage30 completion definition prepared | Complete | `docs/05_decisions/stage30_completion_definition.md` |
 
@@ -43,7 +48,7 @@ Stage21-A result:
 | rollback_chain_passed | true |
 | fixed_failure_pool_hash | `20932c0a1eaf9a841d82425eb593a5231b127e8df5da995990a703ba13694a7e` |
 
-## Next Stage: Stage21-B
+## Completed Stage: Stage21-B
 
 **Definition**: rotating/evolving failure pool multi-batch drift validation.
 
@@ -51,6 +56,20 @@ Stage21-B moves from repeated validation over one fixed pool to controlled
 pool variation. It must prove that the governed Stage20 offline evolution loop
 remains stable when the failure pool changes across cycles, without enabling
 Stage21-C learned priors or changing the Stage20 baseline behavior.
+
+Stage21-B result:
+
+| Metric | Observed |
+|---|---:|
+| completed_cycles | 10/10 |
+| cycle_pass_count | 10/10 |
+| distinct_failure_pool_count | 10 |
+| pool_rotation_count | 9 |
+| cross_pool_regression_drop | 0.0 |
+| overall_pass | true |
+| stage21_b_freeze_ready | true |
+| drift_status | no critical drift |
+| rollback_chain_passed | true |
 
 ## Stage21-B Entry Conditions
 
@@ -63,7 +82,7 @@ Stage21-C learned priors or changing the Stage20 baseline behavior.
 | Stage21-A completed and frozen | Yes | Met |
 | Stage21-A branch and tag pushed | Yes | Met |
 
-## Stage21-B Proposed Success Thresholds
+## Stage21-B Success Thresholds
 
 | Metric | Threshold |
 |---|---:|
@@ -79,6 +98,15 @@ Stage21-C learned priors or changing the Stage20 baseline behavior.
 | drift_status | no critical drift |
 | stage21_b_freeze_ready | true |
 
+## Next Stage: Stage22
+
+**Definition**: independent multi-pool holdout validation.
+
+Stage22 should use Stage21-B pool lineage as evidence, then define independent
+holdout failure pools that are not merely sequential rotations of the Stage21-B
+base pool. Stage22 remains blocked until Stage21-B is committed, tagged, and
+pushed.
+
 ## Long-Horizon Target: Stage30
 
 Stage30 is now defined as the governed production baseline freeze target. It
@@ -93,6 +121,7 @@ tagged. The current Stage30 preparation artifacts are:
 
 - 2026-05-31: Stage21-A completed, frozen, tagged, and pushed as `stage21-a-fixed-failure-pool-v1.0`.
 - 2026-05-31: Stage22-30 roadmap and Stage30 completion definition prepared.
+- 2026-05-31: Stage21-B rotating failure pool validation completed with 10/10 cycles and `stage21_b_freeze_ready=true`.
 - 2026-05-30: Stage20-R completed; Stage20 Baseline v1.0 revalidated for Stage21-A entry.
 - 2026-05-11: Stage20 Baseline v1.0 frozen.
 - 2026-04-17: Project initialized.

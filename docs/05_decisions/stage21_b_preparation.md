@@ -1,6 +1,6 @@
 # Stage21-B Preparation: Rotating Failure Pool Validation
 
-**Status**: Prepared after Stage21-A freeze
+**Status**: Completed; freeze-ready pending tag
 **Prepared on**: 2026-05-31
 **Starting baseline**: `stage21-a-fixed-failure-pool-v1.0`
 **Starting commit**: `df8451b stage21-a: validate fixed failure pool stability across 5 cycles`
@@ -42,6 +42,25 @@ Validate that the Stage20 governed offline evolution pipeline remains stable
 across rotating failure pools and multiple batches, while preserving regression
 protection, TSLA safety interception, memory contamination controls, drift
 limits, and rollback-chain integrity.
+
+## Completion Evidence
+
+Stage21-B has been implemented and executed with the following results:
+
+| Metric | Observed |
+|---|---:|
+| completed_cycles | 10/10 |
+| cycle_pass_count | 10/10 |
+| distinct_failure_pool_count | 10 |
+| pool_rotation_count | 9 |
+| cross_pool_regression_drop | 0.0 |
+| overall_pass | true |
+| stage21_b_freeze_ready | true |
+| drift_status | no critical drift |
+| rollback_chain_passed | true |
+| full tests | 107 passed |
+
+Evidence is written under `reports/stage21_b/`.
 
 ## Scope
 

@@ -1,9 +1,9 @@
 # Stage 21 Entry Document
 
-**Status**: Stage21-A Complete; Stage21-B Ready for Planning
+**Status**: Stage21-A Complete; Stage21-B Complete; Stage22 Ready for Planning
 **Original Entry Baseline**: Stage20 Baseline v1.0 (frozen 2026-05-11)
-**Current Frozen Baseline**: Stage21-A fixed failure pool validation baseline
-**Prerequisite**: Stage20-R revalidated baseline and Stage21-A frozen
+**Current Frozen Baseline**: Stage21-B rotating failure pool validation baseline
+**Prerequisite**: Stage20-R revalidated baseline, Stage21-A frozen, and Stage21-B validated
 
 ---
 
@@ -32,6 +32,20 @@
 - [x] Commit frozen: `df8451b stage21-a: validate fixed failure pool stability across 5 cycles`
 - [x] Tag pushed: `stage21-a-fixed-failure-pool-v1.0`
 
+## Stage21-B Completion Evidence
+
+- [x] Stage21-B 10-cycle rotating failure pool validation complete
+- [x] `completed_cycles=10`
+- [x] `cycle_pass_count=10`
+- [x] `distinct_failure_pool_count=10`
+- [x] `pool_rotation_count=9`
+- [x] `cross_pool_regression_drop=0.0`
+- [x] `overall_pass=true`
+- [x] `stage21_b_freeze_ready=true`
+- [x] `drift_status=no critical drift`
+- [x] `rollback_chain_passed=true`
+- [x] Full tests passed: 107 passed
+
 ---
 
 ## Stage 21: Long-term Evolution & Multi-round Upgrade Verification
@@ -54,7 +68,7 @@ Move from single-cycle offline evolution (Stage 20) to multi-round, sustained ev
 
 ```
 Stage 21-A: 5-cycle evolution with fixed failure pool
-Stage 21-B: 10-cycle evolution with evolving failure pool
+Stage 21-B: 10-cycle evolution with evolving failure pool [complete]
 Stage 21-C: 20-cycle evolution with learned Bayesian priors
 Stage 21-D: Multi-version rollback chain verification
 Stage 21-E: Production readiness assessment
@@ -64,7 +78,7 @@ Stage21-E is the local Stage21 production-readiness assessment. The broader
 post-Stage21 path is now tracked in the Stage22-30 roadmap:
 
 ```text
-Stage22: Multi-pool holdout validation
+Stage22: Multi-pool holdout validation [next]
 Stage23: Learned-prior validation
 Stage24: Adversarial and stress horizon
 Stage25: Promotion and rollback governance
@@ -97,10 +111,9 @@ Stage 18 (Frozen Observation)
                     │
                     └── Stage 21-A Baseline ← CURRENT FROZEN
                             │
-                            └── Stage 21-B Baseline ← NEXT
+                            └── Stage 21-B Baseline ← CURRENT COMPLETED
                                     │
-                                    ├── Stage 21-C Baseline
-                                    └── Stage 21-E (Production Ready)
+                                    └── Stage22 Multi-Pool Holdout Baseline ← NEXT
                                             │
                                             └── Stage22-30 Governance Chain
 ```

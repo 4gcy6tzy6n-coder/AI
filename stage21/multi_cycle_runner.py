@@ -47,6 +47,9 @@ class CycleMetrics:
     all_pass: bool = False
     timestamp: str = ""
     failure_pool_hash: str = ""
+    failure_pool_signature: list[dict[str, str]] = field(default_factory=list)
+    pool_variant_id: str = ""
+    pool_lineage: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -57,6 +60,9 @@ class CycleMetrics:
             "all_pass": self.all_pass,
             "timestamp": self.timestamp,
             "failure_pool_hash": self.failure_pool_hash,
+            "failure_pool_signature": self.failure_pool_signature,
+            "pool_variant_id": self.pool_variant_id,
+            "pool_lineage": self.pool_lineage,
         }
 
 
@@ -113,6 +119,7 @@ class MultiCycleRunner:
         self.thresholds = cfg.get("thresholds", self._default_thresholds())
         self.fixed_failure_pool_hash = ""
         self.fixed_failure_pool_signature: list[dict[str, str]] = []
+        self.pool_lineage: list[dict[str, Any]] = []
 
     @staticmethod
     def _default_thresholds() -> dict[str, Any]:
@@ -167,12 +174,34 @@ class MultiCycleRunner:
         current_failures = list(failure_samples)
         self.fixed_failure_pool_signature = self._failure_pool_signature(current_failures)
         self.fixed_failure_pool_hash = self._failure_pool_hash(current_failures)
+        current_lineage: dict[str, Any] = {
+            "cycle": 1,
+            "pool_variant_id": self._pool_variant_id(1, evolve_pool),
+            "source": "base_pool",
+            "added_sample_ids": [],
+            "removed_sample_ids": [],
+            "retained_sample_ids": [s.sample_id for s in current_failures],
+            "new_sample_count": 0,
+            "retained_sample_count": len(current_failures),
+            "removed_sample_count": 0,
+            "failure_pool_hash": self.fixed_failure_pool_hash,
+        }
         timestamp = datetime.now(timezone.utc).isoformat()
 
         for cycle in range(1, self.num_cycles + 1):
             print("  Cycle {}/{}: ".format(cycle, self.num_cycles), end="")
             if not evolve_pool:
                 self._assert_fixed_failure_pool(current_failures)
+            pool_variant_id = self._pool_variant_id(cycle, evolve_pool)
+            current_pool_hash = self._failure_pool_hash(current_failures)
+            current_signature = self._failure_pool_signature(current_failures)
+            current_lineage = {
+                **current_lineage,
+                "cycle": cycle,
+                "pool_variant_id": pool_variant_id,
+                "failure_pool_hash": current_pool_hash,
+            }
+            self.pool_lineage.append(current_lineage)
 
             # Run pipeline
             result = self._run_single_cycle(
@@ -184,6 +213,10 @@ class MultiCycleRunner:
 
             # Collect cycle metrics
             cycle_metrics = result["cycle_metrics"]
+            cycle_metrics.failure_pool_hash = current_pool_hash
+            cycle_metrics.failure_pool_signature = current_signature
+            cycle_metrics.pool_variant_id = pool_variant_id
+            cycle_metrics.pool_lineage = current_lineage
             self.cycle_results.append(cycle_metrics)
 
             # Accumulate
@@ -199,7 +232,7 @@ class MultiCycleRunner:
 
             # Evolve pool for 21-B
             if evolve_pool:
-                current_failures = self._evolve_failure_pool(
+                current_failures, current_lineage = self._evolve_failure_pool(
                     current_failures, cycle, result["diagnoses"])
 
         # Drift analysis
@@ -215,6 +248,9 @@ class MultiCycleRunner:
 
         # Overall assessment
         cycle_pass_count = sum(1 for c in self.cycle_results if c.all_pass)
+        failure_pool_hashes = [c.failure_pool_hash for c in self.cycle_results]
+        distinct_failure_pool_count = len(set(failure_pool_hashes))
+        cross_pool_regression_drop = self._cross_pool_regression_drop()
         cycles_requirement_met = (
             cycle_pass_count == self.num_cycles
             if self.require_all_cycles_pass
@@ -229,6 +265,16 @@ class MultiCycleRunner:
             and drift.stable
             and rollback_chain_passed
         )
+        stage21_b_requirements_met = (
+            self.stage_name != "Stage21-B"
+            or (
+                self.num_cycles == 10
+                and cycle_pass_count == 10
+                and distinct_failure_pool_count >= 3
+                and cross_pool_regression_drop <= 0.01
+            )
+        )
+        overall_pass = overall_pass and stage21_b_requirements_met
         stage21_a_freeze_ready = (
             self.stage_name == "Stage21-A"
             and self.num_cycles == 5
@@ -236,6 +282,15 @@ class MultiCycleRunner:
             and self.fixed_failure_pool_hash != ""
             and cycle_pass_count == 5
             and rollback_chain_passed
+        )
+        stage21_b_freeze_ready = (
+            self.stage_name == "Stage21-B"
+            and self.num_cycles == 10
+            and overall_pass
+            and cycle_pass_count == 10
+            and distinct_failure_pool_count >= 3
+            and rollback_chain_passed
+            and drift_status == "no critical drift"
         )
 
         # Generate report
@@ -245,6 +300,7 @@ class MultiCycleRunner:
             overall_pass,
             rollback_chain_passed=rollback_chain_passed,
             stage21_a_freeze_ready=stage21_a_freeze_ready,
+            stage21_b_freeze_ready=stage21_b_freeze_ready,
         )
 
         return {
@@ -254,12 +310,18 @@ class MultiCycleRunner:
             "completed_cycles": self.num_cycles,
             "cycle_pass_count": cycle_pass_count,
             "stage21_a_freeze_ready": stage21_a_freeze_ready,
+            "stage21_b_freeze_ready": stage21_b_freeze_ready,
             "cycle_results": [c.to_dict() for c in self.cycle_results],
             "drift_report": drift.to_dict(),
             "drift_status": drift_status,
             "total_fix_packages": len(self.all_fix_packages),
             "fixed_failure_pool_hash": self.fixed_failure_pool_hash,
             "fixed_failure_pool_signature": self.fixed_failure_pool_signature,
+            "failure_pool_hashes": failure_pool_hashes,
+            "distinct_failure_pool_count": distinct_failure_pool_count,
+            "pool_rotation_count": max(0, distinct_failure_pool_count - 1),
+            "pool_lineage": self.pool_lineage,
+            "cross_pool_regression_drop": cross_pool_regression_drop,
             "rollback_chain_passed": rollback_chain_passed,
             "rollback_chain_report": rollback_result.to_dict(),
             "thresholds": self.thresholds,
@@ -397,38 +459,84 @@ class MultiCycleRunner:
         current: list[FailureSample],
         cycle: int,
         diagnoses: list[dict[str, Any]],
-    ) -> list[FailureSample]:
+    ) -> tuple[list[FailureSample], dict[str, Any]]:
         """Evolve the failure pool for 21-B mode.
 
-        Each cycle: keep all existing failures, add 2-3 new ones
-        with types that were under-diagnosed in previous cycles.
+        Each cycle: rotate a bounded number of samples while preserving the
+        pool size. This keeps Stage21-B deterministic and auditable while
+        proving that the loop can handle controlled pool variation.
         """
         from src.core.bayes.schema import FailureCategory, RiskLevel
 
-        evolved = list(current)
+        target_size = len(current)
+        next_cycle = cycle + 1
+        pool_variant_id = self._pool_variant_id(next_cycle, True)
+        rotated_out = list(current[:2])
+        retained = list(current[2:])
 
-        # Add 2 new failure samples per cycle, rotating through types
-        new_types = [
-            FailureCategory.K1, FailureCategory.M1, FailureCategory.R1,
-            FailureCategory.G1, FailureCategory.T1, FailureCategory.S1,
-            FailureCategory.T2, FailureCategory.W1,
-        ]
-        type_idx = (cycle - 1) % len(new_types)
+        variant_types = {
+            "base_evolved": [FailureCategory.K1, FailureCategory.M1, FailureCategory.R1],
+            "safety_heavy": [FailureCategory.T1, FailureCategory.S1, FailureCategory.T2],
+            "retrieval_multiturn": [FailureCategory.R1, FailureCategory.M1, FailureCategory.W1],
+            "mixed_holdout": [FailureCategory.G1, FailureCategory.K1, FailureCategory.S1],
+        }
+        type_cycle = variant_types.get(pool_variant_id, variant_types["base_evolved"])
 
+        new_samples: list[FailureSample] = []
         for i in range(2):
-            ft = new_types[(type_idx + i) % len(new_types)]
+            ft = type_cycle[(cycle + i - 1) % len(type_cycle)]
             new_sample = FailureSample(
-                sample_id="EVO_C{}_N{}".format(cycle, i + 1),
-                user_query="[Evolved cycle {}] {} test query".format(cycle, ft.value),
-                system_response="[Evolved response for cycle {}]".format(cycle),
+                sample_id="EVO_C{:02d}_N{}".format(next_cycle, i + 1),
+                user_query="[Stage21-B {} cycle {}] {} validation query".format(
+                    pool_variant_id, next_cycle, ft.value),
+                system_response="[Stage21-B evolved response for cycle {}]".format(next_cycle),
                 failure_type=ft,
                 risk_level=RiskLevel.MEDIUM,
                 timestamp=datetime.now(timezone.utc).isoformat(),
-                metadata={"evolved": True, "cycle": cycle},
+                metadata={
+                    "evolved": True,
+                    "source_cycle": cycle,
+                    "applies_to_cycle": next_cycle,
+                    "pool_variant_id": pool_variant_id,
+                },
             )
-            evolved.append(new_sample)
+            new_samples.append(new_sample)
 
-        return evolved
+        evolved = (retained + new_samples)[:target_size]
+        lineage = {
+            "cycle": next_cycle,
+            "pool_variant_id": pool_variant_id,
+            "source": "controlled_rotation",
+            "added_sample_ids": [s.sample_id for s in new_samples],
+            "removed_sample_ids": [s.sample_id for s in rotated_out],
+            "retained_sample_ids": [s.sample_id for s in retained],
+            "new_sample_count": len(new_samples),
+            "retained_sample_count": len(retained),
+            "removed_sample_count": len(rotated_out),
+            "failure_pool_hash": self._failure_pool_hash(evolved),
+        }
+        return evolved, lineage
+
+    @staticmethod
+    def _pool_variant_id(cycle: int, evolve_pool: bool) -> str:
+        if not evolve_pool:
+            return "fixed_pool"
+        if cycle <= 3:
+            return "base_evolved"
+        if cycle <= 6:
+            return "safety_heavy"
+        if cycle <= 8:
+            return "retrieval_multiturn"
+        return "mixed_holdout"
+
+    def _cross_pool_regression_drop(self) -> float:
+        if not self.cycle_results:
+            return 0.0
+        baseline = self.cycle_results[0].metrics.regression_pass_rate
+        min_observed = min(
+            c.metrics.regression_pass_rate for c in self.cycle_results
+        )
+        return max(0.0, baseline - min_observed)
 
     def _analyze_drift(self) -> CycleDriftReport:
         """Detect metric drift across cycles."""
@@ -500,6 +608,7 @@ class MultiCycleRunner:
         overall_pass: bool,
         rollback_chain_passed: bool = False,
         stage21_a_freeze_ready: bool = False,
+        stage21_b_freeze_ready: bool = False,
     ) -> str:
         """Generate multi-cycle evolution report."""
         lines: list[str] = []
@@ -530,6 +639,7 @@ class MultiCycleRunner:
         lines.append("- Drift stable: {}".format(drift.stable))
         lines.append("- Rollback chain passed: {}".format(rollback_chain_passed))
         lines.append("- Stage21-A freeze ready: {}".format(stage21_a_freeze_ready))
+        lines.append("- Stage21-B freeze ready: {}".format(stage21_b_freeze_ready))
         if drift.degraded_cycles:
             lines.append("- Degraded cycles: {}".format(drift.degraded_cycles))
         lines.append("")
