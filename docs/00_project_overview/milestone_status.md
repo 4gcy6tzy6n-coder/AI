@@ -1,6 +1,6 @@
 # Milestone Status
 
-## Current Stage: Stage29 Preparation
+## Current Stage: Stage30 Preparation
 
 The project has moved beyond the early Phase 1 roadmap. The current trusted
 baseline chain is **Stage20 Baseline v1.0** revalidated by Stage20-R, followed
@@ -12,7 +12,8 @@ completed **Stage21-B rotating failure pool validation baseline** and
 **Stage25 promotion and rollback governance validation baseline**, followed by
 the frozen **Stage26 observability and audit cockpit validation baseline**, the
 frozen **Stage27 integration and operator workflow validation baseline**, and
-the completed **Stage28 production shadow validation baseline**.
+the completed **Stage28 production shadow validation baseline**, followed by
+the completed **Stage29 release candidate baseline**.
 
 ## Current Gate
 
@@ -70,6 +71,11 @@ the completed **Stage28 production shadow validation baseline**.
 | Stage20/Stage21/Stage22/Stage23/Stage24/Stage25/Stage26/Stage27/Stage28 regression tests | Complete | 59 passed |
 | Full test suite after Stage28 | Complete | 128 passed |
 | Stage29 preparation plan | Complete | `docs/05_decisions/stage29_preparation.md` |
+| Stage29 release candidate freeze | Complete | `reports/stage29/stage29_results.json` |
+| Stage29 implementation tests | Complete | 3 passed |
+| Stage20/Stage21/Stage22/Stage23/Stage24/Stage25/Stage26/Stage27/Stage28/Stage29 regression tests | Complete | 62 passed |
+| Full test suite after Stage29 | Complete | 131 passed |
+| Stage30 entry readiness | Complete | `stage30_entry_ready=true` |
 | Stage30 completion definition prepared | Complete | `docs/05_decisions/stage30_completion_definition.md` |
 
 ## Completed Stage: Stage21-A
@@ -314,20 +320,45 @@ Stage28 result:
 | overall_pass | true |
 | stage28_freeze_ready | true |
 
-## Next Stage: Stage29
+## Completed Stage: Stage29
 
 **Definition**: release candidate freeze.
 
-Stage29 should aggregate the complete Stage20 through Stage28 baseline chain,
-verify required reports, tests, runbooks, rollback evidence, and shadow-mode
-evidence, then produce a Stage30 release candidate. Stage30 implementation
-remains blocked until Stage29 freezes.
+Stage29 aggregated the complete Stage20 through Stage28 baseline chain,
+verified required reports, tests, runbooks, rollback evidence, and shadow-mode
+evidence, then produced a Stage30 release candidate.
+
+Stage29 result:
+
+| Metric | Observed |
+|---|---:|
+| baseline_chain_complete | true |
+| stage28_production_shadow_passed | true |
+| release_candidate_ready | true |
+| required_stage_tags_present | true |
+| required_reports_present | true |
+| full_test_suite_passed | true |
+| critical_drift_count | 0 |
+| rollback_chain_passed | true |
+| operator_runbooks_ready | true |
+| production_shadow_passed | true |
+| stage30_entry_ready | true |
+| overall_pass | true |
+| stage29_freeze_ready | true |
+
+## Next Stage: Stage30
+
+**Definition**: governed production baseline freeze.
+
+Stage30 may begin from the Stage29 release candidate. It should make the final
+governed production baseline decision without changing frozen Stage20 through
+Stage29 evidence.
 
 ## Long-Horizon Target: Stage30
 
-Stage30 is now defined as the governed production baseline freeze target. It
-remains blocked until Stage21-B through Stage29 are completed, frozen, and
-tagged. The current Stage30 preparation artifacts are:
+Stage30 is now defined as the governed production baseline freeze target. Its
+entry gate is open after Stage29 has produced `stage30_entry_ready=true`. The
+current Stage30 preparation artifacts are:
 
 - `docs/00_project_overview/stage22_to_stage30_roadmap.md`
 - `docs/05_decisions/stage30_completion_definition.md`
@@ -346,6 +377,7 @@ tagged. The current Stage30 preparation artifacts are:
 - 2026-05-31: Stage26 observability and audit cockpit validation completed with `stage26_freeze_ready=true`.
 - 2026-05-31: Stage27 integration and operator workflow validation completed with `stage27_freeze_ready=true`.
 - 2026-05-31: Stage28 production shadow validation completed with `stage28_freeze_ready=true`.
+- 2026-05-31: Stage29 release candidate freeze completed with `stage29_freeze_ready=true` and `stage30_entry_ready=true`.
 - 2026-05-30: Stage20-R completed; Stage20 Baseline v1.0 revalidated for Stage21-A entry.
 - 2026-05-11: Stage20 Baseline v1.0 frozen.
 - 2026-04-17: Project initialized.

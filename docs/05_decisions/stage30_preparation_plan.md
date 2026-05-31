@@ -12,10 +12,9 @@ Stage30 implementation starts.
 
 ## Immediate Next Actions
 
-1. Commit, tag, and push Stage28 production shadow validation.
-2. Implement Stage29 release-candidate freeze.
-3. Keep Stage30 implementation blocked until Stage29 has produced a release
-   candidate with complete baseline-chain evidence.
+1. Commit, tag, and push Stage29 release-candidate freeze.
+2. Implement Stage30 governed production baseline validation.
+3. Freeze Stage30 only if the final governed production baseline gate passes.
 
 ## Preparation Deliverables
 
@@ -31,6 +30,7 @@ Stage30 implementation starts.
 | Stage27 preparation plan | `docs/05_decisions/stage27_preparation.md` | Prepared |
 | Stage28 preparation plan | `docs/05_decisions/stage28_preparation.md` | Prepared |
 | Stage29 preparation plan | `docs/05_decisions/stage29_preparation.md` | Prepared |
+| Stage29 release candidate evidence | `reports/stage29/stage29_results.json` | Complete |
 
 ## Work Breakdown
 
@@ -45,7 +45,7 @@ Stage30 implementation starts.
 
 ## Readiness Rule
 
-Stage30 work can begin only when Stage29 marks:
+Stage30 work can begin because Stage29 now marks:
 
 ```text
 stage30_entry_ready=true
@@ -56,5 +56,5 @@ operator_runbooks_ready=true
 production_shadow_passed=true
 ```
 
-Until then, Stage30 remains a planned target rather than an implementation
-stage.
+Stage30 remains unfrozen until the final governed production baseline
+validation passes.

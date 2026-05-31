@@ -1,6 +1,6 @@
 # Stage29 Preparation: Release Candidate Freeze
 
-**Status**: Prepared after Stage28 freeze-ready validation
+**Status**: Completed and freeze-ready
 **Prepared on**: 2026-05-31
 **Starting baseline**: `stage28-production-shadow-validation-v1.0`
 
@@ -81,7 +81,28 @@ Stage29 passes only if all are true:
 | stage30_entry_ready | true |
 | stage29_freeze_ready | true |
 
-## Do Not Start Stage30 Yet
+## Completion Evidence
 
-Stage30 governed production baseline work remains blocked until Stage29
-produces and freezes the release-candidate evidence package.
+| Evidence | Result |
+|---|---:|
+| `reports/stage29/stage29_results.json` | `overall_pass=true` |
+| `reports/stage29/stage29_results.json` | `stage29_freeze_ready=true` |
+| `reports/stage29/stage29_results.json` | `stage30_entry_ready=true` |
+| baseline_chain_complete | true |
+| stage28_production_shadow_passed | true |
+| release_candidate_ready | true |
+| required_stage_tags_present | true |
+| required_reports_present | true |
+| full_test_suite_passed | true |
+| critical_drift_count | 0 |
+| rollback_chain_passed | true |
+| operator_runbooks_ready | true |
+| production_shadow_passed | true |
+| Stage29 implementation tests | 3 passed |
+| Stage20 through Stage29 regression tests | 62 passed |
+| Full test suite after Stage29 | 131 passed |
+
+## Stage30 Entry
+
+Stage30 governed production baseline work may begin after Stage29 is committed,
+tagged, and pushed as `stage29-release-candidate-freeze-v1.0`.
