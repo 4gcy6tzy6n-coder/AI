@@ -1,5 +1,25 @@
 # 项目路线图
 
+## Current Roadmap Addendum: Stage22-30
+
+The early M1-M12 roadmap below is retained for historical context. The active
+project roadmap has moved to the governed offline evolution baseline chain.
+The current long-horizon target is Stage30: a governed production baseline
+freeze after Stage21-B through Stage29 have completed and frozen their
+validation evidence.
+
+Current planning documents:
+
+- `docs/00_project_overview/stage22_to_stage30_roadmap.md`
+- `docs/05_decisions/stage30_completion_definition.md`
+- `docs/05_decisions/stage30_preparation_plan.md`
+
+Active sequence:
+
+```text
+Stage21-B -> Stage22 -> Stage23 -> Stage24 -> Stage25 -> Stage26 -> Stage27 -> Stage28 -> Stage29 -> Stage30
+```
+
 ## Phase 1: 基础架构 (M1-M3)
 
 ### M1: 核心概念验证

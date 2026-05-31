@@ -20,6 +20,8 @@ by the frozen **Stage21-A fixed failure pool validation baseline**.
 | 20-8 rollout conflict cleaned | Complete | `data/stage20/STAGE20_ACCEPTANCE_REPORT.md` |
 | Stage21-A fixed failure pool validation | Complete | `reports/stage21_a/stage21_a_results.json` |
 | Stage21-A frozen and tagged | Complete | `stage21-a-fixed-failure-pool-v1.0` |
+| Stage22-30 roadmap prepared | Complete | `docs/00_project_overview/stage22_to_stage30_roadmap.md` |
+| Stage30 completion definition prepared | Complete | `docs/05_decisions/stage30_completion_definition.md` |
 
 ## Completed Stage: Stage21-A
 
@@ -77,9 +79,20 @@ Stage21-C learned priors or changing the Stage20 baseline behavior.
 | drift_status | no critical drift |
 | stage21_b_freeze_ready | true |
 
+## Long-Horizon Target: Stage30
+
+Stage30 is now defined as the governed production baseline freeze target. It
+remains blocked until Stage21-B through Stage29 are completed, frozen, and
+tagged. The current Stage30 preparation artifacts are:
+
+- `docs/00_project_overview/stage22_to_stage30_roadmap.md`
+- `docs/05_decisions/stage30_completion_definition.md`
+- `docs/05_decisions/stage30_preparation_plan.md`
+
 ## Recent Updates
 
 - 2026-05-31: Stage21-A completed, frozen, tagged, and pushed as `stage21-a-fixed-failure-pool-v1.0`.
+- 2026-05-31: Stage22-30 roadmap and Stage30 completion definition prepared.
 - 2026-05-30: Stage20-R completed; Stage20 Baseline v1.0 revalidated for Stage21-A entry.
 - 2026-05-11: Stage20 Baseline v1.0 frozen.
 - 2026-04-17: Project initialized.

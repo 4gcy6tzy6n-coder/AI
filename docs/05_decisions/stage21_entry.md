@@ -60,6 +60,21 @@ Stage 21-D: Multi-version rollback chain verification
 Stage 21-E: Production readiness assessment
 ```
 
+Stage21-E is the local Stage21 production-readiness assessment. The broader
+post-Stage21 path is now tracked in the Stage22-30 roadmap:
+
+```text
+Stage22: Multi-pool holdout validation
+Stage23: Learned-prior validation
+Stage24: Adversarial and stress horizon
+Stage25: Promotion and rollback governance
+Stage26: Observability and audit cockpit
+Stage27: Integration and operator workflows
+Stage28: Production shadow validation
+Stage29: Release candidate freeze
+Stage30: Governed production baseline
+```
+
 ### Entry Constraints
 
 1. Stage20 Baseline v1.0 remains the root trusted starting point
@@ -86,6 +101,8 @@ Stage 18 (Frozen Observation)
                                     │
                                     ├── Stage 21-C Baseline
                                     └── Stage 21-E (Production Ready)
+                                            │
+                                            └── Stage22-30 Governance Chain
 ```
 
 ---
