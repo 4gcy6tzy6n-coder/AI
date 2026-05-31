@@ -12,10 +12,10 @@ Stage30 implementation starts.
 
 ## Immediate Next Actions
 
-1. Use Stage21-B evidence to define Stage22 multi-pool holdout fixtures.
-2. Implement and freeze Stage22 independent multi-pool holdout validation.
-3. Keep Stage23 learned-prior work blocked until Stage22 proves cross-pool
-   stability without learned priors.
+1. Commit, tag, and push Stage22 independent multi-pool holdout validation.
+2. Implement Stage23 learned-prior validation with safety-neutral-or-better gates.
+3. Keep Stage24 adversarial stress work blocked until Stage23 proves learned
+   priors are bounded and reversible.
 4. Keep Stage30 implementation blocked until Stage29 has produced a release
    candidate with complete baseline-chain evidence.
 

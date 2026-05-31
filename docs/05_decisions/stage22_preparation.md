@@ -1,6 +1,6 @@
 # Stage22 Preparation: Independent Multi-Pool Holdout Validation
 
-**Status**: Prepared after Stage21-B freeze
+**Status**: Completed; freeze-ready pending tag
 **Prepared on**: 2026-05-31
 **Starting baseline**: `stage21-b-rotating-failure-pools-v1.0`
 **Starting commit**: `9241a14 stage21-b: validate rotating failure pool stability`
@@ -38,6 +38,25 @@ drift limits, and rollback-chain integrity.
 
 Validate that the Stage20 governed offline evolution pipeline remains stable
 across independent holdout pools and not only across Stage21-B rotations.
+
+## Completion Evidence
+
+Stage22 has been implemented and executed with the following results:
+
+| Metric | Observed |
+|---|---:|
+| completed_cycles | 12/12 |
+| cycle_pass_count | 12/12 |
+| independent_holdout_pool_count | 4 |
+| cycles_per_holdout_pool | 3 each |
+| cross_pool_regression_drop | 0.0 |
+| overall_pass | true |
+| stage22_freeze_ready | true |
+| drift_status | no critical drift |
+| rollback_chain_passed | true |
+| full tests | 110 passed |
+
+Evidence is written under `reports/stage22/`.
 
 ## Scope
 

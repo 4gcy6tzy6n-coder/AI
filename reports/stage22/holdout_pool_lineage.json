@@ -1,0 +1,1070 @@
+[
+  {
+    "cycle": 1,
+    "holdout_pool_id": "holdout_01",
+    "holdout_pool_hash": "87060b215049f184afd807a3b5beaddd326e1ab7fba7a9ec30dbae0a7a37fd9b",
+    "sample_count": 20,
+    "source": "independent_holdout_fixture",
+    "sample_signature": [
+      {
+        "sample_id": "H01_K1_001",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H01_K1_002",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H01_K1_003",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H01_G1_001",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H01_G1_002",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H01_G1_003",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H01_M1_001",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H01_M1_002",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H01_M1_003",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H01_R1_001",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H01_R1_002",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H01_R1_003",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H01_T1_001",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H01_T1_002",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H01_T2_001",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H01_T2_002",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H01_S1_001",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H01_S1_002",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H01_W1_001",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H01_W1_002",
+        "failure_type": "memory_write_error"
+      }
+    ]
+  },
+  {
+    "cycle": 2,
+    "holdout_pool_id": "holdout_01",
+    "holdout_pool_hash": "87060b215049f184afd807a3b5beaddd326e1ab7fba7a9ec30dbae0a7a37fd9b",
+    "sample_count": 20,
+    "source": "independent_holdout_fixture",
+    "sample_signature": [
+      {
+        "sample_id": "H01_K1_001",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H01_K1_002",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H01_K1_003",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H01_G1_001",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H01_G1_002",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H01_G1_003",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H01_M1_001",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H01_M1_002",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H01_M1_003",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H01_R1_001",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H01_R1_002",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H01_R1_003",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H01_T1_001",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H01_T1_002",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H01_T2_001",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H01_T2_002",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H01_S1_001",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H01_S1_002",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H01_W1_001",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H01_W1_002",
+        "failure_type": "memory_write_error"
+      }
+    ]
+  },
+  {
+    "cycle": 3,
+    "holdout_pool_id": "holdout_01",
+    "holdout_pool_hash": "87060b215049f184afd807a3b5beaddd326e1ab7fba7a9ec30dbae0a7a37fd9b",
+    "sample_count": 20,
+    "source": "independent_holdout_fixture",
+    "sample_signature": [
+      {
+        "sample_id": "H01_K1_001",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H01_K1_002",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H01_K1_003",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H01_G1_001",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H01_G1_002",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H01_G1_003",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H01_M1_001",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H01_M1_002",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H01_M1_003",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H01_R1_001",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H01_R1_002",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H01_R1_003",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H01_T1_001",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H01_T1_002",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H01_T2_001",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H01_T2_002",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H01_S1_001",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H01_S1_002",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H01_W1_001",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H01_W1_002",
+        "failure_type": "memory_write_error"
+      }
+    ]
+  },
+  {
+    "cycle": 4,
+    "holdout_pool_id": "holdout_02",
+    "holdout_pool_hash": "42ba04057b0b93bc22e7d4313df0320f6f5f6c58c20e57511f24d1f9ecb9d38d",
+    "sample_count": 20,
+    "source": "independent_holdout_fixture",
+    "sample_signature": [
+      {
+        "sample_id": "H02_G1_003",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H02_M1_001",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H02_M1_002",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H02_M1_003",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H02_R1_001",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H02_R1_002",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H02_R1_003",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H02_T1_001",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H02_T1_002",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H02_T2_001",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H02_T2_002",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H02_S1_001",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H02_S1_002",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H02_W1_001",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H02_W1_002",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H02_K1_001",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H02_K1_002",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H02_K1_003",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H02_G1_001",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H02_G1_002",
+        "failure_type": "unnatural_generation"
+      }
+    ]
+  },
+  {
+    "cycle": 5,
+    "holdout_pool_id": "holdout_02",
+    "holdout_pool_hash": "42ba04057b0b93bc22e7d4313df0320f6f5f6c58c20e57511f24d1f9ecb9d38d",
+    "sample_count": 20,
+    "source": "independent_holdout_fixture",
+    "sample_signature": [
+      {
+        "sample_id": "H02_G1_003",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H02_M1_001",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H02_M1_002",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H02_M1_003",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H02_R1_001",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H02_R1_002",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H02_R1_003",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H02_T1_001",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H02_T1_002",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H02_T2_001",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H02_T2_002",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H02_S1_001",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H02_S1_002",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H02_W1_001",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H02_W1_002",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H02_K1_001",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H02_K1_002",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H02_K1_003",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H02_G1_001",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H02_G1_002",
+        "failure_type": "unnatural_generation"
+      }
+    ]
+  },
+  {
+    "cycle": 6,
+    "holdout_pool_id": "holdout_02",
+    "holdout_pool_hash": "42ba04057b0b93bc22e7d4313df0320f6f5f6c58c20e57511f24d1f9ecb9d38d",
+    "sample_count": 20,
+    "source": "independent_holdout_fixture",
+    "sample_signature": [
+      {
+        "sample_id": "H02_G1_003",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H02_M1_001",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H02_M1_002",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H02_M1_003",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H02_R1_001",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H02_R1_002",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H02_R1_003",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H02_T1_001",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H02_T1_002",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H02_T2_001",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H02_T2_002",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H02_S1_001",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H02_S1_002",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H02_W1_001",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H02_W1_002",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H02_K1_001",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H02_K1_002",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H02_K1_003",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H02_G1_001",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H02_G1_002",
+        "failure_type": "unnatural_generation"
+      }
+    ]
+  },
+  {
+    "cycle": 7,
+    "holdout_pool_id": "holdout_03",
+    "holdout_pool_hash": "ab997245ec3a4159dab53fa301c9de793e3c7a6f129750cbe5d25dce5ca0daf2",
+    "sample_count": 20,
+    "source": "independent_holdout_fixture",
+    "sample_signature": [
+      {
+        "sample_id": "H03_R1_002",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H03_R1_003",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H03_T1_001",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H03_T1_002",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H03_T2_001",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H03_T2_002",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H03_S1_001",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H03_S1_002",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H03_W1_001",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H03_W1_002",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H03_K1_001",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H03_K1_002",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H03_K1_003",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H03_G1_001",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H03_G1_002",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H03_G1_003",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H03_M1_001",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H03_M1_002",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H03_M1_003",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H03_R1_001",
+        "failure_type": "retrieval_mismatch"
+      }
+    ]
+  },
+  {
+    "cycle": 8,
+    "holdout_pool_id": "holdout_03",
+    "holdout_pool_hash": "ab997245ec3a4159dab53fa301c9de793e3c7a6f129750cbe5d25dce5ca0daf2",
+    "sample_count": 20,
+    "source": "independent_holdout_fixture",
+    "sample_signature": [
+      {
+        "sample_id": "H03_R1_002",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H03_R1_003",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H03_T1_001",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H03_T1_002",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H03_T2_001",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H03_T2_002",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H03_S1_001",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H03_S1_002",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H03_W1_001",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H03_W1_002",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H03_K1_001",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H03_K1_002",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H03_K1_003",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H03_G1_001",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H03_G1_002",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H03_G1_003",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H03_M1_001",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H03_M1_002",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H03_M1_003",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H03_R1_001",
+        "failure_type": "retrieval_mismatch"
+      }
+    ]
+  },
+  {
+    "cycle": 9,
+    "holdout_pool_id": "holdout_03",
+    "holdout_pool_hash": "ab997245ec3a4159dab53fa301c9de793e3c7a6f129750cbe5d25dce5ca0daf2",
+    "sample_count": 20,
+    "source": "independent_holdout_fixture",
+    "sample_signature": [
+      {
+        "sample_id": "H03_R1_002",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H03_R1_003",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H03_T1_001",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H03_T1_002",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H03_T2_001",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H03_T2_002",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H03_S1_001",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H03_S1_002",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H03_W1_001",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H03_W1_002",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H03_K1_001",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H03_K1_002",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H03_K1_003",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H03_G1_001",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H03_G1_002",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H03_G1_003",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H03_M1_001",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H03_M1_002",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H03_M1_003",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H03_R1_001",
+        "failure_type": "retrieval_mismatch"
+      }
+    ]
+  },
+  {
+    "cycle": 10,
+    "holdout_pool_id": "holdout_04",
+    "holdout_pool_hash": "8e6ec80a1acad765fb5f01d6053978d4460f522d613ff4f3d3c655641aa87a2c",
+    "sample_count": 20,
+    "source": "independent_holdout_fixture",
+    "sample_signature": [
+      {
+        "sample_id": "H04_T2_002",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H04_S1_001",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H04_S1_002",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H04_W1_001",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H04_W1_002",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H04_K1_001",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H04_K1_002",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H04_K1_003",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H04_G1_001",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H04_G1_002",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H04_G1_003",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H04_M1_001",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H04_M1_002",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H04_M1_003",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H04_R1_001",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H04_R1_002",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H04_R1_003",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H04_T1_001",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H04_T1_002",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H04_T2_001",
+        "failure_type": "tsla_over_block"
+      }
+    ]
+  },
+  {
+    "cycle": 11,
+    "holdout_pool_id": "holdout_04",
+    "holdout_pool_hash": "8e6ec80a1acad765fb5f01d6053978d4460f522d613ff4f3d3c655641aa87a2c",
+    "sample_count": 20,
+    "source": "independent_holdout_fixture",
+    "sample_signature": [
+      {
+        "sample_id": "H04_T2_002",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H04_S1_001",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H04_S1_002",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H04_W1_001",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H04_W1_002",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H04_K1_001",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H04_K1_002",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H04_K1_003",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H04_G1_001",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H04_G1_002",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H04_G1_003",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H04_M1_001",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H04_M1_002",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H04_M1_003",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H04_R1_001",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H04_R1_002",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H04_R1_003",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H04_T1_001",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H04_T1_002",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H04_T2_001",
+        "failure_type": "tsla_over_block"
+      }
+    ]
+  },
+  {
+    "cycle": 12,
+    "holdout_pool_id": "holdout_04",
+    "holdout_pool_hash": "8e6ec80a1acad765fb5f01d6053978d4460f522d613ff4f3d3c655641aa87a2c",
+    "sample_count": 20,
+    "source": "independent_holdout_fixture",
+    "sample_signature": [
+      {
+        "sample_id": "H04_T2_002",
+        "failure_type": "tsla_over_block"
+      },
+      {
+        "sample_id": "H04_S1_001",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H04_S1_002",
+        "failure_type": "safety_boundary_error"
+      },
+      {
+        "sample_id": "H04_W1_001",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H04_W1_002",
+        "failure_type": "memory_write_error"
+      },
+      {
+        "sample_id": "H04_K1_001",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H04_K1_002",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H04_K1_003",
+        "failure_type": "knowledge_miss"
+      },
+      {
+        "sample_id": "H04_G1_001",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H04_G1_002",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H04_G1_003",
+        "failure_type": "unnatural_generation"
+      },
+      {
+        "sample_id": "H04_M1_001",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H04_M1_002",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H04_M1_003",
+        "failure_type": "multiturn_anomaly"
+      },
+      {
+        "sample_id": "H04_R1_001",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H04_R1_002",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H04_R1_003",
+        "failure_type": "retrieval_mismatch"
+      },
+      {
+        "sample_id": "H04_T1_001",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H04_T1_002",
+        "failure_type": "tsla_false_pass"
+      },
+      {
+        "sample_id": "H04_T2_001",
+        "failure_type": "tsla_over_block"
+      }
+    ]
+  }
+]

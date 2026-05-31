@@ -1,11 +1,12 @@
 # Milestone Status
 
-## Current Stage: Stage22 Preparation
+## Current Stage: Stage23 Preparation
 
 The project has moved beyond the early Phase 1 roadmap. The current trusted
 baseline chain is **Stage20 Baseline v1.0** revalidated by Stage20-R, followed
 by the frozen **Stage21-A fixed failure pool validation baseline** and the
-completed **Stage21-B rotating failure pool validation baseline**.
+completed **Stage21-B rotating failure pool validation baseline** and
+**Stage22 independent multi-pool holdout validation baseline**.
 
 ## Current Gate
 
@@ -26,8 +27,13 @@ completed **Stage21-B rotating failure pool validation baseline**.
 | Stage20/Stage21 regression tests | Complete | 38 passed |
 | Full test suite after Stage21-B | Complete | 107 passed |
 | Stage21-B frozen and tagged | Complete | `stage21-b-rotating-failure-pools-v1.0` |
+| Stage22 independent multi-pool holdout validation | Complete | `reports/stage22/stage22_results.json` |
+| Stage22 implementation tests | Complete | 3 passed |
+| Stage20/Stage21/Stage22 regression tests | Complete | 41 passed |
+| Full test suite after Stage22 | Complete | 110 passed |
 | Stage22-30 roadmap prepared | Complete | `docs/00_project_overview/stage22_to_stage30_roadmap.md` |
 | Stage22 preparation plan | Complete | `docs/05_decisions/stage22_preparation.md` |
+| Stage23 preparation plan | Complete | `docs/05_decisions/stage23_preparation.md` |
 | Stage30 completion definition prepared | Complete | `docs/05_decisions/stage30_completion_definition.md` |
 
 ## Completed Stage: Stage21-A
@@ -100,13 +106,35 @@ Stage21-B result:
 | drift_status | no critical drift |
 | stage21_b_freeze_ready | true |
 
-## Next Stage: Stage22
+## Completed Stage: Stage22
 
 **Definition**: independent multi-pool holdout validation.
 
 Stage22 should use Stage21-B pool lineage as evidence, then define independent
 holdout failure pools that are not merely sequential rotations of the Stage21-B
 base pool. Stage22 entry is now open from `stage21-b-rotating-failure-pools-v1.0`.
+
+Stage22 result:
+
+| Metric | Observed |
+|---|---:|
+| completed_cycles | 12/12 |
+| cycle_pass_count | 12/12 |
+| independent_holdout_pool_count | 4 |
+| cycles_per_holdout_pool | 3 each |
+| cross_pool_regression_drop | 0.0 |
+| overall_pass | true |
+| stage22_freeze_ready | true |
+| drift_status | no critical drift |
+| rollback_chain_passed | true |
+
+## Next Stage: Stage23
+
+**Definition**: learned-prior validation under bounded governance.
+
+Stage23 may evaluate learned Bayesian prior candidates only after Stage22 is
+committed, tagged, and pushed. Learned priors must remain reversible,
+auditable, and safety-neutral or better than the frozen heuristic baseline.
 
 ## Long-Horizon Target: Stage30
 
@@ -124,6 +152,7 @@ tagged. The current Stage30 preparation artifacts are:
 - 2026-05-31: Stage22-30 roadmap and Stage30 completion definition prepared.
 - 2026-05-31: Stage21-B rotating failure pool validation completed with 10/10 cycles and `stage21_b_freeze_ready=true`.
 - 2026-05-31: Stage21-B frozen/tagged and Stage22 independent multi-pool holdout preparation documented.
+- 2026-05-31: Stage22 independent multi-pool holdout validation completed with 12/12 cycles and `stage22_freeze_ready=true`.
 - 2026-05-30: Stage20-R completed; Stage20 Baseline v1.0 revalidated for Stage21-A entry.
 - 2026-05-11: Stage20 Baseline v1.0 frozen.
 - 2026-04-17: Project initialized.

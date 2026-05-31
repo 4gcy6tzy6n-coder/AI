@@ -3,7 +3,7 @@
 **Status**: Planning baseline
 **Prepared on**: 2026-05-31
 **Starting point**: `stage21-a-fixed-failure-pool-v1.0`
-**Current engineering focus**: Stage22 multi-pool holdout preparation
+**Current engineering focus**: Stage23 learned-prior validation preparation
 
 ## Purpose
 
@@ -98,7 +98,8 @@ Stage30 must preserve these constraints:
 |---|---|
 | Stage21-A fixed-pool baseline | Frozen |
 | Stage21-B rotating-pool validation | Complete |
-| Stage22 preparation | Prepared |
+| Stage22 multi-pool holdout validation | Complete |
+| Stage23 preparation | Prepared |
 | Stage22-30 roadmap | Prepared |
 | Stage30 completion definition | Prepared |
 | Stage30 implementation | Not started |
