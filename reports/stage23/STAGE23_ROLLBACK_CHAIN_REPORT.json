@@ -1,0 +1,16 @@
+{
+  "chain_length": 2,
+  "snapshots_created": [
+    "heuristic_prior_snapshot",
+    "learned_prior_candidate_snapshot"
+  ],
+  "rollback_tests": [
+    {
+      "from": "learned_prior_candidate_snapshot",
+      "to": "heuristic_prior_snapshot",
+      "rollback_restored": true,
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

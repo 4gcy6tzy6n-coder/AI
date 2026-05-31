@@ -1,12 +1,13 @@
 # Milestone Status
 
-## Current Stage: Stage23 Preparation
+## Current Stage: Stage24 Preparation
 
 The project has moved beyond the early Phase 1 roadmap. The current trusted
 baseline chain is **Stage20 Baseline v1.0** revalidated by Stage20-R, followed
 by the frozen **Stage21-A fixed failure pool validation baseline** and the
 completed **Stage21-B rotating failure pool validation baseline** and
-**Stage22 independent multi-pool holdout validation baseline**.
+**Stage22 independent multi-pool holdout validation baseline**, followed by
+**Stage23 bounded learned-prior validation baseline**.
 
 ## Current Gate
 
@@ -34,6 +35,11 @@ completed **Stage21-B rotating failure pool validation baseline** and
 | Stage22-30 roadmap prepared | Complete | `docs/00_project_overview/stage22_to_stage30_roadmap.md` |
 | Stage22 preparation plan | Complete | `docs/05_decisions/stage22_preparation.md` |
 | Stage23 preparation plan | Complete | `docs/05_decisions/stage23_preparation.md` |
+| Stage23 bounded learned-prior validation | Complete | `reports/stage23/stage23_results.json` |
+| Stage23 implementation tests | Complete | 3 passed |
+| Stage20/Stage21/Stage22/Stage23 regression tests | Complete | 44 passed |
+| Full test suite after Stage23 | Complete | 113 passed |
+| Stage24 preparation plan | Complete | `docs/05_decisions/stage24_preparation.md` |
 | Stage30 completion definition prepared | Complete | `docs/05_decisions/stage30_completion_definition.md` |
 
 ## Completed Stage: Stage21-A
@@ -128,13 +134,35 @@ Stage22 result:
 | drift_status | no critical drift |
 | rollback_chain_passed | true |
 
-## Next Stage: Stage23
+## Completed Stage: Stage23
 
 **Definition**: learned-prior validation under bounded governance.
 
 Stage23 may evaluate learned Bayesian prior candidates only after Stage22 is
 committed, tagged, and pushed. Learned priors must remain reversible,
 auditable, and safety-neutral or better than the frozen heuristic baseline.
+
+Stage23 result:
+
+| Metric | Observed |
+|---|---:|
+| baseline_chain_complete | true |
+| learned_prior_candidate_count | 1 |
+| prior_comparison_cycles | 12 |
+| learned_prior_safety_regression | 0 |
+| expected_cause_probability_delta | +1.34 pp |
+| overall_pass | true |
+| stage23_freeze_ready | true |
+| drift_status | no critical drift |
+| rollback_chain_passed | true |
+
+## Next Stage: Stage24
+
+**Definition**: adversarial and stress horizon validation.
+
+Stage24 should stress the governed loop with safety-heavy, retrieval-heavy,
+multiturn-heavy, memory-boundary, and mixed adversarial holdouts. Stage25
+promotion governance remains blocked until Stage24 freezes.
 
 ## Long-Horizon Target: Stage30
 
@@ -153,6 +181,7 @@ tagged. The current Stage30 preparation artifacts are:
 - 2026-05-31: Stage21-B rotating failure pool validation completed with 10/10 cycles and `stage21_b_freeze_ready=true`.
 - 2026-05-31: Stage21-B frozen/tagged and Stage22 independent multi-pool holdout preparation documented.
 - 2026-05-31: Stage22 independent multi-pool holdout validation completed with 12/12 cycles and `stage22_freeze_ready=true`.
+- 2026-05-31: Stage23 bounded learned-prior validation completed with `stage23_freeze_ready=true`.
 - 2026-05-30: Stage20-R completed; Stage20 Baseline v1.0 revalidated for Stage21-A entry.
 - 2026-05-11: Stage20 Baseline v1.0 frozen.
 - 2026-04-17: Project initialized.

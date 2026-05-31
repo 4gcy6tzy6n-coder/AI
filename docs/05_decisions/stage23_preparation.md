@@ -1,6 +1,6 @@
 # Stage23 Preparation: Learned Prior Validation
 
-**Status**: Prepared after Stage22 freeze-ready validation
+**Status**: Completed; freeze-ready pending tag
 **Prepared on**: 2026-05-31
 **Starting baseline**: `stage22-multi-pool-holdout-v1.0`
 
@@ -31,6 +31,25 @@ and safety-neutral or better.
 Validate whether empirical Bayesian prior updates can improve diagnosis quality
 without weakening TSLA safety, regression protection, memory contamination
 controls, drift controls, or rollback integrity.
+
+## Completion Evidence
+
+Stage23 has been implemented and executed with the following results:
+
+| Metric | Observed |
+|---|---:|
+| baseline_chain_complete | true |
+| learned_prior_candidate_count | 1 |
+| prior_comparison_cycles | 12 |
+| learned_prior_safety_regression | 0 |
+| expected_cause_probability_delta | +1.34 pp |
+| overall_pass | true |
+| stage23_freeze_ready | true |
+| drift_status | no critical drift |
+| rollback_chain_passed | true |
+| full tests | 113 passed |
+
+Evidence is written under `reports/stage23/`.
 
 ## Scope
 
