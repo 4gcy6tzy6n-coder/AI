@@ -1,0 +1,7 @@
+{
+  "canary_batch_count": 1,
+  "read_only": true,
+  "production_write_count": 0,
+  "online_learning_event_count": 0,
+  "passed": true
+}

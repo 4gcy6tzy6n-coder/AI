@@ -1,6 +1,6 @@
 # Milestone Status
 
-## Current Stage: Stage28 Preparation
+## Current Stage: Stage29 Preparation
 
 The project has moved beyond the early Phase 1 roadmap. The current trusted
 baseline chain is **Stage20 Baseline v1.0** revalidated by Stage20-R, followed
@@ -10,8 +10,9 @@ completed **Stage21-B rotating failure pool validation baseline** and
 **Stage23 bounded learned-prior validation baseline** and the frozen
 **Stage24 adversarial stress horizon validation baseline** and the frozen
 **Stage25 promotion and rollback governance validation baseline**, followed by
-the frozen **Stage26 observability and audit cockpit validation baseline** and
-the frozen **Stage27 integration and operator workflow validation baseline**.
+the frozen **Stage26 observability and audit cockpit validation baseline**, the
+frozen **Stage27 integration and operator workflow validation baseline**, and
+the completed **Stage28 production shadow validation baseline**.
 
 ## Current Gate
 
@@ -64,6 +65,11 @@ the frozen **Stage27 integration and operator workflow validation baseline**.
 | Stage20/Stage21/Stage22/Stage23/Stage24/Stage25/Stage26/Stage27 regression tests | Complete | 56 passed |
 | Full test suite after Stage27 | Complete | 125 passed |
 | Stage28 preparation plan | Complete | `docs/05_decisions/stage28_preparation.md` |
+| Stage28 production shadow validation | Complete | `reports/stage28/stage28_results.json` |
+| Stage28 implementation tests | Complete | 3 passed |
+| Stage20/Stage21/Stage22/Stage23/Stage24/Stage25/Stage26/Stage27/Stage28 regression tests | Complete | 59 passed |
+| Full test suite after Stage28 | Complete | 128 passed |
+| Stage29 preparation plan | Complete | `docs/05_decisions/stage29_preparation.md` |
 | Stage30 completion definition prepared | Complete | `docs/05_decisions/stage30_completion_definition.md` |
 
 ## Completed Stage: Stage21-A
@@ -283,13 +289,39 @@ Stage27 result:
 | overall_pass | true |
 | stage27_freeze_ready | true |
 
-## Next Stage: Stage28
+## Completed Stage: Stage28
 
 **Definition**: production shadow validation.
 
-Stage28 should validate governed shadow/canary behavior without uncontrolled
-learning or production writes. Stage29 release candidate work remains blocked
-until Stage28 freezes.
+Stage28 validated governed shadow/canary behavior without uncontrolled learning
+or production writes.
+
+Stage28 result:
+
+| Metric | Observed |
+|---|---:|
+| shadow_batch_count | 5 |
+| production_shadow_passed | true |
+| canary_read_only_passed | true |
+| production_write_count | 0 |
+| online_learning_event_count | 0 |
+| safety_intercept_rate | 100% |
+| regression_pass_rate | 99.68% |
+| rollback_ready | true |
+| operator_safe_defaults_preserved | true |
+| critical_drift_count | 0 |
+| rollback_chain_passed | true |
+| overall_pass | true |
+| stage28_freeze_ready | true |
+
+## Next Stage: Stage29
+
+**Definition**: release candidate freeze.
+
+Stage29 should aggregate the complete Stage20 through Stage28 baseline chain,
+verify required reports, tests, runbooks, rollback evidence, and shadow-mode
+evidence, then produce a Stage30 release candidate. Stage30 implementation
+remains blocked until Stage29 freezes.
 
 ## Long-Horizon Target: Stage30
 
@@ -313,6 +345,7 @@ tagged. The current Stage30 preparation artifacts are:
 - 2026-05-31: Stage25 promotion and rollback governance validation completed with `stage25_freeze_ready=true`.
 - 2026-05-31: Stage26 observability and audit cockpit validation completed with `stage26_freeze_ready=true`.
 - 2026-05-31: Stage27 integration and operator workflow validation completed with `stage27_freeze_ready=true`.
+- 2026-05-31: Stage28 production shadow validation completed with `stage28_freeze_ready=true`.
 - 2026-05-30: Stage20-R completed; Stage20 Baseline v1.0 revalidated for Stage21-A entry.
 - 2026-05-11: Stage20 Baseline v1.0 frozen.
 - 2026-04-17: Project initialized.

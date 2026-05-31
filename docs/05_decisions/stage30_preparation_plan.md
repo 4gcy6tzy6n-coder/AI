@@ -12,11 +12,9 @@ Stage30 implementation starts.
 
 ## Immediate Next Actions
 
-1. Commit, tag, and push Stage27 integration and operator workflow validation.
-2. Implement Stage28 production shadow validation.
-3. Keep Stage29 release-candidate work blocked until Stage28 proves
-   production shadow readiness.
-4. Keep Stage30 implementation blocked until Stage29 has produced a release
+1. Commit, tag, and push Stage28 production shadow validation.
+2. Implement Stage29 release-candidate freeze.
+3. Keep Stage30 implementation blocked until Stage29 has produced a release
    candidate with complete baseline-chain evidence.
 
 ## Preparation Deliverables
@@ -32,6 +30,7 @@ Stage30 implementation starts.
 | Stage26 preparation plan | `docs/05_decisions/stage26_preparation.md` | Prepared |
 | Stage27 preparation plan | `docs/05_decisions/stage27_preparation.md` | Prepared |
 | Stage28 preparation plan | `docs/05_decisions/stage28_preparation.md` | Prepared |
+| Stage29 preparation plan | `docs/05_decisions/stage29_preparation.md` | Prepared |
 
 ## Work Breakdown
 

@@ -3,7 +3,7 @@
 **Status**: Planning baseline
 **Prepared on**: 2026-05-31
 **Starting point**: `stage21-a-fixed-failure-pool-v1.0`
-**Current engineering focus**: Stage28 production shadow validation preparation
+**Current engineering focus**: Stage29 release candidate preparation
 
 ## Purpose
 
@@ -104,8 +104,9 @@ Stage30 must preserve these constraints:
 | Stage25 promotion governance validation | Complete |
 | Stage26 observability and audit validation | Complete |
 | Stage27 operator workflow validation | Complete |
-| Stage28 preparation | Prepared |
+| Stage28 production shadow validation | Complete |
+| Stage29 preparation | Prepared |
 | Stage22-30 roadmap | Prepared |
 | Stage30 completion definition | Prepared |
 | Stage30 implementation | Not started |
-| Stage30 freeze | Blocked until Stage21-B through Stage29 pass |
+| Stage30 freeze | Blocked until Stage29 passes |

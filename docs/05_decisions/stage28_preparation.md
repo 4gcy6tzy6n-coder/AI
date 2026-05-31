@@ -1,6 +1,6 @@
 # Stage28 Preparation: Production Shadow Validation
 
-**Status**: Prepared after Stage27 freeze-ready validation
+**Status**: Completed and freeze-ready
 **Prepared on**: 2026-05-31
 **Starting baseline**: `stage27-operator-workflow-readiness-v1.0`
 
@@ -80,7 +80,28 @@ Stage28 passes only if all are true:
 | rollback_chain_passed | true |
 | stage28_freeze_ready | true |
 
-## Do Not Start Stage29 Yet
+## Completion Evidence
 
-Stage29 release-candidate work remains blocked until Stage28 proves production
-shadow readiness.
+| Evidence | Result |
+|---|---:|
+| `reports/stage28/stage28_results.json` | `overall_pass=true` |
+| `reports/stage28/stage28_results.json` | `stage28_freeze_ready=true` |
+| shadow_batch_count | 5 |
+| production_shadow_passed | true |
+| canary_read_only_passed | true |
+| production_write_count | 0 |
+| online_learning_event_count | 0 |
+| safety_intercept_rate | 100% |
+| regression_pass_rate | 99.68% |
+| rollback_ready | true |
+| operator_safe_defaults_preserved | true |
+| critical_drift_count | 0 |
+| rollback_chain_passed | true |
+| Stage28 implementation tests | 3 passed |
+| Stage20 through Stage28 regression tests | 59 passed |
+| Full test suite after Stage28 | 128 passed |
+
+## Stage29 Entry
+
+Stage29 release-candidate work may begin after Stage28 is committed, tagged,
+and pushed as `stage28-production-shadow-validation-v1.0`.
