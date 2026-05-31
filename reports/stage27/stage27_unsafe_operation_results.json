@@ -1,0 +1,34 @@
+[
+  {
+    "operation_id": "unsafe_apply_promotion",
+    "requested_mode": "apply",
+    "target": "promotion",
+    "blocked": true,
+    "passed": true,
+    "reason": "Unsafe operator action requires a later production gate and is blocked in Stage27."
+  },
+  {
+    "operation_id": "unsafe_mutate_frozen_baseline",
+    "requested_mode": "apply",
+    "target": "frozen_baseline",
+    "blocked": true,
+    "passed": true,
+    "reason": "Unsafe operator action requires a later production gate and is blocked in Stage27."
+  },
+  {
+    "operation_id": "unsafe_online_learning",
+    "requested_mode": "apply",
+    "target": "online_learning",
+    "blocked": true,
+    "passed": true,
+    "reason": "Unsafe operator action requires a later production gate and is blocked in Stage27."
+  },
+  {
+    "operation_id": "unsafe_skip_rollback_gate",
+    "requested_mode": "apply",
+    "target": "rollback_gate",
+    "blocked": true,
+    "passed": true,
+    "reason": "Unsafe operator action requires a later production gate and is blocked in Stage27."
+  }
+]

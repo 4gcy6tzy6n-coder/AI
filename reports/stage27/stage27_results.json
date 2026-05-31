@@ -1,0 +1,150 @@
+{
+  "stage": "Stage27",
+  "stage26_baseline": {
+    "stage26_results_path": "reports/stage26/stage26_results.json",
+    "stage26_cockpit_path": "reports/stage26/STAGE26_AUDIT_COCKPIT.json",
+    "stage26_cockpit_exists": true,
+    "baseline_chain_complete": true,
+    "stage26_freeze_ready": true,
+    "critical_drift_count": 0,
+    "rollback_chain_passed": true,
+    "overall_pass": true
+  },
+  "operator_workflow_count": 5,
+  "inspect_workflow_passed": true,
+  "validate_workflow_passed": true,
+  "promote_workflow_guarded": true,
+  "rollback_workflow_passed": true,
+  "unsafe_operation_block_rate": 1.0,
+  "runbook_coverage": 1.0,
+  "safe_default_mode": true,
+  "baseline_chain_preserved": true,
+  "critical_drift_count": 0,
+  "rollback_chain_passed": true,
+  "workflow_results": [
+    {
+      "workflow_id": "inspect_baseline_chain",
+      "command": "stage27 inspect --read-only",
+      "mode": "read_only",
+      "requires_write": false,
+      "safe_default": true,
+      "guarded": false,
+      "blocked": false,
+      "runbook_section": "Inspect Baseline Chain",
+      "passed": true,
+      "reason": "Read-only operator workflow completed against Stage26 audit evidence."
+    },
+    {
+      "workflow_id": "validate_audit_cockpit",
+      "command": "stage27 validate --audit-cockpit",
+      "mode": "read_only",
+      "requires_write": false,
+      "safe_default": true,
+      "guarded": false,
+      "blocked": false,
+      "runbook_section": "Validate Audit Cockpit",
+      "passed": true,
+      "reason": "Read-only operator workflow completed against Stage26 audit evidence."
+    },
+    {
+      "workflow_id": "promote_candidate_guarded",
+      "command": "stage27 promote --candidate safe --dry-run",
+      "mode": "dry_run",
+      "requires_write": true,
+      "safe_default": true,
+      "guarded": true,
+      "blocked": false,
+      "runbook_section": "Promote Candidate Guarded",
+      "passed": true,
+      "reason": "Write-capable workflow is restricted to dry-run guarded mode."
+    },
+    {
+      "workflow_id": "rollback_candidate",
+      "command": "stage27 rollback --candidate unsafe --dry-run",
+      "mode": "dry_run",
+      "requires_write": true,
+      "safe_default": true,
+      "guarded": true,
+      "blocked": false,
+      "runbook_section": "Rollback Candidate",
+      "passed": true,
+      "reason": "Read-only operator workflow completed against Stage26 audit evidence."
+    },
+    {
+      "workflow_id": "block_unsafe_operation",
+      "command": "stage27 promote --candidate unsafe --apply",
+      "mode": "apply",
+      "requires_write": true,
+      "safe_default": false,
+      "guarded": false,
+      "blocked": true,
+      "runbook_section": "Block Unsafe Operation",
+      "passed": true,
+      "reason": "Apply-mode operation blocked by Stage27 safe-default policy."
+    }
+  ],
+  "unsafe_operation_results": [
+    {
+      "operation_id": "unsafe_apply_promotion",
+      "requested_mode": "apply",
+      "target": "promotion",
+      "blocked": true,
+      "passed": true,
+      "reason": "Unsafe operator action requires a later production gate and is blocked in Stage27."
+    },
+    {
+      "operation_id": "unsafe_mutate_frozen_baseline",
+      "requested_mode": "apply",
+      "target": "frozen_baseline",
+      "blocked": true,
+      "passed": true,
+      "reason": "Unsafe operator action requires a later production gate and is blocked in Stage27."
+    },
+    {
+      "operation_id": "unsafe_online_learning",
+      "requested_mode": "apply",
+      "target": "online_learning",
+      "blocked": true,
+      "passed": true,
+      "reason": "Unsafe operator action requires a later production gate and is blocked in Stage27."
+    },
+    {
+      "operation_id": "unsafe_skip_rollback_gate",
+      "requested_mode": "apply",
+      "target": "rollback_gate",
+      "blocked": true,
+      "passed": true,
+      "reason": "Unsafe operator action requires a later production gate and is blocked in Stage27."
+    }
+  ],
+  "baseline_hash_before": {
+    "reports/stage26/stage26_results.json": "6f7b8d35ceea7d038ce119ec3faae31b319dcda3691661990e78bce3caf7dad1",
+    "reports/stage26/STAGE26_AUDIT_COCKPIT.json": "a6519546af989777b084721d2618531d9d9727ec5b64b07b0592a833f9d60306",
+    "reports/stage26/STAGE26_BASELINE_CHAIN.json": "d7364a529956173ae72cbed40891ab14800b838309b148892b1511daad7c3450",
+    "reports/stage26/STAGE26_METRICS_INDEX.json": "9c4e984c5ec6a7b2a50dafaa8945b9a0aedda130e8a30ef38e76554a1594c519",
+    "reports/stage26/STAGE26_ROLLBACK_INDEX.json": "0fda4ae1af6629460c6111d461e25325c48609e6e0f7299b72467855edc5c740"
+  },
+  "baseline_hash_after": {
+    "reports/stage26/stage26_results.json": "6f7b8d35ceea7d038ce119ec3faae31b319dcda3691661990e78bce3caf7dad1",
+    "reports/stage26/STAGE26_AUDIT_COCKPIT.json": "a6519546af989777b084721d2618531d9d9727ec5b64b07b0592a833f9d60306",
+    "reports/stage26/STAGE26_BASELINE_CHAIN.json": "d7364a529956173ae72cbed40891ab14800b838309b148892b1511daad7c3450",
+    "reports/stage26/STAGE26_METRICS_INDEX.json": "9c4e984c5ec6a7b2a50dafaa8945b9a0aedda130e8a30ef38e76554a1594c519",
+    "reports/stage26/STAGE26_ROLLBACK_INDEX.json": "0fda4ae1af6629460c6111d461e25325c48609e6e0f7299b72467855edc5c740"
+  },
+  "thresholds": {
+    "operator_workflow_count": 5,
+    "inspect_workflow_passed": true,
+    "validate_workflow_passed": true,
+    "promote_workflow_guarded": true,
+    "rollback_workflow_passed": true,
+    "unsafe_operation_block_rate": 1.0,
+    "runbook_coverage": 1.0,
+    "safe_default_mode": true,
+    "baseline_chain_preserved": true,
+    "critical_drift_count": 0,
+    "rollback_chain_passed": true,
+    "stage27_freeze_ready": true
+  },
+  "stage27_freeze_ready": true,
+  "overall_pass": true
+}

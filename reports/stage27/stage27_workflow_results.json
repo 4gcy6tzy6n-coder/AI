@@ -1,0 +1,62 @@
+[
+  {
+    "workflow_id": "inspect_baseline_chain",
+    "command": "stage27 inspect --read-only",
+    "mode": "read_only",
+    "requires_write": false,
+    "safe_default": true,
+    "guarded": false,
+    "blocked": false,
+    "runbook_section": "Inspect Baseline Chain",
+    "passed": true,
+    "reason": "Read-only operator workflow completed against Stage26 audit evidence."
+  },
+  {
+    "workflow_id": "validate_audit_cockpit",
+    "command": "stage27 validate --audit-cockpit",
+    "mode": "read_only",
+    "requires_write": false,
+    "safe_default": true,
+    "guarded": false,
+    "blocked": false,
+    "runbook_section": "Validate Audit Cockpit",
+    "passed": true,
+    "reason": "Read-only operator workflow completed against Stage26 audit evidence."
+  },
+  {
+    "workflow_id": "promote_candidate_guarded",
+    "command": "stage27 promote --candidate safe --dry-run",
+    "mode": "dry_run",
+    "requires_write": true,
+    "safe_default": true,
+    "guarded": true,
+    "blocked": false,
+    "runbook_section": "Promote Candidate Guarded",
+    "passed": true,
+    "reason": "Write-capable workflow is restricted to dry-run guarded mode."
+  },
+  {
+    "workflow_id": "rollback_candidate",
+    "command": "stage27 rollback --candidate unsafe --dry-run",
+    "mode": "dry_run",
+    "requires_write": true,
+    "safe_default": true,
+    "guarded": true,
+    "blocked": false,
+    "runbook_section": "Rollback Candidate",
+    "passed": true,
+    "reason": "Read-only operator workflow completed against Stage26 audit evidence."
+  },
+  {
+    "workflow_id": "block_unsafe_operation",
+    "command": "stage27 promote --candidate unsafe --apply",
+    "mode": "apply",
+    "requires_write": true,
+    "safe_default": false,
+    "guarded": false,
+    "blocked": true,
+    "runbook_section": "Block Unsafe Operation",
+    "passed": true,
+    "reason": "Apply-mode operation blocked by Stage27 safe-default policy."
+  }
+]

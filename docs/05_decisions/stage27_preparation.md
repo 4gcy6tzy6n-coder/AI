@@ -1,6 +1,6 @@
 # Stage27 Preparation: Integration and Operator Workflow Validation
 
-**Status**: Prepared after Stage26 freeze-ready validation
+**Status**: Completed and freeze-ready
 **Prepared on**: 2026-05-31
 **Starting baseline**: `stage26-observability-audit-cockpit-v1.0`
 
@@ -36,6 +36,28 @@ without mutating frozen Stage20 through Stage26 artifacts.
 
 Validate deterministic integration and operator workflows for the governed
 Stage20 through Stage26 baseline chain.
+
+## Completion Evidence
+
+Stage27 completed on 2026-05-31 with:
+
+| Requirement | Evidence | Status |
+|---|---|---|
+| operator_workflow_count | `5` in `reports/stage27/stage27_results.json` | PASS |
+| inspect_workflow_passed | `true` | PASS |
+| validate_workflow_passed | `true` | PASS |
+| promote_workflow_guarded | `true` | PASS |
+| rollback_workflow_passed | `true` | PASS |
+| unsafe_operation_block_rate | `1.0` | PASS |
+| runbook_coverage | `1.0` | PASS |
+| safe_default_mode | `true` | PASS |
+| baseline_chain_preserved | `true` | PASS |
+| critical_drift_count | `0` | PASS |
+| rollback_chain_passed | `true` | PASS |
+| overall_pass | `true` | PASS |
+| stage27_freeze_ready | `true` | PASS |
+| Stage20-27 tests | 56 passed | PASS |
+| full tests | 125 passed | PASS |
 
 ## Scope
 
@@ -79,7 +101,7 @@ Stage27 passes only if all are true:
 | rollback_chain_passed | true |
 | stage27_freeze_ready | true |
 
-## Do Not Start Stage28 Yet
+## Stage28 Entry
 
-Stage28 production shadow validation remains blocked until Stage27 proves
-operator workflow readiness.
+Stage28 production shadow validation is now open after the Stage27 freeze
+commit and tag are pushed.
