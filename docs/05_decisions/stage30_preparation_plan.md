@@ -12,8 +12,8 @@ Stage30 implementation starts.
 
 ## Immediate Next Actions
 
-1. Commit, tag, and push Stage21-B from the passing validation result.
-2. Use Stage21-B evidence to define Stage22 multi-pool holdout fixtures.
+1. Use Stage21-B evidence to define Stage22 multi-pool holdout fixtures.
+2. Implement and freeze Stage22 independent multi-pool holdout validation.
 3. Keep Stage23 learned-prior work blocked until Stage22 proves cross-pool
    stability without learned priors.
 4. Keep Stage30 implementation blocked until Stage29 has produced a release

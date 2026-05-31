@@ -51,8 +51,8 @@ Stage20 Baseline v1.0
 
 ## Stage21-B to Stage22 Handoff
 
-Stage22 must not start until Stage21-B is committed, tagged, and pushed. The
-minimum handoff package from Stage21-B is:
+Stage22 entry is open after Stage21-B commit, tag, and push. The minimum
+handoff package from Stage21-B is:
 
 - `stage21_b_freeze_ready=true`
 - `completed_cycles=10`
@@ -98,6 +98,7 @@ Stage30 must preserve these constraints:
 |---|---|
 | Stage21-A fixed-pool baseline | Frozen |
 | Stage21-B rotating-pool validation | Complete |
+| Stage22 preparation | Prepared |
 | Stage22-30 roadmap | Prepared |
 | Stage30 completion definition | Prepared |
 | Stage30 implementation | Not started |

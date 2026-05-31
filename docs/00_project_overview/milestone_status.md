@@ -25,7 +25,9 @@ completed **Stage21-B rotating failure pool validation baseline**.
 | Stage21-B implementation tests | Complete | 2 passed |
 | Stage20/Stage21 regression tests | Complete | 38 passed |
 | Full test suite after Stage21-B | Complete | 107 passed |
+| Stage21-B frozen and tagged | Complete | `stage21-b-rotating-failure-pools-v1.0` |
 | Stage22-30 roadmap prepared | Complete | `docs/00_project_overview/stage22_to_stage30_roadmap.md` |
+| Stage22 preparation plan | Complete | `docs/05_decisions/stage22_preparation.md` |
 | Stage30 completion definition prepared | Complete | `docs/05_decisions/stage30_completion_definition.md` |
 
 ## Completed Stage: Stage21-A
@@ -104,8 +106,7 @@ Stage21-B result:
 
 Stage22 should use Stage21-B pool lineage as evidence, then define independent
 holdout failure pools that are not merely sequential rotations of the Stage21-B
-base pool. Stage22 remains blocked until Stage21-B is committed, tagged, and
-pushed.
+base pool. Stage22 entry is now open from `stage21-b-rotating-failure-pools-v1.0`.
 
 ## Long-Horizon Target: Stage30
 
@@ -122,6 +123,7 @@ tagged. The current Stage30 preparation artifacts are:
 - 2026-05-31: Stage21-A completed, frozen, tagged, and pushed as `stage21-a-fixed-failure-pool-v1.0`.
 - 2026-05-31: Stage22-30 roadmap and Stage30 completion definition prepared.
 - 2026-05-31: Stage21-B rotating failure pool validation completed with 10/10 cycles and `stage21_b_freeze_ready=true`.
+- 2026-05-31: Stage21-B frozen/tagged and Stage22 independent multi-pool holdout preparation documented.
 - 2026-05-30: Stage20-R completed; Stage20 Baseline v1.0 revalidated for Stage21-A entry.
 - 2026-05-11: Stage20 Baseline v1.0 frozen.
 - 2026-04-17: Project initialized.
