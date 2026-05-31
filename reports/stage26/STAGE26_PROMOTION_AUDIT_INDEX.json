@@ -1,0 +1,61 @@
+{
+  "index": "promotion_audit",
+  "entries": [
+    {
+      "stage_id": "stage20_r",
+      "stage": "Stage20-R",
+      "covered": true,
+      "not_applicable": true,
+      "reason": "Promotion audit is introduced in Stage25."
+    },
+    {
+      "stage_id": "stage21_a",
+      "stage": "Stage21-A",
+      "covered": true,
+      "not_applicable": true,
+      "reason": "Promotion audit is introduced in Stage25."
+    },
+    {
+      "stage_id": "stage21_b",
+      "stage": "Stage21-B",
+      "covered": true,
+      "not_applicable": true,
+      "reason": "Promotion audit is introduced in Stage25."
+    },
+    {
+      "stage_id": "stage22",
+      "stage": "Stage22",
+      "covered": true,
+      "not_applicable": true,
+      "reason": "Promotion audit is introduced in Stage25."
+    },
+    {
+      "stage_id": "stage23",
+      "stage": "Stage23",
+      "covered": true,
+      "not_applicable": true,
+      "reason": "Promotion audit is introduced in Stage25."
+    },
+    {
+      "stage_id": "stage24",
+      "stage": "Stage24",
+      "covered": true,
+      "not_applicable": true,
+      "reason": "Promotion audit is introduced in Stage25."
+    },
+    {
+      "stage_id": "stage25",
+      "stage": "Stage25",
+      "audit_path": "reports/stage25/STAGE25_AUDIT_LOG.json",
+      "audit_path_exists": true,
+      "audit_event_coverage": 1.0,
+      "promotion_gate_pass_rate": 1.0,
+      "unsafe_promotion_block_rate": 1.0,
+      "rollback_gate_pass_rate": 1.0,
+      "covered": true
+    }
+  ],
+  "covered_count": 7,
+  "total_count": 7,
+  "coverage": 1.0
+}

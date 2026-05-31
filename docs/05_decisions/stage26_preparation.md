@@ -1,6 +1,6 @@
 # Stage26 Preparation: Observability and Audit Cockpit Validation
 
-**Status**: Prepared after Stage25 freeze-ready validation
+**Status**: Completed and freeze-ready
 **Prepared on**: 2026-05-31
 **Starting baseline**: `stage25-promotion-rollback-governance-v1.0`
 
@@ -35,6 +35,29 @@ through Stage25 artifacts.
 
 Validate deterministic observability and audit aggregation for the Stage20
 through Stage25 baseline chain.
+
+## Completion Evidence
+
+Stage26 completed on 2026-05-31 with:
+
+| Requirement | Evidence | Status |
+|---|---|---|
+| baseline_chain_complete | `true` in `reports/stage26/stage26_results.json` | PASS |
+| observed_stage_count | `7` | PASS |
+| metrics_index_coverage | `1.0` | PASS |
+| lineage_index_coverage | `1.0` | PASS |
+| drift_index_coverage | `1.0` | PASS |
+| rollback_index_coverage | `1.0` | PASS |
+| freeze_evidence_coverage | `1.0` | PASS |
+| promotion_audit_coverage | `1.0` | PASS |
+| machine_readable_artifacts | `true` | PASS |
+| human_readable_artifacts | `true` | PASS |
+| critical_drift_count | `0` | PASS |
+| rollback_chain_passed | `true` | PASS |
+| overall_pass | `true` | PASS |
+| stage26_freeze_ready | `true` | PASS |
+| Stage20-26 tests | 53 passed | PASS |
+| full tests | 122 passed | PASS |
 
 ## Scope
 
@@ -80,7 +103,7 @@ Stage26 passes only if all are true:
 | rollback_chain_passed | true |
 | stage26_freeze_ready | true |
 
-## Do Not Start Stage27 Yet
+## Stage27 Entry
 
-Stage27 operator workflow work remains blocked until Stage26 proves
-observability and audit readiness.
+Stage27 integration and operator workflow validation is now open after the
+Stage26 freeze commit and tag are pushed.

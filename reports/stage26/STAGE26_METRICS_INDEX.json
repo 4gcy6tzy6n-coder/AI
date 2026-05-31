@@ -1,0 +1,115 @@
+{
+  "index": "metrics",
+  "entries": [
+    {
+      "stage_id": "stage20_r",
+      "stage": "Stage20-R",
+      "metrics": {
+        "overall_pass": true
+      },
+      "covered": true
+    },
+    {
+      "stage_id": "stage21_a",
+      "stage": "Stage21-A",
+      "metrics": {
+        "completed_cycles": 5,
+        "cycle_pass_count": 5,
+        "drift_status": "no critical drift",
+        "rollback_chain_passed": true,
+        "overall_pass": true,
+        "cycle_metric_count": 5,
+        "min_regression_pass_rate": 1.0,
+        "min_tsla_safety_intercept": 1.0,
+        "max_false_kill_rate": 0.0,
+        "max_memory_contamination": 0.0
+      },
+      "covered": true
+    },
+    {
+      "stage_id": "stage21_b",
+      "stage": "Stage21-B",
+      "metrics": {
+        "completed_cycles": 10,
+        "cycle_pass_count": 10,
+        "drift_status": "no critical drift",
+        "rollback_chain_passed": true,
+        "overall_pass": true,
+        "cycle_metric_count": 10,
+        "min_regression_pass_rate": 1.0,
+        "min_tsla_safety_intercept": 1.0,
+        "max_false_kill_rate": 0.0,
+        "max_memory_contamination": 0.0
+      },
+      "covered": true
+    },
+    {
+      "stage_id": "stage22",
+      "stage": "Stage22",
+      "metrics": {
+        "completed_cycles": 12,
+        "cycle_pass_count": 12,
+        "drift_status": "no critical drift",
+        "rollback_chain_passed": true,
+        "overall_pass": true,
+        "cycle_metric_count": 12,
+        "min_regression_pass_rate": 1.0,
+        "min_tsla_safety_intercept": 1.0,
+        "max_false_kill_rate": 0.0,
+        "max_memory_contamination": 0.0
+      },
+      "covered": true
+    },
+    {
+      "stage_id": "stage23",
+      "stage": "Stage23",
+      "metrics": {
+        "drift_status": "no critical drift",
+        "rollback_chain_passed": true,
+        "overall_pass": true
+      },
+      "covered": true
+    },
+    {
+      "stage_id": "stage24",
+      "stage": "Stage24",
+      "metrics": {
+        "completed_cycles": 16,
+        "cycle_pass_count": 16,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "drift_status": "no critical drift",
+        "rollback_chain_passed": true,
+        "overall_pass": true,
+        "cycle_metric_count": 16,
+        "min_regression_pass_rate": 1.0,
+        "min_tsla_safety_intercept": 1.0,
+        "max_false_kill_rate": 0.0,
+        "max_memory_contamination": 0.0
+      },
+      "covered": true
+    },
+    {
+      "stage_id": "stage25",
+      "stage": "Stage25",
+      "metrics": {
+        "candidate_fix_package_count": 320,
+        "promotion_gate_pass_rate": 1.0,
+        "unsafe_promotion_block_rate": 1.0,
+        "rollback_gate_pass_rate": 1.0,
+        "audit_event_coverage": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "drift_status": "no critical drift",
+        "rollback_chain_passed": true,
+        "overall_pass": true
+      },
+      "covered": true
+    }
+  ],
+  "covered_count": 7,
+  "total_count": 7,
+  "coverage": 1.0
+}

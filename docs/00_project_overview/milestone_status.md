@@ -1,6 +1,6 @@
 # Milestone Status
 
-## Current Stage: Stage26 Preparation
+## Current Stage: Stage27 Preparation
 
 The project has moved beyond the early Phase 1 roadmap. The current trusted
 baseline chain is **Stage20 Baseline v1.0** revalidated by Stage20-R, followed
@@ -9,7 +9,8 @@ completed **Stage21-B rotating failure pool validation baseline** and
 **Stage22 independent multi-pool holdout validation baseline**, followed by
 **Stage23 bounded learned-prior validation baseline** and the frozen
 **Stage24 adversarial stress horizon validation baseline** and the frozen
-**Stage25 promotion and rollback governance validation baseline**.
+**Stage25 promotion and rollback governance validation baseline**, followed by
+the frozen **Stage26 observability and audit cockpit validation baseline**.
 
 ## Current Gate
 
@@ -52,6 +53,11 @@ completed **Stage21-B rotating failure pool validation baseline** and
 | Stage20/Stage21/Stage22/Stage23/Stage24/Stage25 regression tests | Complete | 50 passed |
 | Full test suite after Stage25 | Complete | 119 passed |
 | Stage26 preparation plan | Complete | `docs/05_decisions/stage26_preparation.md` |
+| Stage26 observability and audit cockpit validation | Complete | `reports/stage26/stage26_results.json` |
+| Stage26 implementation tests | Complete | 3 passed |
+| Stage20/Stage21/Stage22/Stage23/Stage24/Stage25/Stage26 regression tests | Complete | 53 passed |
+| Full test suite after Stage26 | Complete | 122 passed |
+| Stage27 preparation plan | Complete | `docs/05_decisions/stage27_preparation.md` |
 | Stage30 completion definition prepared | Complete | `docs/05_decisions/stage30_completion_definition.md` |
 
 ## Completed Stage: Stage21-A
@@ -219,14 +225,40 @@ Stage25 result:
 | drift_status | no critical drift |
 | rollback_chain_passed | true |
 
-## Next Stage: Stage26
+## Completed Stage: Stage26
 
 **Definition**: observability and audit cockpit validation.
 
-Stage26 should expose metrics, lineage, drift, rollback, freeze evidence, and
+Stage26 exposed metrics, lineage, drift, rollback, freeze evidence, and
 promotion governance audit evidence in deterministic machine-readable and
-human-readable artifacts. Stage27 operator workflow work remains blocked until
-Stage26 freezes.
+human-readable artifacts.
+
+Stage26 result:
+
+| Metric | Observed |
+|---|---:|
+| baseline_chain_complete | true |
+| observed_stage_count | 7 |
+| metrics_index_coverage | 100% |
+| lineage_index_coverage | 100% |
+| drift_index_coverage | 100% |
+| rollback_index_coverage | 100% |
+| freeze_evidence_coverage | 100% |
+| promotion_audit_coverage | 100% |
+| machine_readable_artifacts | true |
+| human_readable_artifacts | true |
+| critical_drift_count | 0 |
+| rollback_chain_passed | true |
+| overall_pass | true |
+| stage26_freeze_ready | true |
+
+## Next Stage: Stage27
+
+**Definition**: integration and operator workflow validation.
+
+Stage27 should validate CLI/API/operator workflows, deterministic runbooks,
+safe defaults, and blocked unsafe operation paths. Stage28 production shadow
+work remains blocked until Stage27 freezes.
 
 ## Long-Horizon Target: Stage30
 
@@ -248,6 +280,7 @@ tagged. The current Stage30 preparation artifacts are:
 - 2026-05-31: Stage23 bounded learned-prior validation completed with `stage23_freeze_ready=true`.
 - 2026-05-31: Stage24 adversarial stress horizon validation completed with 16/16 cycles and `stage24_freeze_ready=true`.
 - 2026-05-31: Stage25 promotion and rollback governance validation completed with `stage25_freeze_ready=true`.
+- 2026-05-31: Stage26 observability and audit cockpit validation completed with `stage26_freeze_ready=true`.
 - 2026-05-30: Stage20-R completed; Stage20 Baseline v1.0 revalidated for Stage21-A entry.
 - 2026-05-11: Stage20 Baseline v1.0 frozen.
 - 2026-04-17: Project initialized.

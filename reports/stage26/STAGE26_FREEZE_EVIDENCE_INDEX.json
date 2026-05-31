@@ -1,0 +1,294 @@
+{
+  "index": "freeze",
+  "entries": [
+    {
+      "stage_id": "stage20_r",
+      "stage": "Stage20-R",
+      "artifact_type": "freeze",
+      "artifacts": [
+        {
+          "path": "reports/stage20_r/pipeline_artifacts/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "25996a2a958b66a82352bb03caeaabc783d2a24fd7907039cca77e5d0b83ffe2"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "stage_id": "stage21_a",
+      "stage": "Stage21-A",
+      "artifact_type": "freeze",
+      "artifacts": [
+        {
+          "path": "reports/stage21_a/cycle_01/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "96e53bf871b294bcc648cc789088d707fc019315434a4a8192f47235366b33f9"
+        },
+        {
+          "path": "reports/stage21_a/cycle_02/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "b9a425e18fa6e1fcc4c2e903f7b5e148d3090bb406b54030f89145bf4f47aeec"
+        },
+        {
+          "path": "reports/stage21_a/cycle_03/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "01af415de2ef380939dd052bd12061f1052ad1791dbf027aa63fdae28e4dec07"
+        },
+        {
+          "path": "reports/stage21_a/cycle_04/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "495bcde37c80c020e141007e89d45822587ddd346b747bdc4f57b919e7721ac0"
+        },
+        {
+          "path": "reports/stage21_a/cycle_05/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "b48a868f7779582964fcd9bf320dc9a9fe933b4644db027d98abc354f1001721"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "stage_id": "stage21_b",
+      "stage": "Stage21-B",
+      "artifact_type": "freeze",
+      "artifacts": [
+        {
+          "path": "reports/stage21_b/cycle_01/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "bd8017ea4e6aebb4b08cff52aaff29396dc97c461c19ce649ed940fe1b16eb13"
+        },
+        {
+          "path": "reports/stage21_b/cycle_02/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "f2c93fedf9ad62e3274363279094318f3d9e87a1957b1bf8d8fb9dbed8c179b3"
+        },
+        {
+          "path": "reports/stage21_b/cycle_03/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "2aeaa12facce84baec58722b02249ffdda92dabfc61464566054eb8277b60430"
+        },
+        {
+          "path": "reports/stage21_b/cycle_04/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "75aad79fa9b045aaf036887492d04c810469aff1f6a8f3792b85cc184cd291ad"
+        },
+        {
+          "path": "reports/stage21_b/cycle_05/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "726729b6cf0abb524b40ff24a3d2bfbf268e207f3cae793acce47fd6e9027467"
+        },
+        {
+          "path": "reports/stage21_b/cycle_06/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "4a18a15e306ea1ef81efdba93ce2a9601b78563f2d08ab4e0fd0aab17be25771"
+        },
+        {
+          "path": "reports/stage21_b/cycle_07/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "52a80f53facab4b8c4aca9e221436bcdc812a6757c670fa275747d40da5af3c3"
+        },
+        {
+          "path": "reports/stage21_b/cycle_08/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "063ea46b3c9593dc12e44195804414b04380b9bf711f384a96fd9d920138f30f"
+        },
+        {
+          "path": "reports/stage21_b/cycle_09/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "dccbc4334471ae7ff6d52090b33a74e037047fac16bda9975efe484bf571c5be"
+        },
+        {
+          "path": "reports/stage21_b/cycle_10/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "eaeddff3c2bfe0a586cd72c5ade544ee47ed24b2872cb6e9d8760dae21a17b16"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "stage_id": "stage22",
+      "stage": "Stage22",
+      "artifact_type": "freeze",
+      "artifacts": [
+        {
+          "path": "reports/stage22/cycle_01/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "a54b05ea76f4c478388b12ab7e9fc36102c7a4c8f1afb470085308b295c6ffbc"
+        },
+        {
+          "path": "reports/stage22/cycle_02/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "7917372dd30519535d69225640f89e6e9d5619ceaf96316ae793cbbe1e358d87"
+        },
+        {
+          "path": "reports/stage22/cycle_03/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "867a63712da3f4ae56833d922bb6f518263e883249b402f883f6822d5b26a818"
+        },
+        {
+          "path": "reports/stage22/cycle_04/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "4ae0dbfa1c88dd8d27dd652fa16c9b7752c52b8979b282b8c889ec8cc206880e"
+        },
+        {
+          "path": "reports/stage22/cycle_05/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "cf78991b2a8ca314bff3074ef42d86bfba8950caa47e329c75bca6c75fb56c73"
+        },
+        {
+          "path": "reports/stage22/cycle_06/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "ed04b273f5db082ff2028fdf3e614d995b20acb92d1f09f380e181004e0deb11"
+        },
+        {
+          "path": "reports/stage22/cycle_07/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "ee5020688973e7f4934e901882029e91418289c22639bd1ffaa5079711f6dc53"
+        },
+        {
+          "path": "reports/stage22/cycle_08/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "ed1ebbd20d8924838ff8093f0e0f79a1625717cd158faadbcdec62bde4a41bf3"
+        },
+        {
+          "path": "reports/stage22/cycle_09/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "148f90c9a21de9b101eb5570e12977bfd3150f5ef0d3c14184d662eb542bfbe0"
+        },
+        {
+          "path": "reports/stage22/cycle_10/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "e90e970ef6a99329464108167ab3e4276337f26499fabc811d9be9023c9960f7"
+        },
+        {
+          "path": "reports/stage22/cycle_11/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "364afa819857a80a6d8819f59b85d1cdcbd57b01f251585ae632565ab3a6e850"
+        },
+        {
+          "path": "reports/stage22/cycle_12/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "6df11a2367809b87235d5e8ab659ff78dc3b700948ec57af5ad034fa35255e78"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "stage_id": "stage23",
+      "stage": "Stage23",
+      "artifact_type": "freeze",
+      "artifacts": [
+        {
+          "path": "reports/stage23/learned_prior_candidates.json",
+          "exists": true,
+          "hash": "857cf8d0a7bfb4b1f2eda55d03ac5e7b978298ac9cb2ae83637a6065971eeebd"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "stage_id": "stage24",
+      "stage": "Stage24",
+      "artifact_type": "freeze",
+      "artifacts": [
+        {
+          "path": "reports/stage24/cycle_01/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "7e5e49e968db5633dbc9c7d9fed837d3508d01a6e02668694ccea243516ae49f"
+        },
+        {
+          "path": "reports/stage24/cycle_02/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "21b188c2af3503b0a1a3301d7f5f5d43ae3ac99b821288fd86e5805102934dd6"
+        },
+        {
+          "path": "reports/stage24/cycle_03/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "621699effb63ae929992ed068cdcb3f11ba0ae98e5ff61bf48c151925c677696"
+        },
+        {
+          "path": "reports/stage24/cycle_04/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "d98ea17bf3f8f8de2c433823bb72987516fa04f64eff7a599129543b2cc55979"
+        },
+        {
+          "path": "reports/stage24/cycle_05/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "e6093c0fc107ee89af14da29273844f7d687ca8adf77b900844dd7147a3f9a93"
+        },
+        {
+          "path": "reports/stage24/cycle_06/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "bdb7379d7f34ef048713558b9d6bd07b6031fafa7d02f589d05e1479ba4030c5"
+        },
+        {
+          "path": "reports/stage24/cycle_07/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "fba5259fcaaef0369d8bc8221c7a505c5fd0c16b150c03b3cb7de3f53dfddb5d"
+        },
+        {
+          "path": "reports/stage24/cycle_08/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "5ce9948ef924f2c6df3f786148dae4289f06a34700b915ccc8486c7eb165f890"
+        },
+        {
+          "path": "reports/stage24/cycle_09/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "b967ac521e5a81268506c45e50fd7b188778cd94df6960859c9a37d60d7be20f"
+        },
+        {
+          "path": "reports/stage24/cycle_10/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "47b8bed50dc9f9bbe38b3a1dedf4a212767d3ad2f6905c3fa81de39615ef0848"
+        },
+        {
+          "path": "reports/stage24/cycle_11/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "d5f36b5d146ff9e53147df44b08cb78c4402c4d05747c78cdcf1a1b8b74441e0"
+        },
+        {
+          "path": "reports/stage24/cycle_12/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "d4ddc98f520e3c73215bbab954048c67efcd43645c56f458796225ec53429a0c"
+        },
+        {
+          "path": "reports/stage24/cycle_13/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "98f0d398c0503a3f04bdab4ea484f37313d8afd1051a4d0d48e7951348ef315c"
+        },
+        {
+          "path": "reports/stage24/cycle_14/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "3d3ea6717fb89215a3e8d04c9732deed91823a4202f8333d6445256d7a626ee2"
+        },
+        {
+          "path": "reports/stage24/cycle_15/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "871be8277cc8680d787da6e284f221131a01ecaf6ddddc479559b1cbceae56d2"
+        },
+        {
+          "path": "reports/stage24/cycle_16/stage20_freeze_manifest.json",
+          "exists": true,
+          "hash": "7cab2d412bd66c97998037e37beb3322f1f8d5a9ca179877c2dc94ba10975693"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "stage_id": "stage25",
+      "stage": "Stage25",
+      "artifact_type": "freeze",
+      "artifacts": [
+        {
+          "path": "reports/stage25/stage25_candidate_fix_packages.json",
+          "exists": true,
+          "hash": "0d32e92ac12e9514cc93471ce4249bd1a2681c8fdb1937fafe4ec0b18580ce7a"
+        }
+      ],
+      "covered": true
+    }
+  ],
+  "covered_count": 7,
+  "total_count": 7,
+  "coverage": 1.0
+}

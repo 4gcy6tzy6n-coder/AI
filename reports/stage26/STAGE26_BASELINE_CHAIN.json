@@ -1,0 +1,76 @@
+{
+  "observed_stage_count": 7,
+  "entries": [
+    {
+      "stage_id": "stage20_r",
+      "stage": "Stage20-R",
+      "result_path": "reports/stage20_r/stage20_pipeline_revalidation.json",
+      "result_hash": "e7a3c4529a7ee2d4cf41b4cc41a6ed912443863f7283b0402916e029ca421ffd",
+      "overall_pass": true,
+      "freeze_ready_field": "overall_pass",
+      "freeze_ready": true,
+      "final_report_exists": true
+    },
+    {
+      "stage_id": "stage21_a",
+      "stage": "Stage21-A",
+      "result_path": "reports/stage21_a/stage21_a_results.json",
+      "result_hash": "e7b28afcf77e2b1d5da62f06a11151b0b14ebf5a49ec9c71a515eb435bf2fb70",
+      "overall_pass": true,
+      "freeze_ready_field": "stage21_a_freeze_ready",
+      "freeze_ready": true,
+      "final_report_exists": true
+    },
+    {
+      "stage_id": "stage21_b",
+      "stage": "Stage21-B",
+      "result_path": "reports/stage21_b/stage21_b_results.json",
+      "result_hash": "4671eb8ba687f801643cc408b1e3b3879c4ee3d4b3a645b16e0b006866d4ff15",
+      "overall_pass": true,
+      "freeze_ready_field": "stage21_b_freeze_ready",
+      "freeze_ready": true,
+      "final_report_exists": true
+    },
+    {
+      "stage_id": "stage22",
+      "stage": "Stage22",
+      "result_path": "reports/stage22/stage22_results.json",
+      "result_hash": "3548c5f26fab518cb2eb2904debe6ea1c947e1a0772a6caff357d1e241f4f59f",
+      "overall_pass": true,
+      "freeze_ready_field": "stage22_freeze_ready",
+      "freeze_ready": true,
+      "final_report_exists": true
+    },
+    {
+      "stage_id": "stage23",
+      "stage": "Stage23",
+      "result_path": "reports/stage23/stage23_results.json",
+      "result_hash": "d38a6ee2dfa2e453b726fc669b1eb418b66a004c3b947fd42abdce22d2b9619a",
+      "overall_pass": true,
+      "freeze_ready_field": "stage23_freeze_ready",
+      "freeze_ready": true,
+      "final_report_exists": true
+    },
+    {
+      "stage_id": "stage24",
+      "stage": "Stage24",
+      "result_path": "reports/stage24/stage24_results.json",
+      "result_hash": "0c798daccc6a0c2a5f19955ad8bec7d80bcdc9a241e82392db5f2ec01fb1ec0f",
+      "overall_pass": true,
+      "freeze_ready_field": "stage24_freeze_ready",
+      "freeze_ready": true,
+      "final_report_exists": true
+    },
+    {
+      "stage_id": "stage25",
+      "stage": "Stage25",
+      "result_path": "reports/stage25/stage25_results.json",
+      "result_hash": "7276d2514057a47165c29695cf75293290ed3447849e99ee6c77ac10e6a041cd",
+      "overall_pass": true,
+      "freeze_ready_field": "stage25_freeze_ready",
+      "freeze_ready": true,
+      "final_report_exists": true
+    }
+  ],
+  "baseline_chain_complete": true
+}

@@ -1,0 +1,806 @@
+{
+  "stage": "Stage26",
+  "baseline_chain": {
+    "observed_stage_count": 7,
+    "entries": [
+      {
+        "stage_id": "stage20_r",
+        "stage": "Stage20-R",
+        "result_path": "reports/stage20_r/stage20_pipeline_revalidation.json",
+        "result_hash": "e7a3c4529a7ee2d4cf41b4cc41a6ed912443863f7283b0402916e029ca421ffd",
+        "overall_pass": true,
+        "freeze_ready_field": "overall_pass",
+        "freeze_ready": true,
+        "final_report_exists": true
+      },
+      {
+        "stage_id": "stage21_a",
+        "stage": "Stage21-A",
+        "result_path": "reports/stage21_a/stage21_a_results.json",
+        "result_hash": "e7b28afcf77e2b1d5da62f06a11151b0b14ebf5a49ec9c71a515eb435bf2fb70",
+        "overall_pass": true,
+        "freeze_ready_field": "stage21_a_freeze_ready",
+        "freeze_ready": true,
+        "final_report_exists": true
+      },
+      {
+        "stage_id": "stage21_b",
+        "stage": "Stage21-B",
+        "result_path": "reports/stage21_b/stage21_b_results.json",
+        "result_hash": "4671eb8ba687f801643cc408b1e3b3879c4ee3d4b3a645b16e0b006866d4ff15",
+        "overall_pass": true,
+        "freeze_ready_field": "stage21_b_freeze_ready",
+        "freeze_ready": true,
+        "final_report_exists": true
+      },
+      {
+        "stage_id": "stage22",
+        "stage": "Stage22",
+        "result_path": "reports/stage22/stage22_results.json",
+        "result_hash": "3548c5f26fab518cb2eb2904debe6ea1c947e1a0772a6caff357d1e241f4f59f",
+        "overall_pass": true,
+        "freeze_ready_field": "stage22_freeze_ready",
+        "freeze_ready": true,
+        "final_report_exists": true
+      },
+      {
+        "stage_id": "stage23",
+        "stage": "Stage23",
+        "result_path": "reports/stage23/stage23_results.json",
+        "result_hash": "d38a6ee2dfa2e453b726fc669b1eb418b66a004c3b947fd42abdce22d2b9619a",
+        "overall_pass": true,
+        "freeze_ready_field": "stage23_freeze_ready",
+        "freeze_ready": true,
+        "final_report_exists": true
+      },
+      {
+        "stage_id": "stage24",
+        "stage": "Stage24",
+        "result_path": "reports/stage24/stage24_results.json",
+        "result_hash": "0c798daccc6a0c2a5f19955ad8bec7d80bcdc9a241e82392db5f2ec01fb1ec0f",
+        "overall_pass": true,
+        "freeze_ready_field": "stage24_freeze_ready",
+        "freeze_ready": true,
+        "final_report_exists": true
+      },
+      {
+        "stage_id": "stage25",
+        "stage": "Stage25",
+        "result_path": "reports/stage25/stage25_results.json",
+        "result_hash": "7276d2514057a47165c29695cf75293290ed3447849e99ee6c77ac10e6a041cd",
+        "overall_pass": true,
+        "freeze_ready_field": "stage25_freeze_ready",
+        "freeze_ready": true,
+        "final_report_exists": true
+      }
+    ],
+    "baseline_chain_complete": true
+  },
+  "metrics_index": {
+    "index": "metrics",
+    "entries": [
+      {
+        "stage_id": "stage20_r",
+        "stage": "Stage20-R",
+        "metrics": {
+          "overall_pass": true
+        },
+        "covered": true
+      },
+      {
+        "stage_id": "stage21_a",
+        "stage": "Stage21-A",
+        "metrics": {
+          "completed_cycles": 5,
+          "cycle_pass_count": 5,
+          "drift_status": "no critical drift",
+          "rollback_chain_passed": true,
+          "overall_pass": true,
+          "cycle_metric_count": 5,
+          "min_regression_pass_rate": 1.0,
+          "min_tsla_safety_intercept": 1.0,
+          "max_false_kill_rate": 0.0,
+          "max_memory_contamination": 0.0
+        },
+        "covered": true
+      },
+      {
+        "stage_id": "stage21_b",
+        "stage": "Stage21-B",
+        "metrics": {
+          "completed_cycles": 10,
+          "cycle_pass_count": 10,
+          "drift_status": "no critical drift",
+          "rollback_chain_passed": true,
+          "overall_pass": true,
+          "cycle_metric_count": 10,
+          "min_regression_pass_rate": 1.0,
+          "min_tsla_safety_intercept": 1.0,
+          "max_false_kill_rate": 0.0,
+          "max_memory_contamination": 0.0
+        },
+        "covered": true
+      },
+      {
+        "stage_id": "stage22",
+        "stage": "Stage22",
+        "metrics": {
+          "completed_cycles": 12,
+          "cycle_pass_count": 12,
+          "drift_status": "no critical drift",
+          "rollback_chain_passed": true,
+          "overall_pass": true,
+          "cycle_metric_count": 12,
+          "min_regression_pass_rate": 1.0,
+          "min_tsla_safety_intercept": 1.0,
+          "max_false_kill_rate": 0.0,
+          "max_memory_contamination": 0.0
+        },
+        "covered": true
+      },
+      {
+        "stage_id": "stage23",
+        "stage": "Stage23",
+        "metrics": {
+          "drift_status": "no critical drift",
+          "rollback_chain_passed": true,
+          "overall_pass": true
+        },
+        "covered": true
+      },
+      {
+        "stage_id": "stage24",
+        "stage": "Stage24",
+        "metrics": {
+          "completed_cycles": 16,
+          "cycle_pass_count": 16,
+          "false_kill_rate": 0.0,
+          "memory_contamination": 0.0,
+          "drift_status": "no critical drift",
+          "rollback_chain_passed": true,
+          "overall_pass": true,
+          "cycle_metric_count": 16,
+          "min_regression_pass_rate": 1.0,
+          "min_tsla_safety_intercept": 1.0,
+          "max_false_kill_rate": 0.0,
+          "max_memory_contamination": 0.0
+        },
+        "covered": true
+      },
+      {
+        "stage_id": "stage25",
+        "stage": "Stage25",
+        "metrics": {
+          "candidate_fix_package_count": 320,
+          "promotion_gate_pass_rate": 1.0,
+          "unsafe_promotion_block_rate": 1.0,
+          "rollback_gate_pass_rate": 1.0,
+          "audit_event_coverage": 1.0,
+          "regression_pass_rate": 1.0,
+          "tsla_safety_intercept": 1.0,
+          "false_kill_rate": 0.0,
+          "memory_contamination": 0.0,
+          "drift_status": "no critical drift",
+          "rollback_chain_passed": true,
+          "overall_pass": true
+        },
+        "covered": true
+      }
+    ],
+    "covered_count": 7,
+    "total_count": 7,
+    "coverage": 1.0
+  },
+  "lineage_index": {
+    "index": "lineage",
+    "entries": [
+      {
+        "stage_id": "stage20_r",
+        "stage": "Stage20-R",
+        "artifact_type": "lineage",
+        "artifacts": [
+          {
+            "path": "reports/stage20_r/pipeline_artifacts/stage20_failure_pool.jsonl",
+            "exists": true,
+            "hash": "07e37f2669310d9303f96c3fdaa34654857638c77a5078f674cd700c24000bb8"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage21_a",
+        "stage": "Stage21-A",
+        "artifact_type": "lineage",
+        "artifacts": [
+          {
+            "path": "reports/stage21_a/fixed_failure_pool.jsonl",
+            "exists": true,
+            "hash": "8d9826dae4aa984659aeff24cddbaab164875de2882491421e80d4baea45ce32"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage21_b",
+        "stage": "Stage21-B",
+        "artifact_type": "lineage",
+        "artifacts": [
+          {
+            "path": "reports/stage21_b/pool_lineage.json",
+            "exists": true,
+            "hash": "b7761cd65dad0055c593d4e180c1264a22534ba0acb8d544bbb223ddff58e814"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage22",
+        "stage": "Stage22",
+        "artifact_type": "lineage",
+        "artifacts": [
+          {
+            "path": "reports/stage22/holdout_pool_lineage.json",
+            "exists": true,
+            "hash": "32bf9643eb8cdf946e5693dd68d6791c9c3ddb8e0adb55209bcbe774fe657217"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage23",
+        "stage": "Stage23",
+        "artifact_type": "lineage",
+        "artifacts": [
+          {
+            "path": "reports/stage23/prior_comparison.json",
+            "exists": true,
+            "hash": "974110cf21ae2c11a88860f379b5cd3e3729db5f55c72a495062512797cc352d"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage24",
+        "stage": "Stage24",
+        "artifact_type": "lineage",
+        "artifacts": [
+          {
+            "path": "reports/stage24/adversarial_horizon_lineage.json",
+            "exists": true,
+            "hash": "0df928192c59b61ff631c6840da0ccf3cd085fa4b8c696048d731f67a611f186"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage25",
+        "stage": "Stage25",
+        "artifact_type": "lineage",
+        "artifacts": [
+          {
+            "path": "reports/stage25/STAGE25_AUDIT_LOG.json",
+            "exists": true,
+            "hash": "53851bc9347d019c0d456a5e75fe64ff3e7cd33b114cb8afeb74297ee57aec6f"
+          }
+        ],
+        "covered": true
+      }
+    ],
+    "covered_count": 7,
+    "total_count": 7,
+    "coverage": 1.0
+  },
+  "drift_index": {
+    "index": "drift",
+    "entries": [
+      {
+        "stage_id": "stage20_r",
+        "stage": "Stage20-R",
+        "drift_status": "not_applicable_single_revalidation",
+        "critical_drift": false,
+        "covered": true
+      },
+      {
+        "stage_id": "stage21_a",
+        "stage": "Stage21-A",
+        "drift_status": "no critical drift",
+        "critical_drift": false,
+        "covered": true
+      },
+      {
+        "stage_id": "stage21_b",
+        "stage": "Stage21-B",
+        "drift_status": "no critical drift",
+        "critical_drift": false,
+        "covered": true
+      },
+      {
+        "stage_id": "stage22",
+        "stage": "Stage22",
+        "drift_status": "no critical drift",
+        "critical_drift": false,
+        "covered": true
+      },
+      {
+        "stage_id": "stage23",
+        "stage": "Stage23",
+        "drift_status": "no critical drift",
+        "critical_drift": false,
+        "covered": true
+      },
+      {
+        "stage_id": "stage24",
+        "stage": "Stage24",
+        "drift_status": "no critical drift",
+        "critical_drift": false,
+        "covered": true
+      },
+      {
+        "stage_id": "stage25",
+        "stage": "Stage25",
+        "drift_status": "no critical drift",
+        "critical_drift": false,
+        "covered": true
+      }
+    ],
+    "covered_count": 7,
+    "total_count": 7,
+    "coverage": 1.0,
+    "critical_drift_count": 0
+  },
+  "rollback_index": {
+    "index": "rollback",
+    "entries": [
+      {
+        "stage_id": "stage20_r",
+        "stage": "Stage20-R",
+        "artifact_type": "rollback",
+        "artifacts": [
+          {
+            "path": "reports/stage20_r/pipeline_artifacts/stage20_rollback_runbook.md",
+            "exists": true,
+            "hash": "4e1aeda1672748d5df4768eb07aab7350aabf9ef47ecce13804da05c587b113d",
+            "note": "Stage20-R rollback evidence is a runbook, not a chain report."
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage21_a",
+        "stage": "Stage21-A",
+        "artifact_type": "rollback",
+        "artifacts": [
+          {
+            "path": "reports/stage21_a/STAGE21_ROLLBACK_CHAIN_REPORT.json",
+            "exists": true,
+            "hash": "936f39e3c154a8c9712861a8f985a49e60c10829cbbae4f51f08113abf225a8b"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage21_b",
+        "stage": "Stage21-B",
+        "artifact_type": "rollback",
+        "artifacts": [
+          {
+            "path": "reports/stage21_b/STAGE21_ROLLBACK_CHAIN_REPORT.json",
+            "exists": true,
+            "hash": "2a9f9bc44b593d470a58a2220749fc19c9e3b6dc71d314ec3ef490c8d9e1132a"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage22",
+        "stage": "Stage22",
+        "artifact_type": "rollback",
+        "artifacts": [
+          {
+            "path": "reports/stage22/STAGE22_ROLLBACK_CHAIN_REPORT.json",
+            "exists": true,
+            "hash": "c9c40c006c688d54a2dd45637dba0b7ca9e0d773de3f25dbfbac521c13eaa5a3"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage23",
+        "stage": "Stage23",
+        "artifact_type": "rollback",
+        "artifacts": [
+          {
+            "path": "reports/stage23/STAGE23_ROLLBACK_CHAIN_REPORT.json",
+            "exists": true,
+            "hash": "7de64167b002499fe8b94a8f4886c90049e86a21a2a9535e8d5c34727f518f66"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage24",
+        "stage": "Stage24",
+        "artifact_type": "rollback",
+        "artifacts": [
+          {
+            "path": "reports/stage24/STAGE24_ROLLBACK_CHAIN_REPORT.json",
+            "exists": true,
+            "hash": "80e7b0764343dc0d923528e583126a09877384f5d5eb04efc3dcb312cf934143"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage25",
+        "stage": "Stage25",
+        "artifact_type": "rollback",
+        "artifacts": [
+          {
+            "path": "reports/stage25/stage25_rollback_decisions.json",
+            "exists": true,
+            "hash": "b82e1c2feb25a3159317a3555013041ca03018f95e7d2790ae7f3badf1b77716"
+          }
+        ],
+        "covered": true
+      }
+    ],
+    "covered_count": 7,
+    "total_count": 7,
+    "coverage": 1.0
+  },
+  "freeze_index": {
+    "index": "freeze",
+    "entries": [
+      {
+        "stage_id": "stage20_r",
+        "stage": "Stage20-R",
+        "artifact_type": "freeze",
+        "artifacts": [
+          {
+            "path": "reports/stage20_r/pipeline_artifacts/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "25996a2a958b66a82352bb03caeaabc783d2a24fd7907039cca77e5d0b83ffe2"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage21_a",
+        "stage": "Stage21-A",
+        "artifact_type": "freeze",
+        "artifacts": [
+          {
+            "path": "reports/stage21_a/cycle_01/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "96e53bf871b294bcc648cc789088d707fc019315434a4a8192f47235366b33f9"
+          },
+          {
+            "path": "reports/stage21_a/cycle_02/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "b9a425e18fa6e1fcc4c2e903f7b5e148d3090bb406b54030f89145bf4f47aeec"
+          },
+          {
+            "path": "reports/stage21_a/cycle_03/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "01af415de2ef380939dd052bd12061f1052ad1791dbf027aa63fdae28e4dec07"
+          },
+          {
+            "path": "reports/stage21_a/cycle_04/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "495bcde37c80c020e141007e89d45822587ddd346b747bdc4f57b919e7721ac0"
+          },
+          {
+            "path": "reports/stage21_a/cycle_05/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "b48a868f7779582964fcd9bf320dc9a9fe933b4644db027d98abc354f1001721"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage21_b",
+        "stage": "Stage21-B",
+        "artifact_type": "freeze",
+        "artifacts": [
+          {
+            "path": "reports/stage21_b/cycle_01/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "bd8017ea4e6aebb4b08cff52aaff29396dc97c461c19ce649ed940fe1b16eb13"
+          },
+          {
+            "path": "reports/stage21_b/cycle_02/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "f2c93fedf9ad62e3274363279094318f3d9e87a1957b1bf8d8fb9dbed8c179b3"
+          },
+          {
+            "path": "reports/stage21_b/cycle_03/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "2aeaa12facce84baec58722b02249ffdda92dabfc61464566054eb8277b60430"
+          },
+          {
+            "path": "reports/stage21_b/cycle_04/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "75aad79fa9b045aaf036887492d04c810469aff1f6a8f3792b85cc184cd291ad"
+          },
+          {
+            "path": "reports/stage21_b/cycle_05/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "726729b6cf0abb524b40ff24a3d2bfbf268e207f3cae793acce47fd6e9027467"
+          },
+          {
+            "path": "reports/stage21_b/cycle_06/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "4a18a15e306ea1ef81efdba93ce2a9601b78563f2d08ab4e0fd0aab17be25771"
+          },
+          {
+            "path": "reports/stage21_b/cycle_07/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "52a80f53facab4b8c4aca9e221436bcdc812a6757c670fa275747d40da5af3c3"
+          },
+          {
+            "path": "reports/stage21_b/cycle_08/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "063ea46b3c9593dc12e44195804414b04380b9bf711f384a96fd9d920138f30f"
+          },
+          {
+            "path": "reports/stage21_b/cycle_09/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "dccbc4334471ae7ff6d52090b33a74e037047fac16bda9975efe484bf571c5be"
+          },
+          {
+            "path": "reports/stage21_b/cycle_10/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "eaeddff3c2bfe0a586cd72c5ade544ee47ed24b2872cb6e9d8760dae21a17b16"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage22",
+        "stage": "Stage22",
+        "artifact_type": "freeze",
+        "artifacts": [
+          {
+            "path": "reports/stage22/cycle_01/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "a54b05ea76f4c478388b12ab7e9fc36102c7a4c8f1afb470085308b295c6ffbc"
+          },
+          {
+            "path": "reports/stage22/cycle_02/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "7917372dd30519535d69225640f89e6e9d5619ceaf96316ae793cbbe1e358d87"
+          },
+          {
+            "path": "reports/stage22/cycle_03/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "867a63712da3f4ae56833d922bb6f518263e883249b402f883f6822d5b26a818"
+          },
+          {
+            "path": "reports/stage22/cycle_04/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "4ae0dbfa1c88dd8d27dd652fa16c9b7752c52b8979b282b8c889ec8cc206880e"
+          },
+          {
+            "path": "reports/stage22/cycle_05/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "cf78991b2a8ca314bff3074ef42d86bfba8950caa47e329c75bca6c75fb56c73"
+          },
+          {
+            "path": "reports/stage22/cycle_06/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "ed04b273f5db082ff2028fdf3e614d995b20acb92d1f09f380e181004e0deb11"
+          },
+          {
+            "path": "reports/stage22/cycle_07/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "ee5020688973e7f4934e901882029e91418289c22639bd1ffaa5079711f6dc53"
+          },
+          {
+            "path": "reports/stage22/cycle_08/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "ed1ebbd20d8924838ff8093f0e0f79a1625717cd158faadbcdec62bde4a41bf3"
+          },
+          {
+            "path": "reports/stage22/cycle_09/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "148f90c9a21de9b101eb5570e12977bfd3150f5ef0d3c14184d662eb542bfbe0"
+          },
+          {
+            "path": "reports/stage22/cycle_10/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "e90e970ef6a99329464108167ab3e4276337f26499fabc811d9be9023c9960f7"
+          },
+          {
+            "path": "reports/stage22/cycle_11/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "364afa819857a80a6d8819f59b85d1cdcbd57b01f251585ae632565ab3a6e850"
+          },
+          {
+            "path": "reports/stage22/cycle_12/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "6df11a2367809b87235d5e8ab659ff78dc3b700948ec57af5ad034fa35255e78"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage23",
+        "stage": "Stage23",
+        "artifact_type": "freeze",
+        "artifacts": [
+          {
+            "path": "reports/stage23/learned_prior_candidates.json",
+            "exists": true,
+            "hash": "857cf8d0a7bfb4b1f2eda55d03ac5e7b978298ac9cb2ae83637a6065971eeebd"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage24",
+        "stage": "Stage24",
+        "artifact_type": "freeze",
+        "artifacts": [
+          {
+            "path": "reports/stage24/cycle_01/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "7e5e49e968db5633dbc9c7d9fed837d3508d01a6e02668694ccea243516ae49f"
+          },
+          {
+            "path": "reports/stage24/cycle_02/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "21b188c2af3503b0a1a3301d7f5f5d43ae3ac99b821288fd86e5805102934dd6"
+          },
+          {
+            "path": "reports/stage24/cycle_03/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "621699effb63ae929992ed068cdcb3f11ba0ae98e5ff61bf48c151925c677696"
+          },
+          {
+            "path": "reports/stage24/cycle_04/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "d98ea17bf3f8f8de2c433823bb72987516fa04f64eff7a599129543b2cc55979"
+          },
+          {
+            "path": "reports/stage24/cycle_05/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "e6093c0fc107ee89af14da29273844f7d687ca8adf77b900844dd7147a3f9a93"
+          },
+          {
+            "path": "reports/stage24/cycle_06/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "bdb7379d7f34ef048713558b9d6bd07b6031fafa7d02f589d05e1479ba4030c5"
+          },
+          {
+            "path": "reports/stage24/cycle_07/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "fba5259fcaaef0369d8bc8221c7a505c5fd0c16b150c03b3cb7de3f53dfddb5d"
+          },
+          {
+            "path": "reports/stage24/cycle_08/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "5ce9948ef924f2c6df3f786148dae4289f06a34700b915ccc8486c7eb165f890"
+          },
+          {
+            "path": "reports/stage24/cycle_09/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "b967ac521e5a81268506c45e50fd7b188778cd94df6960859c9a37d60d7be20f"
+          },
+          {
+            "path": "reports/stage24/cycle_10/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "47b8bed50dc9f9bbe38b3a1dedf4a212767d3ad2f6905c3fa81de39615ef0848"
+          },
+          {
+            "path": "reports/stage24/cycle_11/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "d5f36b5d146ff9e53147df44b08cb78c4402c4d05747c78cdcf1a1b8b74441e0"
+          },
+          {
+            "path": "reports/stage24/cycle_12/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "d4ddc98f520e3c73215bbab954048c67efcd43645c56f458796225ec53429a0c"
+          },
+          {
+            "path": "reports/stage24/cycle_13/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "98f0d398c0503a3f04bdab4ea484f37313d8afd1051a4d0d48e7951348ef315c"
+          },
+          {
+            "path": "reports/stage24/cycle_14/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "3d3ea6717fb89215a3e8d04c9732deed91823a4202f8333d6445256d7a626ee2"
+          },
+          {
+            "path": "reports/stage24/cycle_15/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "871be8277cc8680d787da6e284f221131a01ecaf6ddddc479559b1cbceae56d2"
+          },
+          {
+            "path": "reports/stage24/cycle_16/stage20_freeze_manifest.json",
+            "exists": true,
+            "hash": "7cab2d412bd66c97998037e37beb3322f1f8d5a9ca179877c2dc94ba10975693"
+          }
+        ],
+        "covered": true
+      },
+      {
+        "stage_id": "stage25",
+        "stage": "Stage25",
+        "artifact_type": "freeze",
+        "artifacts": [
+          {
+            "path": "reports/stage25/stage25_candidate_fix_packages.json",
+            "exists": true,
+            "hash": "0d32e92ac12e9514cc93471ce4249bd1a2681c8fdb1937fafe4ec0b18580ce7a"
+          }
+        ],
+        "covered": true
+      }
+    ],
+    "covered_count": 7,
+    "total_count": 7,
+    "coverage": 1.0
+  },
+  "promotion_audit": {
+    "index": "promotion_audit",
+    "entries": [
+      {
+        "stage_id": "stage20_r",
+        "stage": "Stage20-R",
+        "covered": true,
+        "not_applicable": true,
+        "reason": "Promotion audit is introduced in Stage25."
+      },
+      {
+        "stage_id": "stage21_a",
+        "stage": "Stage21-A",
+        "covered": true,
+        "not_applicable": true,
+        "reason": "Promotion audit is introduced in Stage25."
+      },
+      {
+        "stage_id": "stage21_b",
+        "stage": "Stage21-B",
+        "covered": true,
+        "not_applicable": true,
+        "reason": "Promotion audit is introduced in Stage25."
+      },
+      {
+        "stage_id": "stage22",
+        "stage": "Stage22",
+        "covered": true,
+        "not_applicable": true,
+        "reason": "Promotion audit is introduced in Stage25."
+      },
+      {
+        "stage_id": "stage23",
+        "stage": "Stage23",
+        "covered": true,
+        "not_applicable": true,
+        "reason": "Promotion audit is introduced in Stage25."
+      },
+      {
+        "stage_id": "stage24",
+        "stage": "Stage24",
+        "covered": true,
+        "not_applicable": true,
+        "reason": "Promotion audit is introduced in Stage25."
+      },
+      {
+        "stage_id": "stage25",
+        "stage": "Stage25",
+        "audit_path": "reports/stage25/STAGE25_AUDIT_LOG.json",
+        "audit_path_exists": true,
+        "audit_event_coverage": 1.0,
+        "promotion_gate_pass_rate": 1.0,
+        "unsafe_promotion_block_rate": 1.0,
+        "rollback_gate_pass_rate": 1.0,
+        "covered": true
+      }
+    ],
+    "covered_count": 7,
+    "total_count": 7,
+    "coverage": 1.0
+  }
+}

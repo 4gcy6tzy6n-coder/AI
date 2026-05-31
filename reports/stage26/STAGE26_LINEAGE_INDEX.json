@@ -1,0 +1,99 @@
+{
+  "index": "lineage",
+  "entries": [
+    {
+      "stage_id": "stage20_r",
+      "stage": "Stage20-R",
+      "artifact_type": "lineage",
+      "artifacts": [
+        {
+          "path": "reports/stage20_r/pipeline_artifacts/stage20_failure_pool.jsonl",
+          "exists": true,
+          "hash": "07e37f2669310d9303f96c3fdaa34654857638c77a5078f674cd700c24000bb8"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "stage_id": "stage21_a",
+      "stage": "Stage21-A",
+      "artifact_type": "lineage",
+      "artifacts": [
+        {
+          "path": "reports/stage21_a/fixed_failure_pool.jsonl",
+          "exists": true,
+          "hash": "8d9826dae4aa984659aeff24cddbaab164875de2882491421e80d4baea45ce32"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "stage_id": "stage21_b",
+      "stage": "Stage21-B",
+      "artifact_type": "lineage",
+      "artifacts": [
+        {
+          "path": "reports/stage21_b/pool_lineage.json",
+          "exists": true,
+          "hash": "b7761cd65dad0055c593d4e180c1264a22534ba0acb8d544bbb223ddff58e814"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "stage_id": "stage22",
+      "stage": "Stage22",
+      "artifact_type": "lineage",
+      "artifacts": [
+        {
+          "path": "reports/stage22/holdout_pool_lineage.json",
+          "exists": true,
+          "hash": "32bf9643eb8cdf946e5693dd68d6791c9c3ddb8e0adb55209bcbe774fe657217"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "stage_id": "stage23",
+      "stage": "Stage23",
+      "artifact_type": "lineage",
+      "artifacts": [
+        {
+          "path": "reports/stage23/prior_comparison.json",
+          "exists": true,
+          "hash": "974110cf21ae2c11a88860f379b5cd3e3729db5f55c72a495062512797cc352d"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "stage_id": "stage24",
+      "stage": "Stage24",
+      "artifact_type": "lineage",
+      "artifacts": [
+        {
+          "path": "reports/stage24/adversarial_horizon_lineage.json",
+          "exists": true,
+          "hash": "0df928192c59b61ff631c6840da0ccf3cd085fa4b8c696048d731f67a611f186"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "stage_id": "stage25",
+      "stage": "Stage25",
+      "artifact_type": "lineage",
+      "artifacts": [
+        {
+          "path": "reports/stage25/STAGE25_AUDIT_LOG.json",
+          "exists": true,
+          "hash": "53851bc9347d019c0d456a5e75fe64ff3e7cd33b114cb8afeb74297ee57aec6f"
+        }
+      ],
+      "covered": true
+    }
+  ],
+  "covered_count": 7,
+  "total_count": 7,
+  "coverage": 1.0
+}

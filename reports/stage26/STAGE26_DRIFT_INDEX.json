@@ -1,0 +1,58 @@
+{
+  "index": "drift",
+  "entries": [
+    {
+      "stage_id": "stage20_r",
+      "stage": "Stage20-R",
+      "drift_status": "not_applicable_single_revalidation",
+      "critical_drift": false,
+      "covered": true
+    },
+    {
+      "stage_id": "stage21_a",
+      "stage": "Stage21-A",
+      "drift_status": "no critical drift",
+      "critical_drift": false,
+      "covered": true
+    },
+    {
+      "stage_id": "stage21_b",
+      "stage": "Stage21-B",
+      "drift_status": "no critical drift",
+      "critical_drift": false,
+      "covered": true
+    },
+    {
+      "stage_id": "stage22",
+      "stage": "Stage22",
+      "drift_status": "no critical drift",
+      "critical_drift": false,
+      "covered": true
+    },
+    {
+      "stage_id": "stage23",
+      "stage": "Stage23",
+      "drift_status": "no critical drift",
+      "critical_drift": false,
+      "covered": true
+    },
+    {
+      "stage_id": "stage24",
+      "stage": "Stage24",
+      "drift_status": "no critical drift",
+      "critical_drift": false,
+      "covered": true
+    },
+    {
+      "stage_id": "stage25",
+      "stage": "Stage25",
+      "drift_status": "no critical drift",
+      "critical_drift": false,
+      "covered": true
+    }
+  ],
+  "covered_count": 7,
+  "total_count": 7,
+  "coverage": 1.0,
+  "critical_drift_count": 0
+}
