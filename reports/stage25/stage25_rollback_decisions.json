@@ -1,0 +1,74 @@
+[
+  {
+    "candidate_id": "unsafe_01_threshold_failure",
+    "unsafe_mode": "threshold_failure",
+    "rollback": true,
+    "scope": "unit",
+    "audit_level": "high",
+    "reason": "Error detected in memory content",
+    "passed": true
+  },
+  {
+    "candidate_id": "unsafe_02_stability_failure",
+    "unsafe_mode": "stability_failure",
+    "rollback": true,
+    "scope": "unit",
+    "audit_level": "high",
+    "reason": "Error detected in memory content",
+    "passed": true
+  },
+  {
+    "candidate_id": "unsafe_03_hard_veto",
+    "unsafe_mode": "hard_veto",
+    "rollback": true,
+    "scope": "cascade",
+    "audit_level": "high",
+    "reason": "Harmful content detected",
+    "passed": true
+  },
+  {
+    "candidate_id": "unsafe_04_conflict",
+    "unsafe_mode": "conflict",
+    "rollback": true,
+    "scope": "cascade",
+    "audit_level": "high",
+    "reason": "Harmful content detected",
+    "passed": true
+  },
+  {
+    "candidate_id": "unsafe_05_review_backflow",
+    "unsafe_mode": "review_backflow",
+    "rollback": true,
+    "scope": "unit",
+    "audit_level": "high",
+    "reason": "Error detected in memory content",
+    "passed": true
+  },
+  {
+    "candidate_id": "unsafe_06_insufficient_review",
+    "unsafe_mode": "insufficient_review",
+    "rollback": true,
+    "scope": "unit",
+    "audit_level": "high",
+    "reason": "Error detected in memory content",
+    "passed": true
+  },
+  {
+    "candidate_id": "unsafe_07_low_user_feedback",
+    "unsafe_mode": "low_user_feedback",
+    "rollback": true,
+    "scope": "unit",
+    "audit_level": "normal",
+    "reason": "User feedback below threshold: 0.1",
+    "passed": true
+  },
+  {
+    "candidate_id": "unsafe_08_harmful_detected",
+    "unsafe_mode": "harmful_detected",
+    "rollback": true,
+    "scope": "cascade",
+    "audit_level": "high",
+    "reason": "Harmful content detected",
+    "passed": true
+  }
+]

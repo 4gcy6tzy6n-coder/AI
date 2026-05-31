@@ -1,6 +1,6 @@
 # Stage25 Preparation: Promotion and Rollback Governance Validation
 
-**Status**: Prepared after Stage24 freeze-ready validation
+**Status**: Completed and freeze-ready
 **Prepared on**: 2026-05-31
 **Starting baseline**: `stage24-adversarial-stress-horizon-v1.0`
 
@@ -36,6 +36,30 @@ through Stage24 artifacts.
 
 Validate deterministic promotion and rollback governance for candidate fix
 packages under the frozen Stage24 baseline chain.
+
+## Completion Evidence
+
+Stage25 completed on 2026-05-31 with:
+
+| Requirement | Evidence | Status |
+|---|---|---|
+| candidate_fix_package_count | `320` in `reports/stage25/stage25_results.json` | PASS |
+| safe_candidate_count | `16` | PASS |
+| unsafe_candidate_count | `8` | PASS |
+| promotion_gate_pass_rate | `1.0` | PASS |
+| unsafe_promotion_block_rate | `1.0` | PASS |
+| rollback_gate_pass_rate | `1.0` | PASS |
+| audit_event_coverage | `1.0` | PASS |
+| regression_pass_rate | `1.0` | PASS |
+| tsla_safety_intercept | `1.0` | PASS |
+| false_kill_rate | `0.0` | PASS |
+| memory_contamination | `0` | PASS |
+| drift_status | `no critical drift` | PASS |
+| rollback_chain_passed | `true` | PASS |
+| overall_pass | `true` | PASS |
+| stage25_freeze_ready | `true` | PASS |
+| Stage20-25 tests | 50 passed | PASS |
+| full tests | 119 passed | PASS |
 
 ## Scope
 
@@ -79,7 +103,7 @@ Stage25 passes only if all are true:
 | rollback_chain_passed | true |
 | stage25_freeze_ready | true |
 
-## Do Not Start Stage26 Yet
+## Stage26 Entry
 
-Stage26 observability and audit cockpit work remains blocked until Stage25
-proves promotion and rollback governance stability.
+Stage26 observability and audit cockpit validation is now open after the
+Stage25 freeze commit and tag are pushed.

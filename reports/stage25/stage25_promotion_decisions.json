@@ -1,0 +1,1301 @@
+{
+  "safe_promotions": [
+    {
+      "unit_id": "876d4fb9-48b7-4eef-a143-460a3bd32de5",
+      "current_zone": "review",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 83,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 82,
+          "passed": true,
+          "gap": -12
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 79,
+          "passed": true,
+          "gap": -14
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 84,
+          "passed": true,
+          "gap": -9
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 86,
+          "passed": true,
+          "gap": -11
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "876d4fb9-48b7-4eef-a143-460a3bd32de5",
+      "package_type": "generation",
+      "source_path": "reports/stage24/cycle_01/stage20_patches/generation_876d4fb9.json",
+      "promotion_passed": true
+    },
+    {
+      "unit_id": "9715974d-86cd-4f9c-a8a5-86a1d2f0b0e9",
+      "current_zone": "isolation",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 84,
+          "passed": true,
+          "gap": -12
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 86,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 83,
+          "passed": true,
+          "gap": -13
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 80,
+          "passed": true,
+          "gap": -15
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 87,
+          "passed": true,
+          "gap": -12
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "9715974d-86cd-4f9c-a8a5-86a1d2f0b0e9",
+      "package_type": "generation",
+      "source_path": "reports/stage24/cycle_01/stage20_patches/generation_9715974d.json",
+      "promotion_passed": true
+    },
+    {
+      "unit_id": "0c75e035-7ab6-4ae6-98a4-7159a02fb189",
+      "current_zone": "review",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 82,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 84,
+          "passed": true,
+          "gap": -9
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 81,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 78,
+          "passed": true,
+          "gap": -13
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 83,
+          "passed": true,
+          "gap": -8
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "0c75e035-7ab6-4ae6-98a4-7159a02fb189",
+      "package_type": "human_review",
+      "source_path": "reports/stage24/cycle_01/stage20_patches/human_review_0c75e035.json",
+      "promotion_passed": true
+    },
+    {
+      "unit_id": "4e883229-3693-4702-9dad-252e5f7a2667",
+      "current_zone": "isolation",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 83,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 82,
+          "passed": true,
+          "gap": -12
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 79,
+          "passed": true,
+          "gap": -14
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 84,
+          "passed": true,
+          "gap": -9
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 86,
+          "passed": true,
+          "gap": -11
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "4e883229-3693-4702-9dad-252e5f7a2667",
+      "package_type": "human_review",
+      "source_path": "reports/stage24/cycle_01/stage20_patches/human_review_4e883229.json",
+      "promotion_passed": true
+    },
+    {
+      "unit_id": "c5bec7d0-8e9d-4f1c-a870-df070ca0d226",
+      "current_zone": "review",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 84,
+          "passed": true,
+          "gap": -12
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 86,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 83,
+          "passed": true,
+          "gap": -13
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 80,
+          "passed": true,
+          "gap": -15
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 87,
+          "passed": true,
+          "gap": -12
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "c5bec7d0-8e9d-4f1c-a870-df070ca0d226",
+      "package_type": "human_review",
+      "source_path": "reports/stage24/cycle_01/stage20_patches/human_review_c5bec7d0.json",
+      "promotion_passed": true
+    },
+    {
+      "unit_id": "4930e856-5d01-44da-8f69-49061d2ee1b8",
+      "current_zone": "isolation",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 82,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 84,
+          "passed": true,
+          "gap": -9
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 81,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 78,
+          "passed": true,
+          "gap": -13
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 83,
+          "passed": true,
+          "gap": -8
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "4930e856-5d01-44da-8f69-49061d2ee1b8",
+      "package_type": "generation",
+      "source_path": "reports/stage24/cycle_02/stage20_patches/generation_4930e856.json",
+      "promotion_passed": true
+    },
+    {
+      "unit_id": "56febf0b-dca1-42eb-99b4-e6cd9421f409",
+      "current_zone": "review",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 83,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 82,
+          "passed": true,
+          "gap": -12
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 79,
+          "passed": true,
+          "gap": -14
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 84,
+          "passed": true,
+          "gap": -9
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 86,
+          "passed": true,
+          "gap": -11
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "56febf0b-dca1-42eb-99b4-e6cd9421f409",
+      "package_type": "generation",
+      "source_path": "reports/stage24/cycle_02/stage20_patches/generation_56febf0b.json",
+      "promotion_passed": true
+    },
+    {
+      "unit_id": "2afac4a2-349d-48d1-8db9-2b839e00ef34",
+      "current_zone": "isolation",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 84,
+          "passed": true,
+          "gap": -12
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 86,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 83,
+          "passed": true,
+          "gap": -13
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 80,
+          "passed": true,
+          "gap": -15
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 87,
+          "passed": true,
+          "gap": -12
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "2afac4a2-349d-48d1-8db9-2b839e00ef34",
+      "package_type": "human_review",
+      "source_path": "reports/stage24/cycle_02/stage20_patches/human_review_2afac4a2.json",
+      "promotion_passed": true
+    },
+    {
+      "unit_id": "3785dcf1-5f38-4518-aa58-8bde8e70fb86",
+      "current_zone": "review",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 82,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 84,
+          "passed": true,
+          "gap": -9
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 81,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 78,
+          "passed": true,
+          "gap": -13
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 83,
+          "passed": true,
+          "gap": -8
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "3785dcf1-5f38-4518-aa58-8bde8e70fb86",
+      "package_type": "human_review",
+      "source_path": "reports/stage24/cycle_02/stage20_patches/human_review_3785dcf1.json",
+      "promotion_passed": true
+    },
+    {
+      "unit_id": "916bd510-6abd-455d-a487-07fbbb1762ef",
+      "current_zone": "isolation",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 83,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 82,
+          "passed": true,
+          "gap": -12
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 79,
+          "passed": true,
+          "gap": -14
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 84,
+          "passed": true,
+          "gap": -9
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 86,
+          "passed": true,
+          "gap": -11
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "916bd510-6abd-455d-a487-07fbbb1762ef",
+      "package_type": "human_review",
+      "source_path": "reports/stage24/cycle_02/stage20_patches/human_review_916bd510.json",
+      "promotion_passed": true
+    },
+    {
+      "unit_id": "40b564d0-db93-4a23-b44d-70fd2835ebed",
+      "current_zone": "review",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 84,
+          "passed": true,
+          "gap": -12
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 86,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 83,
+          "passed": true,
+          "gap": -13
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 80,
+          "passed": true,
+          "gap": -15
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 87,
+          "passed": true,
+          "gap": -12
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "40b564d0-db93-4a23-b44d-70fd2835ebed",
+      "package_type": "generation",
+      "source_path": "reports/stage24/cycle_03/stage20_patches/generation_40b564d0.json",
+      "promotion_passed": true
+    },
+    {
+      "unit_id": "d7075804-5993-49ed-822f-b1e60e295937",
+      "current_zone": "isolation",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 82,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 84,
+          "passed": true,
+          "gap": -9
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 81,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 78,
+          "passed": true,
+          "gap": -13
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 83,
+          "passed": true,
+          "gap": -8
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "d7075804-5993-49ed-822f-b1e60e295937",
+      "package_type": "generation",
+      "source_path": "reports/stage24/cycle_03/stage20_patches/generation_d7075804.json",
+      "promotion_passed": true
+    },
+    {
+      "unit_id": "211093ff-feec-40d7-9d8f-3fc3a56ee3d4",
+      "current_zone": "review",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 83,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 82,
+          "passed": true,
+          "gap": -12
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 79,
+          "passed": true,
+          "gap": -14
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 84,
+          "passed": true,
+          "gap": -9
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 86,
+          "passed": true,
+          "gap": -11
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "211093ff-feec-40d7-9d8f-3fc3a56ee3d4",
+      "package_type": "human_review",
+      "source_path": "reports/stage24/cycle_03/stage20_patches/human_review_211093ff.json",
+      "promotion_passed": true
+    },
+    {
+      "unit_id": "35a38522-3423-4740-86c5-d43d07063602",
+      "current_zone": "isolation",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 84,
+          "passed": true,
+          "gap": -12
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 86,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 83,
+          "passed": true,
+          "gap": -13
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 80,
+          "passed": true,
+          "gap": -15
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 87,
+          "passed": true,
+          "gap": -12
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "35a38522-3423-4740-86c5-d43d07063602",
+      "package_type": "human_review",
+      "source_path": "reports/stage24/cycle_03/stage20_patches/human_review_35a38522.json",
+      "promotion_passed": true
+    },
+    {
+      "unit_id": "54a003fd-a3e5-4948-91c9-978bff498efa",
+      "current_zone": "review",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 82,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 84,
+          "passed": true,
+          "gap": -9
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 81,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 78,
+          "passed": true,
+          "gap": -13
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 83,
+          "passed": true,
+          "gap": -8
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "54a003fd-a3e5-4948-91c9-978bff498efa",
+      "package_type": "human_review",
+      "source_path": "reports/stage24/cycle_03/stage20_patches/human_review_54a003fd.json",
+      "promotion_passed": true
+    },
+    {
+      "unit_id": "44cec342-2994-4844-9617-f54c70463069",
+      "current_zone": "isolation",
+      "decision": "promote_to_normal",
+      "reason": "通过所有晋升检查，允许进入长期正常区",
+      "confidence": 0.85,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 83,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 82,
+          "passed": true,
+          "gap": -12
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 79,
+          "passed": true,
+          "gap": -14
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 84,
+          "passed": true,
+          "gap": -9
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 86,
+          "passed": true,
+          "gap": -11
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "建议持续监控稳定性",
+        "建议定期复查冲突状态"
+      ],
+      "candidate_id": "44cec342-2994-4844-9617-f54c70463069",
+      "package_type": "generation",
+      "source_path": "reports/stage24/cycle_04/stage20_patches/generation_44cec342.json",
+      "promotion_passed": true
+    }
+  ],
+  "unsafe_blocks": [
+    {
+      "unit_id": "unsafe_01_threshold_failure",
+      "current_zone": "review",
+      "decision": "blocked_by_threshold",
+      "reason": "未达到正常区阈值: Q不足(60.0/72), T不足(60.0/75), S不足(60.0/70), E不足(60.0/65), C不足(60.0/75), L不足(60.0/75)",
+      "confidence": 0.75,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 60,
+          "passed": false,
+          "gap": 12
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 60,
+          "passed": false,
+          "gap": 15
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 60,
+          "passed": false,
+          "gap": 10
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 60,
+          "passed": false,
+          "gap": 5
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 60,
+          "passed": false,
+          "gap": 15
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 60,
+          "passed": false,
+          "gap": 15
+        }
+      ],
+      "blockers": [
+        "Q不足(60.0/72)",
+        "T不足(60.0/75)",
+        "S不足(60.0/70)",
+        "E不足(60.0/65)",
+        "C不足(60.0/75)",
+        "L不足(60.0/75)"
+      ],
+      "recommendations": [
+        "Q分数需提升12.0分",
+        "建议增加稳定性验证",
+        "建议清理冲突"
+      ],
+      "candidate_id": "unsafe_01_threshold_failure",
+      "unsafe_mode": "threshold_failure",
+      "blocked": true
+    },
+    {
+      "unit_id": "unsafe_02_stability_failure",
+      "current_zone": "review",
+      "decision": "blocked_by_stability",
+      "reason": "前提检查失败: 稳定门未通过(stay_review)",
+      "confidence": 0.7,
+      "stability_decision": "stay_review",
+      "threshold_checks": [],
+      "blockers": [
+        "稳定门未通过(stay_review)"
+      ],
+      "recommendations": [
+        "建议观察多轮稳定性表现",
+        "建议检查支撑来源独立性"
+      ],
+      "candidate_id": "unsafe_02_stability_failure",
+      "unsafe_mode": "stability_failure",
+      "blocked": true
+    },
+    {
+      "unit_id": "unsafe_03_hard_veto",
+      "current_zone": "review",
+      "decision": "blocked_by_veto",
+      "reason": "一票否决: 命中硬否决",
+      "confidence": 0.8,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 83,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 82,
+          "passed": true,
+          "gap": -12
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 79,
+          "passed": true,
+          "gap": -14
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 84,
+          "passed": true,
+          "gap": -9
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 86,
+          "passed": true,
+          "gap": -11
+        }
+      ],
+      "blockers": [
+        "命中硬否决"
+      ],
+      "recommendations": [],
+      "candidate_id": "unsafe_03_hard_veto",
+      "unsafe_mode": "hard_veto",
+      "blocked": true
+    },
+    {
+      "unit_id": "unsafe_04_conflict",
+      "current_zone": "review",
+      "decision": "blocked_by_conflict",
+      "reason": "一票否决: 存在未解决冲突",
+      "confidence": 0.8,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 83,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 82,
+          "passed": true,
+          "gap": -12
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 79,
+          "passed": true,
+          "gap": -14
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 84,
+          "passed": true,
+          "gap": -9
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 86,
+          "passed": true,
+          "gap": -11
+        }
+      ],
+      "blockers": [
+        "存在未解决冲突"
+      ],
+      "recommendations": [
+        "建议优先解决未决冲突"
+      ],
+      "candidate_id": "unsafe_04_conflict",
+      "unsafe_mode": "conflict",
+      "blocked": true
+    },
+    {
+      "unit_id": "unsafe_05_review_backflow",
+      "current_zone": "review",
+      "decision": "stay_review",
+      "reason": "前提检查失败: 最近发生过回流",
+      "confidence": 0.7,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [],
+      "blockers": [
+        "最近发生过回流"
+      ],
+      "recommendations": [],
+      "candidate_id": "unsafe_05_review_backflow",
+      "unsafe_mode": "review_backflow",
+      "blocked": true
+    },
+    {
+      "unit_id": "unsafe_06_insufficient_review",
+      "current_zone": "review",
+      "decision": "blocked_by_review",
+      "reason": "前提检查失败: 审查轮数不足(1/3)",
+      "confidence": 0.7,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [],
+      "blockers": [
+        "审查轮数不足(1/3)"
+      ],
+      "recommendations": [
+        "建议继续积累审查轮次"
+      ],
+      "candidate_id": "unsafe_06_insufficient_review",
+      "unsafe_mode": "insufficient_review",
+      "blocked": true
+    },
+    {
+      "unit_id": "unsafe_07_low_user_feedback",
+      "current_zone": "review",
+      "decision": "blocked_by_stability",
+      "reason": "前提检查失败: 稳定门未通过(stay_isolation)",
+      "confidence": 0.7,
+      "stability_decision": "stay_isolation",
+      "threshold_checks": [],
+      "blockers": [
+        "稳定门未通过(stay_isolation)"
+      ],
+      "recommendations": [
+        "建议观察多轮稳定性表现",
+        "建议检查支撑来源独立性"
+      ],
+      "candidate_id": "unsafe_07_low_user_feedback",
+      "unsafe_mode": "low_user_feedback",
+      "blocked": true
+    },
+    {
+      "unit_id": "unsafe_08_harmful_detected",
+      "current_zone": "review",
+      "decision": "blocked_by_veto",
+      "reason": "一票否决: 命中硬否决",
+      "confidence": 0.8,
+      "stability_decision": "move_normal_candidate",
+      "threshold_checks": [
+        {
+          "dimension": "Q",
+          "required": 72,
+          "actual": 83,
+          "passed": true,
+          "gap": -11
+        },
+        {
+          "dimension": "T",
+          "required": 75,
+          "actual": 85,
+          "passed": true,
+          "gap": -10
+        },
+        {
+          "dimension": "S",
+          "required": 70,
+          "actual": 82,
+          "passed": true,
+          "gap": -12
+        },
+        {
+          "dimension": "E",
+          "required": 65,
+          "actual": 79,
+          "passed": true,
+          "gap": -14
+        },
+        {
+          "dimension": "C",
+          "required": 75,
+          "actual": 84,
+          "passed": true,
+          "gap": -9
+        },
+        {
+          "dimension": "L",
+          "required": 75,
+          "actual": 86,
+          "passed": true,
+          "gap": -11
+        }
+      ],
+      "blockers": [
+        "命中硬否决"
+      ],
+      "recommendations": [],
+      "candidate_id": "unsafe_08_harmful_detected",
+      "unsafe_mode": "harmful_detected",
+      "blocked": true
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 **Status**: Planning baseline
 **Prepared on**: 2026-05-31
 **Starting point**: `stage21-a-fixed-failure-pool-v1.0`
-**Current engineering focus**: Stage25 promotion and rollback governance preparation
+**Current engineering focus**: Stage26 observability and audit preparation
 
 ## Purpose
 
@@ -101,7 +101,8 @@ Stage30 must preserve these constraints:
 | Stage22 multi-pool holdout validation | Complete |
 | Stage23 learned-prior validation | Complete |
 | Stage24 adversarial stress validation | Complete |
-| Stage25 preparation | Prepared |
+| Stage25 promotion governance validation | Complete |
+| Stage26 preparation | Prepared |
 | Stage22-30 roadmap | Prepared |
 | Stage30 completion definition | Prepared |
 | Stage30 implementation | Not started |

@@ -12,10 +12,10 @@ Stage30 implementation starts.
 
 ## Immediate Next Actions
 
-1. Commit, tag, and push Stage24 adversarial stress horizon validation.
-2. Implement Stage25 promotion and rollback governance validation.
-3. Keep Stage26 observability work blocked until Stage25 proves promotion
-   governance stability.
+1. Commit, tag, and push Stage25 promotion and rollback governance validation.
+2. Implement Stage26 observability and audit cockpit validation.
+3. Keep Stage27 operator workflow work blocked until Stage26 proves
+   observability and audit readiness.
 4. Keep Stage30 implementation blocked until Stage29 has produced a release
    candidate with complete baseline-chain evidence.
 
@@ -29,6 +29,7 @@ Stage30 implementation starts.
 | Milestone status update | `docs/00_project_overview/milestone_status.md` | Prepared |
 | Roadmap addendum | `docs/00_project_overview/roadmap.md` | Prepared |
 | Stage25 preparation plan | `docs/05_decisions/stage25_preparation.md` | Prepared |
+| Stage26 preparation plan | `docs/05_decisions/stage26_preparation.md` | Prepared |
 
 ## Work Breakdown
 
