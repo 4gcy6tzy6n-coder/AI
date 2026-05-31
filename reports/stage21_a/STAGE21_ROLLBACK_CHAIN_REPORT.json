@@ -1,0 +1,73 @@
+{
+  "chain_length": 5,
+  "snapshots_created": [
+    "snap_cycle_1",
+    "snap_cycle_2",
+    "snap_cycle_3",
+    "snap_cycle_4"
+  ],
+  "rollback_tests": [
+    {
+      "from_cycle": 1,
+      "to_cycle": 2,
+      "forward_diff": {
+        "failure_fix_rate": 0.0,
+        "regression_pass_rate": 0.0,
+        "tsla_safety_intercept": 0.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 0.0
+      },
+      "rollback_restored": true,
+      "passed": true
+    },
+    {
+      "from_cycle": 2,
+      "to_cycle": 3,
+      "forward_diff": {
+        "failure_fix_rate": 0.0,
+        "regression_pass_rate": 0.0,
+        "tsla_safety_intercept": 0.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 0.0
+      },
+      "rollback_restored": true,
+      "passed": true
+    },
+    {
+      "from_cycle": 3,
+      "to_cycle": 4,
+      "forward_diff": {
+        "failure_fix_rate": 0.0,
+        "regression_pass_rate": 0.0,
+        "tsla_safety_intercept": 0.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 0.0
+      },
+      "rollback_restored": true,
+      "passed": true
+    },
+    {
+      "from_cycle": 4,
+      "to_cycle": 5,
+      "forward_diff": {
+        "failure_fix_rate": 0.0,
+        "regression_pass_rate": 0.0,
+        "tsla_safety_intercept": 0.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 0.0
+      },
+      "rollback_restored": true,
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "timestamp": "2026-05-31T07:13:58.127226+00:00"
+}

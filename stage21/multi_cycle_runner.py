@@ -13,6 +13,7 @@ Sub-stages:
 """
 
 import json
+import hashlib
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -30,6 +31,7 @@ from stage20.failure_pool import TriggerCondition
 from stage20.offline_replay import OfflineReplayVerifier
 from stage20.stage20_pipeline import Stage20Pipeline
 from stage20.test_sets import RegressionSetBuilder, StressSetBuilder
+from stage21.rollback_chain import RollbackChainVerifier
 from src.core.bayes.schema import ReplayResult
 
 
@@ -44,6 +46,7 @@ class CycleMetrics:
     fix_package_types: dict[str, int] = field(default_factory=dict)
     all_pass: bool = False
     timestamp: str = ""
+    failure_pool_hash: str = ""
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -53,6 +56,7 @@ class CycleMetrics:
             "fix_package_types": self.fix_package_types,
             "all_pass": self.all_pass,
             "timestamp": self.timestamp,
+            "failure_pool_hash": self.failure_pool_hash,
         }
 
 
@@ -104,6 +108,30 @@ class MultiCycleRunner:
         cfg = config or {}
         self.drift_threshold = cfg.get("drift_threshold", 0.05)  # 5% max drift
         self.min_pass_rate = cfg.get("min_pass_rate", 0.80)
+        self.require_all_cycles_pass = cfg.get("require_all_cycles_pass", False)
+        self.stage_name = cfg.get("stage", "Stage21")
+        self.thresholds = cfg.get("thresholds", self._default_thresholds())
+        self.fixed_failure_pool_hash = ""
+        self.fixed_failure_pool_signature: list[dict[str, str]] = []
+
+    @staticmethod
+    def _default_thresholds() -> dict[str, Any]:
+        return {
+            "completed_cycles": "5/5",
+            "cycle_pass_count": "5/5",
+            "failure_fix_rate": 0.80,
+            "regression_pass_rate": 0.98,
+            "tsla_safety_intercept": 0.99,
+            "false_kill_rate": 0.01,
+            "memory_contamination": 0,
+            "retrieval_context_failure": 0.02,
+            "multiturn_consistency": 0.95,
+            "rollback_success_rate": 1.0,
+            "drift_threshold": 0.05,
+            "drift_status": "no critical drift",
+            "rollback_chain_passed": True,
+            "stage21_a_freeze_ready": True,
+        }
 
     def run(
         self,
@@ -123,17 +151,28 @@ class MultiCycleRunner:
         Returns dict with all cycle results, drift report, and overall pass/fail.
         """
         if failure_samples is None:
-            failure_samples = RealisticFailurePool.build(target_size=20)
+            failure_samples = RealisticFailurePool.build(
+                target_size=20,
+                output_path=str(self.output_dir / "fixed_failure_pool.jsonl"),
+            )
         if regression_samples is None:
-            regression_samples = RegressionSetBuilder.build()
+            regression_samples = RegressionSetBuilder.build(
+                output_path=str(self.output_dir / "fixed_regression_set.jsonl"),
+            )
         if stress_samples is None:
-            stress_samples = StressSetBuilder.build()
+            stress_samples = StressSetBuilder.build(
+                output_path=str(self.output_dir / "fixed_stress_set.jsonl"),
+            )
 
         current_failures = list(failure_samples)
+        self.fixed_failure_pool_signature = self._failure_pool_signature(current_failures)
+        self.fixed_failure_pool_hash = self._failure_pool_hash(current_failures)
         timestamp = datetime.now(timezone.utc).isoformat()
 
         for cycle in range(1, self.num_cycles + 1):
             print("  Cycle {}/{}: ".format(cycle, self.num_cycles), end="")
+            if not evolve_pool:
+                self._assert_fixed_failure_pool(current_failures)
 
             # Run pipeline
             result = self._run_single_cycle(
@@ -165,24 +204,65 @@ class MultiCycleRunner:
 
         # Drift analysis
         drift = self._analyze_drift()
+        drift_status = "no critical drift" if drift.stable else "critical drift"
+
+        # Multi-version rollback chain verification
+        rollback_chain = RollbackChainVerifier(output_dir=str(self.output_dir))
+        rollback_result = rollback_chain.verify_chain(
+            [c.to_dict() for c in self.cycle_results]
+        )
+        rollback_chain_passed = rollback_result.all_passed
 
         # Overall assessment
         cycle_pass_count = sum(1 for c in self.cycle_results if c.all_pass)
+        cycles_requirement_met = (
+            cycle_pass_count == self.num_cycles
+            if self.require_all_cycles_pass
+            else cycle_pass_count >= self.num_cycles * self.min_pass_rate
+        )
+        stage_cycle_count_valid = (
+            self.num_cycles == 5 if self.stage_name == "Stage21-A" else True
+        )
         overall_pass = (
-            cycle_pass_count >= self.num_cycles * self.min_pass_rate
+            cycles_requirement_met
+            and stage_cycle_count_valid
             and drift.stable
+            and rollback_chain_passed
+        )
+        stage21_a_freeze_ready = (
+            self.stage_name == "Stage21-A"
+            and self.num_cycles == 5
+            and overall_pass
+            and self.fixed_failure_pool_hash != ""
+            and cycle_pass_count == 5
+            and rollback_chain_passed
         )
 
         # Generate report
-        report = self._generate_report(timestamp, drift, overall_pass)
+        report = self._generate_report(
+            timestamp,
+            drift,
+            overall_pass,
+            rollback_chain_passed=rollback_chain_passed,
+            stage21_a_freeze_ready=stage21_a_freeze_ready,
+        )
 
         return {
+            "stage": self.stage_name,
             "num_cycles": self.num_cycles,
             "cycles_completed": self.num_cycles,
+            "completed_cycles": self.num_cycles,
             "cycle_pass_count": cycle_pass_count,
+            "stage21_a_freeze_ready": stage21_a_freeze_ready,
             "cycle_results": [c.to_dict() for c in self.cycle_results],
             "drift_report": drift.to_dict(),
+            "drift_status": drift_status,
             "total_fix_packages": len(self.all_fix_packages),
+            "fixed_failure_pool_hash": self.fixed_failure_pool_hash,
+            "fixed_failure_pool_signature": self.fixed_failure_pool_signature,
+            "rollback_chain_passed": rollback_chain_passed,
+            "rollback_chain_report": rollback_result.to_dict(),
+            "thresholds": self.thresholds,
             "overall_pass": overall_pass,
             "report_path": report,
             "timestamp": timestamp,
@@ -196,6 +276,11 @@ class MultiCycleRunner:
         stress_samples: list[FailureSample],
     ) -> dict[str, Any]:
         """Execute one full Stage 20 pipeline cycle."""
+        cycle_dir = self.output_dir / "cycle_{:02d}".format(cycle)
+        cycle_dir.mkdir(parents=True, exist_ok=True)
+        failure_pool_path = cycle_dir / "failure_pool.jsonl"
+        self._write_failure_pool(failure_pool_path, failure_samples)
+
         trigger = TriggerCondition(
             knowledge_miss_count=25,
             unnatural_generation_count=12,
@@ -203,8 +288,9 @@ class MultiCycleRunner:
         )
 
         pipeline = Stage20Pipeline(config={
-            "failure_pool_path": "data/stage21/cycle_{}_pool.jsonl".format(cycle),
-            "output_dir": "data/stage21/",
+            "failure_pool_path": str(failure_pool_path),
+            "output_dir": str(cycle_dir),
+            "patch_output_dir": str(cycle_dir / "stage20_patches"),
         })
         result = pipeline.run(
             trigger_condition=trigger,
@@ -234,7 +320,7 @@ class MultiCycleRunner:
         collector.feed_replay(all_replays)
 
         # Rollback
-        rollback = RollbackVerificationHarness(output_dir="data/stage21/")
+        rollback = RollbackVerificationHarness(output_dir=str(cycle_dir))
         rb_passed, _ = rollback.run_harness()
         collector.feed_rollback_test(rb_passed)
 
@@ -247,7 +333,7 @@ class MultiCycleRunner:
             t = p.get("package_type", "unknown")
             pkg_types[t] = pkg_types.get(t, 0) + 1
 
-        passed, _ = metrics.all_passing()
+        passed, _ = metrics.all_passing(self.thresholds)
         passed = passed and rb_passed
 
         cm = CycleMetrics(
@@ -257,6 +343,7 @@ class MultiCycleRunner:
             fix_package_types=pkg_types,
             all_pass=passed,
             timestamp=metrics.timestamp,
+            failure_pool_hash=self._failure_pool_hash(failure_samples),
         )
 
         # Extract FixPackage objects
@@ -271,6 +358,39 @@ class MultiCycleRunner:
             "fix_packages": actual_packages if actual_packages else [],
             "freeze_snapshot": freeze_data,
         }
+
+    @staticmethod
+    def _failure_pool_signature(samples: list[FailureSample]) -> list[dict[str, str]]:
+        """Stable fixed-pool identity, intentionally excluding timestamps."""
+        return [
+            {
+                "sample_id": sample.sample_id,
+                "failure_type": sample.failure_type.value,
+            }
+            for sample in samples
+        ]
+
+    @classmethod
+    def _failure_pool_hash(cls, samples: list[FailureSample]) -> str:
+        payload = json.dumps(
+            cls._failure_pool_signature(samples),
+            ensure_ascii=True,
+            sort_keys=True,
+            separators=(",", ":"),
+        )
+        return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+    def _assert_fixed_failure_pool(self, samples: list[FailureSample]) -> None:
+        current_signature = self._failure_pool_signature(samples)
+        if current_signature != self.fixed_failure_pool_signature:
+            raise ValueError("Stage21-A fixed failure pool changed between cycles")
+
+    @staticmethod
+    def _write_failure_pool(path: Path, samples: list[FailureSample]) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open("w", encoding="utf-8") as f:
+            for sample in samples:
+                f.write(json.dumps(sample.to_dict(), ensure_ascii=False) + "\n")
 
     def _evolve_failure_pool(
         self,
@@ -339,6 +459,11 @@ class MultiCycleRunner:
                 delta = abs(current - baseline)
                 drifts[name].append(delta)
 
+                if name == "memory_contamination" and current > 0:
+                    max_drifts[name] = max(max_drifts.get(name, 0.0), delta)
+                    degraded_cycles.add(cycle)
+                    continue
+
                 if delta > self.drift_threshold:
                     max_drifts[name] = max(
                         max_drifts.get(name, 0.0), delta)
@@ -352,6 +477,12 @@ class MultiCycleRunner:
                                         "retrieval_context_failure")
                           and current < baseline):
                         degraded_cycles.add(cycle)
+
+        first_cycle_contaminated = (
+            self.cycle_results[0].metrics.memory_contamination > 0
+        )
+        if first_cycle_contaminated:
+            degraded_cycles.add(self.cycle_results[0].cycle_number)
 
         stable = len(degraded_cycles) == 0
 
@@ -367,13 +498,24 @@ class MultiCycleRunner:
         timestamp: str,
         drift: CycleDriftReport,
         overall_pass: bool,
+        rollback_chain_passed: bool = False,
+        stage21_a_freeze_ready: bool = False,
     ) -> str:
         """Generate multi-cycle evolution report."""
         lines: list[str] = []
-        lines.append("# Stage 21 Multi-Cycle Evolution Report")
+        title = (
+            "Stage 21-A Fixed Failure Pool Validation Report"
+            if self.stage_name == "Stage21-A"
+            else "Stage 21 Multi-Cycle Evolution Report"
+        )
+        lines.append("# {}".format(title))
         lines.append("")
         lines.append("**Generated**: {}".format(timestamp))
         lines.append("**Cycles**: {}".format(self.num_cycles))
+        if self.fixed_failure_pool_hash:
+            lines.append("**Fixed failure pool hash**: `{}`".format(
+                self.fixed_failure_pool_hash
+            ))
         lines.append("")
         lines.append("---")
         lines.append("")
@@ -386,6 +528,8 @@ class MultiCycleRunner:
         lines.append("- Cycles passed: {}/{}".format(cycle_pass, self.num_cycles))
         lines.append("- Total fix packages: {}".format(len(self.all_fix_packages)))
         lines.append("- Drift stable: {}".format(drift.stable))
+        lines.append("- Rollback chain passed: {}".format(rollback_chain_passed))
+        lines.append("- Stage21-A freeze ready: {}".format(stage21_a_freeze_ready))
         if drift.degraded_cycles:
             lines.append("- Degraded cycles: {}".format(drift.degraded_cycles))
         lines.append("")

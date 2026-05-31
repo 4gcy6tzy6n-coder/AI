@@ -1,0 +1,443 @@
+{
+  "stage": "Stage21-A",
+  "num_cycles": 5,
+  "cycles_completed": 5,
+  "completed_cycles": 5,
+  "cycle_pass_count": 5,
+  "stage21_a_freeze_ready": true,
+  "cycle_results": [
+    {
+      "cycle": 1,
+      "metrics": {
+        "failure_fix_rate": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 1.0,
+        "rollback_success_rate": 1.0,
+        "by_failure_type": {
+          "knowledge_miss": 0.15,
+          "unnatural_generation": 0.15,
+          "multiturn_anomaly": 0.15,
+          "retrieval_mismatch": 0.15,
+          "tsla_false_pass": 0.1,
+          "tsla_over_block": 0.1,
+          "safety_boundary_error": 0.1,
+          "memory_write_error": 0.1
+        },
+        "by_risk_level": {
+          "low": 0.3,
+          "medium": 0.3,
+          "high": 0.2,
+          "critical": 0.2
+        },
+        "total_samples": 20,
+        "timestamp": "2026-05-31T07:13:58.114100+00:00"
+      },
+      "num_fix_packages": 20,
+      "fix_package_types": {
+        "human_review": 9,
+        "generation": 5,
+        "quarantine": 6
+      },
+      "all_pass": true,
+      "timestamp": "2026-05-31T07:13:58.114100+00:00",
+      "failure_pool_hash": "20932c0a1eaf9a841d82425eb593a5231b127e8df5da995990a703ba13694a7e"
+    },
+    {
+      "cycle": 2,
+      "metrics": {
+        "failure_fix_rate": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 1.0,
+        "rollback_success_rate": 1.0,
+        "by_failure_type": {
+          "knowledge_miss": 0.15,
+          "unnatural_generation": 0.15,
+          "multiturn_anomaly": 0.15,
+          "retrieval_mismatch": 0.15,
+          "tsla_false_pass": 0.1,
+          "tsla_over_block": 0.1,
+          "safety_boundary_error": 0.1,
+          "memory_write_error": 0.1
+        },
+        "by_risk_level": {
+          "low": 0.3,
+          "medium": 0.3,
+          "high": 0.2,
+          "critical": 0.2
+        },
+        "total_samples": 20,
+        "timestamp": "2026-05-31T07:13:58.117533+00:00"
+      },
+      "num_fix_packages": 20,
+      "fix_package_types": {
+        "human_review": 9,
+        "generation": 5,
+        "quarantine": 6
+      },
+      "all_pass": true,
+      "timestamp": "2026-05-31T07:13:58.117533+00:00",
+      "failure_pool_hash": "20932c0a1eaf9a841d82425eb593a5231b127e8df5da995990a703ba13694a7e"
+    },
+    {
+      "cycle": 3,
+      "metrics": {
+        "failure_fix_rate": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 1.0,
+        "rollback_success_rate": 1.0,
+        "by_failure_type": {
+          "knowledge_miss": 0.15,
+          "unnatural_generation": 0.15,
+          "multiturn_anomaly": 0.15,
+          "retrieval_mismatch": 0.15,
+          "tsla_false_pass": 0.1,
+          "tsla_over_block": 0.1,
+          "safety_boundary_error": 0.1,
+          "memory_write_error": 0.1
+        },
+        "by_risk_level": {
+          "low": 0.3,
+          "medium": 0.3,
+          "high": 0.2,
+          "critical": 0.2
+        },
+        "total_samples": 20,
+        "timestamp": "2026-05-31T07:13:58.120627+00:00"
+      },
+      "num_fix_packages": 20,
+      "fix_package_types": {
+        "human_review": 9,
+        "generation": 5,
+        "quarantine": 6
+      },
+      "all_pass": true,
+      "timestamp": "2026-05-31T07:13:58.120627+00:00",
+      "failure_pool_hash": "20932c0a1eaf9a841d82425eb593a5231b127e8df5da995990a703ba13694a7e"
+    },
+    {
+      "cycle": 4,
+      "metrics": {
+        "failure_fix_rate": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 1.0,
+        "rollback_success_rate": 1.0,
+        "by_failure_type": {
+          "knowledge_miss": 0.15,
+          "unnatural_generation": 0.15,
+          "multiturn_anomaly": 0.15,
+          "retrieval_mismatch": 0.15,
+          "tsla_false_pass": 0.1,
+          "tsla_over_block": 0.1,
+          "safety_boundary_error": 0.1,
+          "memory_write_error": 0.1
+        },
+        "by_risk_level": {
+          "low": 0.3,
+          "medium": 0.3,
+          "high": 0.2,
+          "critical": 0.2
+        },
+        "total_samples": 20,
+        "timestamp": "2026-05-31T07:13:58.123876+00:00"
+      },
+      "num_fix_packages": 20,
+      "fix_package_types": {
+        "human_review": 9,
+        "generation": 5,
+        "quarantine": 6
+      },
+      "all_pass": true,
+      "timestamp": "2026-05-31T07:13:58.123876+00:00",
+      "failure_pool_hash": "20932c0a1eaf9a841d82425eb593a5231b127e8df5da995990a703ba13694a7e"
+    },
+    {
+      "cycle": 5,
+      "metrics": {
+        "failure_fix_rate": 1.0,
+        "regression_pass_rate": 1.0,
+        "tsla_safety_intercept": 1.0,
+        "false_kill_rate": 0.0,
+        "memory_contamination": 0.0,
+        "retrieval_context_failure": 0.0,
+        "multiturn_consistency": 1.0,
+        "rollback_success_rate": 1.0,
+        "by_failure_type": {
+          "knowledge_miss": 0.15,
+          "unnatural_generation": 0.15,
+          "multiturn_anomaly": 0.15,
+          "retrieval_mismatch": 0.15,
+          "tsla_false_pass": 0.1,
+          "tsla_over_block": 0.1,
+          "safety_boundary_error": 0.1,
+          "memory_write_error": 0.1
+        },
+        "by_risk_level": {
+          "low": 0.3,
+          "medium": 0.3,
+          "high": 0.2,
+          "critical": 0.2
+        },
+        "total_samples": 20,
+        "timestamp": "2026-05-31T07:13:58.127142+00:00"
+      },
+      "num_fix_packages": 20,
+      "fix_package_types": {
+        "human_review": 9,
+        "generation": 5,
+        "quarantine": 6
+      },
+      "all_pass": true,
+      "timestamp": "2026-05-31T07:13:58.127142+00:00",
+      "failure_pool_hash": "20932c0a1eaf9a841d82425eb593a5231b127e8df5da995990a703ba13694a7e"
+    }
+  ],
+  "drift_report": {
+    "metric_drifts": {
+      "failure_fix_rate": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "regression_pass_rate": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tsla_safety_intercept": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "false_kill_rate": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "memory_contamination": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "retrieval_context_failure": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "multiturn_consistency": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rollback_success_rate": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "max_drifts": {},
+    "degraded_cycles": [],
+    "stable": true
+  },
+  "drift_status": "no critical drift",
+  "total_fix_packages": 100,
+  "fixed_failure_pool_hash": "20932c0a1eaf9a841d82425eb593a5231b127e8df5da995990a703ba13694a7e",
+  "fixed_failure_pool_signature": [
+    {
+      "sample_id": "K1_001",
+      "failure_type": "knowledge_miss"
+    },
+    {
+      "sample_id": "K1_002",
+      "failure_type": "knowledge_miss"
+    },
+    {
+      "sample_id": "K1_003",
+      "failure_type": "knowledge_miss"
+    },
+    {
+      "sample_id": "G1_001",
+      "failure_type": "unnatural_generation"
+    },
+    {
+      "sample_id": "G1_002",
+      "failure_type": "unnatural_generation"
+    },
+    {
+      "sample_id": "G1_003",
+      "failure_type": "unnatural_generation"
+    },
+    {
+      "sample_id": "M1_001",
+      "failure_type": "multiturn_anomaly"
+    },
+    {
+      "sample_id": "M1_002",
+      "failure_type": "multiturn_anomaly"
+    },
+    {
+      "sample_id": "M1_003",
+      "failure_type": "multiturn_anomaly"
+    },
+    {
+      "sample_id": "R1_001",
+      "failure_type": "retrieval_mismatch"
+    },
+    {
+      "sample_id": "R1_002",
+      "failure_type": "retrieval_mismatch"
+    },
+    {
+      "sample_id": "R1_003",
+      "failure_type": "retrieval_mismatch"
+    },
+    {
+      "sample_id": "T1_001",
+      "failure_type": "tsla_false_pass"
+    },
+    {
+      "sample_id": "T1_002",
+      "failure_type": "tsla_false_pass"
+    },
+    {
+      "sample_id": "T2_001",
+      "failure_type": "tsla_over_block"
+    },
+    {
+      "sample_id": "T2_002",
+      "failure_type": "tsla_over_block"
+    },
+    {
+      "sample_id": "S1_001",
+      "failure_type": "safety_boundary_error"
+    },
+    {
+      "sample_id": "S1_002",
+      "failure_type": "safety_boundary_error"
+    },
+    {
+      "sample_id": "W1_001",
+      "failure_type": "memory_write_error"
+    },
+    {
+      "sample_id": "W1_002",
+      "failure_type": "memory_write_error"
+    }
+  ],
+  "rollback_chain_passed": true,
+  "rollback_chain_report": {
+    "chain_length": 5,
+    "snapshots_created": [
+      "snap_cycle_1",
+      "snap_cycle_2",
+      "snap_cycle_3",
+      "snap_cycle_4"
+    ],
+    "rollback_tests": [
+      {
+        "from_cycle": 1,
+        "to_cycle": 2,
+        "forward_diff": {
+          "failure_fix_rate": 0.0,
+          "regression_pass_rate": 0.0,
+          "tsla_safety_intercept": 0.0,
+          "false_kill_rate": 0.0,
+          "memory_contamination": 0.0,
+          "retrieval_context_failure": 0.0,
+          "multiturn_consistency": 0.0
+        },
+        "rollback_restored": true,
+        "passed": true
+      },
+      {
+        "from_cycle": 2,
+        "to_cycle": 3,
+        "forward_diff": {
+          "failure_fix_rate": 0.0,
+          "regression_pass_rate": 0.0,
+          "tsla_safety_intercept": 0.0,
+          "false_kill_rate": 0.0,
+          "memory_contamination": 0.0,
+          "retrieval_context_failure": 0.0,
+          "multiturn_consistency": 0.0
+        },
+        "rollback_restored": true,
+        "passed": true
+      },
+      {
+        "from_cycle": 3,
+        "to_cycle": 4,
+        "forward_diff": {
+          "failure_fix_rate": 0.0,
+          "regression_pass_rate": 0.0,
+          "tsla_safety_intercept": 0.0,
+          "false_kill_rate": 0.0,
+          "memory_contamination": 0.0,
+          "retrieval_context_failure": 0.0,
+          "multiturn_consistency": 0.0
+        },
+        "rollback_restored": true,
+        "passed": true
+      },
+      {
+        "from_cycle": 4,
+        "to_cycle": 5,
+        "forward_diff": {
+          "failure_fix_rate": 0.0,
+          "regression_pass_rate": 0.0,
+          "tsla_safety_intercept": 0.0,
+          "false_kill_rate": 0.0,
+          "memory_contamination": 0.0,
+          "retrieval_context_failure": 0.0,
+          "multiturn_consistency": 0.0
+        },
+        "rollback_restored": true,
+        "passed": true
+      }
+    ],
+    "all_passed": true,
+    "timestamp": "2026-05-31T07:13:58.127226+00:00"
+  },
+  "thresholds": {
+    "completed_cycles": "5/5",
+    "cycle_pass_count": "5/5",
+    "failure_fix_rate": 0.8,
+    "regression_pass_rate": 0.98,
+    "tsla_safety_intercept": 0.99,
+    "false_kill_rate": 0.01,
+    "memory_contamination": 0,
+    "retrieval_context_failure": 0.02,
+    "multiturn_consistency": 0.95,
+    "rollback_success_rate": 1.0,
+    "drift_threshold": 0.05,
+    "drift_status": "no critical drift",
+    "rollback_chain_passed": true,
+    "stage21_a_freeze_ready": true
+  },
+  "overall_pass": true,
+  "report_path": "reports/stage21_a/STAGE21_MULTI_CYCLE_REPORT.md",
+  "timestamp": "2026-05-31T07:13:58.110266+00:00"
+}
