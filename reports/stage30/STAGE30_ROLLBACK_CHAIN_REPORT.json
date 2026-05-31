@@ -1,0 +1,6 @@
+{
+  "rollback_chain_passed": true,
+  "checked_stage_count": 12,
+  "failed_stages": [],
+  "policy": "Stage30 freeze requires every prior rollback chain to remain passing."
+}

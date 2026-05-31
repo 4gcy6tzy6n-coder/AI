@@ -1,6 +1,6 @@
 # Stage30 Completion Definition
 
-**Status**: Planning definition
+**Status**: Completed and freeze-ready
 **Prepared on**: 2026-05-31
 **Depends on**: Stage21-B through Stage29 freeze chain
 **Target tag**: `stage30-governed-production-baseline-v1.0`
@@ -114,6 +114,30 @@ Stage30 may be frozen only after:
 - the final report states `stage30_freeze_ready=true`;
 - the release commit is tagged as `stage30-governed-production-baseline-v1.0`;
 - the branch and tag are pushed.
+
+## Completion Evidence
+
+| Evidence | Result |
+|---|---:|
+| `reports/stage30/stage30_results.json` | `overall_pass=true` |
+| `reports/stage30/stage30_results.json` | `stage30_freeze_ready=true` |
+| baseline_chain_complete | true |
+| stage29_release_candidate_ready | true |
+| full_test_suite_passed | true |
+| governed_pipeline_passed | true |
+| multi_pool_validation_passed | true |
+| adversarial_stress_passed | true |
+| learned_prior_safety_passed | true |
+| promotion_governance_passed | true |
+| rollback_chain_passed | true |
+| observability_ready | true |
+| operator_runbooks_ready | true |
+| production_shadow_passed | true |
+| memory_contamination | 0 |
+| critical_drift_count | 0 |
+| Stage30 implementation tests | 3 passed |
+| Stage20 through Stage30 regression tests | 65 passed |
+| Full test suite after Stage30 | 134 passed |
 
 ## Explicit Non-Goals
 

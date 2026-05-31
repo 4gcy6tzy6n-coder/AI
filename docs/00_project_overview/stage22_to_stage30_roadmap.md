@@ -1,9 +1,9 @@
 # Stage22 to Stage30 Roadmap
 
-**Status**: Planning baseline
+**Status**: Completed baseline chain
 **Prepared on**: 2026-05-31
 **Starting point**: `stage21-a-fixed-failure-pool-v1.0`
-**Current engineering focus**: Stage30 governed production baseline preparation
+**Current engineering focus**: Stage30 governed production baseline frozen
 
 ## Purpose
 
@@ -108,5 +108,5 @@ Stage30 must preserve these constraints:
 | Stage29 release candidate freeze | Complete |
 | Stage22-30 roadmap | Prepared |
 | Stage30 completion definition | Prepared |
-| Stage30 implementation | Ready to start |
-| Stage30 freeze | Blocked until Stage30 validation passes |
+| Stage30 implementation | Complete |
+| Stage30 freeze | Frozen |
