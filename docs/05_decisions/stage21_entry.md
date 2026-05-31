@@ -1,12 +1,13 @@
 # Stage 21 Entry Document
 
-**Status**: Ready for Entry  
-**Entry Baseline**: Stage20 Baseline v1.0 (frozen 2026-05-11)  
-**Prerequisite**: Stage 20 Complete (8/8 acceptance metrics passed)
+**Status**: Stage21-A Complete; Stage21-B Ready for Planning
+**Original Entry Baseline**: Stage20 Baseline v1.0 (frozen 2026-05-11)
+**Current Frozen Baseline**: Stage21-A fixed failure pool validation baseline
+**Prerequisite**: Stage20-R revalidated baseline and Stage21-A frozen
 
 ---
 
-## Entry Conditions — ALL MET
+## Original Stage21 Entry Conditions — ALL MET
 
 - [x] Stage 20-B acceptance hardening complete (8/8 metrics passed)
 - [x] Stage20 Baseline v1.0 frozen as official trusted baseline
@@ -17,6 +18,19 @@
 - [x] Rollback capability verified (4/4 rollback tests pass)
 - [x] Rollback runbook published with 7 auto-rollback triggers
 - [x] Stage 18 baseline preserved as safe rollback anchor
+
+## Stage21-A Freeze Evidence
+
+- [x] Stage21-A 5-cycle fixed failure pool validation complete
+- [x] `completed_cycles=5`
+- [x] `cycle_pass_count=5`
+- [x] `overall_pass=true`
+- [x] `stage21_a_freeze_ready=true`
+- [x] `drift_status=no critical drift`
+- [x] `rollback_chain_passed=true`
+- [x] Full tests passed: 105 passed
+- [x] Commit frozen: `df8451b stage21-a: validate fixed failure pool stability across 5 cycles`
+- [x] Tag pushed: `stage21-a-fixed-failure-pool-v1.0`
 
 ---
 
@@ -48,11 +62,12 @@ Stage 21-E: Production readiness assessment
 
 ### Entry Constraints
 
-1. Stage20 Baseline v1.0 is the ONLY valid starting point
+1. Stage20 Baseline v1.0 remains the root trusted starting point
 2. Stage 18 baseline remains available as ultimate safe rollback anchor
 3. Each Stage 21 sub-stage freezes its own intermediate baseline
 4. All 8 acceptance metrics must be re-validated at each cycle boundary
 5. The B-TSLA pipeline (evidence → bayesian → risk → fix → replay → freeze) is the ONLY approved upgrade path
+6. Stage21-B may vary failure pools but must not introduce Stage21-C learned priors
 
 ---
 
@@ -61,17 +76,20 @@ Stage 21-E: Production readiness assessment
 ```
 Stage 18 (Frozen Observation)
     │
-    └── Stage 20 (Governed Offline Evolution) ← CURRENT
+    └── Stage 20 (Governed Offline Evolution)
             │
-            └── Stage 21 (Long-term Multi-round Evolution) ← NEXT
+            └── Stage20-R (Revalidated Baseline)
                     │
-                    ├── Stage 21-A Baseline
-                    ├── Stage 21-B Baseline
-                    ├── Stage 21-C Baseline
-                    └── Stage 21-E (Production Ready)
+                    └── Stage 21-A Baseline ← CURRENT FROZEN
+                            │
+                            └── Stage 21-B Baseline ← NEXT
+                                    │
+                                    ├── Stage 21-C Baseline
+                                    └── Stage 21-E (Production Ready)
 ```
 
 ---
 
 **Entry Authorized**: Stage 20-C Completion Ceremony  
-**Date**: 2026-05-11
+**Original Entry Date**: 2026-05-11
+**Stage21-A Freeze Date**: 2026-05-31
