@@ -1,0 +1,55 @@
+{
+  "version": "Stage20_Baseline_v1.0",
+  "freeze_timestamp": "2026-05-31T08:05:23.291605+00:00",
+  "component_versions": {
+    "tsla_scorer": "v0.4",
+    "hard_veto": "v0.2",
+    "action_router": "v0.2",
+    "stability_gate": "v0.3",
+    "promotion_gate": "v0.3",
+    "rollback_gate": "v0.1",
+    "permanent_protection_gate": "v0.1",
+    "deep_permanent_gate": "v0.1",
+    "zone_manager": "v0.2",
+    "btsta_orchestrator": "v0.1",
+    "bayesian_inferencer": "v0.1",
+    "evidence_collector": "v0.1",
+    "risk_policy": "v0.1",
+    "correction_executor": "v0.1"
+  },
+  "snapshot_ids": {},
+  "rollback_runbook_path": "reports/stage24/cycle_05/stage20_rollback_runbook.md",
+  "auto_rollback_conditions": {
+    "error_rate_spike": {
+      "threshold": 0.05,
+      "window_minutes": 5,
+      "description": "Error rate exceeds 5% sustained for 5 minutes"
+    },
+    "latency_p95_spike": {
+      "threshold_ms": 1000,
+      "window_minutes": 5,
+      "description": "P95 latency exceeds 1000ms sustained for 5 minutes"
+    },
+    "memory_contamination_detected": {
+      "threshold": 0,
+      "description": "Any memory contamination detected"
+    },
+    "critical_safety_event": {
+      "threshold": 1,
+      "description": "Any single critical safety event"
+    },
+    "regression_pass_rate_drop": {
+      "threshold": 0.98,
+      "description": "Regression pass rate drops below 98%"
+    },
+    "tsla_false_pass": {
+      "threshold": 1,
+      "description": "TSLA lets through a failure it should have caught"
+    },
+    "multiturn_anomaly_spike": {
+      "threshold": 3,
+      "window_hours": 1,
+      "description": "3+ multi-turn anomalies within 1 hour"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Stage24 Preparation: Adversarial and Stress Horizon Validation
 
-**Status**: Prepared after Stage23 freeze-ready validation
+**Status**: Completed and freeze-ready
 **Prepared on**: 2026-05-31
 **Starting baseline**: `stage23-learned-prior-validation-v1.0`
 
@@ -35,6 +35,27 @@ adversarial holdouts.
 Validate that the governed offline evolution loop remains stable across
 adversarial and stress-heavy holdout horizons without safety, regression,
 memory, or rollback degradation.
+
+## Completion Evidence
+
+Stage24 completed on 2026-05-31 with:
+
+| Requirement | Evidence | Status |
+|---|---|---|
+| completed_cycles | `16` in `reports/stage24/stage24_results.json` | PASS |
+| cycle_pass_count | `16` | PASS |
+| adversarial_pool_count | `4` | PASS |
+| safety_heavy_pass_rate | `1.0` | PASS |
+| retrieval_heavy_pass_rate | `1.0` | PASS |
+| multiturn_heavy_pass_rate | `1.0` | PASS |
+| memory_contamination | `0.0` | PASS |
+| false_kill_rate | `0.0` | PASS |
+| rollback_chain_passed | `true` | PASS |
+| drift_status | `no critical drift` | PASS |
+| overall_pass | `true` | PASS |
+| stage24_freeze_ready | `true` | PASS |
+| Stage20-24 tests | 47 passed | PASS |
+| full tests | 116 passed | PASS |
 
 ## Scope
 
@@ -78,7 +99,7 @@ Stage24 passes only if all are true:
 | drift_status | no critical drift |
 | stage24_freeze_ready | true |
 
-## Do Not Start Stage25 Yet
+## Stage25 Entry
 
-Stage25 promotion and rollback governance automation remains blocked until
-Stage24 proves adversarial and stress horizon stability.
+Stage25 promotion and rollback governance validation is now open after the
+Stage24 freeze commit and tag are pushed.

@@ -1,13 +1,14 @@
 # Milestone Status
 
-## Current Stage: Stage24 Preparation
+## Current Stage: Stage25 Preparation
 
 The project has moved beyond the early Phase 1 roadmap. The current trusted
 baseline chain is **Stage20 Baseline v1.0** revalidated by Stage20-R, followed
 by the frozen **Stage21-A fixed failure pool validation baseline** and the
 completed **Stage21-B rotating failure pool validation baseline** and
 **Stage22 independent multi-pool holdout validation baseline**, followed by
-**Stage23 bounded learned-prior validation baseline**.
+**Stage23 bounded learned-prior validation baseline** and the frozen
+**Stage24 adversarial stress horizon validation baseline**.
 
 ## Current Gate
 
@@ -40,6 +41,11 @@ completed **Stage21-B rotating failure pool validation baseline** and
 | Stage20/Stage21/Stage22/Stage23 regression tests | Complete | 44 passed |
 | Full test suite after Stage23 | Complete | 113 passed |
 | Stage24 preparation plan | Complete | `docs/05_decisions/stage24_preparation.md` |
+| Stage24 adversarial stress horizon validation | Complete | `reports/stage24/stage24_results.json` |
+| Stage24 implementation tests | Complete | 3 passed |
+| Stage20/Stage21/Stage22/Stage23/Stage24 regression tests | Complete | 47 passed |
+| Full test suite after Stage24 | Complete | 116 passed |
+| Stage25 preparation plan | Complete | `docs/05_decisions/stage25_preparation.md` |
 | Stage30 completion definition prepared | Complete | `docs/05_decisions/stage30_completion_definition.md` |
 
 ## Completed Stage: Stage21-A
@@ -156,13 +162,37 @@ Stage23 result:
 | drift_status | no critical drift |
 | rollback_chain_passed | true |
 
-## Next Stage: Stage24
+## Completed Stage: Stage24
 
 **Definition**: adversarial and stress horizon validation.
 
-Stage24 should stress the governed loop with safety-heavy, retrieval-heavy,
-multiturn-heavy, memory-boundary, and mixed adversarial holdouts. Stage25
-promotion governance remains blocked until Stage24 freezes.
+Stage24 stressed the governed loop with safety-heavy, retrieval-heavy,
+multiturn-heavy, memory-boundary, and mixed adversarial holdouts.
+
+Stage24 result:
+
+| Metric | Observed |
+|---|---:|
+| completed_cycles | 16/16 |
+| cycle_pass_count | 16/16 |
+| adversarial_pool_count | 4 |
+| safety_heavy_pass_rate | 100% |
+| retrieval_heavy_pass_rate | 100% |
+| multiturn_heavy_pass_rate | 100% |
+| memory_contamination | 0 |
+| false_kill_rate | 0.0 |
+| overall_pass | true |
+| stage24_freeze_ready | true |
+| drift_status | no critical drift |
+| rollback_chain_passed | true |
+
+## Next Stage: Stage25
+
+**Definition**: promotion and rollback governance validation.
+
+Stage25 should validate deterministic candidate promotion gates, rollback
+gates, audit evidence, and blocked unsafe promotion paths. Stage26
+observability work remains blocked until Stage25 freezes.
 
 ## Long-Horizon Target: Stage30
 
@@ -182,6 +212,7 @@ tagged. The current Stage30 preparation artifacts are:
 - 2026-05-31: Stage21-B frozen/tagged and Stage22 independent multi-pool holdout preparation documented.
 - 2026-05-31: Stage22 independent multi-pool holdout validation completed with 12/12 cycles and `stage22_freeze_ready=true`.
 - 2026-05-31: Stage23 bounded learned-prior validation completed with `stage23_freeze_ready=true`.
+- 2026-05-31: Stage24 adversarial stress horizon validation completed with 16/16 cycles and `stage24_freeze_ready=true`.
 - 2026-05-30: Stage20-R completed; Stage20 Baseline v1.0 revalidated for Stage21-A entry.
 - 2026-05-11: Stage20 Baseline v1.0 frozen.
 - 2026-04-17: Project initialized.
